@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.log
+reseah.md
+
+# Exports/builds de GDevelop (nombres típicos; ajustar cuando exista el proyecto real)
+dist/
+Exported/
+.gdevelop/
