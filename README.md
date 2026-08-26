@@ -10,7 +10,7 @@ Plazo de entrega: 01/09 al 31/10/2026.
 ## Estado
 
 Recién creado — todavía sin proyecto de GDevelop scaffoldeado. Ver
-`reseah.md` (no versionado, bitácora personal) para el detalle de cómo
+`reseach.md` (no versionado, bitácora personal) para el detalle de cómo
 se llegó a esta decisión.
 
 ## Motor
