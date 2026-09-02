@@ -1,9 +1,23 @@
 node_modules/
 .DS_Store
 *.log
+
+# Notas / material de trabajo personal — no forma parte de la entrega
 reseach.md
+scripts/
+material_lectura/
+consigna.md
+prompts_mcp.md
+.claude/
+
+# Config local del MCP de GDevelop (path absoluto específico de esta máquina)
+.mcp.json
 
 # Exports/builds de GDevelop (nombres típicos; ajustar cuando exista el proyecto real)
 dist/
 Exported/
 .gdevelop/
+
+# Backups y autosave que genera GDevelop / gdevelop-mcp al editar el .json
+*.bak-*
+*.autosave

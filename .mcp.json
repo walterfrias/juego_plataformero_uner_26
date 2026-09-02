@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "gdevelop": {
-      "command": "node",
-      "args": ["/home/xtsulyts/Escritorio/gdevelop-mcp/dist/index.js"]
-    }
-  }
-}
