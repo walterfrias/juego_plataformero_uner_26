@@ -1,5 +1,6 @@
 {
-  "firstLayout": "Level1",
+  "firstLayout": "MainMenu",
+  "previewLayout": "MainMenu",
   "gdVersion": {
     "build": 279,
     "major": 5,
@@ -28,9 +29,37 @@
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
-    "platformSpecificAssets": {},
+    "platformSpecificAssets": {
+      "android-icon-144": "",
+      "android-icon-192": "",
+      "android-icon-36": "",
+      "android-icon-48": "",
+      "android-icon-72": "",
+      "android-icon-96": "",
+      "android-windowSplashScreenAnimatedIcon": "",
+      "desktop-icon-512": "",
+      "ios-icon-100": "",
+      "ios-icon-1024": "",
+      "ios-icon-114": "",
+      "ios-icon-120": "",
+      "ios-icon-144": "",
+      "ios-icon-152": "",
+      "ios-icon-167": "",
+      "ios-icon-180": "",
+      "ios-icon-20": "",
+      "ios-icon-29": "",
+      "ios-icon-40": "",
+      "ios-icon-50": "",
+      "ios-icon-57": "",
+      "ios-icon-58": "",
+      "ios-icon-60": "",
+      "ios-icon-72": "",
+      "ios-icon-76": "",
+      "ios-icon-80": "",
+      "ios-icon-87": ""
+    },
     "loadingScreen": {
-      "backgroundColor": 0,
+      "backgroundColor": 1716814,
       "backgroundFadeInDuration": 0.2,
       "backgroundImageResourceName": "",
       "gdevelopLogoStyle": "light",
@@ -854,7 +883,23 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "MusicVolume",
+      "type": "number",
+      "value": 100
+    },
+    {
+      "name": "SfxVolume",
+      "type": "number",
+      "value": 100
+    },
+    {
+      "name": "SettingsOpen",
+      "type": "number",
+      "value": "0"
+    }
+  ],
   "layouts": [
     {
       "b": 40,
@@ -878,7 +923,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.7202635412471186,
+        "zoomFactor": 2.432820030887644,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -942,6 +987,16 @@
           "name": "ZombieDDir",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "HordaActive",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Paused",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -1127,14 +1182,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 25,
           "layer": "",
           "name": "Player",
           "persistentUuid": "be7204f7-da1e-43f7-b589-c6193244f378",
-          "width": 0,
-          "x": 28,
-          "y": 76,
+          "width": 18,
+          "x": 40,
+          "y": 84,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1148,8 +1204,8 @@
           "name": "HumoHorda",
           "persistentUuid": "858efa7d-e2e6-4370-976b-29315b390b75",
           "width": 0,
-          "x": 1049,
-          "y": 70,
+          "x": 1663,
+          "y": 91,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -1158,13 +1214,14 @@
         {
           "angle": 0,
           "customSize": true,
+          "depth": 1,
           "height": 10,
           "layer": "",
           "name": "HordaPiso",
           "persistentUuid": "ab84ac30-32c6-4f2b-9854-fa6744d5d1f4",
-          "width": 260,
-          "x": 928,
-          "y": 80,
+          "width": 211,
+          "x": 1482,
+          "y": 79,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -1613,7 +1670,7 @@
           "name": "HordaZombieM",
           "persistentUuid": "448384de-09c6-4019-8e21-4d71ca36ece0",
           "width": 0,
-          "x": 895,
+          "x": 1467,
           "y": 76,
           "zOrder": 4,
           "numberProperties": [],
@@ -1628,7 +1685,7 @@
           "name": "HordaZombieF",
           "persistentUuid": "9fe321b0-f30c-4c71-b274-1a28f160db27",
           "width": 0,
-          "x": 910,
+          "x": 1482,
           "y": 73,
           "zOrder": 4,
           "numberProperties": [],
@@ -1643,7 +1700,7 @@
           "name": "HordaZombieT",
           "persistentUuid": "cf5f2402-d501-47a6-8e04-660c66dd897c",
           "width": 0,
-          "x": 925,
+          "x": 1497,
           "y": 78,
           "zOrder": 4,
           "numberProperties": [],
@@ -1658,7 +1715,7 @@
           "name": "HordaZombieM",
           "persistentUuid": "23f65ee8-9f7b-4169-8def-699e4aac657c",
           "width": 0,
-          "x": 940,
+          "x": 1512,
           "y": 74,
           "zOrder": 4,
           "numberProperties": [],
@@ -1673,7 +1730,7 @@
           "name": "HordaZombieF",
           "persistentUuid": "28615077-fcfb-455b-be54-16f70573e003",
           "width": 0,
-          "x": 955,
+          "x": 1527,
           "y": 79,
           "zOrder": 4,
           "numberProperties": [],
@@ -1688,7 +1745,7 @@
           "name": "HordaZombieT",
           "persistentUuid": "5c50424f-49be-46d5-99ba-acbc01e45b5f",
           "width": 0,
-          "x": 970,
+          "x": 1542,
           "y": 75,
           "zOrder": 4,
           "numberProperties": [],
@@ -1703,7 +1760,7 @@
           "name": "HordaZombieM",
           "persistentUuid": "e7f0ebbc-4d0e-4809-ac3d-828b70f12bc1",
           "width": 0,
-          "x": 985,
+          "x": 1557,
           "y": 77,
           "zOrder": 4,
           "numberProperties": [],
@@ -1718,7 +1775,7 @@
           "name": "HordaZombieF",
           "persistentUuid": "4302b95d-56a4-4d7b-9654-eaa1fe01ec3a",
           "width": 0,
-          "x": 1000,
+          "x": 1572,
           "y": 72,
           "zOrder": 4,
           "numberProperties": [],
@@ -1733,7 +1790,7 @@
           "name": "HordaZombieT",
           "persistentUuid": "965ee4a5-6c6c-4eab-b82d-532466c24110",
           "width": 0,
-          "x": 1015,
+          "x": 1587,
           "y": 80,
           "zOrder": 4,
           "numberProperties": [],
@@ -1748,7 +1805,7 @@
           "name": "HordaZombieM",
           "persistentUuid": "5cedd58b-5e93-4749-96f0-361eff1afdc1",
           "width": 0,
-          "x": 1030,
+          "x": 1602,
           "y": 74,
           "zOrder": 4,
           "numberProperties": [],
@@ -1763,7 +1820,7 @@
           "name": "HordaZombieF",
           "persistentUuid": "f06a314b-a788-40ec-a2a0-4f951c3a32a5",
           "width": 0,
-          "x": 1045,
+          "x": 1617,
           "y": 76,
           "zOrder": 4,
           "numberProperties": [],
@@ -1778,7 +1835,7 @@
           "name": "HordaZombieT",
           "persistentUuid": "27056583-4d44-4a2f-ae79-87a0822170fd",
           "width": 0,
-          "x": 1060,
+          "x": 1632,
           "y": 78,
           "zOrder": 4,
           "numberProperties": [],
@@ -1793,7 +1850,7 @@
           "name": "HordaZombieM",
           "persistentUuid": "51f402c7-b669-4ce2-b0ab-1c236de652a2",
           "width": 0,
-          "x": 1075,
+          "x": 1647,
           "y": 73,
           "zOrder": 4,
           "numberProperties": [],
@@ -1808,7 +1865,7 @@
           "name": "HordaZombieF",
           "persistentUuid": "5a74f298-6057-403d-9de9-1843cc59a8b3",
           "width": 0,
-          "x": 1090,
+          "x": 1662,
           "y": 79,
           "zOrder": 4,
           "numberProperties": [],
@@ -1823,7 +1880,7 @@
           "name": "HordaZombieT",
           "persistentUuid": "c50ab8fd-c611-4def-b0ca-dd2813e523dc",
           "width": 0,
-          "x": 1105,
+          "x": 1677,
           "y": 75,
           "zOrder": 4,
           "numberProperties": [],
@@ -1836,6 +1893,7 @@
           "height": 0,
           "layer": "UI",
           "name": "Heart1",
+          "persistentUuid": "e3fc8028-fdb9-441c-a6e2-4139e3a1cdf5",
           "width": 0,
           "x": 8,
           "y": 8,
@@ -1850,6 +1908,7 @@
           "height": 0,
           "layer": "UI",
           "name": "Heart2",
+          "persistentUuid": "29a5a55c-a0da-4b41-b92a-530f1d19197a",
           "width": 0,
           "x": 22,
           "y": 8,
@@ -1864,6 +1923,7 @@
           "height": 0,
           "layer": "UI",
           "name": "Heart3",
+          "persistentUuid": "f5e4dbd4-0979-42a6-9b8d-58bb37762e5b",
           "width": 0,
           "x": 36,
           "y": 8,
@@ -1878,9 +1938,10 @@
           "height": 0,
           "layer": "",
           "name": "Meta",
+          "persistentUuid": "353bb853-6ffc-4268-9441-a364738f6f36",
           "width": 0,
-          "x": 1650,
-          "y": 64,
+          "x": 2569,
+          "y": 63,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1892,6 +1953,7 @@
           "height": 54,
           "layer": "UI",
           "name": "GameOverText",
+          "persistentUuid": "1bc9d6b8-ad5f-4cab-8243-2528c3488c5e",
           "width": 400,
           "x": 40,
           "y": 108,
@@ -1906,10 +1968,82 @@
           "height": 54,
           "layer": "UI",
           "name": "VictoryText",
+          "persistentUuid": "1e9e50f0-1a22-445c-8af7-d0cf9f8caf4d",
           "width": 400,
           "x": 40,
           "y": 108,
           "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "HumoHorda",
+          "persistentUuid": "8346c500-213b-4721-b6c9-04036149c5c6",
+          "width": 0,
+          "x": 1529,
+          "y": 93,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "PauseTitle",
+          "width": 0,
+          "x": 190,
+          "y": 50,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "PauseMusic",
+          "width": 0,
+          "x": 140,
+          "y": 90,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "PauseSfx",
+          "width": 0,
+          "x": 140,
+          "y": 110,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 40,
+          "layer": "UI",
+          "name": "PauseHint",
+          "width": 320,
+          "x": 80,
+          "y": 140,
+          "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4358,7 +4492,7 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 1.0,
+                  "timeBetweenFrames": 1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -4399,7 +4533,7 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 1.0,
+                  "timeBetweenFrames": 1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -4440,7 +4574,7 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 1.0,
+                  "timeBetweenFrames": 1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -4481,7 +4615,7 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 1.0,
+                  "timeBetweenFrames": 1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -4508,60 +4642,88 @@
         },
         {
           "assetStoreId": "",
+          "bold": true,
+          "italic": false,
           "name": "GameOverText",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "GAME OVER\n[R] para reiniciar",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 18,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "GAME OVER\n[R] para reiniciar",
             "font": "",
-            "characterSize": 18,
-            "color": "240;240;240",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 18,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": true,
+          "italic": false,
           "name": "VictoryText",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "LLEGASTE AL LABORATORIO\n[R] para reiniciar",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 18,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "LLEGASTE AL LABORATORIO\n[R] para reiniciar",
             "font": "",
-            "characterSize": 18,
-            "color": "240;240;240",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 18,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
@@ -4723,6 +4885,122 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "PauseTitle",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": true,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "PAUSA",
+            "font": "",
+            "characterSize": 22,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "PauseMusic",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Musica: 100%",
+            "font": "",
+            "characterSize": 15,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "PauseSfx",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "SFX: 100%",
+            "font": "",
+            "characterSize": 15,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "PauseHint",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "<- -> Musica  ^ v SFX\nR: Reiniciar   M: Menu   ESC: Reanudar",
+            "font": "",
+            "characterSize": 12,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -4829,6 +5107,18 @@
           },
           {
             "objectName": "ZombieD"
+          },
+          {
+            "objectName": "PauseTitle"
+          },
+          {
+            "objectName": "PauseMusic"
+          },
+          {
+            "objectName": "PauseSfx"
+          },
+          {
+            "objectName": "PauseHint"
           }
         ]
       },
@@ -4877,6 +5167,38 @@
               },
               "parameters": [
                 "HordaPiso"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieF"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieM"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieT"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HumoHorda"
               ]
             }
           ]
@@ -5368,7 +5690,18 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "HordaActive",
+                "=",
+                "1"
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -5476,47 +5809,42 @@
           "actions": [
             {
               "type": {
-                "value": "Delete"
+                "value": "SetX"
               },
               "parameters": [
                 "HordaZombieM",
-                ""
+                "-",
+                "560"
               ]
             },
             {
               "type": {
-                "value": "Delete"
+                "value": "SetX"
               },
               "parameters": [
                 "HordaZombieF",
-                ""
+                "-",
+                "560"
               ]
             },
             {
               "type": {
-                "value": "Delete"
+                "value": "SetX"
               },
               "parameters": [
                 "HordaZombieT",
-                ""
+                "-",
+                "560"
               ]
             },
             {
               "type": {
-                "value": "Delete"
+                "value": "SetX"
               },
               "parameters": [
                 "HordaPiso",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "HumoHorda",
-                ""
+                "-",
+                "560"
               ]
             }
           ]
@@ -5706,8 +6034,7 @@
                 "\"Invuln\""
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5755,8 +6082,7 @@
                 "1100 * TimeDelta()"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5782,8 +6108,7 @@
                 ""
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5808,8 +6133,7 @@
                 "Heart1"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5835,8 +6159,7 @@
                 ""
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5861,8 +6184,7 @@
                 "Heart2"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5888,8 +6210,7 @@
                 ""
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5914,8 +6235,7 @@
                 "Heart3"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5948,12 +6268,52 @@
               },
               "parameters": [
                 "Lives",
+                "-",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "1650"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "76"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BounceVel",
                 "=",
                 "0"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6017,8 +6377,7 @@
                 "0"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6075,8 +6434,7 @@
                 "0"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6117,12 +6475,11 @@
               },
               "parameters": [
                 "",
-                "Level1",
+                "\"Level1\"",
                 "no"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6163,12 +6520,11 @@
               },
               "parameters": [
                 "",
-                "Level1",
+                "\"Level1\"",
                 "no"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6209,12 +6565,11 @@
               },
               "parameters": [
                 "",
-                "Level1",
+                "\"Level1\"",
                 "no"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6255,12 +6610,11 @@
               },
               "parameters": [
                 "",
-                "Level1",
+                "\"Level1\"",
                 "no"
               ]
             }
-          ],
-          "_t1": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6384,6 +6738,442 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">",
+                "1300"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "HordaActive",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "HordaActive",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HordaZombieF",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HordaZombieM",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HordaZombieT",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HumoHorda",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseTitle"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseMusic"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseSfx"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseHint"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "PauseMusic",
+                "=",
+                "\"Musica: \" + ToString(GlobalVariable(MusicVolume)) + \"%\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "PauseSfx",
+                "=",
+                "\"SFX: \" + ToString(GlobalVariable(SfxVolume)) + \"%\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Over",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Won",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "PauseTitle",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "PauseMusic",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "PauseSfx",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "PauseHint",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseTitle"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseMusic"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseSfx"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseHint"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"r\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Level1\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"m\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Espeja el estado de pausa al global SettingsOpen para que SettingsControls (Link) sepa cuando ajustar volumen."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "Variable(Paused)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "target": "SettingsControls"
         }
       ],
       "layers": [
@@ -6534,9 +7324,844 @@
         }
       ],
       "behaviorsSharedData": []
+    },
+    {
+      "b": 40,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "MainMenu",
+      "name": "MainMenu",
+      "r": 16,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 20,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 1,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [
+        {
+          "name": "MenuUI",
+          "objects": [
+            {
+              "name": "MMTitle"
+            },
+            {
+              "name": "MMHint"
+            }
+          ]
+        },
+        {
+          "name": "OptionsUI",
+          "objects": [
+            {
+              "name": "OptTitle"
+            },
+            {
+              "name": "OptMusic"
+            },
+            {
+              "name": "OptSfx"
+            },
+            {
+              "name": "OptHint"
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [],
+      "variables": [],
+      "layers": [
+        {
+          "ambientLightColorB": 32,
+          "ambientLightColorG": 32,
+          "ambientLightColorR": 32,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "cameraType": "perspective",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "name": "MMTitle",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": true,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "PACIENTE ZERO",
+            "font": "",
+            "characterSize": 26,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "MMHint",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "ENTER / ESPACIO: Jugar      O: Opciones",
+            "font": "",
+            "characterSize": 13,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "OptTitle",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": true,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "OPCIONES",
+            "font": "",
+            "characterSize": 20,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "OptMusic",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Musica: 100%",
+            "font": "",
+            "characterSize": 16,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "OptSfx",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "SFX: 100%",
+            "font": "",
+            "characterSize": 16,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "OptHint",
+          "type": "TextObject::Text",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "<- -> Musica   ^ v SFX   ESC: Volver",
+            "font": "",
+            "characterSize": 13,
+            "color": "240;240;240",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "isOutlineEnabled": true,
+            "outlineThickness": 2,
+            "outlineColor": "12;14;22",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "MMTitle"
+          },
+          {
+            "objectName": "MMHint"
+          },
+          {
+            "objectName": "OptTitle"
+          },
+          {
+            "objectName": "OptMusic"
+          },
+          {
+            "objectName": "OptSfx"
+          },
+          {
+            "objectName": "OptHint"
+          }
+        ]
+      },
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "MMTitle",
+          "width": 0,
+          "x": 130,
+          "y": 90,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "MMHint",
+          "width": 0,
+          "x": 110,
+          "y": 130,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "OptTitle",
+          "width": 0,
+          "x": 190,
+          "y": 60,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "OptMusic",
+          "width": 0,
+          "x": 150,
+          "y": 100,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "OptSfx",
+          "width": 0,
+          "x": 150,
+          "y": 122,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "OptHint",
+          "width": 0,
+          "x": 60,
+          "y": 170,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "MainMenu - estado unico: variable GLOBAL SettingsOpen (0 = menu principal, 1 = opciones). Los inputs SOLO cambian el estado; la visibilidad y el arranque del juego se derivan de el. Level1 reutiliza SettingsOpen en la pausa."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "OptMusic",
+                "=",
+                "\"Musica: \" + ToString(GlobalVariable(MusicVolume)) + \"%\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "OptSfx",
+                "=",
+                "\"SFX: \" + ToString(GlobalVariable(SfxVolume)) + \"%\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Visibilidad declarativa: se recalcula sola desde SettingsOpen. Una sola fuente de verdad -> los dos estados no se pueden desincronizar."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "MenuUI",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "OptionsUI"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "MenuUI"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "OptionsUI",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Inputs: SOLO cambian el estado o arrancan el juego."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Return\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Space\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Level1\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"o\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Volumen: logica compartida con la pausa de Level1, en la hoja de eventos externa SettingsControls."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "target": "SettingsControls"
+        }
+      ]
     }
   ],
-  "externalEvents": [],
+  "externalEvents": [
+    {
+      "name": "SettingsControls",
+      "associatedLayout": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Ajuste de volumen. Compartido por MainMenu y la pausa de Level1 via evento Link. Activo mientras SettingsOpen = 1."
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "MusicVolume",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "MusicVolume",
+                "+",
+                "-10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Right\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "MusicVolume",
+                "<",
+                "100"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "MusicVolume",
+                "+",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Up\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SfxVolume",
+                "<",
+                "100"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "SfxVolume",
+                "+",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Down\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SfxVolume",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "SfxVolume",
+                "+",
+                "-10"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "eventsFunctionsExtensions": [],
   "externalLayouts": []
 }
