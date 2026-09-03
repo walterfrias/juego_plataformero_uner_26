@@ -1165,38 +1165,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/N1/BaldosaFloja.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "BaldosaFloja.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/N1/BaldosaSplash_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "BaldosaSplash_1.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/N1/BaldosaSplash_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "BaldosaSplash_2.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/N1/BaldosaSplash_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "BaldosaSplash_3.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
         "file": "assets/City/ArbolBajo.png",
         "kind": "image",
         "metadata": "",
@@ -1384,11 +1352,6 @@
           "name": "ZombieJDir",
           "type": "number",
           "value": 1
-        },
-        {
-          "name": "BaldosaGag",
-          "type": "number",
-          "value": 0
         }
       ],
       "instances": [
@@ -2706,113 +2669,6 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
-          "name": "BaldosaFloja",
-          "persistentUuid": "a0165e49-c0ad-48fb-8e64-524d0c8823b7",
-          "width": 0,
-          "x": 120,
-          "y": 105,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "BancoPlaza",
-          "persistentUuid": "5171dd2d-873b-4f72-8c20-6b94b5bfc2b4",
-          "width": 0,
-          "x": 172,
-          "y": 95,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "Toldo",
-          "persistentUuid": "f56aec16-93b3-4ee2-bc79-50019d326c82",
-          "width": 0,
-          "x": 206,
-          "y": 76,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "FarolRepisa",
-          "persistentUuid": "730abd90-caac-4916-a218-957eba04bd4b",
-          "width": 0,
-          "x": 262,
-          "y": 66,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 102,
-          "layer": "",
-          "name": "Balcon",
-          "persistentUuid": "15772abc-7a6c-41ee-b531-16553ac9f80b",
-          "width": 46,
-          "x": 359,
-          "y": 7,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 119,
-          "layer": "",
-          "name": "EscaleraIncendio",
-          "persistentUuid": "2519954c-27d7-424c-a2bf-047ba482acb9",
-          "width": 46,
-          "x": 569,
-          "y": -10,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "Colchon",
-          "persistentUuid": "0b93d029-47d2-43a3-8473-ad05c0f7336b",
-          "width": 0,
-          "x": 490,
-          "y": 101,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
           "layer": "Decor",
           "name": "ArbolBajo",
           "persistentUuid": "8efe3e95-759a-4dc2-97aa-4287699317eb",
@@ -2892,10 +2748,10 @@
           "height": 0,
           "layer": "",
           "name": "BancoPlaza",
-          "persistentUuid": "925b6e90-54a0-437c-a943-57fb3e351f84",
+          "persistentUuid": "1cb596d3-b00e-4fef-a491-ab359b1a7a97",
           "width": 0,
-          "x": 709,
-          "y": 96,
+          "x": 172,
+          "y": 95,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -2906,12 +2762,72 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "BancoPlaza",
-          "persistentUuid": "e9916990-fdf8-402f-a962-9ab990b70172",
+          "name": "Toldo",
+          "persistentUuid": "51dd7f70-c809-4963-b9d0-024165c5f7fe",
           "width": 0,
-          "x": 748,
-          "y": 96,
+          "x": 206,
+          "y": 76,
           "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "FarolRepisa",
+          "persistentUuid": "302dc25d-fc54-4cb4-a042-5c3ef2edbe5c",
+          "width": 0,
+          "x": 262,
+          "y": 66,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Balcon",
+          "persistentUuid": "0907ea3c-8e60-443c-907e-9c107985e061",
+          "width": 0,
+          "x": 264,
+          "y": 50,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "EscaleraIncendio",
+          "persistentUuid": "66ec11d3-ae8c-4820-8cd9-0b8a708ef949",
+          "width": 0,
+          "x": 312,
+          "y": 50,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Colchon",
+          "persistentUuid": "71791e2f-75a0-459e-88f3-d22e52f456c8",
+          "width": 0,
+          "x": 300,
+          "y": 100,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6905,7 +6821,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 1,
+                  "timeBetweenFrames": 1.0,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -6971,7 +6887,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 1,
+                  "timeBetweenFrames": 1.0,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -7037,7 +6953,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 1,
+                  "timeBetweenFrames": 1.0,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -7103,7 +7019,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 1,
+                  "timeBetweenFrames": 1.0,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -7169,7 +7085,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 1,
+                  "timeBetweenFrames": 1.0,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -7215,132 +7131,11 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 1,
+                  "timeBetweenFrames": 1.0,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Colchon.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "BaldosaFloja",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior"
-            }
-          ],
-          "animations": [
-            {
-              "name": "Idle",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 1,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "BaldosaFloja.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "BaldosaSplash",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Splash",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.1,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "BaldosaSplash_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "BaldosaSplash_2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "BaldosaSplash_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7517,12 +7312,6 @@
           },
           {
             "objectName": "Colchon"
-          },
-          {
-            "objectName": "BaldosaFloja"
-          },
-          {
-            "objectName": "BaldosaSplash"
           }
         ]
       },
@@ -10154,27 +9943,6 @@
           "conditions": [
             {
               "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "BaldosaSplash"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "CollisionNP"
               },
               "parameters": [
@@ -10218,170 +9986,8 @@
                 "-480"
               ]
             }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Player",
-                "BaldosaFloja",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "BaldosaGag",
-                "=",
-                "0"
-              ]
-            }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "BaldosaGag",
-                "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"baldosa\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "BaldosaFloja",
-                "=",
-                "111"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "200"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "BaldosaSplash",
-                "=",
-                "BaldosaFloja.X() + 1"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "BaldosaSplash",
-                "=",
-                "100"
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "BaldosaSplash",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetAnimationName"
-              },
-              "parameters": [
-                "BaldosaSplash",
-                "\"Splash\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "BaldosaGag",
-                "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "",
-                "\"baldosa\"",
-                ">",
-                "0.6"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "BaldosaFloja",
-                "=",
-                "105"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "BaldosaSplash"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "BaldosaGag",
-                "=",
-                "0"
-              ]
-            }
-          ]
+          "_n1plat": true
         }
       ],
       "layers": [
