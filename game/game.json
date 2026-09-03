@@ -875,6 +875,358 @@
         "name": "ZombieD_Walk_8.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_N/Zombie_N_Walk_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_N_Walk_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_N/Zombie_N_Walk_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_N_Walk_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_N/Zombie_N_Walk_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_N_Walk_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_N/Zombie_N_Walk_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_N_Walk_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_N/Zombie_N_Walk_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_N_Walk_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_N/Zombie_N_Walk_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_N_Walk_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_N/Zombie_N_Walk_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_N_Walk_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_N/Zombie_N_Walk_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_N_Walk_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_O/Zombie_O_Walk_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_O_Walk_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_O/Zombie_O_Walk_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_O_Walk_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_O/Zombie_O_Walk_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_O_Walk_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_O/Zombie_O_Walk_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_O_Walk_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_O/Zombie_O_Walk_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_O_Walk_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_O/Zombie_O_Walk_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_O_Walk_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_O/Zombie_O_Walk_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_O_Walk_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_O/Zombie_O_Walk_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_O_Walk_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_V/Zombie_V_Walk_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_V_Walk_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_V/Zombie_V_Walk_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_V_Walk_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_V/Zombie_V_Walk_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_V_Walk_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_V/Zombie_V_Walk_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_V_Walk_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_V/Zombie_V_Walk_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_V_Walk_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_V/Zombie_V_Walk_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_V_Walk_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_V/Zombie_V_Walk_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_V_Walk_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_V/Zombie_V_Walk_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_V_Walk_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_J/Zombie_J_Walk_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_J_Walk_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_J/Zombie_J_Walk_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_J_Walk_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_J/Zombie_J_Walk_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_J_Walk_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_J/Zombie_J_Walk_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_J_Walk_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_J/Zombie_J_Walk_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_J_Walk_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_J/Zombie_J_Walk_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_J_Walk_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_J/Zombie_J_Walk_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_J_Walk_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_J/Zombie_J_Walk_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Zombie_J_Walk_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/BancoPlaza.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "BancoPlaza.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/Toldo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Toldo.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/FarolRepisa.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "FarolRepisa.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/Colchon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Colchon.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/BaldosaFloja.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "BaldosaFloja.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/BaldosaSplash_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "BaldosaSplash_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/BaldosaSplash_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "BaldosaSplash_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/BaldosaSplash_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "BaldosaSplash_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/ArbolBajo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ArbolBajo.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/ArbolAlto.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ArbolAlto.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/Balcon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balcon.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/N1/EscaleraIncendio.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "EscaleraIncendio.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -897,7 +1249,7 @@
     {
       "name": "SettingsOpen",
       "type": "number",
-      "value": "0"
+      "value": 0
     }
   ],
   "layouts": [
@@ -943,6 +1295,21 @@
             },
             {
               "name": "ZombieD"
+            },
+            {
+              "name": "ZombieN"
+            },
+            {
+              "name": "ZombieO"
+            },
+            {
+              "name": "ZombieV"
+            },
+            {
+              "name": "ZombieJ"
+            },
+            {
+              "name": "ZombieMarcha"
             }
           ]
         }
@@ -997,6 +1364,31 @@
           "name": "Paused",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ZombieNDir",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "ZombieODir",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "ZombieVDir",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "ZombieJDir",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "BaldosaGag",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -1005,11 +1397,71 @@
           "customSize": false,
           "height": 0,
           "layer": "",
+          "name": "ZombieJ",
+          "persistentUuid": "afc9ae00-b90e-40f5-9a8c-f83242410bb6",
+          "width": 0,
+          "x": 2180,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieV",
+          "persistentUuid": "af2c3c65-abb6-4153-a1da-624d39edb465",
+          "width": 0,
+          "x": 1200,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieO",
+          "persistentUuid": "5dd604cc-2375-46b0-b23a-60a5fb78eccc",
+          "width": 0,
+          "x": 1010,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieN",
+          "persistentUuid": "db1581ac-b1f0-4407-b47f-90cf82e788dc",
+          "width": 0,
+          "x": 780,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
           "name": "ZombieD",
           "persistentUuid": "e6a03489-b5ba-470e-ae57-6f4fc65e3e80",
           "width": 0,
-          "x": 630,
-          "y": 76,
+          "x": 662,
+          "y": 77,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -1068,7 +1520,7 @@
           "name": "Farol",
           "persistentUuid": "16d7a545-500b-4ff6-beaa-f0f1a3c0dc42",
           "width": 0,
-          "x": 36,
+          "x": -81,
           "y": 54,
           "zOrder": 1,
           "numberProperties": [],
@@ -1098,7 +1550,7 @@
           "name": "Farol",
           "persistentUuid": "a70e22dd-eef0-46f9-a2fb-15cc6c5eb89c",
           "width": 0,
-          "x": 268,
+          "x": 526,
           "y": 54,
           "zOrder": 1,
           "numberProperties": [],
@@ -1113,8 +1565,8 @@
           "name": "Tacho",
           "persistentUuid": "ed2c522f-950f-4801-ac31-745f174f6282",
           "width": 0,
-          "x": 60,
-          "y": 92,
+          "x": -46,
+          "y": 93,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1167,14 +1619,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 158,
           "layer": "BG_far",
           "name": "Obelisco",
           "persistentUuid": "9c1e10d3-2eae-42a8-943f-ae609e7a36af",
-          "width": 0,
-          "x": 512,
-          "y": -1,
+          "width": 27,
+          "x": 734,
+          "y": -48,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1223,21 +1676,6 @@
           "x": 1482,
           "y": 79,
           "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 150,
-          "layer": "",
-          "name": "River",
-          "persistentUuid": "3a91341e-0859-4290-bc8a-36a147e09de6",
-          "width": 2800,
-          "x": -200,
-          "y": 178,
-          "zOrder": -2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1955,8 +2393,8 @@
           "name": "GameOverText",
           "persistentUuid": "1bc9d6b8-ad5f-4cab-8243-2528c3488c5e",
           "width": 400,
-          "x": 40,
-          "y": 108,
+          "x": 30,
+          "y": 144,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -1970,8 +2408,8 @@
           "name": "VictoryText",
           "persistentUuid": "1e9e50f0-1a22-445c-8af7-d0cf9f8caf4d",
           "width": 400,
-          "x": 40,
-          "y": 108,
+          "x": 49,
+          "y": 95,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -1998,6 +2436,7 @@
           "height": 0,
           "layer": "UI",
           "name": "PauseTitle",
+          "persistentUuid": "7136ea31-9050-4f7e-88fa-953e4cb66ec5",
           "width": 0,
           "x": 190,
           "y": 50,
@@ -2012,9 +2451,10 @@
           "height": 0,
           "layer": "UI",
           "name": "PauseMusic",
+          "persistentUuid": "32ac579d-2ba6-4ba9-970a-b5c3d4f32873",
           "width": 0,
-          "x": 140,
-          "y": 90,
+          "x": 181,
+          "y": 99,
           "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
@@ -2026,9 +2466,10 @@
           "height": 0,
           "layer": "UI",
           "name": "PauseSfx",
+          "persistentUuid": "1677f881-e8f6-4250-8298-0788012da71a",
           "width": 0,
-          "x": 140,
-          "y": 110,
+          "x": 180,
+          "y": 78,
           "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
@@ -2040,10 +2481,437 @@
           "height": 40,
           "layer": "UI",
           "name": "PauseHint",
+          "persistentUuid": "aad277a4-e0a6-436b-adb9-c215d1b7b7ab",
           "width": 320,
-          "x": 80,
-          "y": 140,
+          "x": 87,
+          "y": 160,
           "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieMarcha",
+          "persistentUuid": "53df4ed1-d77a-40a2-a13a-9fef727973eb",
+          "width": 0,
+          "x": -6,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieMarcha",
+          "persistentUuid": "6574478c-6d09-41c4-b2ed-669cfdf0ff56",
+          "width": 0,
+          "x": 560,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieMarcha",
+          "persistentUuid": "3cee1160-05c1-4bea-91b7-c3f40fcac212",
+          "width": 0,
+          "x": 1080,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieMarcha",
+          "persistentUuid": "add65e74-fd9f-4ad5-aaa1-dbe01dec6fca",
+          "width": 0,
+          "x": 1600,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieMarcha",
+          "persistentUuid": "b569b3dd-01ec-4600-901a-4280d4a5eb40",
+          "width": 0,
+          "x": 2120,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "ArbolAlto",
+          "persistentUuid": "45cc744c-3aed-494c-930f-ff6af6ed998b",
+          "width": 0,
+          "x": 95,
+          "y": 30,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 66,
+          "layer": "Decor",
+          "name": "ArbolBajo",
+          "persistentUuid": "e81df4cf-b84a-4e74-845a-167fbb514b39",
+          "width": 45,
+          "x": 430,
+          "y": 44,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "ArbolAlto",
+          "persistentUuid": "57711ef6-ae33-459d-a664-3ab6e8a64923",
+          "width": 0,
+          "x": 610,
+          "y": 30,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 54,
+          "layer": "Decor",
+          "name": "ArbolBajo",
+          "persistentUuid": "7ab1de38-8470-47f8-9cc5-3be5d795d77a",
+          "width": 42,
+          "x": 800,
+          "y": 56,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "ArbolAlto",
+          "persistentUuid": "9ad764e3-e42e-4553-a616-94f6b38fe8e8",
+          "width": 0,
+          "x": 1050,
+          "y": 30,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "ArbolBajo",
+          "persistentUuid": "2fd00ac2-b469-4f6e-af64-53dec004a6fa",
+          "width": 0,
+          "x": 1300,
+          "y": 66,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "ArbolAlto",
+          "persistentUuid": "85073d94-c62b-48d2-b5dc-4bccfa41d61a",
+          "width": 0,
+          "x": 1560,
+          "y": 30,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "ArbolBajo",
+          "persistentUuid": "b5a9e543-9ce2-41b5-94eb-bd56747e81b6",
+          "width": 0,
+          "x": 2060,
+          "y": 66,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "ArbolAlto",
+          "persistentUuid": "3b1e5f39-9aed-43fd-a80b-e59c35264e24",
+          "width": 0,
+          "x": 2320,
+          "y": 30,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BaldosaFloja",
+          "persistentUuid": "a0165e49-c0ad-48fb-8e64-524d0c8823b7",
+          "width": 0,
+          "x": 120,
+          "y": 105,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BancoPlaza",
+          "persistentUuid": "5171dd2d-873b-4f72-8c20-6b94b5bfc2b4",
+          "width": 0,
+          "x": 172,
+          "y": 95,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Toldo",
+          "persistentUuid": "f56aec16-93b3-4ee2-bc79-50019d326c82",
+          "width": 0,
+          "x": 206,
+          "y": 76,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "FarolRepisa",
+          "persistentUuid": "730abd90-caac-4916-a218-957eba04bd4b",
+          "width": 0,
+          "x": 262,
+          "y": 66,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 102,
+          "layer": "",
+          "name": "Balcon",
+          "persistentUuid": "15772abc-7a6c-41ee-b531-16553ac9f80b",
+          "width": 46,
+          "x": 359,
+          "y": 7,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 119,
+          "layer": "",
+          "name": "EscaleraIncendio",
+          "persistentUuid": "2519954c-27d7-424c-a2bf-047ba482acb9",
+          "width": 46,
+          "x": 569,
+          "y": -10,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Colchon",
+          "persistentUuid": "0b93d029-47d2-43a3-8473-ad05c0f7336b",
+          "width": 0,
+          "x": 490,
+          "y": 101,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "ArbolBajo",
+          "persistentUuid": "8efe3e95-759a-4dc2-97aa-4287699317eb",
+          "width": 0,
+          "x": 823,
+          "y": 67,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 44,
+          "layer": "Decor",
+          "name": "ArbolBajo",
+          "persistentUuid": "9e61bf85-933c-455d-8620-a1a357264a99",
+          "width": 33,
+          "x": 632,
+          "y": 65,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 66,
+          "layer": "Decor",
+          "name": "ArbolBajo",
+          "persistentUuid": "5b99960e-2440-4954-82f2-10f88200e3f7",
+          "width": 39,
+          "x": 446,
+          "y": 54,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "Farol",
+          "persistentUuid": "ccb75ea7-f532-4566-be46-41de875fcbbf",
+          "width": 0,
+          "x": 722,
+          "y": 53,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "Farol",
+          "persistentUuid": "a2530388-972b-481d-be5c-462dce0d4f77",
+          "width": 0,
+          "x": 697,
+          "y": 53,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BancoPlaza",
+          "persistentUuid": "925b6e90-54a0-437c-a943-57fb3e351f84",
+          "width": 0,
+          "x": 709,
+          "y": 96,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BancoPlaza",
+          "persistentUuid": "e9916990-fdf8-402f-a962-9ab990b70172",
+          "width": 0,
+          "x": 748,
+          "y": 96,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2889,14 +3757,20 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Farol",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru"
+            }
+          ],
           "animations": [
             {
               "name": "Idle",
@@ -2907,7 +3781,7 @@
                   "timeBetweenFrames": 0.1,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "farol.png",
                       "points": [],
                       "originPoint": {
@@ -2921,7 +3795,26 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 1
+                          },
+                          {
+                            "x": 18,
+                            "y": 1
+                          },
+                          {
+                            "x": 18,
+                            "y": 8
+                          },
+                          {
+                            "x": 2,
+                            "y": 8
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -4888,119 +5781,1585 @@
         },
         {
           "assetStoreId": "",
+          "bold": true,
+          "italic": false,
           "name": "PauseTitle",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "PAUSA",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 22,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "PAUSA",
             "font": "",
-            "characterSize": 22,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 22,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": false,
+          "italic": false,
           "name": "PauseMusic",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "Musica: 100%",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 15,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "Musica: 100%",
             "font": "",
-            "characterSize": 15,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 15,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": false,
+          "italic": false,
           "name": "PauseSfx",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "SFX: 100%",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 15,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "SFX: 100%",
             "font": "",
-            "characterSize": 15,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 15,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": false,
+          "italic": false,
           "name": "PauseHint",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "<- -> Musica  ^ v SFX\nR: Reiniciar   M: Menu   ESC: Reanudar",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 12,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "<- -> Musica  ^ v SFX\nR: Reiniciar   M: Menu   ESC: Reanudar",
             "font": "",
-            "characterSize": 12,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 12,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ZombieN",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.13,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_N_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_N_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_N_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_N_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_N_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_N_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_N_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_N_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ZombieO",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.13,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_O_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_O_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_O_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_O_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_O_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_O_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_O_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_O_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ZombieV",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.13,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_V_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_V_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_V_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_V_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_V_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_V_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_V_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_V_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ZombieJ",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.13,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_J_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_J_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_J_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_J_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_J_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_J_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_J_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Zombie_J_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ZombieMarcha",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.13,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieM_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieM_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieM_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieM_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieM_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieM_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieM_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieM_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "ArbolBajo",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "ArbolBajo.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 6,
+                            "y": 2
+                          },
+                          {
+                            "x": 36,
+                            "y": 2
+                          },
+                          {
+                            "x": 36,
+                            "y": 9
+                          },
+                          {
+                            "x": 6,
+                            "y": 9
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "ArbolAlto",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "ArbolAlto.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 8,
+                            "y": 2
+                          },
+                          {
+                            "x": 40,
+                            "y": 2
+                          },
+                          {
+                            "x": 40,
+                            "y": 10
+                          },
+                          {
+                            "x": 8,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "BancoPlaza",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "BancoPlaza.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 25,
+                            "y": 1
+                          },
+                          {
+                            "x": 25,
+                            "y": 5
+                          },
+                          {
+                            "x": 3,
+                            "y": 5
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Toldo",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Toldo.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 45,
+                            "y": 0
+                          },
+                          {
+                            "x": 45,
+                            "y": 5
+                          },
+                          {
+                            "x": 1,
+                            "y": 5
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Balcon",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Balcon.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 12
+                          },
+                          {
+                            "x": 40,
+                            "y": 12
+                          },
+                          {
+                            "x": 40,
+                            "y": 18
+                          },
+                          {
+                            "x": 2,
+                            "y": 18
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "EscaleraIncendio",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "EscaleraIncendio.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 12
+                          },
+                          {
+                            "x": 37,
+                            "y": 12
+                          },
+                          {
+                            "x": 37,
+                            "y": 17
+                          },
+                          {
+                            "x": 2,
+                            "y": 17
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "FarolRepisa",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Jumpthru"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "FarolRepisa.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Colchon",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Colchon.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "BaldosaFloja",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "BaldosaFloja.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "BaldosaSplash",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Splash",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "BaldosaSplash_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "BaldosaSplash_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "BaldosaSplash_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -5119,6 +7478,51 @@
           },
           {
             "objectName": "PauseHint"
+          },
+          {
+            "objectName": "ZombieN"
+          },
+          {
+            "objectName": "ZombieO"
+          },
+          {
+            "objectName": "ZombieV"
+          },
+          {
+            "objectName": "ZombieJ"
+          },
+          {
+            "objectName": "ZombieMarcha"
+          },
+          {
+            "objectName": "ArbolBajo"
+          },
+          {
+            "objectName": "ArbolAlto"
+          },
+          {
+            "objectName": "BancoPlaza"
+          },
+          {
+            "objectName": "Toldo"
+          },
+          {
+            "objectName": "Balcon"
+          },
+          {
+            "objectName": "EscaleraIncendio"
+          },
+          {
+            "objectName": "FarolRepisa"
+          },
+          {
+            "objectName": "Colchon"
+          },
+          {
+            "objectName": "BaldosaFloja"
+          },
+          {
+            "objectName": "BaldosaSplash"
           }
         ]
       },
@@ -7153,6 +9557,14 @@
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Espeja el estado de pausa al global SettingsOpen para que SettingsControls (Link) sepa cuando ajustar volumen."
         },
         {
@@ -7173,7 +9585,803 @@
         },
         {
           "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
           "target": "SettingsControls"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "ZombieN",
+                "\"Walk\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "ZombieN",
+                "+",
+                "Variable(ZombieNDir) * 26 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieN",
+                ">",
+                "850"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "ZombieNDir",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ZombieNDir",
+                "=",
+                "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieN",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieN",
+                "<",
+                "730"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "ZombieNDir",
+                "=",
+                "-1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ZombieNDir",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieN",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "ZombieO",
+                "\"Walk\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "ZombieO",
+                "+",
+                "Variable(ZombieODir) * 13 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieO",
+                ">",
+                "1090"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "ZombieODir",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ZombieODir",
+                "=",
+                "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieO",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieO",
+                "<",
+                "950"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "ZombieODir",
+                "=",
+                "-1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ZombieODir",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieO",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "ZombieV",
+                "\"Walk\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "ZombieV",
+                "+",
+                "Variable(ZombieVDir) * 8 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieV",
+                ">",
+                "1250"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "ZombieVDir",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ZombieVDir",
+                "=",
+                "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieV",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieV",
+                "<",
+                "1150"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "ZombieVDir",
+                "=",
+                "-1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ZombieVDir",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieV",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "ZombieJ",
+                "\"Walk\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "ZombieJ",
+                "+",
+                "Variable(ZombieJDir) * 34 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieJ",
+                ">",
+                "2360"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "ZombieJDir",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ZombieJDir",
+                "=",
+                "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieJ",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieJ",
+                "<",
+                "2060"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "ZombieJDir",
+                "=",
+                "-1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ZombieJDir",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieJ",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "ZombieMarcha",
+                "\"Walk\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "ZombieMarcha",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "ZombieMarcha",
+                "+",
+                "20 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "ZombieMarcha",
+                ">",
+                "2680"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "ZombieMarcha",
+                "=",
+                "-60"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "BaldosaSplash"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Colchon",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "Colchon.Y()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BounceVel",
+                "=",
+                "-480"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "BaldosaFloja",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "BaldosaGag",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BaldosaGag",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"baldosa\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "BaldosaFloja",
+                "=",
+                "111"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "200"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "BaldosaSplash",
+                "=",
+                "BaldosaFloja.X() + 1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "BaldosaSplash",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "BaldosaSplash",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "BaldosaSplash",
+                "\"Splash\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "BaldosaGag",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"baldosa\"",
+                ">",
+                "0.6"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "BaldosaFloja",
+                "=",
+                "105"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "BaldosaSplash"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BaldosaGag",
+                "=",
+                "0"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -7382,212 +10590,356 @@
           ]
         }
       ],
-      "behaviorsSharedData": [],
       "variables": [],
-      "layers": [
+      "instances": [
         {
-          "ambientLightColorB": 32,
-          "ambientLightColorG": 32,
-          "ambientLightColorR": 32,
-          "camera2DPlaneMaxDrawingDistance": 5000,
-          "camera3DFarPlaneDistance": 10000,
-          "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 0.1,
-          "cameraType": "perspective",
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "isLocked": false,
-          "name": "",
-          "renderingType": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "MMTitle",
+          "persistentUuid": "58858519-a5eb-48a8-8f72-a3758542d60f",
+          "width": 0,
+          "x": 130,
+          "y": 90,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "MMHint",
+          "persistentUuid": "8d8dd58f-ea59-49ce-b452-74e7e6cbc3c0",
+          "width": 0,
+          "x": 110,
+          "y": 130,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "OptTitle",
+          "persistentUuid": "6c59593f-1db5-4d53-9d78-930c6f02efb7",
+          "width": 0,
+          "x": 190,
+          "y": 60,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "OptMusic",
+          "persistentUuid": "6f9f9b6b-5d64-4be4-9e66-47f75e0a46a4",
+          "width": 0,
+          "x": 150,
+          "y": 100,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "OptSfx",
+          "persistentUuid": "5d6577ec-45a8-41df-9e44-1d59c084ac9d",
+          "width": 0,
+          "x": 150,
+          "y": 122,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "OptHint",
+          "persistentUuid": "b2745ad4-d262-42d4-b204-17d81832a844",
+          "width": 0,
+          "x": 60,
+          "y": 170,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
         {
           "assetStoreId": "",
+          "bold": true,
+          "italic": false,
           "name": "MMTitle",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "PACIENTE ZERO",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 26,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "PACIENTE ZERO",
             "font": "",
-            "characterSize": 26,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 26,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": false,
+          "italic": false,
           "name": "MMHint",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "ENTER / ESPACIO: Jugar      O: Opciones",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 13,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "ENTER / ESPACIO: Jugar      O: Opciones",
             "font": "",
-            "characterSize": 13,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 13,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": true,
+          "italic": false,
           "name": "OptTitle",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "OPCIONES",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "OPCIONES",
             "font": "",
-            "characterSize": 20,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 20,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": false,
+          "italic": false,
           "name": "OptMusic",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "Musica: 100%",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 16,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "Musica: 100%",
             "font": "",
-            "characterSize": 16,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": false,
+          "italic": false,
           "name": "OptSfx",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "SFX: 100%",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 16,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "SFX: 100%",
             "font": "",
-            "characterSize": 16,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 16,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         },
         {
           "assetStoreId": "",
+          "bold": false,
+          "italic": false,
           "name": "OptHint",
+          "smoothed": true,
           "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
+          "string": "<- -> Musica   ^ v SFX   ESC: Volver",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 13,
+          "color": {
+            "b": 240,
+            "g": 240,
+            "r": 240
+          },
           "content": {
             "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
             "italic": false,
+            "outlineColor": "12;14;22",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
             "text": "<- -> Musica   ^ v SFX   ESC: Volver",
             "font": "",
-            "characterSize": 13,
-            "color": "240;240;240",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
-            "isOutlineEnabled": true,
-            "outlineThickness": 2,
-            "outlineColor": "12;14;22",
-            "isShadowEnabled": false,
-            "shadowColor": "0;0;0",
-            "shadowOpacity": 127,
-            "shadowDistance": 4,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2
+            "characterSize": 13,
+            "lineHeight": 0,
+            "color": "240;240;240"
           }
         }
       ],
@@ -7614,95 +10966,17 @@
           }
         ]
       },
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "MMTitle",
-          "width": 0,
-          "x": 130,
-          "y": 90,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "MMHint",
-          "width": 0,
-          "x": 110,
-          "y": 130,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "OptTitle",
-          "width": 0,
-          "x": 190,
-          "y": 60,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "OptMusic",
-          "width": 0,
-          "x": 150,
-          "y": 100,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "OptSfx",
-          "width": 0,
-          "x": 150,
-          "y": 122,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "OptHint",
-          "width": 0,
-          "x": 60,
-          "y": 170,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
       "events": [
         {
           "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "MainMenu - estado unico: variable GLOBAL SettingsOpen (0 = menu principal, 1 = opciones). Los inputs SOLO cambian el estado; la visibilidad y el arranque del juego se derivan de el. Level1 reutiliza SettingsOpen en la pausa."
         },
         {
@@ -7756,6 +11030,14 @@
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Visibilidad declarativa: se recalcula sola desde SettingsOpen. Una sola fuente de verdad -> los dos estados no se pueden desincronizar."
         },
         {
@@ -7828,6 +11110,14 @@
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Inputs: SOLO cambian el estado o arrancan el juego."
         },
         {
@@ -7957,22 +11247,73 @@
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Volumen: logica compartida con la pausa de Level1, en la hoja de eventos externa SettingsControls."
         },
         {
           "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
           "target": "SettingsControls"
         }
-      ]
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 32,
+          "ambientLightColorG": 32,
+          "ambientLightColorR": 32,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "cameraType": "perspective",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
     }
   ],
   "externalEvents": [
     {
-      "name": "SettingsControls",
       "associatedLayout": "",
+      "name": "SettingsControls",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Ajuste de volumen. Compartido por MainMenu y la pausa de Level1 via evento Link. Activo mientras SettingsOpen = 1."
         },
         {
