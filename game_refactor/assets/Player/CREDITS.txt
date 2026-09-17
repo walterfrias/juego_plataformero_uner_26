@@ -1,0 +1,8 @@
+Player sprite (PLACEHOLDER temporal):
+  "Mask Dude" - Pixel Adventure 1, por Pixel Frog
+  https://pixelfrog-assets.itch.io/pixel-adventure-1
+  Licencia: CC0 / dominio publico (sin atribucion obligatoria)
+  Mirror de descarga: github.com/marpor/PixelAdventure
+
+Se reemplaza por el personaje definitivo dibujado a mano.
+Para volver al Val procedural: scripts/gen_player.py + scripts/wire_player.py

@@ -26,11 +26,12 @@ razonamiento de por qué se llegó hasta acá.
   Godot es código puro y no resuelve la cláusula de "igualdad de
   condiciones"; GDevelop está nombrado explícitamente en la consigna y
   trae de fábrica el behavior "Platformer Character").
-- Preguntas todavía sin confirmar por la cátedra al momento del pivot
-  (mail ya enviado sobre la versión naves/Phaser, sin respuesta
-  confirmada): si el género era realmente flexible, y si un framework
-  de código cumplía la cláusula del motor. El pivot a GDevelop se hizo
-  para no depender de esa respuesta y no perder más tiempo del plazo.
+- El mail enviado a la cátedra sobre la versión naves/Phaser quedó sin
+  respuesta y sin seguimiento — **decisión final: no hace falta
+  avisar el pivot.** El juego de naves queda como proyecto personal
+  del usuario, fuera de la cursada; para la materia se entrega
+  directamente este repo (plataformero/GDevelop), sin depender de
+  ninguna respuesta de la cátedra.
 
 ## Motor y herramientas
 
@@ -77,6 +78,3 @@ repo (pack CC0 de Kenney).
    jugable (pack CC0 recomendado arriba).
 5. Menú de opciones, ~30 min de duración total de juego.
 6. Video pitch (hasta 5 min) — dejar para cuando haya algo jugable.
-7. Decidir si conviene mandar un mail de seguimiento a la cátedra
-   avisando el cambio de planes (naves/Phaser → plataformas/GDevelop),
-   o esperar la respuesta del mail anterior primero.

@@ -1,0 +1,29 @@
+Player sprite (candidato para reemplazar el placeholder Mask Dude):
+  "Forest Boy - Platformer Animated Character 24x24"
+  por patvanmackelberg (rehash/recolor de "Classic Hero" de Jason-Em / GrafxKid)
+  https://opengameart.org/content/forest-boy-platformer-animated-character-24x24
+  Archivo original: ForestBoy.png
+  Licencia: CC0 / dominio publico (sin atribucion obligatoria)
+
+Procesamiento: recorte + reescalado a pixel real 32x34 (Pillow, nearest
+neighbor) para igualar la escala de Player/ y Zombie_O/ del juego.
+Fondo original solido (141,158,129) removido con color-key exacto.
+
+Mapeo de frames (hoja original es un sheet de estilo Zelda top-down/3-4,
+no un side-view de plataformero puro -> se aproximaron las poses):
+  Idle_1  <- fila 2, columna 1 (parado, gorra puesta)
+  Walk_1..4 <- fila 0, columnas 0-3 (ciclo de caminata real del sheet)
+  Jump_1  <- fila 2, columna 4 (brazo arriba, gorra puesta) - aproximado
+  Fall_1  <- fila 1, columna 1 (pierna flexionada, gorra puesta) - aproximado
+  Hit_1   <- fila 0, columna 4 (gorra volando, pelo despeinado - frame real de "golpe")
+  Death_1 <- fila 5, columna 3 (pose encogida/caida, sin gorra) - aproximado,
+             coherente con que Hit_1 ya establece que pierde la gorra al recibir daño
+
+No hay frames dedicados de salto/caida en la hoja original (es un sheet
+de aventura top-down, no un plataformero de perfil puro): Jump/Fall/Death
+son la mejor aproximacion disponible dentro del mismo personaje, a
+reemplazar en el pase de arte propio si hace falta mas fidelidad.
+
+Script de generacion: ver conversacion de Claude Code del 2026-09-14
+(recorte por deteccion de bbox contra el color de fondo solido del PNG
+original + reescalado nearest-neighbor manteniendo aspecto).

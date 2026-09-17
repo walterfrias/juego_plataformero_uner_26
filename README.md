@@ -7,6 +7,11 @@ cátedra).
 
 Plazo de entrega: 01/09 al 31/10/2026.
 
+## Consigna
+
+Ver [`consigna.md`](./consigna.md) — lineamientos oficiales de la
+cátedra (restricciones del prototipo, GDD, dinámica de devoluciones).
+
 ## Estado
 
 Recién creado — todavía sin proyecto de GDevelop scaffoldeado. Ver

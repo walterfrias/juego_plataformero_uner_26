@@ -1,0 +1,11 @@
+Sugerimos dibujar, con la herramienta Piskel, el Personaje con la técnica Pixel Art 
+
+    a) Pueden crear un proyecto nuevo
+    b) O buscar en sitios especializados un personaje y realizar la personalización necesaria.
+
+Armar la ficha de Personaje en formato .PDF
+Diseñar otro Asset que sera parte del proyecto (moneda, fruta, llave, otro, botiquín, arma)
+Indicar la Paleta de colores utilizada.
+Sugerimos un formato 32 x 32 
+Crear una animación IDLE para el personaje
+Ademas crear una animación para CAMINAR y otra para SALTAR (si el personaje no realiza salto en el Video juego, crear otra acción por ej: disparar, golpear o nadar)

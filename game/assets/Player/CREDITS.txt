@@ -1,8 +1,46 @@
-Player sprite (PLACEHOLDER temporal):
-  "Mask Dude" - Pixel Adventure 1, por Pixel Frog
-  https://pixelfrog-assets.itch.io/pixel-adventure-1
+Player sprite (placeholder actual, reemplaza a "Mask Dude" desde 2026-09-14):
+  Base: "Forest Boy - Platformer Animated Character 24x24" por
+  patvanmackelberg (rehash de "Classic Hero" de Jason-Em / GrafxKid)
+  https://opengameart.org/content/forest-boy-platformer-animated-character-24x24
   Licencia: CC0 / dominio publico (sin atribucion obligatoria)
-  Mirror de descarga: github.com/marpor/PixelAdventure
 
-Se reemplaza por el personaje definitivo dibujado a mano.
-Para volver al Val procedural: scripts/gen_player.py + scripts/wire_player.py
+Procesamiento (Python + Pillow):
+  1. Recorte de frames individuales contra el color de fondo solido
+     del PNG original (no tenia alpha real) + reescalado nearest-neighbor
+     a 32x34 (misma escala que Zombie_O/ y el resto del juego).
+  2. Recolor de paleta a camiseta de Argentina (celeste/blanco), guiño
+     a d10ego (Maradona / la 10), en vez del verde/blanco original:
+       verde brillante -> celeste     (117,170,219)  camiseta
+       verde oscuro    -> celeste sombra (74,120,168) sombra camiseta
+       piel clara      -> SKIN   (226,178,140)
+       piel media      -> SKIN_S (183,138,108)
+       blanco pantalon -> shorts blancos (232,232,226)
+       blanco puro     -> sin cambio (255,255,255) highlight/cierre
+       marron botas    -> BOOT   (44,40,46)  botines oscuros
+       amarillo (flash de golpe) -> HAIR (72,52,42)
+       contorno negro  -> OUTL   (24,24,34)
+  (version anterior con campera naranja/jean, paleta de "Val" en
+  scripts/gen_player.py, descartada a pedido del usuario 2026-09-14)
+
+Origen: game/assets/Player_ForestBoy/ (frames base + CREDITS con el
+mapeo exacto de que celda de la hoja original se uso para cada pose).
+
+Mapeo de animaciones (la hoja original es un sheet estilo Zelda
+top-down/3-4, no un side-view de plataformero puro -> Jump/Fall/Death
+son la mejor aproximacion disponible, no frames dedicados):
+  Idle_1..11  <- 1 sola pose repetida (parado, gorra puesta)
+  Run_1..12   <- ciclo real de 4 frames de caminata del sheet original
+  Jump_1      <- pose con brazo arriba (aproximado)
+  Fall_1      <- pose con pierna flexionada (aproximado)
+  Hit_1..7    <- 1 sola pose repetida (frame real de "golpe", gorra volando)
+  Death_1..7  <- 1 sola pose repetida (encogido/caido, sin gorra)
+
+game.json no se toco: los nombres de archivo y de animacion (Idle/Run/
+Jump/Fall/Hit/Death) son los mismos que ya usaba Mask Dude, asi que el
+reemplazo es solo de pixeles. Para volver a Mask Dude: git checkout de
+este directorio contra el commit anterior (los PNG originales siguen
+en el historial de git). Para volver al Val procedural: scripts/gen_player.py
++ scripts/wire_player.py.
+
+Se reemplaza por el personaje definitivo dibujado a mano cuando llegue
+el pase de arte propio.

@@ -1,0 +1,7 @@
+AUDIO de Paciente Zero
+
+SFX (sfx_*.wav): generados por scripts/gen_sfx.py (chiptune procedural, numpy). Propios, sin licencia de terceros.
+
+MÚSICA (music_*.wav): PLACEHOLDER procedural de scripts/gen_sfx.py.
+Plan: reemplazar por pistas CC0 (Kenney Music, OpenGameArt, Sonniss GDC bundle). Dejar el archivo CC0 como music_menu / music_level1 (.ogg preferido) en esta carpeta y correr scripts/wire_audio.py de nuevo.
+Al usar CC0: anotar acá autor + fuente + link de licencia.
