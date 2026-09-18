@@ -19,10 +19,9 @@ paso desde la calle hasta el foco de la infección, enfrentando oleadas
 de infectados cada vez más densas, para encontrar y derrotar al
 **Paciente Zero**: la persona (o experimento) que originó el brote.
 
-Motivación del villano (borrador, a pulir): Paciente Zero es un
-científico que provocó el brote de forma deliberada, buscando
-dominar el mundo controlando a los infectados — no fue un accidente
-de laboratorio.
+Motivación del villano: Paciente Zero es un científico que provocó
+el brote de forma deliberada, buscando dominar el mundo controlando
+a los infectados — no fue un accidente de laboratorio.
 
 Tono: **arcade retro pixel-art**, más cercano a "Zombies Ate My
 Neighbors" que a survival horror — ligereza y ritmo de plataformas
@@ -39,12 +38,12 @@ Arco narrativo en 3 niveles + tutorial:
 
 ## 2. Ficha del personaje jugable
 
-- **Nombre:** d10ego (guiño a Diego Maradona / la camiseta N°10 —
-  coherente con la ambientación en Buenos Aires)
+- **Nombre:** Lio (guiño a Messi, coherente con la ambientación
+  argentina; renombrado 2026-09-13, antes d10ego/guiño a Maradona)
 - **Rol:** único/a humano/a inmune al virus, sin entrenamiento de
   combate — su única arma es su propio peso: elimina zombies saltando
   sobre sus cabezas (stomp), igual que un plataformero clásico.
-- **Vidas:** 3 (a confirmar con duración de nivel)
+- **Vidas:** 3 (confirmado)
 - **Daño:** pierde una vida al tocar un zombie por el costado o
   recibir un golpe; invulnerabilidad breve tras recibir daño
   (estándar en GDevelop: timer + parpadeo).
@@ -55,7 +54,9 @@ Arco narrativo en 3 niveles + tutorial:
   fall (bajada), hit/damage, death. El stomp puede reusar el frame de
   "fall" — no hace falta una animación de ataque dedicada, coherente
   con la mecánica elegida.
-- **Tamaño de sprite:** 32x32 (confirmado).
+- **Tamaño de sprite:** 32×34 (canvas final; base 32×32 estirada a
+  32×34 para igualar la escala de `Zombie_O` y el resto de los
+  sprites del juego).
 
 ## 3. Enemigos
 
@@ -154,20 +155,22 @@ Decidido en la lluvia de ideas del HCD (ver `HIGH_CONCEPT.md`).
   zombie, daño al jugador.
 - SFX adicionales recomendados: salto, pickup de antídoto, golpe/hit
   del jefe, victoria.
-- **Fuente: librerías CC0** (Kenney Audio, freesound.org, packs GDC de
-  Sonniss) — mismo criterio que el arte. SFX/música propios solo si
-  sobra tiempo.
+- **Fuente: 100% procedural** (Python + numpy, `scripts/gen_sfx.py`,
+  WAV sintetizado estilo chiptune) — mismo criterio que el arte
+  (Pillow) y los sprites: nada de librerías CC0 de terceros ni de
+  IA-audio. Decisión cerrada 2026-09-17/18: la música ya no es
+  placeholder a reemplazar, es el audio definitivo.
 
 ## 8. Pendiente de definir
 
-- Motivación del Paciente Zero (borrador en §1, "a pulir" — texto
-  final del diario/cinemáticas cuando se escriban las notas
-  narrativas).
+- Texto final de las notas del diario / cinemáticas (la motivación
+  core de Paciente Zero ya está cerrada, ver §1).
 - Nº de notas de diario reales por nivel (hoy: "~2-3", placeholder).
 
 ### Ya confirmados (2026-09-02)
-- Título: **Paciente Zero**. Nombre del jugable: **d10ego**. Balance
-  de antídotos: 4 por nivel, los 4 = 1 vida extra (ver §6).
+- Título: **Paciente Zero**. Nombre del jugable: **Lio** (renombrado
+  2026-09-13, antes d10ego). Balance de antídotos: 4 por nivel, los
+  4 = 1 vida extra (ver §6).
 - Mecánica del hueco forzado (Nivel 1, Tier 2): si el jugador no está
   parado sobre la horda al cruzar y cae al río, **pierde 1 vida y
   reaparece en un checkpoint justo antes del hueco** (no es muerte

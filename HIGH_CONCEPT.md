@@ -31,7 +31,7 @@ experiencia corta y accesible.
   
 ## 2. Resumen de la historia (un párrafo)
 
-Buenos Aires amanece tomada por infectados. d10ego, el/la único/a humano/a
+Buenos Aires amanece tomada por infectados. Lio, el/la único/a humano/a
 inmune al virus, sale de su refugio para llegar al origen del brote.
 Cruza la calle entre los primeros infectados, se interna en un
 hospital/laboratorio donde descubre que la infección no fue un accidente,
@@ -91,7 +91,8 @@ años (promedio 30–40). No está pensado para comercializarse.
 ## 6. Concepto del juego — las 6 partes (libro, págs. 92–93)
 
 ### a. Gráficos de los componentes
-- Pixel-art, sprites 32×32, resolución interna 480×270 (16:9, escalado *nearest*).
+- Pixel-art, sprites 32×32 (Lio: canvas 32×34 para igualar la escala de
+  los zombies), resolución interna 480×270 (16:9, escalado *nearest*).
 - Componentes a producir: personaje jugable (idle, run, jump, fall, hit,
   death), zombies de patrulla — varias variantes visuales del mismo
   comportamiento (walk, death) —, Paciente Zero (idle/telegraph,
@@ -102,10 +103,11 @@ años (promedio 30–40). No está pensado para comercializarse.
 - Criterio de arte: **nada generado por IA.** Los sprites de enemigos y
   los props se producen de forma procedural con scripts propios (Python
   + Pillow) sobre una paleta compartida — esto da consistencia y permite
-  sacar variantes rápido. El personaje jugable usa por ahora un
-  placeholder CC0 (Pixel Adventure, Pixel Frog) hasta un pase de arte
-  propio de d10ego y el jefe. Tiles y fondos pueden apoyarse en packs
-  CC0 (Kenney) si hace falta acelerar.
+  sacar variantes rápido. El personaje jugable usa un sprite CC0
+  (Forest Boy, OpenGameArt) recoloreado a celeste/blanco Argentina —
+  ya no es placeholder, es el arte definitivo de Lio. El jefe (Paciente
+  Zero) sigue pendiente de pase de arte propio. Tiles y fondos pueden
+  apoyarse en packs CC0 (Kenney) si hace falta acelerar.
 
 ### b. Interfaz
 - Menú principal: Jugar / Opciones / (Salir).
@@ -172,9 +174,11 @@ años (promedio 30–40). No está pensado para comercializarse.
 - SFX obligatorios (colisiones, según consigna): stomp/kill de zombie,
   daño al jugador.
 - SFX recomendados: salto, pickup de antídoto, golpe del jefe, victoria.
-- **Fuente de audio: librerías CC0** (Kenney Audio, freesound.org, packs
-  GDC de Sonniss) — mismo criterio que el arte. SFX o música propios solo
-  si sobra tiempo.
+- **Fuente de audio: 100% procedural** (Python + numpy,
+  `scripts/gen_sfx.py`) — mismo criterio que el arte (Pillow). Sin
+  librerías CC0 de terceros, descartadas por completo (decisión
+  2026-09-17/18): tanto SFX como música quedan generados por código
+  propio para mantener consistencia con el resto del pipeline.
 
 ---
 
@@ -182,8 +186,10 @@ años (promedio 30–40). No está pensado para comercializarse.
 
 - **Título del juego: Paciente Zero** (antes pendiente; candidatos
   descartados: *PISOTÓN*, *Cero Pacientes*). Confirmado 2026-09-02.
-- **Personaje jugable: d10ego** (antes provisorio *Val*) — guiño a
-  Maradona / la camiseta N°10, coherente con la ambientación porteña.
+- **Personaje jugable: Lio** (antes provisorio *Val*, luego *d10ego*
+  —guiño a Maradona— renombrado 2026-09-13) — guiño a Messi, coherente
+  con la ambientación porteña. Arte definitivo: sprite CC0 (Forest Boy,
+  OpenGameArt) recoloreado a celeste/blanco Argentina (2026-09-14).
 - Jefe final: **Paciente Zero** (antes "Paciente Cero").
 - Coleccionable único: **antídotos** (contador + vida extra + 100%).
   **4 por nivel; juntar los 4 = 1 vida extra.** Sin score aparte, sin
@@ -193,7 +199,9 @@ años (promedio 30–40). No está pensado para comercializarse.
 - Característica única, segunda cara: **tramo de persecución sobre la
   horda** en cada nivel (la manada como suelo móvil). Reemplaza a las
   alternativas descartadas (apilar zombies sueltos, trampas ambientales).
-- Fuente de audio: **librerías CC0**.
+- Fuente de audio: **100% procedural (Python)**, sin librerías CC0
+  (descartadas por completo 2026-09-17/18) ni IA-audio — SFX y música
+  generados con `scripts/gen_sfx.py`, mismo criterio que el arte.
 - Público de diseño: **12+ (PEGI 12 / ESRB Teen)**, casual, pixel-art /
   plataformas clásicas, adolescentes a 40+.
 - **Mochila de repartidor** (2026-09-12): prop de escenario que además
