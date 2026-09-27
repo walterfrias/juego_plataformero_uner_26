@@ -1593,6 +1593,26 @@
               "name": "ZombieEnd6"
             }
           ]
+        },
+        {
+          "name": "Virus",
+          "objects": [
+            {
+              "name": "Virus1"
+            },
+            {
+              "name": "Virus2"
+            },
+            {
+              "name": "Virus3"
+            },
+            {
+              "name": "Virus4"
+            },
+            {
+              "name": "Virus5"
+            }
+          ]
         }
       ],
       "variables": [
@@ -3976,21 +3996,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "Virus1",
-          "persistentUuid": "973259a1-dc61-4ff3-b311-be4690e0aed4",
-          "width": 0,
-          "x": 250,
-          "y": 55,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
           "name": "Virus2",
           "persistentUuid": "3902c02d-8242-4a55-a72f-970aa87db7d1",
           "width": 0,
@@ -4087,6 +4092,22 @@
           "x": 2520,
           "y": 76,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Virus1",
+          "persistentUuid": "63966114-e949-42d2-9fb5-33e960bcd7c0",
+          "width": 0,
+          "x": 2460,
+          "y": 55,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4850,7 +4871,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "animations[4]": {
+            "directions[0]": {
+              "timeBetweenFrames": 0.12
+            }
+          }
         },
         {
           "assetStoreId": "",
@@ -5044,8 +5070,28 @@
           "name": "ZombieF",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -5230,7 +5276,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -5238,8 +5296,28 @@
           "name": "ZombieM",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -5390,7 +5468,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -6230,8 +6320,28 @@
           "name": "ZombieT",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -6382,7 +6492,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -6719,7 +6841,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "GAME OVER\n[R] para reiniciar",
+          "string": "GAME OVER\n[R] o click para reiniciar",
           "font": "",
           "textAlignment": "center",
           "characterSize": 18,
@@ -6762,7 +6884,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "LLEGASTE AL LABORATORIO\n[R] para reiniciar",
+          "string": "LLEGASTE AL LABORATORIO\n[R] o click para reiniciar",
           "font": "",
           "textAlignment": "center",
           "characterSize": 18,
@@ -6800,8 +6922,28 @@
           "name": "ZombieD",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -6952,7 +7094,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "assetStoreId": "",
@@ -7117,7 +7271,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "<- -> Musica  ^ v SFX\nR: Reiniciar   M: Menu   ESC: Reanudar",
+            "text": "<- -> Musica  ^ v SFX\nR: Reiniciar   M: Menu   ESC/P: Reanudar",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
@@ -7132,8 +7286,28 @@
           "name": "ZombieN",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -7284,7 +7458,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -7292,8 +7478,28 @@
           "name": "ZombieO",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -7444,7 +7650,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -7452,8 +7670,28 @@
           "name": "ZombieV",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -7604,7 +7842,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -7612,8 +7862,28 @@
           "name": "ZombieMarcha",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -7764,7 +8034,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": false,
@@ -8976,8 +9258,28 @@
           "name": "ZombieEnd1",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -9128,7 +9430,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -9136,8 +9450,28 @@
           "name": "ZombieEnd2",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -9288,7 +9622,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -9296,8 +9642,28 @@
           "name": "ZombieEnd3",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -9448,7 +9814,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -10086,8 +10464,28 @@
           "name": "ZombieEnd4",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -10238,7 +10636,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -10246,8 +10656,28 @@
           "name": "ZombieEnd5",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -10398,7 +10828,19 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -10406,8 +10848,28 @@
           "name": "ZombieEnd6",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -10558,7 +11020,115 @@
                 }
               ]
             }
-          ]
+          ],
+          "effects[0]": {
+            "name": "InfectedOutline",
+            "effectType": "Outline",
+            "doubleParameters": {
+              "thickness": 2,
+              "padding": 4
+            },
+            "stringParameters": {
+              "color": "220;40;40"
+            },
+            "booleanParameters": {}
+          }
+        },
+        {
+          "name": "ZombiePoofFX",
+          "type": "ParticleSystem::ParticleEmitter",
+          "tags": "",
+          "variables": [],
+          "behaviors": [],
+          "effects": [],
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 360,
+          "emitterForceMax": 90,
+          "emitterForceMin": 40,
+          "flow": 500,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 24,
+          "particleAlpha1": 255,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 70,
+          "particleBlue2": 40,
+          "particleColor1": "60;220;90",
+          "particleColor2": "60;220;90",
+          "particleGravityX": 0,
+          "particleGravityY": 25,
+          "particleGreen1": 200,
+          "particleGreen2": 140,
+          "particleLifeTimeMax": 0.45,
+          "particleLifeTimeMin": 0.25,
+          "particleRed1": 140,
+          "particleRed2": 80,
+          "particleSize1": 40,
+          "particleSize2": 90,
+          "particleSizeRandomness1": 20,
+          "particleSizeRandomness2": 0,
+          "rendererParam1": 4,
+          "rendererParam2": 4,
+          "rendererType": "Quad",
+          "tank": 20,
+          "textureParticleName": "",
+          "zoneRadius": 4
+        },
+        {
+          "name": "InfectedGasFX",
+          "type": "ParticleSystem::ParticleEmitter",
+          "tags": "",
+          "variables": [],
+          "behaviors": [],
+          "effects": [],
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 360,
+          "emitterForceMax": 20,
+          "emitterForceMin": 8,
+          "flow": 200,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 8,
+          "particleAlpha1": 180,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 40,
+          "particleBlue2": 60,
+          "particleColor1": "200;60;40",
+          "particleColor2": "120;20;60",
+          "particleGravityX": 0,
+          "particleGravityY": -35,
+          "particleGreen1": 60,
+          "particleGreen2": 20,
+          "particleLifeTimeMax": 0.7,
+          "particleLifeTimeMin": 0.4,
+          "particleRed1": 200,
+          "particleRed2": 120,
+          "particleSize1": 60,
+          "particleSize2": 140,
+          "particleSizeRandomness1": 25,
+          "particleSizeRandomness2": 0,
+          "rendererParam1": 5,
+          "rendererParam2": 5,
+          "rendererType": "Point",
+          "tank": 6,
+          "textureParticleName": "",
+          "zoneRadius": 3
         }
       ],
       "objectsFolderStructure": {
@@ -10894,11 +11464,200 @@
           "conditions": [
             {
               "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"a\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateLeftKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"d\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateRightKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"w\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateUpKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"s\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateDownKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"j\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateJumpKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "Player",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Right\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "Player",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
               },
               "parameters": [
                 "Player",
                 "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "CompareObjectTimer",
+                "inverted": true
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\"",
+                "<",
+                "0.9"
               ]
             }
           ],
@@ -10919,12 +11678,24 @@
           "conditions": [
             {
               "type": {
-                "inverted": true,
-                "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle",
+                "inverted": true
               },
               "parameters": [
                 "Player",
                 "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "CompareObjectTimer",
+                "inverted": true
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\"",
+                "<",
+                "0.9"
               ]
             }
           ],
@@ -10951,6 +11722,18 @@
                 "Player",
                 "PlatformerObject"
               ]
+            },
+            {
+              "type": {
+                "value": "CompareObjectTimer",
+                "inverted": true
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\"",
+                "<",
+                "0.9"
+              ]
             }
           ],
           "actions": [
@@ -10975,6 +11758,18 @@
               "parameters": [
                 "Player",
                 "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "CompareObjectTimer",
+                "inverted": true
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\"",
+                "<",
+                "0.9"
               ]
             }
           ],
@@ -11014,9 +11809,41 @@
                 "<",
                 "Zombies.Y()"
               ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IsFalling"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Zombies",
+                "Infected",
+                "=",
+                "0"
+              ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "ZombiePoofFX",
+                "Zombies.X()",
+                "Zombies.Y()",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "Delete"
@@ -11024,6 +11851,118 @@
               "parameters": [
                 "Zombies",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BounceVel",
+                "=",
+                "-330"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "sfx_stomp.wav",
+                "no",
+                "GlobalVariable(SfxVolume)",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Zombies",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "Zombies.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IsFalling"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Zombies",
+                "Infected",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Zombies",
+                "Infected",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "EnableEffect"
+              },
+              "parameters": [
+                "Zombies",
+                "\"InfectedOutline\"",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Zombies",
+                "\"Immune\""
               ]
             },
             {
@@ -11095,6 +12034,16 @@
                 "\"Invuln\"",
                 "1"
               ]
+            },
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">=",
+                "Zombies.X()"
+              ]
             }
           ],
           "actions": [
@@ -11136,6 +12085,135 @@
                 "no",
                 "GlobalVariable(SfxVolume)",
                 "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Player",
+                "+",
+                "70"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Player",
+                "+",
+                "-30"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Zombies",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                ">=",
+                "Zombies.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\"",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "Zombies.X()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Lives",
+                "-",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "Player",
+                "\"Hit\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "sfx_hurt.wav",
+                "no",
+                "GlobalVariable(SfxVolume)",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Player",
+                "+",
+                "-70"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Player",
+                "+",
+                "-30"
               ]
             }
           ]
@@ -13277,6 +14355,202 @@
               },
               "parameters": [
                 "",
+                "\"p\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Over",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Won",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "PauseTitle",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "PauseMusic",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "PauseSfx",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "PauseHint",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PauseMusicChannel"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"p\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Paused",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseTitle"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseMusic"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseSfx"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "PauseHint"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResumeMusicChannel"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
                 "\"r\""
               ]
             },
@@ -14808,7 +16082,7 @@
               "parameters": [
                 "Virus1",
                 "<",
-                "160"
+                "2370"
               ]
             }
           ],
@@ -14823,8 +16097,7 @@
                 "(-60+Random(120))*3.14159265/180"
               ]
             }
-          ],
-          "_virus": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14836,7 +16109,7 @@
               "parameters": [
                 "Virus1",
                 ">",
-                "340"
+                "2550"
               ]
             }
           ],
@@ -14851,8 +16124,7 @@
                 "(120+Random(120))*3.14159265/180"
               ]
             }
-          ],
-          "_virus": true
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17333,6 +18605,321 @@
             }
           ],
           "_tw0915b": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Virus",
+                "Zombies",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Zombies",
+                "Infected",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "Zombies",
+                "\"Immune\"",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Zombies",
+                "Infected",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "EnableEffect"
+              },
+              "parameters": [
+                "Zombies",
+                "\"InfectedOutline\"",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "InfectedGasFX",
+                "Zombies.X()",
+                "Zombies.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Zombies",
+                "\"Gas\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Zombies",
+                "\"InfectedTime\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "objectsToPick": "Zombies",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Zombies",
+                "Infected",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "Zombies",
+                "\"Gas\"",
+                "0.7"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Zombies",
+                "\"Gas\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "InfectedGasFX",
+                "Zombies.X()",
+                "Zombies.Y()",
+                ""
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EnableEffect"
+              },
+              "parameters": [
+                "Zombies",
+                "\"InfectedOutline\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "objectsToPick": "Zombies",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Zombies",
+                "Infected",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "Zombies",
+                "\"InfectedTime\"",
+                "6"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Zombies",
+                "Infected",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "EnableEffect"
+              },
+              "parameters": [
+                "Zombies",
+                "\"InfectedOutline\"",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Zombies",
+                "\"Immune\""
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Over",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Level1\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Won",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Level1\"",
+                "no"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -17712,7 +19299,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "ENTER / ESPACIO: Jugar      O: Opciones",
+            "text": "ENTER / ESPACIO: Jugar      O: Opciones      ESC: Salir",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "center",
@@ -18158,6 +19745,52 @@
                 "",
                 "\"Tutorial\"",
                 "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "SettingsOpen",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "sfx_select.wav",
+                "no",
+                "GlobalVariable(SfxVolume)",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Quit"
+              },
+              "parameters": [
+                ""
               ]
             }
           ]
@@ -19557,7 +21190,7 @@
             "italic": false,
             "smoothed": true,
             "underlined": false,
-            "text": "Flechas / A-D: moverte",
+            "text": "Flechas / WASD: moverte",
             "font": "",
             "characterSize": 13,
             "color": "240;240;240",
@@ -19586,7 +21219,7 @@
             "italic": false,
             "smoothed": true,
             "underlined": false,
-            "text": "Espacio: saltar",
+            "text": "Espacio / J: saltar",
             "font": "",
             "characterSize": 13,
             "color": "240;240;240",
@@ -19631,6 +21264,102 @@
             "shadowAngle": 90,
             "shadowBlurRadius": 2
           }
+        },
+        {
+          "name": "IntroText",
+          "type": "TextObject::Text",
+          "tags": "",
+          "variables": [],
+          "behaviors": [],
+          "effects": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Hello",
+            "font": "",
+            "characterSize": 30,
+            "color": "0;0;0",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "isOutlineEnabled": false,
+            "outlineThickness": 2,
+            "outlineColor": "255;255;255",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          },
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "text": "Buenos Aires cayó al virus. Sos inmune.",
+          "font": "",
+          "characterSize": 13,
+          "color": "240;240;240",
+          "textAlignment": "left",
+          "verticalTextAlignment": "center",
+          "isOutlineEnabled": true,
+          "outlineThickness": 2,
+          "outlineColor": "12;14;22",
+          "isShadowEnabled": false,
+          "shadowColor": "0;0;0",
+          "shadowOpacity": 127,
+          "shadowDistance": 4,
+          "shadowAngle": 90,
+          "shadowBlurRadius": 2
+        },
+        {
+          "name": "HintClimb",
+          "type": "TextObject::Text",
+          "tags": "",
+          "variables": [],
+          "behaviors": [],
+          "effects": [],
+          "content": {
+            "bold": false,
+            "italic": false,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Hello",
+            "font": "",
+            "characterSize": 30,
+            "color": "0;0;0",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "isOutlineEnabled": false,
+            "outlineThickness": 2,
+            "outlineColor": "255;255;255",
+            "isShadowEnabled": false,
+            "shadowColor": "0;0;0",
+            "shadowOpacity": 127,
+            "shadowDistance": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2
+          },
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "text": "W/S o Flechas: subir el poste",
+          "font": "",
+          "characterSize": 13,
+          "color": "240;240;240",
+          "textAlignment": "left",
+          "verticalTextAlignment": "center",
+          "isOutlineEnabled": true,
+          "outlineThickness": 2,
+          "outlineColor": "12;14;22",
+          "isShadowEnabled": false,
+          "shadowColor": "0;0;0",
+          "shadowOpacity": 127,
+          "shadowDistance": 4,
+          "shadowAngle": 90,
+          "shadowBlurRadius": 2
         }
       ],
       "objectsFolderStructure": {
@@ -19692,20 +21421,6 @@
           "width": 950,
           "x": -50,
           "y": 110,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 24,
-          "layer": "",
-          "name": "Poste",
-          "width": 14,
-          "x": 380,
-          "y": 86,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -19808,9 +21523,234 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Poste",
+          "persistentUuid": "3a0474ee-e6b8-4fe7-a8c7-4e2d92c1a2cd",
+          "width": 0,
+          "x": 380,
+          "y": 14,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "IntroText",
+          "persistentUuid": "d0711322-7bed-40d0-a028-60baf13fc887",
+          "width": 0,
+          "x": 60,
+          "y": 20,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "HintClimb",
+          "persistentUuid": "a24a36fb-36ab-4bad-a41b-7a249ffd1010",
+          "width": 0,
+          "x": 60,
+          "y": 20,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"a\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateLeftKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"d\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateRightKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"w\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateUpKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"s\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateDownKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"j\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateJumpKey"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "Player",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsUsingControl"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "\"Right\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "Player",
+                "no"
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -20117,8 +22057,16 @@
                 "value": "Show"
               },
               "parameters": [
-                "HintMove",
+                "IntroText",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HintMove"
               ]
             },
             {
@@ -20135,6 +22083,53 @@
               },
               "parameters": [
                 "HintStomp"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HintClimb"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "IntroText"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HintMove",
+                ""
               ]
             }
           ]
@@ -20160,6 +22155,40 @@
               },
               "parameters": [
                 "HintMove"
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HintClimb",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">=",
+                "400"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HintClimb"
               ]
             },
             {
