@@ -33,48 +33,89 @@ razonamiento de por qué se llegó hasta acá.
   directamente este repo (plataformero/GDevelop), sin depender de
   ninguna respuesta de la cátedra.
 
+## El juego: "Paciente Zero"
+
+- Plataformero 2D, Buenos Aires tomada por un virus zombie. El
+  protagonista es **Lio** (inmune; guiño a Messi).
+- Proyecto GDevelop en `game/game.json`, resolución **480x270**.
+  Escenas: `MainMenu` → `Tutorial` → `Level1` → `Level2` (laboratorio)
+  → `Level3` (jefe Paciente Zero) → `MainMenu`.
+- Docs de diseño: `GDD.md`, `HIGH_CONCEPT.md`, `consigna.md`. Ficha de
+  personaje (primera entrega) en `primer_entrega/`.
+- **Arte:** zombies, props y fondos son 100% procedurales (Pillow,
+  `scripts/gen_*.py`, paleta en `scripts/palette_night.py`). El player
+  es la excepción: sprite CC0 "Forest Boy" (OpenGameArt) recoloreado a
+  celeste/blanco (créditos en `game/assets/Player/CREDITS.txt`). Se
+  descartó generar sprites con IA de imagen (inconsistencia cuadro a
+  cuadro).
+- **Audio:** 100% procedural (Python + numpy, `scripts/gen_sfx.py`).
+  Se descartó CC0 para música y SFX.
+- Build web publicado como DRAFT/secret en
+  `walterfrias.itch.io/paciente-zero`. Los exports van a `dist/`
+  (gitignored) con `gdexport`, que viene dentro de
+  `~/Escritorio/gdevelop-mcp/node_modules/.bin/`. No hay `butler`: el
+  zip se sube a mano.
+
 ## Motor y herramientas
 
-- **GDevelop**, todavía sin proyecto scaffoldeado dentro de este repo
-  (a la fecha del último commit, no existe ningún `.json` de proyecto
-  GDevelop todavía).
-- Este repo tiene un `.mcp.json` que apunta a un servidor MCP de
-  terceros, [`gb2b/gdevelop-mcp`](https://github.com/gb2b/gdevelop-mcp)
-  (MIT, no oficial), clonado e instalado en
-  `~/Escritorio/gdevelop-mcp/` (fuera de este repo, es una herramienta
-  compartida, no un asset del juego). Ya se corrió `pnpm install` +
-  `pnpm build` ahí, `dist/index.js` existe.
-- **Nunca se probó el flujo end-to-end.** Primeros pasos pendientes
-  apenas arranque una sesión con este MCP disponible:
-  1. `sync_gdevelop_sources()`
-  2. `gdevelop_overview()`
-  3. `quick_start_template` con un proyecto descartable, para
-     confirmar que el MCP edita bien un `.json` antes de usarlo en
-     serio.
-  4. Ojo: no se confirmó que Puppeteer haya bajado Chromium durante el
-     install (no apareció en `~/.cache/puppeteer`) — si las tools de
-     preview runtime fallan la primera vez, puede hacer falta correr
-     la descarga del browser a mano dentro de
-     `~/Escritorio/gdevelop-mcp`.
+- `.mcp.json` apunta a [`gb2b/gdevelop-mcp`](https://github.com/gb2b/gdevelop-mcp)
+  (MIT, no oficial), instalado en `~/Escritorio/gdevelop-mcp/` (fuera
+  de este repo). Validado end-to-end y en uso habitual.
+- Dos formas de editar `game/game.json`:
+  - Scripts `scripts/wire_*.py` (históricos): hacen backup `.bak-<ts>`,
+    son idempotentes y editan el JSON directo.
+  - Desde el 19/09 se usa sobre todo `mcp__gdevelop__edit_project`
+    (con `dryRun` y backup automático), verificando con
+    `validate_project`.
 
-## Cuello de botella identificado: animación de personaje
+## Reglas aprendidas (fallan en silencio si se ignoran)
 
-No es el código (con asistencia de IA eso dejó de ser el límite, se
-demostró armando el prototipo de naves en una semana) — es la
-animación 2D de personaje (idle/salto/caída, ~32x32). La AI de
-generación de imágenes no es confiable para mantener consistencia
-cuadro a cuadro. Salida recomendada: usar packs CC0 de personaje ya
-animado (Kenney "Pixel Platformer Pack", "Tiny Hero Sprites", "Pixel
-Adventure" de pixelfrog en itch.io) en vez de dibujar o generar por
-IA — mismo criterio que ya se usó para el arte de naves en el otro
-repo (pack CC0 de Kenney).
+- **GDevelop tiene que estar CERRADO** antes de editar el JSON por
+  script o por MCP. Si está abierto, al guardar pisa los cambios (así
+  se perdió trabajo el 06/09).
+- **Comillas en parámetros:** los de tipo "expresión de string"
+  (nombre de escena, nombre de efecto, timers) necesitan comillas
+  escapadas (`"\"Level1\""`); si no, compilan a `""`. Otros tipos
+  (p. ej. `mouse`: `"Left"`) se rompen CON comillas de más. No
+  adivinar: verificar el JS compilado con
+  `preview_scene(keepExport:true)` + grep sobre `code0.js`.
+  `validate_project` no detecta este bug.
+- **Instrucciones legacy de behavior** (AddCondition/AddAction) van sin
+  el segmento del behavior en `type.value`
+  (`PlatformBehavior::IsFalling`).
+- **`edit_project`:** para reemplazar un array, el path es el nombre
+  del array (`"effects"`). La notación con índice (`"effects[0]"`) crea
+  una clave literal nueva, que no hace nada.
+- **`ForEach`:** el motor lee el objeto de la clave `"object"`. El
+  esquema del MCP usa `"objectsToPick"`, que el motor ignora (el evento
+  compila vacío). Poner las dos claves.
+- Un efecto arranca deshabilitado solo si su definición trae
+  `"disabled": true`; un evento `Once` no alcanza.
+- `ChangeColor` es un tint multiplicativo: sobre la paleta noche solo
+  oscurece. Para resaltar un objeto se usa el efecto `Outline`.
+
+## Estado (al 27/09/2026)
+
+- **Nivel 1 cerrado, playtesteado y aprobado por los profes**:
+  - horda, virus voladores, puentes, antídoto;
+  - combate corregido (stomp con `IsFalling`, knockback, anim `Hit`);
+  - controles WASD+J y mirror;
+  - contagio zombie↔virus: Outline rojo, gas, 2 golpes, cura a los 6s
+    e inmunidad de 3s.
+- **Tutorial** implementado y probado.
+- **Nivel 2 y Nivel 3 jugables (primer corte)**, generados por
+  `scripts/gen_lab.py` + `scripts/wire_levels23.py`. Ojo: `--force`
+  regenera las escenas desde cero y pisa los cambios hechos a mano.
+  Detalle en `reseach.md` (27/09).
 
 ## Pendiente / próximos pasos
 
-1. Validar el MCP de GDevelop (ver arriba).
-2. Definir temática/narrativa propia (sin decidir todavía).
-3. Armar el GDD + ficha de personaje.
-4. Diseñar los niveles (~3 + tutorial) y elegir/armar el personaje
-   jugable (pack CC0 recomendado arriba).
-5. Menú de opciones, ~30 min de duración total de juego.
-6. Video pitch (hasta 5 min) — dejar para cuando haya algo jugable.
+1. Entrega de avance el **martes 29/09**: los 3 niveles jugables y el
+   flujo completo. Falta el playtest a mano de L2/L3 y el re-export a
+   itch.io.
+2. **Bug abierto:** la pausa de Level1 (ESC/P) no responde en el
+   preview. Diagnóstico sugerido en `reseach.md` (sección 19/09).
+3. Pulido de L2/L3: música propia, cartel de meta de L2, más contenido
+   (objetivo ~7 min por nivel), calibrar el jefe.
+4. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
+   31/10/2026.
