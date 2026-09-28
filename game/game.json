@@ -1917,6 +1917,54 @@
         "name": "ZombiePol_Walk_8.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Lab/camilla.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "camilla.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/wet_floor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "wet_floor.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/wet_sign.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "wet_sign.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/vent.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "vent.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/airflow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "airflow.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/lab_cabinet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "lab_cabinet.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -14088,7 +14136,7 @@
           "actions": [
             {
               "type": {
-                "value": "XOffset"
+                "value": "TiledSpriteObject::XOffset"
               },
               "parameters": [
                 "River",
@@ -14098,7 +14146,7 @@
             },
             {
               "type": {
-                "value": "XOffset"
+                "value": "TiledSpriteObject::XOffset"
               },
               "parameters": [
                 "RiverFoam",
@@ -15134,303 +15182,219 @@
                 "",
                 "\"Escape\""
               ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Over",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Won",
-                "=",
-                "0"
-              ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseTitle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseMusic"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseSfx"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseHint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResumeMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "0"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Over",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Won",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseTitle",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseMusic",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseSfx",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseHint",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseTitle",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseMusic",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseSfx",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseHint",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextJustPressed"
-              },
-              "parameters": [
-                "",
-                "\"Escape\""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseTitle"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseMusic"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseSfx"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseHint"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResumeMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            }
-          ],
-          "events": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextJustPressed"
-              },
-              "parameters": [
-                "",
-                "\"p\""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Over",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Won",
-                "=",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseTitle",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseMusic",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseSfx",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseHint",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            }
-          ],
-          "events": []
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15443,81 +15407,219 @@
                 "",
                 "\"p\""
               ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseTitle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseMusic"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseSfx"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseHint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResumeMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Over",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Won",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseTitle",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseMusic",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseSfx",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseHint",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseTitle"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseMusic"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseSfx"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseHint"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResumeMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -23801,7 +23903,7 @@
           "height": 176,
           "layer": "BG_far",
           "name": "LabFar",
-          "width": 2800,
+          "width": 4400,
           "x": -300,
           "y": -66,
           "zOrder": 0,
@@ -23815,7 +23917,7 @@
           "height": 64,
           "layer": "BG_near",
           "name": "LabNear",
-          "width": 2800,
+          "width": 4400,
           "x": -300,
           "y": 46,
           "zOrder": 0,
@@ -23885,8 +23987,50 @@
           "height": 96,
           "layer": "",
           "name": "Ground",
-          "width": 572,
+          "width": 422,
           "x": 1728,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "Ground",
+          "width": 302,
+          "x": 2178,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "Ground",
+          "width": 140,
+          "x": 2620,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "Ground",
+          "width": 940,
+          "x": 2960,
           "y": 110,
           "zOrder": 1,
           "numberProperties": [],
@@ -23943,6 +24087,48 @@
           "name": "GlassSpikes",
           "width": 28,
           "x": 1700,
+          "y": 160,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 46,
+          "layer": "",
+          "name": "GlassSpikes",
+          "width": 28,
+          "x": 2150,
+          "y": 160,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 46,
+          "layer": "",
+          "name": "GlassSpikes",
+          "width": 140,
+          "x": 2480,
+          "y": 160,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 46,
+          "layer": "",
+          "name": "GlassSpikes",
+          "width": 200,
+          "x": 2760,
           "y": 160,
           "zOrder": -1,
           "numberProperties": [],
@@ -24042,20 +24228,6 @@
           "width": 64,
           "x": 1560,
           "y": 56,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 8,
-          "layer": "",
-          "name": "Estante",
-          "width": 64,
-          "x": 1880,
-          "y": 82,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -24451,41 +24623,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "ZombieEnf",
-          "width": 0,
-          "x": 1990,
-          "y": 76,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Dir",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "name": "MinX",
-              "type": "number",
-              "value": 1960
-            },
-            {
-              "name": "MaxX",
-              "type": "number",
-              "value": 2100
-            },
-            {
-              "name": "Speed",
-              "type": "number",
-              "value": 28
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
           "name": "ZombieMed",
           "width": 0,
           "x": 2060,
@@ -24512,7 +24649,182 @@
             {
               "name": "Speed",
               "type": "number",
-              "value": 22
+              "value": 20
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieEnf",
+          "width": 0,
+          "x": 2300,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 2200
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 2460
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 26
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombiePol",
+          "width": 0,
+          "x": 3010,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 2975
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 3060
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 16
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieRep",
+          "width": 0,
+          "x": 3300,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 3200
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 3380
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 30
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieMed",
+          "width": 0,
+          "x": 3500,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 3440
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 3640
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 20
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieHin",
+          "width": 0,
+          "x": 3620,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 3500
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 3690
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 24
             }
           ]
         },
@@ -24670,8 +24982,8 @@
           "layer": "",
           "name": "Antidoto",
           "width": 0,
-          "x": 1585,
-          "y": 36,
+          "x": 3409,
+          "y": -44,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -24684,8 +24996,176 @@
           "layer": "",
           "name": "Meta",
           "width": 0,
-          "x": 2150,
+          "x": 3720,
           "y": 63,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 4,
+          "layer": "",
+          "name": "WetFloor",
+          "width": 370,
+          "x": 1780,
+          "y": 108,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "WetSign",
+          "width": 0,
+          "x": 1784,
+          "y": 92,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "name": "Camilla",
+          "width": 48,
+          "x": 2484,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 2484
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 2568
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 40
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 16,
+          "layer": "",
+          "name": "Camilla",
+          "width": 48,
+          "x": 2764,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 2764
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 2908
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 60
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 155,
+          "layer": "",
+          "name": "AirFlow",
+          "width": 32,
+          "x": 3080,
+          "y": -45,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 6,
+          "layer": "",
+          "name": "Vent",
+          "width": 32,
+          "x": 3080,
+          "y": 106,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 155,
+          "layer": "",
+          "name": "AirFlow",
+          "width": 32,
+          "x": 3400,
+          "y": -45,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 6,
+          "layer": "",
+          "name": "Vent",
+          "width": 32,
+          "x": 3400,
+          "y": 106,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 92,
+          "layer": "",
+          "name": "Gabinete",
+          "width": 32,
+          "x": 3114,
+          "y": 18,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -28033,6 +28513,163 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Camilla",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": "1"
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": "40"
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "camilla.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 4,
+          "name": "WetFloor",
+          "texture": "wet_floor.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "WetSign",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "wet_sign.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 6,
+          "name": "Vent",
+          "texture": "vent.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "AirFlow",
+          "texture": "airflow.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "Gabinete",
+          "texture": "lab_cabinet.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior"
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -28124,6 +28761,24 @@
           },
           {
             "objectName": "Virus3"
+          },
+          {
+            "objectName": "Camilla"
+          },
+          {
+            "objectName": "WetFloor"
+          },
+          {
+            "objectName": "WetSign"
+          },
+          {
+            "objectName": "Vent"
+          },
+          {
+            "objectName": "AirFlow"
+          },
+          {
+            "objectName": "Gabinete"
           }
         ]
       },
@@ -28141,7 +28796,7 @@
                 "Player",
                 "-100",
                 "-65",
-                "2200",
+                "3800",
                 "205",
                 "yes",
                 "",
@@ -29672,303 +30327,219 @@
                 "",
                 "\"Escape\""
               ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Over",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Won",
-                "=",
-                "0"
-              ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseTitle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseMusic"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseSfx"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseHint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResumeMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "0"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Over",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Won",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseTitle",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseMusic",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseSfx",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseHint",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseTitle",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseMusic",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseSfx",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseHint",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextJustPressed"
-              },
-              "parameters": [
-                "",
-                "\"Escape\""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseTitle"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseMusic"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseSfx"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseHint"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResumeMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            }
-          ],
-          "events": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextJustPressed"
-              },
-              "parameters": [
-                "",
-                "\"p\""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Over",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Won",
-                "=",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseTitle",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseMusic",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseSfx",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseHint",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            }
-          ],
-          "events": []
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29981,81 +30552,219 @@
                 "",
                 "\"p\""
               ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseTitle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseMusic"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseSfx"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseHint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResumeMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Over",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Won",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseTitle",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseMusic",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseSfx",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseHint",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseTitle"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseMusic"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseSfx"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseHint"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResumeMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -31764,6 +32473,480 @@
                 "CheckX",
                 "=",
                 "1728"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">",
+                "2178"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "CheckX",
+                "<",
+                "2178"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "CheckX",
+                "=",
+                "2178"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">",
+                "2620"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "CheckX",
+                "<",
+                "2620"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "CheckX",
+                "=",
+                "2620"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">",
+                "2960"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "CheckX",
+                "<",
+                "2960"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "CheckX",
+                "=",
+                "2960"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">",
+                "3160"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "CheckX",
+                "<",
+                "3160"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "CheckX",
+                "=",
+                "3160"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Piso encerado: pisándolo casi no frenás (resbala hacia el hueco).",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "WetFloor",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Deceleration"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "60"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::Acceleration"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "160"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP",
+                "inverted": true
+              },
+              "parameters": [
+                "Player",
+                "WetFloor",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::Deceleration"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "1500"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::Acceleration"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "300"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Camillas: plataformas que van y vienen sobre los huecos anchos (Dir/MinX/MaxX/Speed por instancia). El Platformer lleva al jugador parado encima.",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Camilla",
+          "objectsToPick": "Camilla",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Camilla",
+                "+",
+                "Camilla.Variable(Dir) * Camilla.Variable(Speed) * TimeDelta()"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Camilla",
+                    ">",
+                    "Camilla.Variable(MaxX)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camilla",
+                    "Dir",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Camilla",
+                    "Dir",
+                    "=",
+                    "-1"
+                  ]
+                }
+              ],
+              "events": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Camilla",
+                    "<",
+                    "Camilla.Variable(MinX)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Camilla",
+                    "Dir",
+                    "=",
+                    "-1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Camilla",
+                    "Dir",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Ductos: la corriente de aire te empuja hacia arriba.",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TiledSpriteObject::YOffset"
+              },
+              "parameters": [
+                "AirFlow",
+                "+",
+                "60 * TimeDelta()"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "AirFlow",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Player",
+                "-",
+                "140 * TimeDelta()"
               ]
             }
           ],
@@ -35111,303 +36294,219 @@
                 "",
                 "\"Escape\""
               ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Over",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Won",
-                "=",
-                "0"
-              ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseTitle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseMusic"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseSfx"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseHint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResumeMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "0"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Over",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Won",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseTitle",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseMusic",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseSfx",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseHint",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseTitle",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseMusic",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseSfx",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseHint",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextJustPressed"
-              },
-              "parameters": [
-                "",
-                "\"Escape\""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseTitle"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseMusic"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseSfx"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseHint"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResumeMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            }
-          ],
-          "events": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextJustPressed"
-              },
-              "parameters": [
-                "",
-                "\"p\""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Over",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Won",
-                "=",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseTitle",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseMusic",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseSfx",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "PauseHint",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            }
-          ],
-          "events": []
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -35420,81 +36519,219 @@
                 "",
                 "\"p\""
               ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "1"
-              ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Paused",
-                "=",
-                "0"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseTitle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseMusic"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseSfx"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "PauseHint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResumeMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Over",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Won",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseTitle",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseMusic",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseSfx",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "PauseHint",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseMusicChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseTitle"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseMusic"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseSfx"
-              ]
-            },
-            {
-              "type": {
-                "value": "Hide"
-              },
-              "parameters": [
-                "PauseHint"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResumeMusicChannel"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Paused",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",

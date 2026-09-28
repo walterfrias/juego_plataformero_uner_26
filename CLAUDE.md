@@ -93,6 +93,12 @@ razonamiento de por qué se llegó hasta acá.
   instancias, y las acciones sobre ese mismo objeto solo afectan a las
   filtradas. Para actuar sobre todas, usar un evento cuyas condiciones no
   lo mencionen (así se arregló el bug de los "4 zombies rotos").
+- **Toggles:** dos eventos hermanos `tecla & X=0 → X=1` y `tecla & X=1 →
+  X=0` se deshacen en el mismo frame. Usar un evento padre con
+  sub-eventos y un estado intermedio (ver `scripts/fix_pause_toggle.py`).
+- **Acciones de extensiones de objeto** (p. ej. `XOffset`/`YOffset` de
+  TiledSprite) llevan el prefijo de la extensión en el tipo:
+  `TiledSpriteObject::XOffset`. Sin él, la acción se descarta al compilar.
 - Un efecto arranca deshabilitado solo si su definición trae
   `"disabled": true`; un evento `Once` no alcanza.
 - `ChangeColor` es un tint multiplicativo: sobre la paleta noche solo
@@ -110,9 +116,12 @@ razonamiento de por qué se llegó hasta acá.
 - **Nivel 2 y Nivel 3 jugables (primer corte).** Se regeneran con, en
   este orden: `gen_lab.py` → `gen_zombies_lab.py` →
   `gen_zombies_horda.py` → `wire_n1_horda_lab.py` →
-  `wire_levels23.py --force`. Ojo: `--force`
+  `fix_pause_toggle.py` → `wire_levels23.py --force`. Ojo: `--force`
   regenera L2/L3 desde cero y pisa los cambios hechos a mano. Detalle en
   `reseach.md` (27/09).
+- Nivel 2 (~3800 px): pasillos con huecos y estantes, **piso encerado**
+  (resbala), **camillas móviles** sobre huecos anchos y **ductos de aire**
+  (uno obligatorio para pasar un gabinete, otro opcional con antídoto).
 - La horda del Nivel 1 mezcla personal del laboratorio (médico,
   enfermera, investigador) con 3 zombies exclusivos de la horda (hincha,
   repartidor, policía). Te daña si te choca de costado (−1 vida); se
@@ -124,8 +133,9 @@ razonamiento de por qué se llegó hasta acá.
 1. Entrega de avance el **martes 29/09**: los 3 niveles jugables y el
    flujo completo. Falta el playtest a mano de L2/L3 y el re-export a
    itch.io.
-2. **Bug abierto:** la pausa de Level1 (ESC/P) no responde en el
-   preview. Diagnóstico sugerido en `reseach.md` (sección 19/09).
+2. Pulido del menú de pausa (sin fondo, se lee regular). El bug de
+   ESC/P quedó resuelto el 27/09 (era un toggle que se deshacía en el
+   mismo frame, ver `reseach.md`).
 3. Pulido de L2/L3: música propia, cartel de meta de L2, más contenido
    (objetivo ~7 min por nivel), calibrar el jefe.
 4. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
