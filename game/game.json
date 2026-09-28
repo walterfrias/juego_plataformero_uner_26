@@ -1725,6 +1725,198 @@
         "name": "ZombieMed_Walk_8.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Hin/Zombie_Hin_Walk_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieHin_Walk_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Hin/Zombie_Hin_Walk_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieHin_Walk_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Hin/Zombie_Hin_Walk_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieHin_Walk_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Hin/Zombie_Hin_Walk_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieHin_Walk_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Hin/Zombie_Hin_Walk_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieHin_Walk_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Hin/Zombie_Hin_Walk_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieHin_Walk_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Hin/Zombie_Hin_Walk_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieHin_Walk_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Hin/Zombie_Hin_Walk_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieHin_Walk_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Rep/Zombie_Rep_Walk_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieRep_Walk_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Rep/Zombie_Rep_Walk_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieRep_Walk_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Rep/Zombie_Rep_Walk_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieRep_Walk_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Rep/Zombie_Rep_Walk_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieRep_Walk_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Rep/Zombie_Rep_Walk_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieRep_Walk_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Rep/Zombie_Rep_Walk_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieRep_Walk_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Rep/Zombie_Rep_Walk_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieRep_Walk_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Rep/Zombie_Rep_Walk_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombieRep_Walk_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Pol/Zombie_Pol_Walk_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombiePol_Walk_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Pol/Zombie_Pol_Walk_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombiePol_Walk_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Pol/Zombie_Pol_Walk_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombiePol_Walk_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Pol/Zombie_Pol_Walk_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombiePol_Walk_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Pol/Zombie_Pol_Walk_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombiePol_Walk_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Pol/Zombie_Pol_Walk_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombiePol_Walk_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Pol/Zombie_Pol_Walk_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombiePol_Walk_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Zombie_Pol/Zombie_Pol_Walk_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ZombiePol_Walk_8.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -1840,6 +2032,29 @@
             },
             {
               "name": "Virus5"
+            }
+          ]
+        },
+        {
+          "name": "Horda",
+          "objects": [
+            {
+              "name": "HordaZombieEnf"
+            },
+            {
+              "name": "HordaZombieMed"
+            },
+            {
+              "name": "HordaZombieInv"
+            },
+            {
+              "name": "HordaZombieHin"
+            },
+            {
+              "name": "HordaZombieRep"
+            },
+            {
+              "name": "HordaZombiePol"
             }
           ]
         }
@@ -2670,7 +2885,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieEnf",
+          "name": "HordaZombieHin",
           "persistentUuid": "9fe321b0-f30c-4c71-b274-1a28f160db27",
           "width": 0,
           "x": 1180,
@@ -2685,7 +2900,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieInv",
+          "name": "HordaZombieEnf",
           "persistentUuid": "cf5f2402-d501-47a6-8e04-660c66dd897c",
           "width": 0,
           "x": 1195,
@@ -2700,7 +2915,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieMed",
+          "name": "HordaZombieRep",
           "persistentUuid": "23f65ee8-9f7b-4169-8def-699e4aac657c",
           "width": 0,
           "x": 1210,
@@ -2715,7 +2930,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieEnf",
+          "name": "HordaZombieInv",
           "persistentUuid": "28615077-fcfb-455b-be54-16f70573e003",
           "width": 0,
           "x": 1225,
@@ -2730,7 +2945,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieInv",
+          "name": "HordaZombiePol",
           "persistentUuid": "5c50424f-49be-46d5-99ba-acbc01e45b5f",
           "width": 0,
           "x": 1240,
@@ -2760,7 +2975,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieEnf",
+          "name": "HordaZombieHin",
           "persistentUuid": "4302b95d-56a4-4d7b-9654-eaa1fe01ec3a",
           "width": 0,
           "x": 1270,
@@ -2775,7 +2990,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieInv",
+          "name": "HordaZombieEnf",
           "persistentUuid": "965ee4a5-6c6c-4eab-b82d-532466c24110",
           "width": 0,
           "x": 1285,
@@ -2790,7 +3005,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieMed",
+          "name": "HordaZombieRep",
           "persistentUuid": "5cedd58b-5e93-4749-96f0-361eff1afdc1",
           "width": 0,
           "x": 1300,
@@ -2805,7 +3020,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieEnf",
+          "name": "HordaZombieInv",
           "persistentUuid": "f06a314b-a788-40ec-a2a0-4f951c3a32a5",
           "width": 0,
           "x": 1315,
@@ -2820,7 +3035,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieInv",
+          "name": "HordaZombiePol",
           "persistentUuid": "27056583-4d44-4a2f-ae79-87a0822170fd",
           "width": 0,
           "x": 1330,
@@ -2850,7 +3065,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieEnf",
+          "name": "HordaZombieHin",
           "persistentUuid": "5a74f298-6057-403d-9de9-1843cc59a8b3",
           "width": 0,
           "x": 1360,
@@ -2865,7 +3080,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieInv",
+          "name": "HordaZombieEnf",
           "persistentUuid": "c50ab8fd-c611-4def-b0ca-dd2813e523dc",
           "width": 0,
           "x": 1375,
@@ -5996,6 +6211,486 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "ZombieMed_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "HordaZombieHin",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.09,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "HordaZombieRep",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "HordaZombiePol",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_8.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -11334,6 +12029,15 @@
           },
           {
             "objectName": "ZombieEnd6"
+          },
+          {
+            "objectName": "HordaZombieHin"
+          },
+          {
+            "objectName": "HordaZombieRep"
+          },
+          {
+            "objectName": "HordaZombiePol"
           }
         ]
       },
@@ -11427,6 +12131,30 @@
               },
               "parameters": [
                 "HordaZombieMed"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieHin"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieRep"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombiePol"
               ]
             },
             {
@@ -12487,7 +13215,8 @@
             "textR": 0
           },
           "comment": "=== Horda de persecucion (Nivel 1). Estados en scene var HordaActive: 0=en reposo detras del Player / 1=estampida (arrastra, 130px/s) / 2=ya cruzaste, se va corriendo / 3=oculta. HordaPiso = jumpthru invisible, unico piso sobre el hueco del rio. HordaShift = px acumulados (para resetear las tandas sin colapsarlas). Quedarse atras o caer al rio = -1 vida + respawn + horda vuelve. Tuneables en scripts/wire_horda_chase.py. ===",
-          "events": []
+          "events": [],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12518,6 +13247,33 @@
                 "value": "SetAnimationName"
               },
               "parameters": [
+                "HordaZombieHin",
+                "\"Walk\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "HordaZombieRep",
+                "\"Walk\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "HordaZombiePol",
+                "\"Walk\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
                 "HordaZombieEnf",
                 "\"Walk\""
               ]
@@ -12537,6 +13293,36 @@
               },
               "parameters": [
                 "HordaZombieMed",
+                "+",
+                "130 * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombieHin",
+                "+",
+                "130 * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombieRep",
+                "+",
+                "130 * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombiePol",
                 "+",
                 "130 * TimeDelta()"
               ]
@@ -12664,6 +13450,36 @@
                 "value": "SetX"
               },
               "parameters": [
+                "HordaZombieHin",
+                "-",
+                "850"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombieRep",
+                "-",
+                "850"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombiePol",
+                "-",
+                "850"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
                 "HordaZombieInv",
                 "-",
                 "850"
@@ -12687,167 +13503,6 @@
                 "HordaShift",
                 "-",
                 "850"
-              ]
-            }
-          ],
-          "events": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "HordaActive",
-                "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "PosX"
-              },
-              "parameters": [
-                "Player",
-                "<",
-                "HordaPiso.X() - 25"
-              ]
-            },
-            {
-              "type": {
-                "value": "PosY"
-              },
-              "parameters": [
-                "Player",
-                "<",
-                "210"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Lives",
-                "-",
-                "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Player",
-                "=",
-                "Variable(CheckX)"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "Player",
-                "=",
-                "Variable(CheckY)"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
-              },
-              "parameters": [
-                "Player",
-                "PlatformerObject",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "BounceVel",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "HordaZombieEnf",
-                "-",
-                "Variable(HordaShift)"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "HordaZombieMed",
-                "-",
-                "Variable(HordaShift)"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "HordaZombieInv",
-                "-",
-                "Variable(HordaShift)"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "HordaPiso",
-                "-",
-                "Variable(HordaShift)"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "HordaShift",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "HordaActive",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "sfx_hurt.wav",
-                "no",
-                "GlobalVariable(SfxVolume)",
-                "1"
               ]
             }
           ],
@@ -12931,6 +13586,36 @@
                 "value": "SetX"
               },
               "parameters": [
+                "HordaZombieHin",
+                "+",
+                "210 * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombieRep",
+                "+",
+                "210 * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombiePol",
+                "+",
+                "210 * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
                 "HordaZombieInv",
                 "+",
                 "210 * TimeDelta()"
@@ -12995,6 +13680,30 @@
                 "value": "Hide"
               },
               "parameters": [
+                "HordaZombieHin"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieRep"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombiePol"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
                 "HordaZombieInv"
               ]
             },
@@ -13034,6 +13743,340 @@
                 "HordaActive",
                 "=",
                 "3"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Horda",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "HordaActive",
+                ">=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "HordaActive",
+                "<=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                ">",
+                "Horda.Y() - 12"
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\"",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">=",
+                "Horda.X()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Lives",
+                "-",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "Player",
+                "\"Hit\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "sfx_hurt.wav",
+                "no",
+                "GlobalVariable(SfxVolume)",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Player",
+                "+",
+                "70"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Player",
+                "+",
+                "-30"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Horda",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "HordaActive",
+                ">=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "HordaActive",
+                "<=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Player",
+                ">",
+                "Horda.Y() - 12"
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\"",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "Horda.X()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Lives",
+                "-",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Player",
+                "\"Invuln\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "Player",
+                "\"Hit\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "sfx_hurt.wav",
+                "no",
+                "GlobalVariable(SfxVolume)",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Player",
+                "+",
+                "-70"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "Player",
+                "+",
+                "-30"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "HordaActive",
+                "=",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieEnf"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieMed"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieHin"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieRep"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombiePol"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HordaZombieInv"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "HumoHorda"
               ]
             }
           ],
@@ -13405,6 +14448,36 @@
               },
               "parameters": [
                 "HordaZombieMed",
+                "-",
+                "Variable(HordaShift)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombieHin",
+                "-",
+                "Variable(HordaShift)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombieRep",
+                "-",
+                "Variable(HordaShift)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "HordaZombiePol",
                 "-",
                 "Variable(HordaShift)"
               ]
@@ -13926,6 +14999,33 @@
               },
               "parameters": [
                 "HordaZombieMed",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HordaZombieHin",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HordaZombieRep",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "HordaZombiePol",
                 ""
               ]
             },
@@ -14522,7 +15622,8 @@
             "textR": 0
           },
           "comment": "Espeja el estado de pausa al global SettingsOpen para que SettingsControls (Link) sepa cuando ajustar volumen.",
-          "events": []
+          "events": [],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14547,7 +15648,8 @@
             "includeConfig": 0
           },
           "target": "SettingsControls",
-          "events": []
+          "events": [],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -22475,10 +23577,19 @@
               "name": "ZombieEnf"
             },
             {
+              "name": "ZombieHin"
+            },
+            {
               "name": "ZombieInv"
             },
             {
               "name": "ZombieMed"
+            },
+            {
+              "name": "ZombiePol"
+            },
+            {
+              "name": "ZombieRep"
             }
           ]
         },
@@ -23025,6 +24136,41 @@
           "customSize": false,
           "height": 0,
           "layer": "",
+          "name": "ZombieRep",
+          "width": 0,
+          "x": 660,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 600
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 760
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 30
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
           "name": "ZombieInv",
           "width": 0,
           "x": 780,
@@ -23052,6 +24198,41 @@
               "name": "Speed",
               "type": "number",
               "value": 12
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombiePol",
+          "width": 0,
+          "x": 1100,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 1040
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 1200
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 16
             }
           ]
         },
@@ -23157,6 +24338,41 @@
               "name": "Speed",
               "type": "number",
               "value": 20
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ZombieHin",
+          "width": 0,
+          "x": 1530,
+          "y": 76,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": 1400
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": 1690
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 24
             }
           ]
         },
@@ -25335,6 +26551,206 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
+          "name": "ZombieHin",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": "1"
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": "20"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.09,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieHin_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
           "name": "ZombieInv",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -25712,6 +27128,406 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "ZombieMed_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ZombiePol",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": "1"
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": "20"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombiePol_Walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ZombieRep",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Infected",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "Dir",
+              "type": "number",
+              "value": "1"
+            },
+            {
+              "name": "MinX",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "MaxX",
+              "type": "number",
+              "value": "0"
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": "20"
+            }
+          ],
+          "effects": [
+            {
+              "name": "InfectedOutline",
+              "effectType": "Outline",
+              "disabled": true,
+              "doubleParameters": {
+                "thickness": 2,
+                "padding": 4
+              },
+              "stringParameters": {
+                "color": "220;40;40"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ZombieRep_Walk_8.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -26286,10 +28102,19 @@
             "objectName": "ZombieEnf"
           },
           {
+            "objectName": "ZombieHin"
+          },
+          {
             "objectName": "ZombieInv"
           },
           {
             "objectName": "ZombieMed"
+          },
+          {
+            "objectName": "ZombiePol"
+          },
+          {
+            "objectName": "ZombieRep"
           },
           {
             "objectName": "Virus1"
@@ -28347,7 +30172,8 @@
             "includeConfig": 0
           },
           "target": "SettingsControls",
-          "events": []
+          "events": [],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33785,7 +35611,8 @@
             "includeConfig": 0
           },
           "target": "SettingsControls",
-          "events": []
+          "events": [],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",

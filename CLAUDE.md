@@ -89,6 +89,10 @@ razonamiento de por qué se llegó hasta acá.
 - **`ForEach`:** el motor lee el objeto de la clave `"object"`. El
   esquema del MCP usa `"objectsToPick"`, que el motor ignora (el evento
   compila vacío). Poner las dos claves.
+- **Selección de instancias:** una condición sobre un objeto filtra sus
+  instancias, y las acciones sobre ese mismo objeto solo afectan a las
+  filtradas. Para actuar sobre todas, usar un evento cuyas condiciones no
+  lo mencionen (así se arregló el bug de los "4 zombies rotos").
 - Un efecto arranca deshabilitado solo si su definición trae
   `"disabled": true`; un evento `Once` no alcanza.
 - `ChangeColor` es un tint multiplicativo: sobre la paleta noche solo
@@ -105,12 +109,15 @@ razonamiento de por qué se llegó hasta acá.
 - **Tutorial** implementado y probado.
 - **Nivel 2 y Nivel 3 jugables (primer corte).** Se regeneran con, en
   este orden: `gen_lab.py` → `gen_zombies_lab.py` →
-  `wire_n1_horda_lab.py` → `wire_levels23.py --force`. Ojo: `--force`
+  `gen_zombies_horda.py` → `wire_n1_horda_lab.py` →
+  `wire_levels23.py --force`. Ojo: `--force`
   regenera L2/L3 desde cero y pisa los cambios hechos a mano. Detalle en
   `reseach.md` (27/09).
-- La horda del Nivel 1 y los zombies del Nivel 2 son personal del
-  laboratorio (médico, enfermera, investigador). **ZombieT es exclusivo
-  del jefe** Paciente Zero.
+- La horda del Nivel 1 mezcla personal del laboratorio (médico,
+  enfermera, investigador) con 3 zombies exclusivos de la horda (hincha,
+  repartidor, policía). Te daña si te choca de costado (−1 vida); se
+  cruza el río montado encima. El Nivel 2 tiene solo personal del lab.
+  **ZombieT es exclusivo del jefe** Paciente Zero.
 
 ## Pendiente / próximos pasos
 
