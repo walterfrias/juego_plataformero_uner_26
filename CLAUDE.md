@@ -128,11 +128,20 @@ razonamiento de por qué se llegó hasta acá.
   cruza el río montado encima. El Nivel 2 tiene solo personal del lab.
   **ZombieT es exclusivo del jefe** Paciente Zero.
 
+## Entregas
+
+- **Pre-entrega Pre-Alfa (29/09/2026):** prototipo funcional con core
+  loop, física base y estructura inicial de niveles, más el foco de la
+  cátedra en **Game Testing** (validación de mecánicas, detección
+  temprana de errores y playtesting). Build:
+  `dist/PacienteZero-HTML5-PreAlfa-20260929.zip`. Detalle y lo que falta
+  (playtesting con usuarios reales) en `reseach.md`.
+
 ## Pendiente / próximos pasos
 
-1. Entrega de avance el **martes 29/09**: los 3 niveles jugables y el
-   flujo completo. Falta el playtest a mano de L2/L3 y el re-export a
-   itch.io.
+1. **Playtesting con usuarios reales** (lo que falta de la fase Pre-Alfa):
+   planilla de feedback, contadores de muertes/tiempo por nivel, informe
+   de QA.
 2. Pulido del menú de pausa (sin fondo, se lee regular). El bug de
    ESC/P quedó resuelto el 27/09 (era un toggle que se deshacía en el
    mismo frame, ver `reseach.md`).
