@@ -1789,9 +1789,6 @@
               "name": "ZombieM"
             },
             {
-              "name": "ZombieT"
-            },
-            {
               "name": "ZombieD"
             },
             {
@@ -1860,11 +1857,6 @@
         },
         {
           "name": "ZombieMDir",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "ZombieTDir",
           "type": "number",
           "value": 1
         },
@@ -2080,21 +2072,6 @@
           "width": 0,
           "x": 662,
           "y": 77,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "ZombieT",
-          "persistentUuid": "b5cd3e0d-3466-4d3b-9692-22dc6e123e45",
-          "width": 0,
-          "x": 540,
-          "y": 76,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -2678,7 +2655,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieM",
+          "name": "HordaZombieMed",
           "persistentUuid": "448384de-09c6-4019-8e21-4d71ca36ece0",
           "width": 0,
           "x": 1165,
@@ -2693,7 +2670,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieF",
+          "name": "HordaZombieEnf",
           "persistentUuid": "9fe321b0-f30c-4c71-b274-1a28f160db27",
           "width": 0,
           "x": 1180,
@@ -2708,7 +2685,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieT",
+          "name": "HordaZombieInv",
           "persistentUuid": "cf5f2402-d501-47a6-8e04-660c66dd897c",
           "width": 0,
           "x": 1195,
@@ -2723,7 +2700,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieM",
+          "name": "HordaZombieMed",
           "persistentUuid": "23f65ee8-9f7b-4169-8def-699e4aac657c",
           "width": 0,
           "x": 1210,
@@ -2738,7 +2715,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieF",
+          "name": "HordaZombieEnf",
           "persistentUuid": "28615077-fcfb-455b-be54-16f70573e003",
           "width": 0,
           "x": 1225,
@@ -2753,7 +2730,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieT",
+          "name": "HordaZombieInv",
           "persistentUuid": "5c50424f-49be-46d5-99ba-acbc01e45b5f",
           "width": 0,
           "x": 1240,
@@ -2768,7 +2745,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieM",
+          "name": "HordaZombieMed",
           "persistentUuid": "e7f0ebbc-4d0e-4809-ac3d-828b70f12bc1",
           "width": 0,
           "x": 1255,
@@ -2783,7 +2760,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieF",
+          "name": "HordaZombieEnf",
           "persistentUuid": "4302b95d-56a4-4d7b-9654-eaa1fe01ec3a",
           "width": 0,
           "x": 1270,
@@ -2798,7 +2775,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieT",
+          "name": "HordaZombieInv",
           "persistentUuid": "965ee4a5-6c6c-4eab-b82d-532466c24110",
           "width": 0,
           "x": 1285,
@@ -2813,7 +2790,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieM",
+          "name": "HordaZombieMed",
           "persistentUuid": "5cedd58b-5e93-4749-96f0-361eff1afdc1",
           "width": 0,
           "x": 1300,
@@ -2828,7 +2805,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieF",
+          "name": "HordaZombieEnf",
           "persistentUuid": "f06a314b-a788-40ec-a2a0-4f951c3a32a5",
           "width": 0,
           "x": 1315,
@@ -2843,7 +2820,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieT",
+          "name": "HordaZombieInv",
           "persistentUuid": "27056583-4d44-4a2f-ae79-87a0822170fd",
           "width": 0,
           "x": 1330,
@@ -2858,7 +2835,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieM",
+          "name": "HordaZombieMed",
           "persistentUuid": "51f402c7-b669-4ce2-b0ab-1c236de652a2",
           "width": 0,
           "x": 1345,
@@ -2873,7 +2850,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieF",
+          "name": "HordaZombieEnf",
           "persistentUuid": "5a74f298-6057-403d-9de9-1843cc59a8b3",
           "width": 0,
           "x": 1360,
@@ -2888,7 +2865,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "HordaZombieT",
+          "name": "HordaZombieInv",
           "persistentUuid": "c50ab8fd-c611-4def-b0ca-dd2813e523dc",
           "width": 0,
           "x": 1375,
@@ -5722,7 +5699,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "HordaZombieF",
+          "name": "HordaZombieEnf",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -5735,11 +5712,11 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.11,
+                  "timeBetweenFrames": 0.09,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_1.png",
+                      "image": "ZombieEnf_Walk_1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5756,7 +5733,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_2.png",
+                      "image": "ZombieEnf_Walk_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5773,7 +5750,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_3.png",
+                      "image": "ZombieEnf_Walk_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5790,7 +5767,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_4.png",
+                      "image": "ZombieEnf_Walk_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5807,7 +5784,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_5.png",
+                      "image": "ZombieEnf_Walk_5.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5824,7 +5801,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_6.png",
+                      "image": "ZombieEnf_Walk_6.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5841,7 +5818,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_7.png",
+                      "image": "ZombieEnf_Walk_7.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5858,41 +5835,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_8.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_9.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_10.png",
+                      "image": "ZombieEnf_Walk_8.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5916,7 +5859,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "HordaZombieM",
+          "name": "HordaZombieMed",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -5929,11 +5872,11 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.13,
+                  "timeBetweenFrames": 0.11,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieM_Walk_1.png",
+                      "image": "ZombieMed_Walk_1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5950,7 +5893,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieM_Walk_2.png",
+                      "image": "ZombieMed_Walk_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5967,7 +5910,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieM_Walk_3.png",
+                      "image": "ZombieMed_Walk_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5984,7 +5927,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieM_Walk_4.png",
+                      "image": "ZombieMed_Walk_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6001,7 +5944,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieM_Walk_5.png",
+                      "image": "ZombieMed_Walk_5.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6018,7 +5961,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieM_Walk_6.png",
+                      "image": "ZombieMed_Walk_6.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6035,7 +5978,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieM_Walk_7.png",
+                      "image": "ZombieMed_Walk_7.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6052,7 +5995,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieM_Walk_8.png",
+                      "image": "ZombieMed_Walk_8.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6554,199 +6497,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "ZombieT",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "Infected",
-              "type": "number",
-              "value": "0"
-            }
-          ],
-          "effects": [
-            {
-              "name": "InfectedOutline",
-              "effectType": "Outline",
-              "disabled": true,
-              "doubleParameters": {
-                "thickness": 2,
-                "padding": 4
-              },
-              "stringParameters": {
-                "color": "220;40;40"
-              },
-              "booleanParameters": {}
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Walk",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.13,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_4.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_7.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_8.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "effects[0]": {
-            "name": "InfectedOutline",
-            "effectType": "Outline",
-            "doubleParameters": {
-              "thickness": 2,
-              "padding": 4
-            },
-            "stringParameters": {
-              "color": "220;40;40"
-            },
-            "booleanParameters": {}
-          }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "HordaZombieT",
+          "name": "HordaZombieInv",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -6759,11 +6510,11 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.13,
+                  "timeBetweenFrames": 0.14,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_1.png",
+                      "image": "ZombieInv_Walk_1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6780,7 +6531,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_2.png",
+                      "image": "ZombieInv_Walk_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6797,7 +6548,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_3.png",
+                      "image": "ZombieInv_Walk_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6814,7 +6565,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_4.png",
+                      "image": "ZombieInv_Walk_4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6831,7 +6582,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_5.png",
+                      "image": "ZombieInv_Walk_5.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6848,7 +6599,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_6.png",
+                      "image": "ZombieInv_Walk_6.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6865,7 +6616,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_7.png",
+                      "image": "ZombieInv_Walk_7.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6882,7 +6633,7 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "ZombieT_Walk_8.png",
+                      "image": "ZombieInv_Walk_8.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7101,7 +6852,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "GAME OVER\n[R] para reiniciar",
+            "text": "GAME OVER\n[R] o click: reintentar  [ESC]: menu",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
@@ -7144,7 +6895,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "LLEGASTE AL LABORATORIO\n[Espacio]/click: Nivel 2  [R]: repetir",
+            "text": "LLEGASTE AL LABORATORIO\n[Espacio]/click: Nivel 2\n[R]: repetir  [ESC]: menu",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
@@ -11399,10 +11150,10 @@
             "objectName": "ZombieM"
           },
           {
-            "objectName": "HordaZombieF"
+            "objectName": "HordaZombieEnf"
           },
           {
-            "objectName": "HordaZombieM"
+            "objectName": "HordaZombieMed"
           },
           {
             "objectName": "HordaPiso"
@@ -11447,10 +11198,7 @@
             "objectName": "BarbedWire"
           },
           {
-            "objectName": "ZombieT"
-          },
-          {
-            "objectName": "HordaZombieT"
+            "objectName": "HordaZombieInv"
           },
           {
             "objectName": "Heart1"
@@ -11614,12 +11362,14 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": []
+          "actions": [],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11641,7 +11391,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11667,7 +11418,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "HordaZombieF"
+                "HordaZombieEnf"
               ]
             },
             {
@@ -11675,7 +11426,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "HordaZombieM"
+                "HordaZombieMed"
               ]
             },
             {
@@ -11683,7 +11434,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "HordaZombieT"
+                "HordaZombieInv"
               ]
             },
             {
@@ -11694,7 +11445,8 @@
                 "HumoHorda"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11719,7 +11471,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11744,7 +11497,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11769,7 +11523,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11794,7 +11549,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11819,7 +11575,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11845,7 +11602,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11871,7 +11629,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11908,7 +11667,8 @@
                 "\"Run\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11946,7 +11706,8 @@
                 "\"Idle\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11983,7 +11744,8 @@
                 "\"Fall\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12020,7 +11782,8 @@
                 "\"Jump\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12123,7 +11886,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12235,7 +11999,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12344,7 +12109,8 @@
                 "-30"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12453,7 +12219,8 @@
                 "-30"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12468,7 +12235,8 @@
                 "\"Walk\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12484,7 +12252,8 @@
                 "Variable(ZombieFDir) * 22 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12530,7 +12299,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12576,7 +12346,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12591,7 +12362,8 @@
                 "\"Walk\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12607,7 +12379,8 @@
                 "Variable(ZombieMDir) * 18 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12653,7 +12426,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12699,7 +12473,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -12711,7 +12486,8 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "=== Horda de persecucion (Nivel 1). Estados en scene var HordaActive: 0=en reposo detras del Player / 1=estampida (arrastra, 130px/s) / 2=ya cruzaste, se va corriendo / 3=oculta. HordaPiso = jumpthru invisible, unico piso sobre el hueco del rio. HordaShift = px acumulados (para resetear las tandas sin colapsarlas). Quedarse atras o caer al rio = -1 vida + respawn + horda vuelve. Tuneables en scripts/wire_horda_chase.py. ==="
+          "comment": "=== Horda de persecucion (Nivel 1). Estados en scene var HordaActive: 0=en reposo detras del Player / 1=estampida (arrastra, 130px/s) / 2=ya cruzaste, se va corriendo / 3=oculta. HordaPiso = jumpthru invisible, unico piso sobre el hueco del rio. HordaShift = px acumulados (para resetear las tandas sin colapsarlas). Quedarse atras o caer al rio = -1 vida + respawn + horda vuelve. Tuneables en scripts/wire_horda_chase.py. ===",
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12733,7 +12509,7 @@
                 "value": "SetAnimationName"
               },
               "parameters": [
-                "HordaZombieM",
+                "HordaZombieMed",
                 "\"Walk\""
               ]
             },
@@ -12742,7 +12518,7 @@
                 "value": "SetAnimationName"
               },
               "parameters": [
-                "HordaZombieF",
+                "HordaZombieEnf",
                 "\"Walk\""
               ]
             },
@@ -12751,7 +12527,7 @@
                 "value": "SetAnimationName"
               },
               "parameters": [
-                "HordaZombieT",
+                "HordaZombieInv",
                 "\"Walk\""
               ]
             },
@@ -12760,7 +12536,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieM",
+                "HordaZombieMed",
                 "+",
                 "130 * TimeDelta()"
               ]
@@ -12770,7 +12546,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieF",
+                "HordaZombieEnf",
                 "+",
                 "130 * TimeDelta()"
               ]
@@ -12780,7 +12556,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieT",
+                "HordaZombieInv",
                 "+",
                 "130 * TimeDelta()"
               ]
@@ -12825,7 +12601,8 @@
                 "130 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -12867,7 +12644,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieF",
+                "HordaZombieEnf",
                 "-",
                 "850"
               ]
@@ -12877,7 +12654,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieM",
+                "HordaZombieMed",
                 "-",
                 "850"
               ]
@@ -12887,7 +12664,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieT",
+                "HordaZombieInv",
                 "-",
                 "850"
               ]
@@ -12912,7 +12689,8 @@
                 "850"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13005,7 +12783,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieF",
+                "HordaZombieEnf",
                 "-",
                 "Variable(HordaShift)"
               ]
@@ -13015,7 +12793,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieM",
+                "HordaZombieMed",
                 "-",
                 "Variable(HordaShift)"
               ]
@@ -13025,7 +12803,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieT",
+                "HordaZombieInv",
                 "-",
                 "Variable(HordaShift)"
               ]
@@ -13072,7 +12850,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13109,7 +12888,8 @@
                 "2"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13131,7 +12911,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieF",
+                "HordaZombieEnf",
                 "+",
                 "210 * TimeDelta()"
               ]
@@ -13141,7 +12921,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieM",
+                "HordaZombieMed",
                 "+",
                 "210 * TimeDelta()"
               ]
@@ -13151,7 +12931,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieT",
+                "HordaZombieInv",
                 "+",
                 "210 * TimeDelta()"
               ]
@@ -13166,7 +12946,8 @@
                 "210 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13186,7 +12967,7 @@
                 "value": "PosX"
               },
               "parameters": [
-                "HordaZombieM",
+                "HordaZombieMed",
                 ">",
                 "Player.X() + 380"
               ]
@@ -13198,7 +12979,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "HordaZombieF"
+                "HordaZombieEnf"
               ]
             },
             {
@@ -13206,7 +12987,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "HordaZombieM"
+                "HordaZombieMed"
               ]
             },
             {
@@ -13214,7 +12995,7 @@
                 "value": "Hide"
               },
               "parameters": [
-                "HordaZombieT"
+                "HordaZombieInv"
               ]
             },
             {
@@ -13255,7 +13036,8 @@
                 "3"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13281,130 +13063,8 @@
                 "2 * TimeDelta()"
               ]
             }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SetAnimationName"
-              },
-              "parameters": [
-                "ZombieT",
-                "\"Walk\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "ZombieT",
-                "+",
-                "Variable(ZombieTDir) * 14 * TimeDelta()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PosX"
-              },
-              "parameters": [
-                "ZombieT",
-                ">",
-                "600"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "ZombieTDir",
-                "=",
-                "1"
-              ]
-            }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "ZombieTDir",
-                "=",
-                "-1"
-              ]
-            },
-            {
-              "type": {
-                "value": "FlipX"
-              },
-              "parameters": [
-                "ZombieT",
-                "yes"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PosX"
-              },
-              "parameters": [
-                "ZombieT",
-                "<",
-                "510"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "ZombieTDir",
-                "=",
-                "-1"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "ZombieTDir",
-                "=",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "FlipX"
-              },
-              "parameters": [
-                "ZombieT",
-                "no"
-              ]
-            }
-          ]
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13442,7 +13102,8 @@
                 "\"Invuln\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13490,7 +13151,8 @@
                 "1100 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13516,7 +13178,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13541,7 +13204,8 @@
                 "Heart1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13567,7 +13231,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13592,7 +13257,8 @@
                 "Heart2"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13618,7 +13284,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13643,7 +13310,8 @@
                 "Heart3"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13726,7 +13394,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieF",
+                "HordaZombieEnf",
                 "-",
                 "Variable(HordaShift)"
               ]
@@ -13736,7 +13404,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieM",
+                "HordaZombieMed",
                 "-",
                 "Variable(HordaShift)"
               ]
@@ -13746,7 +13414,7 @@
                 "value": "SetX"
               },
               "parameters": [
-                "HordaZombieT",
+                "HordaZombieInv",
                 "-",
                 "Variable(HordaShift)"
               ]
@@ -13793,7 +13461,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13869,7 +13538,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13938,7 +13608,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -13983,7 +13654,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14028,7 +13700,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14073,7 +13746,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14088,7 +13762,8 @@
                 "\"Walk\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14104,7 +13779,8 @@
                 "Variable(ZombieDDir) * 12 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14150,7 +13826,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14196,7 +13873,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14238,7 +13916,7 @@
                 "value": "Show"
               },
               "parameters": [
-                "HordaZombieF",
+                "HordaZombieEnf",
                 ""
               ]
             },
@@ -14247,7 +13925,7 @@
                 "value": "Show"
               },
               "parameters": [
-                "HordaZombieM",
+                "HordaZombieMed",
                 ""
               ]
             },
@@ -14256,7 +13934,7 @@
                 "value": "Show"
               },
               "parameters": [
-                "HordaZombieT",
+                "HordaZombieInv",
                 ""
               ]
             },
@@ -14269,7 +13947,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14314,7 +13993,8 @@
                 "PauseHint"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14340,7 +14020,8 @@
                 "\"SFX: \" + ToString(GlobalVariable(SfxVolume)) + \"%\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14450,7 +14131,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14536,7 +14218,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14646,7 +14329,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14732,7 +14416,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14777,7 +14462,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14822,7 +14508,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -14834,7 +14521,8 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Espeja el estado de pausa al global SettingsOpen para que SettingsControls (Link) sepa cuando ajustar volumen."
+          "comment": "Espeja el estado de pausa al global SettingsOpen para que SettingsControls (Link) sepa cuando ajustar volumen.",
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14850,14 +14538,16 @@
                 "Variable(Paused)"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
           },
-          "target": "SettingsControls"
+          "target": "SettingsControls",
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14872,7 +14562,8 @@
                 "\"Walk\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14888,7 +14579,8 @@
                 "Variable(ZombieNDir) * 26 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14934,7 +14626,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14980,7 +14673,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14995,7 +14689,8 @@
                 "\"Walk\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15011,7 +14706,8 @@
                 "Variable(ZombieODir) * 13 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15057,7 +14753,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15103,7 +14800,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15118,7 +14816,8 @@
                 "\"Walk\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15134,7 +14833,8 @@
                 "Variable(ZombieVDir) * 8 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15180,7 +14880,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15226,7 +14927,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15250,7 +14952,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15266,7 +14969,8 @@
                 "20 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15293,7 +14997,8 @@
                 "-60"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15340,7 +15045,8 @@
                 "422"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15387,7 +15093,8 @@
                 "976"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15434,7 +15141,8 @@
                 "1180"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15481,7 +15189,8 @@
                 "1425"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15528,7 +15237,8 @@
                 "1600"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15575,7 +15285,8 @@
                 "1680"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15625,7 +15336,8 @@
                 "-480"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15675,7 +15387,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15722,7 +15435,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15749,7 +15463,8 @@
                 "4"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15775,7 +15490,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15800,7 +15516,8 @@
                 "Heart4"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15847,7 +15564,8 @@
                 "1990"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15895,7 +15613,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15922,7 +15641,8 @@
                 "0"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15944,7 +15664,8 @@
               ]
             }
           ],
-          "_mochila": true
+          "_mochila": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -15992,7 +15713,8 @@
               ]
             }
           ],
-          "_mochila": true
+          "_mochila": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16011,7 +15733,8 @@
               ]
             }
           ],
-          "_mochila": true
+          "_mochila": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16059,7 +15782,8 @@
               ]
             }
           ],
-          "_mochila": true
+          "_mochila": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16097,7 +15821,8 @@
               ]
             }
           ],
-          "_mochila": true
+          "_mochila": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16113,7 +15838,8 @@
               ]
             }
           ],
-          "_tw0915": true
+          "_tw0915": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16129,7 +15855,8 @@
               ]
             }
           ],
-          "_tw0915": true
+          "_tw0915": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16145,7 +15872,8 @@
               ]
             }
           ],
-          "_tw0915": true
+          "_tw0915": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16188,7 +15916,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16215,7 +15944,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16262,7 +15992,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16289,7 +16020,8 @@
                 "(-60+Random(120))*3.14159265/180"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16316,7 +16048,8 @@
                 "(120+Random(120))*3.14159265/180"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16344,7 +16077,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16372,7 +16106,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16472,7 +16207,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16572,7 +16308,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16615,7 +16352,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16642,7 +16380,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16689,7 +16428,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16717,7 +16457,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16745,7 +16486,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16773,7 +16515,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16801,7 +16544,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -16901,7 +16645,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17001,7 +16746,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17044,7 +16790,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17071,7 +16818,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17118,7 +16866,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17146,7 +16895,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17174,7 +16924,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17202,7 +16953,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17230,7 +16982,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17330,7 +17083,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17430,7 +17184,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17473,7 +17228,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17500,7 +17256,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17547,7 +17304,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17575,7 +17333,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17603,7 +17362,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17631,7 +17391,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17659,7 +17420,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17759,7 +17521,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17859,7 +17622,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17902,7 +17666,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17929,7 +17694,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -17976,7 +17742,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18004,7 +17771,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18032,7 +17800,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18060,7 +17829,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18088,7 +17858,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18188,7 +17959,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18288,7 +18060,8 @@
               ]
             }
           ],
-          "_virus": true
+          "_virus": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18304,7 +18077,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18321,7 +18095,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18368,7 +18143,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18415,7 +18191,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18431,7 +18208,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18448,7 +18226,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18495,7 +18274,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18542,7 +18322,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18558,7 +18339,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18575,7 +18357,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18622,7 +18405,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18669,7 +18453,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18685,7 +18470,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18702,7 +18488,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18749,7 +18536,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18796,7 +18584,8 @@
               ]
             }
           ],
-          "_tw0915b": true
+          "_tw0915b": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -18887,7 +18676,8 @@
                 "\"InfectedTime\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::ForEach",
@@ -18962,7 +18752,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::ForEach",
@@ -19068,7 +18859,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -19113,7 +18905,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -19203,6 +18996,98 @@
               "parameters": [
                 "",
                 "\"Level2\"",
+                "no"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Over",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
+                "no"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Won",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
                 "no"
               ]
             }
@@ -22590,16 +22475,10 @@
               "name": "ZombieEnf"
             },
             {
-              "name": "ZombieF"
-            },
-            {
               "name": "ZombieInv"
             },
             {
               "name": "ZombieMed"
-            },
-            {
-              "name": "ZombieO"
             }
           ]
         },
@@ -22631,11 +22510,6 @@
         },
         {
           "name": "ZombieMDir",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "ZombieTDir",
           "type": "number",
           "value": 1
         },
@@ -23151,7 +23025,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "ZombieF",
+          "name": "ZombieInv",
           "width": 0,
           "x": 780,
           "y": 76,
@@ -23177,7 +23051,7 @@
             {
               "name": "Speed",
               "type": "number",
-              "value": 22
+              "value": 12
             }
           ]
         },
@@ -23291,7 +23165,7 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "ZombieO",
+          "name": "ZombieEnf",
           "width": 0,
           "x": 1620,
           "y": 76,
@@ -23317,7 +23191,7 @@
             {
               "name": "Speed",
               "type": "number",
-              "value": 13
+              "value": 24
             }
           ]
         },
@@ -24771,7 +24645,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "GAME OVER\n[R] para reiniciar",
+            "text": "GAME OVER\n[R] o click: reintentar  [ESC]: menu",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
@@ -24814,7 +24688,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "LLEGASTE AL CORAZON DEL LAB\n[Espacio]/click: Nivel 3  [R]: repetir",
+            "text": "LLEGASTE AL CORAZON DEL LAB\n[Espacio]/click: Nivel 3\n[R]: repetir  [ESC]: menu",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
@@ -25461,252 +25335,6 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "ZombieF",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "Infected",
-              "type": "number",
-              "value": "0"
-            },
-            {
-              "name": "Dir",
-              "type": "number",
-              "value": "1"
-            },
-            {
-              "name": "MinX",
-              "type": "number",
-              "value": "0"
-            },
-            {
-              "name": "MaxX",
-              "type": "number",
-              "value": "0"
-            },
-            {
-              "name": "Speed",
-              "type": "number",
-              "value": "20"
-            }
-          ],
-          "effects": [
-            {
-              "name": "InfectedOutline",
-              "effectType": "Outline",
-              "disabled": true,
-              "doubleParameters": {
-                "thickness": 2,
-                "padding": 4
-              },
-              "stringParameters": {
-                "color": "220;40;40"
-              },
-              "booleanParameters": {}
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Walk",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.11,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_4.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_7.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_8.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_9.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "ZombieF_Walk_10.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "effects[0]": {
-            "name": "InfectedOutline",
-            "effectType": "Outline",
-            "doubleParameters": {
-              "thickness": 2,
-              "padding": 4
-            },
-            "stringParameters": {
-              "color": "220;40;40"
-            },
-            "booleanParameters": {}
-          }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
           "name": "ZombieInv",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -26103,218 +25731,6 @@
               ]
             }
           ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "ZombieO",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "Infected",
-              "type": "number",
-              "value": "0"
-            },
-            {
-              "name": "Dir",
-              "type": "number",
-              "value": "1"
-            },
-            {
-              "name": "MinX",
-              "type": "number",
-              "value": "0"
-            },
-            {
-              "name": "MaxX",
-              "type": "number",
-              "value": "0"
-            },
-            {
-              "name": "Speed",
-              "type": "number",
-              "value": "20"
-            }
-          ],
-          "effects": [
-            {
-              "name": "InfectedOutline",
-              "effectType": "Outline",
-              "disabled": true,
-              "doubleParameters": {
-                "thickness": 2,
-                "padding": 4
-              },
-              "stringParameters": {
-                "color": "220;40;40"
-              },
-              "booleanParameters": {}
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Walk",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.13,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Zombie_O_Walk_1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Zombie_O_Walk_2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Zombie_O_Walk_3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Zombie_O_Walk_4.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Zombie_O_Walk_5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Zombie_O_Walk_6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Zombie_O_Walk_7.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Zombie_O_Walk_8.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "effects[0]": {
-            "name": "InfectedOutline",
-            "effectType": "Outline",
-            "doubleParameters": {
-              "thickness": 2,
-              "padding": 4
-            },
-            "stringParameters": {
-              "color": "220;40;40"
-            },
-            "booleanParameters": {}
-          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -26870,16 +26286,10 @@
             "objectName": "ZombieEnf"
           },
           {
-            "objectName": "ZombieF"
-          },
-          {
             "objectName": "ZombieInv"
           },
           {
             "objectName": "ZombieMed"
-          },
-          {
-            "objectName": "ZombieO"
           },
           {
             "objectName": "Virus1"
@@ -26940,7 +26350,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -26952,7 +26363,8 @@
               "parameters": []
             }
           ],
-          "actions": []
+          "actions": [],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -26977,7 +26389,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27002,7 +26415,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27027,7 +26441,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27052,7 +26467,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27077,7 +26493,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27103,7 +26520,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27129,7 +26547,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27166,7 +26585,8 @@
                 "\"Run\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27204,7 +26624,8 @@
                 "\"Idle\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27241,7 +26662,8 @@
                 "\"Fall\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27278,7 +26700,8 @@
                 "\"Jump\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27381,7 +26804,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27493,7 +26917,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27602,7 +27027,8 @@
                 "-30"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27711,7 +27137,8 @@
                 "-30"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27749,7 +27176,8 @@
                 "\"Invuln\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27797,7 +27225,8 @@
                 "1100 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27823,7 +27252,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27848,7 +27278,8 @@
                 "Heart1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27874,7 +27305,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27899,7 +27331,8 @@
                 "Heart2"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27925,7 +27358,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -27950,7 +27384,8 @@
                 "Heart3"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28040,7 +27475,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28116,7 +27552,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28185,7 +27622,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28230,7 +27668,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28275,7 +27714,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28320,7 +27760,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28365,7 +27806,8 @@
                 "PauseHint"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28391,7 +27833,8 @@
                 "\"SFX: \" + ToString(GlobalVariable(SfxVolume)) + \"%\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28501,7 +27944,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28587,7 +28031,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28697,7 +28142,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28783,7 +28229,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28828,7 +28275,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28873,7 +28321,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28889,14 +28338,16 @@
                 "Variable(Paused)"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
           },
-          "target": "SettingsControls"
+          "target": "SettingsControls",
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28946,7 +28397,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -28993,7 +28445,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29020,7 +28473,8 @@
                 "4"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29046,7 +28500,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29071,7 +28526,8 @@
                 "Heart4"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29119,7 +28575,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29146,7 +28603,8 @@
                 "0"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29165,7 +28623,8 @@
               ]
             }
           ],
-          "_mochila": true
+          "_mochila": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29256,7 +28715,8 @@
                 "\"InfectedTime\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::ForEach",
@@ -29331,7 +28791,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::ForEach",
@@ -29437,7 +28898,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29482,7 +28944,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -29572,6 +29035,98 @@
               "parameters": [
                 "",
                 "\"Level3\"",
+                "no"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Over",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
+                "no"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Won",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
                 "no"
               ]
             }
@@ -30579,11 +30134,6 @@
         },
         {
           "name": "ZombieMDir",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "ZombieTDir",
           "type": "number",
           "value": 1
         },
@@ -32125,7 +31675,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "GAME OVER\n[R] para reiniciar",
+            "text": "GAME OVER\n[R] o click: reintentar  [ESC]: menu",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
@@ -32168,7 +31718,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "DERROTASTE AL PACIENTE ZERO\n[Espacio]/click: menu  [R]: repetir",
+            "text": "DERROTASTE AL PACIENTE ZERO\n[Espacio]/click o [ESC]: menu\n[R]: repetir",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
@@ -32569,19 +32119,7 @@
                 }
               ]
             }
-          ],
-          "effects[0]": {
-            "name": "InfectedOutline",
-            "effectType": "Outline",
-            "doubleParameters": {
-              "thickness": 2,
-              "padding": 4
-            },
-            "stringParameters": {
-              "color": "220;40;40"
-            },
-            "booleanParameters": {}
-          }
+          ]
         },
         {
           "assetStoreId": "",
@@ -32757,7 +32295,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32769,7 +32308,8 @@
               "parameters": []
             }
           ],
-          "actions": []
+          "actions": [],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32794,7 +32334,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32819,7 +32360,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32844,7 +32386,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32869,7 +32412,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32894,7 +32438,8 @@
                 "PlatformerObject"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32920,7 +32465,8 @@
                 "yes"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32946,7 +32492,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -32983,7 +32530,8 @@
                 "\"Run\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33021,7 +32569,8 @@
                 "\"Idle\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33058,7 +32607,8 @@
                 "\"Fall\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33095,7 +32645,8 @@
                 "\"Jump\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33133,7 +32684,8 @@
                 "\"Invuln\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33181,7 +32733,8 @@
                 "1100 * TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33207,7 +32760,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33232,7 +32786,8 @@
                 "Heart1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33258,7 +32813,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33283,7 +32839,8 @@
                 "Heart2"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33309,7 +32866,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33334,7 +32892,8 @@
                 "Heart3"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33424,7 +32983,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33500,7 +33060,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33545,7 +33106,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33590,7 +33152,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33635,7 +33198,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33680,7 +33244,8 @@
                 "PauseHint"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33706,7 +33271,8 @@
                 "\"SFX: \" + ToString(GlobalVariable(SfxVolume)) + \"%\""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33816,7 +33382,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -33902,7 +33469,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34012,7 +33580,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34098,7 +33667,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34143,7 +33713,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34188,7 +33759,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34204,14 +33776,16 @@
                 "Variable(Paused)"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
           },
-          "target": "SettingsControls"
+          "target": "SettingsControls",
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34258,7 +33832,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34285,7 +33860,8 @@
                 "4"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34311,7 +33887,8 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34336,7 +33913,8 @@
                 "Heart4"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34384,7 +33962,8 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34411,7 +33990,8 @@
                 "0"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34430,7 +34010,8 @@
               ]
             }
           ],
-          "_mochila": true
+          "_mochila": true,
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34475,7 +34056,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34520,7 +34102,8 @@
                 "no"
               ]
             }
-          ]
+          ],
+          "events": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -34588,6 +34171,98 @@
               },
               "parameters": [
                 "NextReady",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
+                "no"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Over",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
+                "no"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Escape\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Won",
                 "=",
                 "1"
               ]

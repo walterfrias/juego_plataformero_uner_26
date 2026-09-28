@@ -103,10 +103,14 @@ razonamiento de por qué se llegó hasta acá.
   - contagio zombie↔virus: Outline rojo, gas, 2 golpes, cura a los 6s
     e inmunidad de 3s.
 - **Tutorial** implementado y probado.
-- **Nivel 2 y Nivel 3 jugables (primer corte)**, generados por
-  `scripts/gen_lab.py` + `scripts/wire_levels23.py`. Ojo: `--force`
-  regenera las escenas desde cero y pisa los cambios hechos a mano.
-  Detalle en `reseach.md` (27/09).
+- **Nivel 2 y Nivel 3 jugables (primer corte).** Se regeneran con, en
+  este orden: `gen_lab.py` → `gen_zombies_lab.py` →
+  `wire_n1_horda_lab.py` → `wire_levels23.py --force`. Ojo: `--force`
+  regenera L2/L3 desde cero y pisa los cambios hechos a mano. Detalle en
+  `reseach.md` (27/09).
+- La horda del Nivel 1 y los zombies del Nivel 2 son personal del
+  laboratorio (médico, enfermera, investigador). **ZombieT es exclusivo
+  del jefe** Paciente Zero.
 
 ## Pendiente / próximos pasos
 
