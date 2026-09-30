@@ -142,9 +142,11 @@ razonamiento de por qué se llegó hasta acá.
 1. **Playtesting con usuarios reales** (lo que falta de la fase Pre-Alfa):
    planilla de feedback, contadores de muertes/tiempo por nivel, informe
    de QA.
-2. Pulido del menú de pausa (sin fondo, se lee regular). El bug de
-   ESC/P quedó resuelto el 27/09 (era un toggle que se deshacía en el
-   mismo frame, ver `reseach.md`).
+2. ~~Pulido del menú de pausa~~ hecho el 29/09: MainMenu rediseñado
+   (`gen_menu_ui.py` + `wire_main_menu_v2.py`) y la pausa de L1/L2/L3
+   usa el mismo panel (`wire_pause_panel.py`: mismos nombres de objeto,
+   ahora Sprites, así la lógica del toggle ESC/P no cambió). Luna del
+   menú también en Level1 junto al obelisco (`wire_luna_level1.py`).
 3. Pulido de L2/L3: música propia, cartel de meta de L2, más contenido
    (objetivo ~7 min por nivel), calibrar el jefe.
 4. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
