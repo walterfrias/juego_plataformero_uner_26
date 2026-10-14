@@ -3,6 +3,8 @@
 gen_city_bg.py  —  fondo de ciudad nocturna placeholder (tileable) + Obelisco.
 
 Qué crea:
+  - assets/City/city_farthest.png 224x60 : skyline más lejano (bruma, pocas
+                                 ventanas) para el parallax de Level1 (14/10)
   - assets/City/city_far.png   224x70  : skyline lejano (edificios claros/hazy)
   - assets/City/city_near.png  224x96  : skyline cercano (siluetas oscuras)
   - assets/City/obelisco.png   18x122  : Obelisco de Buenos Aires (landmark)
@@ -102,7 +104,12 @@ if __name__ == "__main__":
     near = make_skyline("city_near.png", 96, (26, 29, 54, 255), (40, 44, 74, 255),
                         (255, 226, 150, 255), (120, 90, 50, 255), 0.15,
                         seed=23, minw=20, maxw=42, minh=44, maxh=90)
+    # va detrás de city_far: más chico, color entre el cielo (16,20,40) y far
+    farthest = make_skyline("city_farthest.png", 60, (32, 38, 68, 255), (40, 47, 82, 255),
+                            (200, 170, 110, 255), (90, 80, 70, 255), 0.07,
+                            seed=41, minw=8, maxw=20, minh=16, maxh=50)
     ob = make_obelisco()
+    print(f"city_farthest.png {farthest.size}")
     print(f"city_far.png  {far.size}")
     print(f"city_near.png {near.size}")
     print(f"obelisco.png  {ob.size}")

@@ -13,6 +13,8 @@ SFX (consigna pide al menos los de colisión: stomp/kill y daño):
   sfx_victory.wav   llegar a la meta (fanfarria mayor)
   sfx_gameover.wav  perder (descenso menor lento)
   sfx_select.wav    confirmar en el menú (blip)
+  sfx_zumbido.wav   zumbido de tubo fluorescente del lab (loop 2 s, 14/10)
+  sfx_chispazo.wav  chispazo eléctrico de un tubo que falla (14/10)
 
 MÚSICA — procedural, definitiva (CC0 descartado por completo, ver
 AUDIO_CREDITS.txt):
@@ -160,12 +162,45 @@ def music():
     save("music_level1", lvl, fade_ms=6, loop=True, target=0.44)
 
 
+def lab_sfx():
+    """luces del laboratorio (wire_lab_luces.py). Generador aleatorio propio:
+    así no cambia la secuencia de np.random de los SFX y la música de arriba."""
+    rng = np.random.default_rng(1414)
+    # zumbido de balasto: 120 Hz + armónicos, saturado suave, con un latido
+    # lento (0.5 Hz) y un crujido de fondo que pulsa a 120 Hz. 2.0 s = 240
+    # ciclos exactos: el loop cierra solo.
+    t = np.arange(int(2.0 * SR)) / SR
+    hum = sum(a * np.sin(2 * np.pi * f * t)
+              for f, a in ((120, 0.5), (240, 0.28), (360, 0.15), (480, 0.07), (1080, 0.04)))
+    hum = np.tanh(1.8 * hum) * (1 + 0.08 * np.sin(2 * np.pi * 0.5 * t))
+    hum = hum + rng.uniform(-1, 1, len(t)) * (0.5 + 0.5 * np.sin(2 * np.pi * 120 * t)) ** 4 * 0.06
+    save("sfx_zumbido", hum, fade_ms=20, loop=True, target=0.5)
+
+    # chispazo: clics de ruido que se apagan + un "zap" agudo que cae
+    n = int(0.16 * SR)
+    y = np.zeros(n)
+    pos = 0
+    for k in range(rng.integers(6, 9)):
+        ln = int(SR * rng.uniform(0.002, 0.006))
+        if pos + ln >= n:
+            break
+        y[pos:pos + ln] += rng.uniform(-1, 1, ln) * (1 - k / 9)
+        pos += int(SR * rng.uniform(0.006, 0.022))
+    y = np.diff(y, prepend=0) * 0.7 + y * 0.5                    # más agudo (pasa-altos casero)
+    zap = square(1800, 600, 0.06, 0.3) * env(int(0.06 * SR), a=0.001, r=0.05) * 0.25
+    y[:len(zap)] += zap
+    y *= np.exp(-np.arange(n) / (0.05 * SR))
+    save("sfx_chispazo", y, target=0.55)
+
+
 def main():
     np.random.seed(0)
     print("SFX ->", OUT)
     sfx()
     print("Música (placeholder) ->", OUT)
     music()
+    print("Luces del lab ->", OUT)
+    lab_sfx()
     cred = f"{OUT}/AUDIO_CREDITS.txt"
     if not os.path.exists(cred):
         with open(cred, "w") as f:

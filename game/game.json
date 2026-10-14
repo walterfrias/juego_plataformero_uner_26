@@ -2588,6 +2588,58 @@
         "metadata": "",
         "name": "hud_font.fnt",
         "userAdded": true
+      },
+      {
+        "file": "assets/City/city_farthest.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "city_farthest.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/lamp_fixture.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "lamp_fixture.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/lamp_glow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "lamp_glow.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/lab_sombra.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "lab_sombra.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/sfx_zumbido.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_zumbido.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": true,
+        "userAdded": true
+      },
+      {
+        "file": "assets/audio/sfx_chispazo.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_chispazo.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": true,
+        "userAdded": true
       }
     ]
   },
@@ -5251,7 +5303,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "BG_far",
+          "layer": "BG_farthest",
           "name": "Luna",
           "width": 0,
           "x": 778,
@@ -6322,6 +6374,20 @@
           "x": 0,
           "y": 0,
           "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "width": 4000,
+          "height": 60,
+          "layer": "BG_farthest",
+          "name": "CityFarthest",
+          "x": -492,
+          "y": 6,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -15365,6 +15431,17 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 60,
+          "name": "CityFarthest",
+          "texture": "city_farthest.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 4000,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -15669,6 +15746,9 @@
           },
           {
             "objectName": "FarolLuz"
+          },
+          {
+            "objectName": "CityFarthest"
           }
         ]
       },
@@ -28213,9 +28293,120 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Parallax del fondo (wire_parallax.py)",
+          "source": "",
+          "creationTime": 0,
+          "folded": true,
+          "color": {
+            "b": 180,
+            "g": 120,
+            "r": 90
+          },
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Parallax: cada objeto del fondo se ve moverse a f veces la cámara (Luna 0.03, edificios lejanos 0.12, Obelisco 0.15, CityFar 0.30, CityNear 0.55). Generado por wire_parallax.py."
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "CityFarthest",
+                    "=",
+                    "round(-0.88 * CameraCenterX(\"\"))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "CityFar",
+                    "=",
+                    "round(-0.70 * CameraCenterX(\"\"))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "CityNear",
+                    "=",
+                    "round(-0.45 * CameraCenterX(\"\"))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "Luna",
+                    "=",
+                    "round(176 + 0.97 * CameraCenterX(\"\"))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "Obelisco",
+                    "=",
+                    "round(153 + 0.85 * CameraCenterX(\"\"))"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 32,
+          "ambientLightColorG": 32,
+          "ambientLightColorR": 32,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "cameraType": "perspective",
+          "followBaseLayerCamera": true,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "BG_farthest",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
         {
           "ambientLightColorB": 32,
           "ambientLightColorG": 32,
@@ -36323,6 +36514,11 @@
           "name": "NotasBonus",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "LampNear",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -38375,6 +38571,553 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "width": 460,
+          "height": 270,
+          "layer": "Atmos",
+          "name": "LabSombra",
+          "x": 1740,
+          "y": -65,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Alpha",
+              "type": "number",
+              "value": 140
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "width": 860,
+          "height": 270,
+          "layer": "Atmos",
+          "name": "LabSombra",
+          "x": 2940,
+          "y": -65,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Alpha",
+              "type": "number",
+              "value": 140
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 100,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 55,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 360,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 315,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 620,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 575,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 880,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 835,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 1140,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 1095,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 1400,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 1355,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 1660,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 1615,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 1960,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 1915,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 8
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 2240,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 2195,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 9
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 2500,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 2455,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 2780,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 2735,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 3250,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 3205,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 12
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 3560,
+          "y": -64,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 3515,
+          "y": -61,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 13
+            }
+          ]
         }
       ],
       "objects": [
@@ -43380,6 +44123,151 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LampFixture",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "lamp_fixture.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LampGlow",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Prev",
+              "type": "number",
+              "value": 1
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "lamp_glow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LabSombra",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Alpha",
+              "type": "number",
+              "value": 140
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "lab_sombra.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -43558,6 +44446,15 @@
           },
           {
             "objectName": "PlatEdge"
+          },
+          {
+            "objectName": "LampFixture"
+          },
+          {
+            "objectName": "LampGlow"
+          },
+          {
+            "objectName": "LabSombra"
           }
         ]
       },
@@ -52081,6 +52978,633 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Luces del laboratorio (wire_lab_luces.py)",
+          "source": "",
+          "creationTime": 0,
+          "folded": true,
+          "color": {
+            "b": 200,
+            "g": 230,
+            "r": 190
+          },
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Tubos del lab: Mode 0 estable, 1 intermitente, 2 roto. Generado por wire_lab_luces.py."
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LabSombra",
+              "objectsToPick": "LabSombra",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LabSombra",
+                        "=",
+                        "LabSombra.Variable(Alpha)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LampGlow",
+              "objectsToPick": "LampGlow",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        ">=",
+                        "20"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        "<",
+                        "20"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 16) * 6007 + LampGlow.Variable(Seed) * 7727, 101)",
+                        "<",
+                        "45"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        "<",
+                        "20"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 16) * 6007 + LampGlow.Variable(Seed) * 7727, 101)",
+                        ">=",
+                        "45"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        ">=",
+                        "14"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        "<",
+                        "14"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 16) * 6007 + LampGlow.Variable(Seed) * 7727, 101)",
+                        ">=",
+                        "55"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        "<",
+                        "14"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 16) * 6007 + LampGlow.Variable(Seed) * 7727, 101)",
+                        "<",
+                        "55"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "LampGlow.Opacity()",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Prev",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Prev",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2))",
+                            "<",
+                            "240"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectTimer"
+                          },
+                          "parameters": [
+                            "LampGlow",
+                            "\"Spark\"",
+                            "0.12"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "sfx_chispazo.wav",
+                            "no",
+                            "GlobalVariable(SfxVolume) * 0.6 * (1 - abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2)) / 240)",
+                            "RandomFloatInRange(0.8, 1.3)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "LampGlow",
+                            "\"Spark\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "LampGlow.Opacity()",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Prev",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Prev",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2))",
+                            "<",
+                            "240"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectTimer"
+                          },
+                          "parameters": [
+                            "LampGlow",
+                            "\"Spark\"",
+                            "0.12"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "sfx_chispazo.wav",
+                            "no",
+                            "GlobalVariable(SfxVolume) * 0.6 * (1 - abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2)) / 240)",
+                            "RandomFloatInRange(0.8, 1.3)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "LampGlow",
+                            "\"Spark\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundOnChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "sfx_zumbido.wav",
+                    "2",
+                    "yes",
+                    "0",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "LampGlow",
+                    "\"Spark\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "LampNear",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LampGlow",
+              "objectsToPick": "LampGlow",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "LampNear",
+                        "=",
+                        "max(Variable(LampNear), clamp(1 - abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2)) / 220, 0, 1) * LampGlow.Opacity() / 255)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetSoundChannelVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "2",
+                    "=",
+                    "GlobalVariable(SfxVolume) * (0.05 + 0.3 * Variable(LampNear)) * (1 - min(1, Variable(Paused) + Variable(Over) + Variable(Won) + Variable(NotaOpen)))"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -52184,6 +53708,35 @@
           "isLightingLayer": false,
           "isLocked": false,
           "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 32,
+          "ambientLightColorG": 32,
+          "ambientLightColorR": 32,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "cameraType": "perspective",
+          "followBaseLayerCamera": true,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Atmos",
           "renderingType": "",
           "visibility": true,
           "cameras": [
@@ -52518,6 +54071,11 @@
         },
         {
           "name": "NotasBonus",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LampNear",
           "type": "number",
           "value": 0
         }
@@ -53321,6 +54879,104 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "width": 600,
+          "height": 270,
+          "layer": "Atmos",
+          "name": "LabSombra",
+          "x": -60,
+          "y": -25,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Alpha",
+              "type": "number",
+              "value": 90
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 100,
+          "y": -24,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 55,
+          "y": -21,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Decor",
+          "name": "LampFixture",
+          "x": 340,
+          "y": -24,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LampGlow",
+          "x": 295,
+          "y": -21,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2
+            }
+          ]
         }
       ],
       "objects": [
@@ -56316,6 +57972,151 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LampFixture",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "lamp_fixture.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LampGlow",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Mode",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Prev",
+              "type": "number",
+              "value": 1
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "lamp_glow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LabSombra",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Alpha",
+              "type": "number",
+              "value": 140
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "lab_sombra.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -56440,6 +58241,15 @@
           },
           {
             "objectName": "PlatEdge"
+          },
+          {
+            "objectName": "LampFixture"
+          },
+          {
+            "objectName": "LampGlow"
+          },
+          {
+            "objectName": "LabSombra"
           }
         ]
       },
@@ -64078,6 +65888,633 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Group",
+          "name": "Luces del laboratorio (wire_lab_luces.py)",
+          "source": "",
+          "creationTime": 0,
+          "folded": true,
+          "color": {
+            "b": 200,
+            "g": 230,
+            "r": 190
+          },
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Tubos del lab: Mode 0 estable, 1 intermitente, 2 roto. Generado por wire_lab_luces.py."
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LabSombra",
+              "objectsToPick": "LabSombra",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LabSombra",
+                        "=",
+                        "LabSombra.Variable(Alpha)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LampGlow",
+              "objectsToPick": "LampGlow",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        ">=",
+                        "20"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        "<",
+                        "20"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 16) * 6007 + LampGlow.Variable(Seed) * 7727, 101)",
+                        "<",
+                        "45"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        "<",
+                        "20"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 16) * 6007 + LampGlow.Variable(Seed) * 7727, 101)",
+                        ">=",
+                        "45"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        ">=",
+                        "14"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        "<",
+                        "14"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 16) * 6007 + LampGlow.Variable(Seed) * 7727, 101)",
+                        ">=",
+                        "55"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Mode",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 2.5) * 7919 + LampGlow.Variable(Seed) * 104729, 101)",
+                        "<",
+                        "14"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "mod(floor(TimeFromStart() * 16) * 6007 + LampGlow.Variable(Seed) * 7727, 101)",
+                        "<",
+                        "55"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "LampGlow.Opacity()",
+                        ">",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Prev",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Prev",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2))",
+                            "<",
+                            "240"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectTimer"
+                          },
+                          "parameters": [
+                            "LampGlow",
+                            "\"Spark\"",
+                            "0.12"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "sfx_chispazo.wav",
+                            "no",
+                            "GlobalVariable(SfxVolume) * 0.6 * (1 - abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2)) / 240)",
+                            "RandomFloatInRange(0.8, 1.3)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "LampGlow",
+                            "\"Spark\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "LampGlow.Opacity()",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Prev",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "LampGlow",
+                        "Prev",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2))",
+                            "<",
+                            "240"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectTimer"
+                          },
+                          "parameters": [
+                            "LampGlow",
+                            "\"Spark\"",
+                            "0.12"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "sfx_chispazo.wav",
+                            "no",
+                            "GlobalVariable(SfxVolume) * 0.6 * (1 - abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2)) / 240)",
+                            "RandomFloatInRange(0.8, 1.3)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "LampGlow",
+                            "\"Spark\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundOnChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "sfx_zumbido.wav",
+                    "2",
+                    "yes",
+                    "0",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "LampGlow",
+                    "\"Spark\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "LampNear",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "LampGlow",
+              "objectsToPick": "LampGlow",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "LampNear",
+                        "=",
+                        "max(Variable(LampNear), clamp(1 - abs(LampGlow.X() + 65 - (Player.X() + Player.Width() / 2)) / 220, 0, 1) * LampGlow.Opacity() / 255)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetSoundChannelVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "2",
+                    "=",
+                    "GlobalVariable(SfxVolume) * (0.05 + 0.3 * Variable(LampNear)) * (1 - min(1, Variable(Paused) + Variable(Over) + Variable(Won) + Variable(NotaOpen)))"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -64181,6 +66618,35 @@
           "isLightingLayer": false,
           "isLocked": false,
           "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 32,
+          "ambientLightColorG": 32,
+          "ambientLightColorR": 32,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "cameraType": "perspective",
+          "followBaseLayerCamera": true,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Atmos",
           "renderingType": "",
           "visibility": true,
           "cameras": [

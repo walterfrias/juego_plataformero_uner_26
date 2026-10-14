@@ -106,6 +106,9 @@ razonamiento de por qué se llegó hasta acá.
   `"disabled": true`; un evento `Once` no alcanza.
 - `ChangeColor` es un tint multiplicativo: sobre la paleta noche solo
   oscurece. Para resaltar un objeto se usa el efecto `Outline`.
+- **La opacidad de instancia** (`"opacity"` en `numberProperties`) **no la
+  respeta el runtime en los Sprite** (quedan en 255). Ponerla en una var de
+  objeto y aplicarla con la acción `Opacity` por evento.
 - **Time scale 0 congela los timers** (de escena y de objeto). Para medir
   tiempo con el juego congelado (popup de nota) contar frames en una var.
 - **Cerrar un popup con la misma tecla que salta (J/Espacio):** cerrar al
@@ -189,11 +192,35 @@ razonamiento de por qué se llegó hasta acá.
   230). Ámbar en L1, verde tóxico en el lab (L2/L3); las barras de las
   camillas las siguen (MOVERS en el script).
 
+- **Parallax del fondo de L1 (14/10):** `gen_city_bg.py` (tira nueva
+  `city_farthest.png`) → `wire_parallax.py`. Capa nueva `BG_farthest`
+  (detrás de BG_far, con la Luna). Las capas siguen a la cámara 1:1 y se
+  mueven los objetos: XOffset de las tiras y X de Obelisco/Luna según
+  `CameraCenterX("")` (compila a `getCameraX`, centro de cámara). Velocidad
+  relativa: Luna 0.03, CityFarthest 0.12, Obelisco 0.15, CityFar 0.30,
+  CityNear 0.55. El Obelisco recorre la pantalla de x=372 a 39 en todo el
+  nivel (acompaña como en el menú).
+
+- **Luces de terror clase B en el lab (14/10):** `gen_lab_luces.py` →
+  `wire_lab_luces.py`. Capa nueva `Atmos` (entre la de juego y la UI) con
+  la sombra de zonas a oscuras (`LabSombra`, ~55 %) y los conos
+  (`LampGlow`); carcasas (`LampFixture`) en Decor. Tubos estables,
+  intermitentes (ráfagas, ~91 % prendidos) y rotos (destellos, ~7 %), con
+  ruido pseudoaleatorio sobre `TimeFromStart()`. L2: 13 tubos, zonas
+  oscuras en el piso encerado y en el tramo final; L3: 2 tubos + arena
+  un poco más oscura. Sonido (`gen_sfx.py` → `lab_sfx()`, con generador
+  aleatorio propio para no alterar los demás WAV): `sfx_zumbido` en loop
+  en el canal de sonido 2, volumen según la cercanía a un tubo PRENDIDO
+  (mudo en pausa / nota / fin); `sfx_chispazo` (pitch al azar) cuando un
+  tubo cambia de estado a menos de 240 px de Lio.
+
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
   CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →
   `wire_pixel_texts.py` → `wire_mochila_niveles.py` → `wire_notas.py` →
   `wire_bordes_plataforma.py`. También re-correr `wire_notas.py` después
-  de `fix_pause_toggle.py` o `wire_pause_panel.py`. Arte: `gen_mochila.py`
+  de `fix_pause_toggle.py` o `wire_pause_panel.py`. `wire_lab_luces.py` y
+  `wire_parallax.py` son independientes (re-correr el de luces después de
+  `wire_levels23.py --force`). Arte: `gen_mochila.py`
   antes de `gen_menu_ui.py` (la ayuda de la pausa usa `mochila_worn.png`);
   `gen_notas.py`, `gen_borde_plataforma.py`, `gen_luz_borde.py`.
 
@@ -225,6 +252,13 @@ razonamiento de por qué se llegó hasta acá.
    - planeo en L2: puede facilitar los huecos de las camillas;
    - bordes por cercanía: calibrar NEAR/FAR/MAX y el verde del lab;
    - el velo de la pausa / popup (pause_dim) oscurece poco: ¿subirlo?
+   - parallax de L1: velocidades y si la base del Obelisco "flota";
+   - luces del lab: oscuridad de las zonas (140 / 90) y volumen del
+     zumbido (0.05 + 0.3) y de los chispazos.
 5. Re-export y subida del build a itch.io con todo lo nuevo.
-6. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
+6. **Congelamiento de funciones (acordado el 14/10):** de acá a la
+   entrega solo pulido, balance y bugs; lo único "nuevo" admitido es
+   contenido con piezas existentes si el playtest muestra que no se llega
+   a los 30 min de la consigna. Contenido congelado el 28/10.
+7. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
    31/10/2026.
