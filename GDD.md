@@ -116,11 +116,24 @@ Decidido en la lluvia de ideas del HCD (ver `HIGH_CONCEPT.md`).
 ### Antídotos (único coleccionable de gameplay)
 - Frascos repartidos por los niveles, en rutas alternativas / plataformas
   opcionales (no en el camino directo a la meta).
-- Un solo sistema: contador global en el HUD (`Antídotos: 3 / 4`).
+- Contador en el HUD: ícono del frasco + `n/4` (se pone verde con 4/4).
 - **4 antídotos por nivel; juntar los 4 = 1 vida extra** (confirmado
   2026-09-02).
-- Juntar todos los de un nivel = 100% en la pantalla de victoria.
-- **Sin** tabla de récords ni guardado en disco (fuera de alcance).
+- Juntar todos los de un nivel = +1000 en la pantalla de victoria.
+- ~~Sin tabla de récords ni guardado en disco~~ → cambiado el 09/10:
+  hay puntaje y un único récord (ver "Puntaje" abajo).
+
+### Puntaje y récord (decidido 2026-10-09)
+- Stomp +100, antídoto +250 (con "+100"/"+250" flotante).
+- Al ganar el nivel: meta +1000, +500 por vida restante, +1000 si se
+  juntaron los 4 antídotos. Desglose en la pantalla de victoria.
+- Lo ganado en un nivel se suma al total recién al ganar: morir, Game
+  Over o reintentar lo descartan (no se puede farmear). El total vuelve a
+  0 al apretar "Jugar".
+- Un solo récord guardado en el navegador (sin nombres ni tabla), que
+  se muestra en el menú principal y como "¡NUEVO RÉCORD!" al ganar.
+- HUD: corazones | antídotos `n/4` | `PUNTOS 000000` (L3: cartel del
+  jefe centrado arriba), en la pixel font del menú.
 
 ### Mochila de repartidor (power-up de planeo, confirmado 2026-09-12)
 - Prop de escenario ambientado en la ciudad (delivery), no un
@@ -140,13 +153,128 @@ Decidido en la lluvia de ideas del HCD (ver `HIGH_CONCEPT.md`).
   IA — mismo criterio que zombies y antídoto.
 - Wiring: `scripts/wire_mochila.py` (Nivel 1, 1 instancia en x=950,y=96,
   junto al 3er antídoto sobre el pozo de agua).
+- Puesta: Lio la lleva en la espalda (`MochilaWorn`, 7x10, hombros a
+  cintura) y se da vuelta con él (`scripts/wire_mochila_back.py`, 14/10).
+  El Tutorial la presenta como "¡UNA MOCHILA DE REPARTIDOR!".
+- **Inventario (decidido 2026-10-14):** además del planeo, la mochila es
+  donde Lio guarda las **pruebas del brote** (ver abajo). Desde que la
+  agarra en el Nivel 1 la conserva el resto del juego (planeo + inventario
+  también en L2 y L3). Las pruebas se releen desde la pausa con I
+  ("MOCHILA"). Implementado en L1, L2 y L3 (global `TieneMochila`: se
+  pone en 1 al agarrarla en L1 y "Jugar" la vuelve a 0; si muere en L1
+  después de agarrarla, el nivel arranca con ella puesta). La mochila del
+  Tutorial es de práctica y no cuenta. **A playtestear:** el planeo puede
+  facilitar los huecos de L2 (camillas) que se diseñaron sin él.
 
-### Notas del diario de Paciente Zero (narrativa)
-- ~2–3 por nivel. Al recogerlas, cartel de texto breve.
+### Notas del diario de Paciente Zero = pruebas del brote (2026-10-14)
+- **7 pruebas:** 3 en el Nivel 1, 3 en el Nivel 2 y 1 que suelta Paciente
+  Zero al ser derrotado (Nivel 3). En L1 van después de la mochila
+  (x≈950), que es donde Lio las guarda.
+- **Al recogerlas:** el mundo se congela (time scale 0) y se ve la nota
+  completa en estilo papel hasta 6 s; se cierra antes soltando J,
+  Espacio, Enter o ESC (después de 0.5 s);
+  después, aviso "GUARDADA EN LA MOCHILA".
+- **Inventario (pausa → I: MOCHILA, 2026-10-14):** título "MOCHILA -
+  PRUEBAS n/7", la nota elegida grande (o "???" si falta) y una fila de 7
+  casilleros con cursor ámbar; ← → elige, I / ESC / P vuelven a la pausa.
 - Opcionales: no hacen falta para terminar el juego, pero completan el
-  trasfondo del villano (por qué provocó el brote).
-- Es el vehículo narrativo principal — evita diálogos largos, coherente
+  trasfondo del villano. Bonus: **+1000 con las 7** en la victoria final
+  (L3), línea "PRUEBAS 7/7 +1000" en el desglose (decidido 2026-10-14).
+- Es el vehículo narrativo principal: evita diálogos largos, coherente
   con el ritmo arcade y con el libro (pág. 92).
+- **Formato** (pixel font del HUD): solo mayúsculas, acentos y Ñ, signos
+  `! ( ) + , - . / : ? ¡ ¿` (sin comillas, `#`, `;` ni apóstrofe);
+  máx. 30 caracteres por línea y 8 líneas por nota. Firma "P.Z." (el
+  villano no tiene nombre propio). Arte: `scripts/gen_notas.py`, que
+  también tiene los textos (fuente única).
+
+| # | Título | Dónde | Qué explica |
+|---|---|---|---|
+| 1 | EL PLAN | L1, x≈1230 | Origen del brote: lo soltó en el festejo |
+| 2 | REMITO | L1, x≈1010, junto a la mochila (la 1.ª que se encuentra) | De dónde sale la mochila |
+| 3 | MENSAJEROS | L1, x≈2220, zona de virus | Contagio virus↔zombie |
+| 4 | PERSONAL | L2, arriba del estante largo (x≈1060) | Los zombies del laboratorio |
+| 5 | EL ANTÍDOTO | L2, ducto opcional (x≈3400), bajo el antídoto escondido | Por qué hay antídotos sueltos |
+| 6 | ANOMALÍA | L2, piso justo después del gabinete (x≈3168) | Por qué Lio es inmune / la cura |
+| 7 | ÚLTIMA PÁGINA | L3, la suelta el jefe al morir; la victoria aparece al cerrarla | Motivación: dominar el mundo |
+
+```
+PRUEBA 1/7 - EL PLAN
+DÍA 1. EL VIRUS ESTÁ LISTO.
+LO SOLTARÉ EN EL OBELISCO,
+EN PLENO FESTEJO. MILES DE
+HINCHAS ABRAZADOS: EL MEJOR
+CONTAGIO ES LA ALEGRÍA.
+NADIE VA A SOSPECHAR DE UN
+CIENTÍFICO CON CAMISETA.
+- P.Z.
+```
+```
+PRUEBA 2/7 - REMITO
+PEDIDO 0451 - LABORATORIO.
+12 DOCENAS DE EMPANADAS.
+DEJAR EN LA PUERTA. NO TOCAR
+TIMBRE. NO MIRAR LOS FRASCOS.
+NOTA DEL REPARTIDOR: HAY UN
+OLOR RARO Y LOS VIRUS VUELAN.
+NO VUELVO MÁS. ME QUEDO CON
+LA PROPINA Y LA MOCHILA.
+```
+```
+PRUEBA 3/7 - MENSAJEROS
+DÍA 4. LOS VIRUS GRANDES
+VUELAN SOLOS Y BUSCAN GENTE.
+SI TOCAN A UN INFECTADO LO
+PONEN MÁS FUERTE Y MÁS VERDE.
+LOS LLAMO MIS MENSAJEROS.
+NO TRAEN CARTAS, TRAEN
+OBEDIENCIA.
+- P.Z.
+```
+```
+PRUEBA 4/7 - PERSONAL
+REGISTRO DEL LABORATORIO.
+EL PRIMERO FUE EL MÉDICO DE
+GUARDIA. DESPUÉS LA ENFERMERA.
+DESPUÉS EL INVESTIGADOR QUE
+QUERÍA AVISAR A LA PRENSA.
+YA NO ME DISCUTEN NADA.
+POR FIN UN EQUIPO QUE ESCUCHA.
+- P.Z.
+```
+```
+PRUEBA 5/7 - EL ANTÍDOTO
+DÍA 9. ALGUIEN DEL EQUIPO
+FABRICÓ UN ANTÍDOTO ANTES DE
+CAER. ROMPÍ LA FÓRMULA, PERO
+QUEDARON FRASCOS SUELTOS POR
+TODA LA CIUDAD.
+SI ALGUIEN LOS JUNTA...
+NO. NADIE ES TAN TONTO COMO
+PARA SALIR A LA CALLE.
+```
+```
+PRUEBA 6/7 - ANOMALÍA
+DÍA 12. LAS CÁMARAS MUESTRAN
+A ALGUIEN QUE NO SE CONTAGIA.
+SALTA SOBRE MIS INFECTADOS
+COMO SI FUERA UN JUEGO.
+LLEVA UNA MOCHILA DE DELIVERY.
+SI ES INMUNE, SU SANGRE ES LA
+CURA. QUE NO LLEGUE HASTA ACÁ.
+- P.Z.
+```
+```
+PRUEBA 7/7 - ÚLTIMA PÁGINA
+NO QUERÍA DESTRUIR EL MUNDO.
+QUERÍA QUE ME HICIERA CASO.
+UN EJÉRCITO QUE NO PROTESTA,
+NO VOTA, NO PIDE AUMENTO.
+EMPECÉ POR BUENOS AIRES
+PORQUE SI FUNCIONA ACÁ,
+FUNCIONA EN CUALQUIER LADO.
+¿QUIÉN SOS VOS PARA FRENARME?
+```
 
 ## 7. Sonido (punto 7 de la consigna — mínimo música de fondo + colisiones)
 
@@ -163,9 +291,8 @@ Decidido en la lluvia de ideas del HCD (ver `HIGH_CONCEPT.md`).
 
 ## 8. Pendiente de definir
 
-- Texto final de las notas del diario / cinemáticas (la motivación
-  core de Paciente Zero ya está cerrada, ver §1).
-- Nº de notas de diario reales por nivel (hoy: "~2-3", placeholder).
+- Texto de cinemáticas, si las hay. Las notas del diario ya están
+  escritas (7, ver §6, 2026-10-14).
 
 ### Ya confirmados (2026-09-02)
 - Título: **Paciente Zero**. Nombre del jugable: **Lio** (renombrado

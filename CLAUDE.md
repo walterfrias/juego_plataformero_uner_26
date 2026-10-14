@@ -99,12 +99,33 @@ razonamiento de por qué se llegó hasta acá.
 - **Acciones de extensiones de objeto** (p. ej. `XOffset`/`YOffset` de
   TiledSprite) llevan el prefijo de la extensión en el tipo:
   `TiledSpriteObject::XOffset`. Sin él, la acción se descarta al compilar.
+- **BitmapText:** la acción de texto es `BitmapText::BitmapTextObject::SetText`
+  (`BitmapText::SetText` se descarta al compilar; `BitmapText::SetTint`
+  sí va sin el segmento del objeto). Fuente del HUD: `gen_font.py`.
 - Un efecto arranca deshabilitado solo si su definición trae
   `"disabled": true`; un evento `Once` no alcanza.
 - `ChangeColor` es un tint multiplicativo: sobre la paleta noche solo
   oscurece. Para resaltar un objeto se usa el efecto `Outline`.
+- **Time scale 0 congela los timers** (de escena y de objeto). Para medir
+  tiempo con el juego congelado (popup de nota) contar frames en una var.
+- **Cerrar un popup con la misma tecla que salta (J/Espacio):** cerrar al
+  SOLTAR (`KeyFromTextReleased`) y bloquear controles mientras está
+  abierto (`IgnoreDefaultControls` + condición en los eventos WASD/J). Si
+  no, la tecla queda "guardada" y Lio salta al despausar.
+- **Guardas sobre eventos existentes** (NotaOpen=0, MochilaOpen=0 en la
+  pausa/controles): el script tiene que sacar su propio grupo ANTES de
+  buscar, o se matchea a sí mismo al re-correr (pasó con wire_notas.py).
+- Para probar, **mover al Player de verdad** (teclas), no solo
+  teletransportarlo encima: así se vio que la nota 6 arriba del gabinete
+  era inalcanzable en la práctica.
+- **Test de runtime:** `gdexport` al scratchpad, inyectar
+  `window.__game = game;` en `index.html` después de `new
+  gdjs.RuntimeGame`, servir con `python3 -m http.server` y manejar con el
+  puppeteer de `~/Escritorio/gdevelop-mcp/node_modules/puppeteer`
+  (`getSceneStack().replace(...)`, leer vars/objetos, capturas). Grep de
+  "Unknown" en `code*.js` para instrucciones descartadas.
 
-## Estado (al 27/09/2026)
+## Estado (al 14/10/2026)
 
 - **Nivel 1 cerrado, playtesteado y aprobado por los profes**:
   - horda, virus voladores, puentes, antídoto;
@@ -128,6 +149,54 @@ razonamiento de por qué se llegó hasta acá.
   cruza el río montado encima. El Nivel 2 tiene solo personal del lab.
   **ZombieT es exclusivo del jefe** Paciente Zero.
 
+- **Puntaje + HUD (09/10):** `gen_font.py` → `wire_score_hud.py`
+  (idempotente; re-correrlo después de `wire_levels23.py --force`).
+  Stomp +100 con cadena sin tocar el piso (100/200/400/800/1000),
+  antídoto +250, números estilo arcade; al ganar: meta +1000, +500 por vida, +1000
+  con 4/4 antídotos; en la victoria de L3, +1000 con las 7 pruebas. `LevelScore` (escena) pasa a `Puntaje` (global)
+  recién al ganar; récord único en storage del navegador, visible en el
+  menú. Detalle en `reseach.md` (09/10).
+- **Textos en fuente pixel (14/10):** `wire_pixel_texts.py` (después de
+  `wire_score_hud.py`): tutorial y carteles de victoria/Game Over en
+  BitmapText; ya no queda ningún TextObject.
+- **Mochila de repartidor (14/10):** en la espalda y gira con Lio
+  (`wire_mochila_back.py`). Desde que se agarra en L1 queda para todo el
+  juego (global `TieneMochila`, `wire_mochila_niveles.py`): planeo + espalda
+  en L2/L3; si muere en L1 arranca con ella; "Jugar" la resetea. La del
+  Tutorial es de práctica.
+- **Pruebas del brote (14/10, completo):** 7 notas del diario de Paciente
+  Zero (textos en GDD §6 y en `gen_notas.py`, fuente única; arte con el
+  texto horneado en `game/assets/UI/Notas/`). `wire_notas.py`:
+  - L1: notas 2 (x≈1010, junto a la mochila), 1 (x≈1232), 3 (x≈2220).
+    L2: 4 (estante largo), 5 (ducto opcional), 6 (piso tras el gabinete).
+    L3: la 7 la suelta el jefe al morir; la victoria espera a que se lea
+    (evento original con condiciones BossDown/Nota7/NotaOpen; si ya la
+    tenía, victoria inmediata).
+  - Al agarrar: time scale 0 + popup (se cierra soltando J/Espacio/Enter/
+    ESC o solo a los 6 s). Globals `Nota1..7`, no reaparecen al morir;
+    "Jugar" las resetea.
+  - Pausa → **I: MOCHILA** (inventario) en L1/L2/L3: nota grande + 7
+    casilleros, ← → elige, I/ESC/P vuelven. La ayuda de la pausa lleva el
+    sprite de la mochila.
+  - Bonus **PRUEBAS 7/7 +1000** en la victoria de L3 (`wire_score_hud.py`).
+
+- **Bordes de plataforma por cercanía (14/10, L1/L2/L3):**
+  `gen_borde_plataforma.py` + `gen_luz_borde.py` → `wire_bordes_plataforma.py
+  [Escena]`. Árboles y faroles: copia `<Nombre>Luz` del sprite con luz de
+  borde pintada (variante B elegida por el usuario). El resto: barra ámbar
+  sobre el canto de la máscara de colisión (menos Ground, Poste,
+  HordaPiso). Opacidad según la distancia a Lio (NEAR 40 / FAR 150 / MAX
+  230). Ámbar en L1, verde tóxico en el lab (L2/L3); las barras de las
+  camillas las siguen (MOVERS en el script).
+
+- **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
+  CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →
+  `wire_pixel_texts.py` → `wire_mochila_niveles.py` → `wire_notas.py` →
+  `wire_bordes_plataforma.py`. También re-correr `wire_notas.py` después
+  de `fix_pause_toggle.py` o `wire_pause_panel.py`. Arte: `gen_mochila.py`
+  antes de `gen_menu_ui.py` (la ayuda de la pausa usa `mochila_worn.png`);
+  `gen_notas.py`, `gen_borde_plataforma.py`, `gen_luz_borde.py`.
+
 ## Entregas
 
 - **Pre-entrega Pre-Alfa (29/09/2026):** prototipo funcional con core
@@ -149,5 +218,13 @@ razonamiento de por qué se llegó hasta acá.
    menú también en Level1 junto al obelisco (`wire_luna_level1.py`).
 3. Pulido de L2/L3: música propia, cartel de meta de L2, más contenido
    (objetivo ~7 min por nivel), calibrar el jefe.
-4. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
+4. **Playtest de lo hecho el 14/10** (jugar de punta a punta):
+   - notas 1 y 3 de L1 caen en patrullas de zombies (¿riesgo/recompensa o
+     molesto?); notas 4 y 5 de L2: ¿bien escondidas?;
+   - 6 s del popup: ¿alcanzan?;
+   - planeo en L2: puede facilitar los huecos de las camillas;
+   - bordes por cercanía: calibrar NEAR/FAR/MAX y el verde del lab;
+   - el velo de la pausa / popup (pause_dim) oscurece poco: ¿subirlo?
+5. Re-export y subida del build a itch.io con todo lo nuevo.
+6. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
    31/10/2026.
