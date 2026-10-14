@@ -1,10 +1,10 @@
 node_modules/
 .DS_Store
 *.log
+__pycache__/
 
 # Notas / material de trabajo personal — no forma parte de la entrega
 reseach.md
-scripts/
 material_lectura/
 consigna.md
 prompts_mcp.md
@@ -21,3 +21,6 @@ Exported/
 # Backups y autosave que genera GDevelop / gdevelop-mcp al editar el .json
 *.bak-*
 *.autosave
+
+# Capturas de pantalla de debug/seguimiento
+capturas/
