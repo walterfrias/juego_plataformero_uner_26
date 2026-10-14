@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Paciente Zero — Avance GDD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4ecdc;
+    --cream2:#faf6ec;
+    --ink:#221e28;
+    --ink-soft:#2b2620;
+    --orange:#c1702e;
+    --orange2:#b8672c;
+    --green:#4e7a4a;
+    --dark:#16131e;
+    --dark2:#221e2b;
+    --dark-border:#3a3446;
+    --muted:#8a8375;
+    --line:#d8cdb8;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{font-family:'Nunito',sans-serif; color:var(--ink-soft); font-size:12px;}
+  .pix{font-family:'Press Start 2P',monospace;}
+  img{image-rendering:pixelated; image-rendering:-moz-crisp-edges; image-rendering:crisp-edges;}
+
+  @page{ size:A4; margin:0; }
+
+  .page{
+    width:210mm; height:297mm;
+    padding:16mm 15mm 20mm;
+    position:relative;
+    page-break-after:always;
+    overflow:hidden;
+  }
+  .page:last-child{page-break-after:auto;}
+  .page.cream{background:var(--cream); color:var(--ink-soft);}
+  .page.dark{background:var(--dark); color:#e9e4d8;}
+  .page.dark::before,.page.dark::after{
+    content:""; position:absolute; left:0; right:0; height:9px; background:var(--orange);
+  }
+  .page.dark::before{top:0;}
+  .page.dark::after{bottom:0;}
+
+  .pill{
+    display:inline-block; background:var(--cream2); border:2px solid var(--ink);
+    border-radius:999px; padding:7px 18px; font-size:9px; letter-spacing:.5px;
+  }
+  .page.dark .pill{background:var(--cream); color:var(--ink); border-color:var(--ink);}
+
+  h1.title{font-size:24px; color:var(--orange); margin:14px 0 4px;}
+  h1.title.small{font-size:17px;}
+  h2.heading{font-size:12px; color:var(--orange); margin:20px 0 8px;}
+  h3.sub{font-size:9px; color:var(--ink-soft); margin:0 0 8px;}
+  p{line-height:1.55; margin:6px 0; font-size:11px;}
+  .muted{color:var(--muted); font-size:9.5px;}
+
+  .box{border:2px solid var(--ink); border-radius:14px; padding:16px 20px; margin-top:10px; background:var(--cream2);}
+  .page.dark .box{background:var(--dark2); border-color:var(--dark-border); color:#e9e4d8;}
+  .box h4{margin:0 0 6px; font-size:10px; color:var(--orange);}
+
+  table{width:100%; border-collapse:collapse; font-size:10.5px; margin-top:8px;}
+  th,td{border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top;}
+  th{background:#efe4cd; font-size:8px; letter-spacing:.3px;}
+
+  ul.tight{margin:6px 0; padding-left:16px;}
+  ul.tight li{margin:3px 0; line-height:1.45; font-size:11px;}
+
+  .footer{
+    position:absolute; bottom:10mm; left:15mm; right:15mm;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:9px; color:var(--muted); border-top:1px solid var(--line); padding-top:6px;
+  }
+  .page.dark .footer{color:#9c93b0; border-top-color:var(--dark-border);}
+
+  .fact-list{list-style:none; margin:10px 0 0; padding:0; font-size:10.5px;}
+  .fact-list li{margin:5px 0; line-height:1.45;}
+  .fact-list b{color:var(--orange2);}
+
+  .gallery{display:flex; flex-wrap:wrap; gap:12px; margin-top:10px;}
+  .card{border:2px solid var(--ink); border-radius:10px; padding:10px 12px; background:var(--cream2); flex:1 1 46%; min-width:0;}
+  .card h4{font-size:9px; color:var(--orange); margin:0 0 6px;}
+  .card .imgwrap{background:#efe4cd; border-radius:6px; padding:8px; display:flex; align-items:center; justify-content:center; height:56px;}
+  .card .imgwrap img{max-height:44px; width:auto;}
+  .card .imgwrap img.sheet{max-height:100%; width:auto; max-width:100%;}
+  .card p{font-size:9.7px; line-height:1.4; margin:6px 0 0;}
+  .card .meta{font-size:8.7px; color:var(--muted); margin-top:4px;}
+
+  .propgrid{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+  .prop{border:2px solid var(--ink); border-radius:10px; background:var(--cream2); padding:8px; width:104px; text-align:center;}
+  .prop .imgwrap{height:64px; display:flex; align-items:flex-end; justify-content:center;}
+  .prop .imgwrap img{max-height:60px; max-width:70px;}
+  .prop .name{font-size:8px; margin-top:5px; font-weight:800;}
+  .prop .dims{font-size:7.5px; color:var(--muted);}
+
+  .palette{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px;}
+  .palette .item{width:76px; font-size:8.5px; text-align:center;}
+  .swatch{width:76px; height:56px; border-radius:8px; border:2px solid var(--ink); margin-bottom:4px;}
+
+  .coverimgrow{display:flex; align-items:flex-end; gap:18px; margin:22px 0; background:#1c1826; border:2px solid var(--dark-border); border-radius:14px; padding:16px 20px 10px; justify-content:center;}
+  .coverimgrow img{height:64px; width:auto;}
+  .coverimgrow img.small{height:40px;}
+  .coverimgrow .lbl{font-size:7px; color:#9c93b0; text-align:center; margin-top:4px;}
+  .coverimgrow .cell{display:flex; flex-direction:column; align-items:center;}
+
+  .two-col{display:flex; gap:18px;}
+  .two-col > div{flex:1;}
+
+  .checklist{margin-top:10px;}
+  .checklist li{margin:4px 0;}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 — COVER -->
+<div class="page dark">
+  <div style="font-weight:800; letter-spacing:.5px; color:#e9e4d8; line-height:1.7; margin-top:14px; font-size:13px;">
+    UNIVERSIDAD NACIONAL DE ENTRE RÍOS<br>
+    <span style="font-size:11px; font-weight:700;">FACULTAD DE CIENCIAS DE LA ADMINISTRACIÓN</span><br>
+    <span style="font-size:10px; color:#9c93b0; font-weight:600;">TECNICATURA UNIVERSITARIA EN DESARROLLO WEB</span>
+  </div>
+
+  <p style="margin-top:26px; color:#cfc8dd; font-size:11px;">Cátedra:</p>
+  <div class="pill pix">Multimedia y Juegos en Web</div>
+  <p class="muted" style="color:#9c93b0; margin-top:8px;">Docentes: Fabien M. Pineda · Hernan I. Hernandez · Juan I. Carubia</p>
+
+  <h1 class="pix title" style="font-size:34px; margin-top:46px;">PACIENTE ZERO</h1>
+  <div class="pill pix" style="margin-top:8px; background:#2c2636; color:#f4ecdc; border-color:#f4ecdc;">
+    AVANCE — GDD + HIGH CONCEPT (BORRADOR)
+  </div>
+
+  <div class="coverimgrow">
+    <div class="cell"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Player_ForestBoy/ForestBoy_Idle_1.png"><div class="lbl">LIO</div></div>
+    <div class="cell"><img class="small" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_F/Zombie_F_Walk_1.png"><div class="lbl">ZOMBIE F</div></div>
+    <div class="cell"><img class="small" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_M/Zombie_M_Walk_1.png"><div class="lbl">ZOMBIE M</div></div>
+    <div class="cell"><img class="small" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_T/Zombie_T_Walk_1.png"><div class="lbl">ZOMBIE T</div></div>
+    <div class="cell"><img class="small" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_O/Zombie_O_Walk_1.png"><div class="lbl">ZOMBIE O</div></div>
+    <div class="cell"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Virus/virus_3.png" style="height:34px;"><div class="lbl">VIRUS</div></div>
+    <div class="cell"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/UI/antidoto_1.png" style="height:38px;"><div class="lbl">ANTÍDOTO</div></div>
+    <div class="cell"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/farol.png" style="height:60px;"><div class="lbl">FAROL</div></div>
+  </div>
+
+  <p style="color:#cfc8dd; font-size:10.5px; margin-top:24px; max-width:140mm;">
+    Documento de avance: Historia / High Concept, GDD resumido y muestra de arte
+    (personaje, NPCs, objetos de escenario y obstáculo volador), para pedir
+    devolución de la cátedra antes de seguir con la producción.
+  </p>
+
+  <div style="position:absolute; bottom:18mm; left:15mm;">
+    <p class="pix" style="font-size:10px; margin:0;">Integrante: Walter Frías</p>
+    <p class="muted" style="color:#9c93b0; margin-top:4px;">Trabajo individual — Avance para devolución (no es la entrega final)</p>
+  </div>
+  <div class="pix" style="position:absolute; bottom:18mm; right:15mm; color:var(--orange); font-size:20px;">2026</div>
+</div>
+
+<!-- PAGE 2 — NOTA DE ESTADO -->
+<div class="page cream">
+  <div class="pill pix">Nota para la cátedra</div>
+  <h1 class="pix title small">Por qué este envío</h1>
+  <p>
+    Este documento reúne el estado actual del <b>High Concept</b> y el <b>GDD</b>
+    de <i>Paciente Zero</i>, más una muestra amplia del arte producido hasta
+    ahora — personaje jugable, ocho variantes de zombie, objetos de escenario
+    urbano y el obstáculo volador tipo coronavirus — para pedir una devolución
+    de la cátedra antes de seguir avanzando con la producción.
+  </p>
+  <p>
+    <b>Aclaración:</b> ni el High Concept ni el GDD están cerrados — esto es la
+    versión de trabajo al 18/09/2026. Los documentos completos y "vivos" quedan
+    en el repositorio del proyecto (<span class="pix" style="font-size:9px;">GDD.md</span>
+    y <span class="pix" style="font-size:9px;">HIGH_CONCEPT.md</span>) y se van a
+    seguir editando con lo que surja de esta devolución.
+  </p>
+  <p>
+    Ya existe un prototipo jugable en GDevelop (Nivel 1 completo y probado,
+    Tutorial en desarrollo) — el foco de este envío es <b>diseño y arte</b>,
+    no el build ni el video pitch, que quedan para cuando el contenido esté
+    aprobado.
+  </p>
+
+  <div class="box">
+    <h4>Qué incluye este avance</h4>
+    <ul class="tight checklist">
+      <li>Historia y concepto del juego (High Concept, borrador)</li>
+      <li>Ficha resumida del personaje jugable y reglas de juego (GDD)</li>
+      <li>Estructura de niveles, menú de opciones, coleccionables y sonido</li>
+      <li>Galería de sprites — ocho variantes visuales del enemigo zombie (NPCs)</li>
+      <li>Galería de objetos de escenario — mobiliario urbano y props</li>
+      <li>Obstáculo volador "coronavirus" — diseño, sprite y comportamiento</li>
+      <li>Herramientas y pipeline de producción</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h4>Qué NO incluye (todavía)</h4>
+    <ul class="tight">
+      <li>Arte definitivo del jefe final (Paciente Zero) — sigue pendiente de pase de arte propio</li>
+      <li>Texto final de las notas del diario / cinemáticas</li>
+      <li>Escena Tutorial terminada e implementada</li>
+      <li>Video pitch — se deja para cuando haya contenido aprobado</li>
+    </ul>
+  </div>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 2</span></div>
+</div>
+
+<!-- PAGE 3 — HIGH CONCEPT 1 -->
+<div class="page cream">
+  <div class="pill pix">High Concept (borrador)</div>
+  <h1 class="pix title small">Historia del juego</h1>
+
+  <h2 class="heading pix">Descripción del juego</h2>
+  <p>
+    Plataformero 2D de acción arcade con estética pixel-art. Un brote zombie
+    golpea la Ciudad de Buenos Aires y Lio —el único humano inmune al virus—
+    se abre paso desde la calle hasta el foco de la infección para derrotar
+    al <b>Paciente Zero</b>, el científico que provocó el brote de forma
+    deliberada. La característica única tiene dos caras: no hay armas, la
+    única forma de eliminar zombies es saltarles sobre la cabeza (<i>stomp</i>);
+    y en cada nivel hay un tramo de <b>persecución</b> en el que una horda
+    masiva avanza como una estampida, y la única forma de no quedar atrás es
+    correr por encima de la manada como si fuera un suelo móvil. Por el
+    camino se juntan antídotos (vida extra) y notas del diario de Paciente
+    Zero, que cuentan la historia sin diálogos. Duración total ~30 min
+    (tutorial + 3 niveles).
+  </p>
+
+  <h2 class="heading pix">Resumen de la historia</h2>
+  <p>
+    Buenos Aires amanece tomada por infectados. Lio sale de su refugio para
+    llegar al origen del brote. Cruza la calle entre los primeros infectados,
+    se interna en un hospital/laboratorio donde descubre que la infección no
+    fue un accidente, y finalmente enfrenta al Paciente Zero. Al derrotarlo,
+    el brote se detiene. Las notas de su diario, repartidas por los niveles,
+    van revelando ese trasfondo sin cortar la acción.
+  </p>
+
+  <table>
+    <tr><th>Escena</th><th>Rol narrativo</th></tr>
+    <tr><td>Tutorial</td><td>Refugio seguro: se enseñan los controles sin peligro real.</td></tr>
+    <tr><td>Nivel 1 — La calle</td><td>Primer contacto con el brote. Introduce el <i>stomp</i>.</td></tr>
+    <tr><td>Nivel 2 — El interior</td><td>Hospital/laboratorio. Pistas del origen. Más enemigos y hazards.</td></tr>
+    <tr><td>Nivel 3 — Confrontación</td><td>Arena final contra el Paciente Zero.</td></tr>
+  </table>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 3</span></div>
+</div>
+
+<!-- PAGE 4 — HIGH CONCEPT 2 -->
+<div class="page cream">
+  <div class="pill pix">High Concept (borrador)</div>
+  <h1 class="pix title small">Plataforma, género y público</h1>
+
+  <div class="two-col">
+    <div class="box">
+      <h4>Plataforma</h4>
+      <p style="font-size:10px;">Juego web (navegador de escritorio), export HTML5 de GDevelop. Controles de teclado. Fuera de alcance: móvil/táctil, consolas.</p>
+    </div>
+    <div class="box">
+      <h4>Género</h4>
+      <p style="font-size:10px;">Plataformas 2D de acción arcade + tramos de persecución/auto-scroll. Referencias: <i>Super Mario Bros.</i>, <i>Zombies Ate My Neighbors</i>, <i>Donkey Kong Country</i>.</p>
+    </div>
+  </div>
+  <div class="box">
+    <h4>Público de diseño</h4>
+    <p style="font-size:10px;">12+ (equivalente a PEGI 12 / ESRB Teen): violencia fantástica sin sangre realista, tono arcade retro. Jugador casual, curioso más que competitivo, afinidad por pixel-art y plataformas clásicas — desde adolescentes hasta adultos de 40+. Atracción: partida corta (~30 min), curva de dificultad suave con tutorial sin riesgo, dos mecánicas legibles (stomp / correr sobre la horda).</p>
+  </div>
+
+  <h2 class="heading pix">Las 6 partes del concepto (resumen)</h2>
+  <ul class="tight">
+    <li><b>a. Gráficos:</b> pixel-art 32×32/34, resolución interna 480×270. Nada generado por IA de imagen: sprites procedurales (Python + Pillow) sobre paleta compartida; el jugable usa un sprite CC0 recoloreado.</li>
+    <li><b>b. Interfaz:</b> menú Jugar/Opciones, HUD con vidas y contador de antídotos, notas de diario como carteles de texto, pantallas de transición/game over/victoria.</li>
+    <li><b>c. Historia:</b> mínima, contada por ambiente y notas del diario opcionales — sin diálogos largos.</li>
+    <li><b>d. Niveles:</b> tutorial + 3 niveles (~24–29 min), dificultad creciente, cada uno con un tramo de persecución sobre la horda.</li>
+    <li><b>e. Mecánica:</b> correr/saltar (behavior nativo Platformer Character), stomp como único combate, horda como plataforma móvil, jefe con patrón telegrafía→ataque→ventana de stomp (×3).</li>
+    <li><b>f. Sonido:</b> música + SFX 100% procedurales (Python + numpy), sin librerías CC0 ni IA-audio — mismo criterio que el arte.</li>
+  </ul>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 4</span></div>
+</div>
+
+<!-- PAGE 5 — GDD PERSONAJE -->
+<div class="page cream">
+  <div class="pill pix">Documento de Diseño (GDD) — borrador</div>
+  <h1 class="pix title small">Personaje jugable</h1>
+
+  <div class="box" style="display:flex; gap:20px; align-items:center;">
+    <div style="background:#efe4cd; border-radius:8px; padding:10px;">
+      <img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Player_ForestBoy/ForestBoy_Idle_1.png" style="width:96px; height:auto;">
+    </div>
+    <ul class="fact-list" style="flex:1;">
+      <li><b>Nombre:</b> Lio (guiño a Messi, ambientación porteña)</li>
+      <li><b>Rol:</b> único humano inmune al virus, sin entrenamiento de combate</li>
+      <li><b>Habilidad:</b> eliminar zombies saltando sobre su cabeza (stomp); sin armas</li>
+      <li><b>Movimiento:</b> correr y saltar — behavior nativo Platformer Character de GDevelop</li>
+      <li><b>Vidas:</b> 3 · <b>Daño:</b> pierde 1 vida al tocar un zombie de costado, invulnerabilidad breve con parpadeo</li>
+      <li><b>Tamaño de sprite:</b> 32×34 px (base 32×32 estirada, igual escala que los zombies)</li>
+      <li><b>Animaciones:</b> idle, run, jump, fall, hit, death — el stomp reusa el frame de "fall"</li>
+    </ul>
+  </div>
+
+  <h2 class="heading pix">Reglas de combate y daño</h2>
+  <ul class="tight">
+    <li>Sin armas: la única forma de eliminar enemigos es el <i>stomp</i> (saltar sobre la cabeza).</li>
+    <li>Contacto lateral con un zombie = pierde 1 vida + breve invulnerabilidad con parpadeo.</li>
+    <li>Mochila de repartidor (power-up único por nivel): mientras cae, mantener Espacio baja la velocidad de caída de 600 a 80 px/s — planeo, no vuelo ni doble salto.</li>
+  </ul>
+
+  <h2 class="heading pix">Jefe final — Paciente Zero (Nivel 3)</h2>
+  <p>
+    Versión mutada del zombie común (reusa paleta/estructura de sprite para ahorrar arte). Patrón de combate pensado para la mecánica de solo-stomp:
+  </p>
+  <ol style="font-size:11px; line-height:1.6; margin:4px 0 0; padding-left:18px;">
+    <li>Telegrafía el ataque (se agacha ~1s antes de embestir)</li>
+    <li>Ataca (embestida horizontal o "pisada" que el jugador esquiva saltando)</li>
+    <li>Queda expuesto un instante — única ventana para el stomp</li>
+  </ol>
+  <p>Necesita <b>3 stomps</b> para morir, con breve invulnerabilidad entre cada uno (patrón clásico tipo Bowser/Koopa). Arte del jefe: pendiente de pase propio — ver página de Nota de estado.</p>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 5</span></div>
+</div>
+
+<!-- PAGE 6 — GDD NIVELES / SISTEMAS -->
+<div class="page cream">
+  <div class="pill pix">Documento de Diseño (GDD) — borrador</div>
+  <h1 class="pix title small">Niveles y sistemas</h1>
+
+  <table>
+    <tr><th>Nivel</th><th>Duración</th><th>Contenido</th></tr>
+    <tr><td>Tutorial</td><td>~3–5 min</td><td>Correr, saltar, stomp de práctica — sin posibilidad real de perder.</td></tr>
+    <tr><td>Nivel 1</td><td>~7–8 min</td><td>Plataformas simples, zombies de patrulla, checkpoint a mitad de nivel.</td></tr>
+    <tr><td>Nivel 2</td><td>~7–8 min</td><td>Más densidad de zombies, 1 hazard nuevo (pinchos/huecos), checkpoint.</td></tr>
+    <tr><td>Nivel 3 (boss)</td><td>~7–8 min</td><td>Arena de combate contra Paciente Zero + pantalla de victoria.</td></tr>
+  </table>
+  <p class="muted">Total estimado: ~24–29 min, dentro del margen de 30 min pedido por la consigna.</p>
+
+  <div class="two-col" style="margin-top:8px;">
+    <div class="box">
+      <h4>Menú de opciones</h4>
+      <ul class="tight" style="font-size:10px;">
+        <li>Volumen de música</li>
+        <li>Volumen de efectos (SFX)</li>
+        <li>Reiniciar nivel actual</li>
+        <li>Salir / volver al menú principal</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>Coleccionables</h4>
+      <p style="font-size:10px;">Antídoto: 4 por nivel, juntar los 4 = 1 vida extra. Mochila de repartidor: ítem único por nivel, desbloquea planeo. Notas del diario: ~2–3 por nivel, opcionales, narrativa.</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <h4>Sonido</h4>
+    <p style="font-size:10px;">Música de fondo (1 loop general) + SFX obligatorios por colisión (stomp/kill, daño al jugador) y recomendados (salto, pickup, golpe de jefe, victoria). Fuente: 100% procedural, Python + numpy (<span class="pix" style="font-size:8px;">scripts/gen_sfx.py</span>) — decisión cerrada, sin librerías CC0 ni IA-audio.</p>
+  </div>
+
+  <div class="box">
+    <h4>Pendiente de definir</h4>
+    <ul class="tight" style="font-size:10px;">
+      <li>Texto final de las notas del diario / cinemáticas</li>
+      <li>Número real de notas de diario por nivel (hoy: "~2–3", placeholder)</li>
+      <li>Ajuste del tramo de persecución sobre la horda con playtesting</li>
+    </ul>
+  </div>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 6</span></div>
+</div>
+
+<!-- PAGE 7 — NPCs 1 -->
+<div class="page cream">
+  <div class="pill pix">Sprites de NPCs</div>
+  <h1 class="pix title small">Enemigo zombie — variantes (1/2)</h1>
+  <p style="font-size:10px;">
+    Un solo comportamiento de enemigo (patrulla, muere de un stomp, daña por
+    contacto lateral), con ocho variantes visuales para dar lectura de
+    personaje sin sumar mecánicas nuevas. Todas 32×34 px, contorno de 1 px,
+    generadas por script propio (Python + Pillow).
+  </p>
+
+  <div class="gallery">
+    <div class="card">
+      <h4>ZombieF — vecina de barrio</h4>
+      <div class="imgwrap"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_F/zombie_f_walk_sheet.png"></div>
+      <p>Melena larga asimétrica, vestido rosa polvoriento roto, ojos rojos. Pies que se deslizan y resetean (shuffle), 10 frames.</p>
+      <div class="meta">Patrulla: velocidad media-baja · grupo Zombies · también base de HordaZombieF</div>
+    </div>
+    <div class="card">
+      <h4>ZombieM — obrero rengo</h4>
+      <div class="imgwrap"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_M/zombie_m_walk_sheet.png"></div>
+      <p>Contextura ancha y encorvada, camisa azul rota con herida en el hombro. Pierna izquierda tiesa que pivota como pata de palo, 8 frames.</p>
+      <div class="meta">Patrulla: la más lenta de las 3 originales · también HordaZombieM y "ZombieMarcha" (zombie de marcha diegética)</div>
+    </div>
+    <div class="card">
+      <h4>ZombieT — oficinista</h4>
+      <div class="imgwrap"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_T/zombie_t_walk_sheet.png"></div>
+      <p>Alto y flaco, camisa blanca sucia + corbata manchada, anteojos torcidos, calvicie. Marcha tiesa con balanceo lateral, 8 frames.</p>
+      <div class="meta">Patrulla · grupo Zombies · también base de HordaZombieT</div>
+    </div>
+    <div class="card">
+      <h4>ZombieD — arrastrada</h4>
+      <div class="imgwrap"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_D/zombie_d_walk_sheet.png"></div>
+      <p>Mujer alta y consumida, cárdigan mostaza gastado, melena apelmazada. Arrastra la pierna izquierda a los tirones, 8 frames.</p>
+      <div class="meta">Patrulla: la más lenta de las 8 · sólo patrulla, no integra la horda</div>
+    </div>
+  </div>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 7</span></div>
+</div>
+
+<!-- PAGE 8 — NPCs 2 -->
+<div class="page cream">
+  <div class="pill pix">Sprites de NPCs</div>
+  <h1 class="pix title small">Enemigo zombie — variantes (2/2)</h1>
+  <p style="font-size:10px;">
+    Segunda tanda ("wave 2"), agregada para completar variedad de silueta sin
+    sumar mecánicas: se decidió que ocho tipos es el techo — lo que falta ya
+    no es arte de zombie, es diseño de nivel.
+  </p>
+
+  <div class="gallery">
+    <div class="card">
+      <h4>ZombieN — adolescente con capucha</h4>
+      <div class="imgwrap"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_N/zombie_n_walk_sheet.png"></div>
+      <p>Pasos rápidos con tics nerviosos. El más nervioso del grupo de patrulla.</p>
+      <div class="meta">Sólo patrulla · grupo Zombies</div>
+    </div>
+    <div class="card">
+      <h4>ZombieV — anciana encorvada</h4>
+      <div class="imgwrap"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_V/zombie_v_walk_sheet.png"></div>
+      <p>Muy encorvada, andar lentísimo — la más lenta de esta segunda tanda.</p>
+      <div class="meta">Sólo patrulla · grupo Zombies</div>
+    </div>
+    <div class="card">
+      <h4>ZombieO — obrero de obra</h4>
+      <div class="imgwrap"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_O/zombie_o_walk_sheet.png"></div>
+      <p>Casco y chaleco de obra, renguera pesada.</p>
+      <div class="meta">Sólo patrulla · grupo Zombies</div>
+    </div>
+    <div class="card">
+      <h4>ZombieJ — corredor</h4>
+      <div class="imgwrap"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Zombie_J/zombie_j_walk_sheet.png"></div>
+      <p>Volcado hacia adelante, el más rápido de los ocho. Usado cerca de la salida del Nivel 1, en la zona de plataformeo diegético.</p>
+      <div class="meta">Zombie de cierre de nivel · misma familia visual</div>
+    </div>
+  </div>
+
+  <div class="box">
+    <h4>La horda (tramo de persecución)</h4>
+    <p style="font-size:10px;">La estampida del tramo de persecución reusa el arte de ZombieF, ZombieM y ZombieT como "HordaZombieF/M/T": misma silueta, pero funcionan como una masa que avanza en bloque a modo de suelo móvil, no como enemigos individuales de patrulla.</p>
+  </div>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 8</span></div>
+</div>
+
+<!-- PAGE 9 — OBJETOS DE CALLE -->
+<div class="page cream">
+  <div class="pill pix">Objetos y props de escenario</div>
+  <h1 class="pix title small">Mobiliario urbano — calle</h1>
+  <p style="font-size:10px;">
+    Props de calle, todos pixel-art procedural (Python + Pillow), sin
+    dependencias de packs de terceros. Se leen por silueta + color, mismo
+    criterio que los personajes.
+  </p>
+
+  <div class="propgrid">
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/farol.png"></div><div class="name">Farol</div><div class="dims">20×56 · farol de calle encendido, glow cálido</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/poste.png"></div><div class="name">Poste</div><div class="dims">18×96 · poste de tendido eléctrico</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/tacho.png"></div><div class="name">Tacho</div><div class="dims">16×18 · tacho de basura metálico</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/ArbolAlto.png"></div><div class="name">Árbol alto</div><div class="dims">48×82 · vereda</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/ArbolBajo.png"></div><div class="name">Árbol bajo</div><div class="dims">42×44 · vereda</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/BloqueHormigon_A.png"></div><div class="name">Bloque A</div><div class="dims">36×16 · bloque de hormigón, plataforma</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/BloqueHormigon_B.png"></div><div class="name">Bloque B</div><div class="dims">36×16 · variante de bloque</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/obelisco.png"></div><div class="name">Obelisco</div><div class="dims">landmark de fondo, Buenos Aires</div></div>
+  </div>
+
+  <div class="box">
+    <h4>Fondo de ciudad</h4>
+    <div style="display:flex; gap:10px; margin-top:8px;">
+      <img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/city_far.png" style="height:60px; border-radius:6px; border:1px solid var(--line);">
+      <img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/City/city_near.png" style="height:60px; border-radius:6px; border:1px solid var(--line);">
+    </div>
+    <p style="font-size:9.5px; margin-top:6px;">Capas de parallax (lejos/cerca) para el fondo urbano de Nivel 1.</p>
+  </div>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 9</span></div>
+</div>
+
+<!-- PAGE 10 — OBJETOS N1 + COLECCIONABLES -->
+<div class="page cream">
+  <div class="pill pix">Objetos y props de escenario</div>
+  <h1 class="pix title small">Mobiliario Nivel 1 y coleccionables</h1>
+  <p style="font-size:10px;">
+    Elementos de plataformeo diegético (mobiliario porteño con colisión,
+    resueltos sólo con saltar + stomp) y los dos coleccionables de gameplay.
+  </p>
+
+  <div class="propgrid">
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/N1/BancoPlaza.png"></div><div class="name">Banco de plaza</div><div class="dims">28×15 · jumpthru</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/N1/Toldo.png"></div><div class="name">Puesto/toldo</div><div class="dims">46×34 · techo jumpthru</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/N1/Colchon.png"></div><div class="name">Colchón</div><div class="dims">30×10 · sólido + rebote</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/N1/FarolRepisa.png"></div><div class="name">Farol (ménsula)</div><div class="dims">12×4 · atravesable</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/N1/EscaleraIncendio.png"></div><div class="name">Escalera incendio</div><div class="dims">46×80</div></div>
+    <div class="prop"><div class="imgwrap"><img src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/N1/Balcon.png"></div><div class="name">Balcón</div><div class="dims">46×80</div></div>
+  </div>
+
+  <div class="two-col" style="margin-top:14px;">
+    <div class="box">
+      <h4>Antídoto (coleccionable)</h4>
+      <div class="imgwrap" style="height:auto; padding:6px;"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/UI/antidoto_sheet.png" style="height:34px;"></div>
+      <p style="font-size:9.5px;">Frasco animado (6 frames). 4 por nivel repartidos en rutas alternativas; juntar los 4 = 1 vida extra. Ficha completa (paleta, formato) en el anexo <i>Ficha de Personaje</i>.</p>
+    </div>
+    <div class="box">
+      <h4>Mochila de repartidor (power-up)</h4>
+      <div class="imgwrap" style="height:auto; padding:6px;"><img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/UI/mochila_sheet.png" style="height:34px;"></div>
+      <p style="font-size:9.5px;">Mochila térmica naranja de delivery, ítem único por nivel. Al agarrarla desbloquea planeo (caída lenta) para el resto del nivel. Ficha completa en el anexo <i>Ficha de Personaje</i>.</p>
+    </div>
+  </div>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 10</span></div>
+</div>
+
+<!-- PAGE 11 — VIRUS / CORONAVIRUS -->
+<div class="page cream">
+  <div class="pill pix">Obstáculo volador</div>
+  <h1 class="pix title small">"Coronavirus" — hazard aéreo del Nivel 1</h1>
+  <p>
+    Obstáculo aéreo del Nivel 1: una bola con espigas estilo coronavirus que
+    el jugador tiene que esquivar. A diferencia de los zombies, <b>no se
+    puede eliminar</b> — no tiene animación de muerte, es un hazard puro.
+  </p>
+
+  <div class="box">
+    <h4>Sprite — 6 frames de animación</h4>
+    <div class="imgwrap" style="height:auto; padding:22px 14px; background:#efe4cd; border-radius:8px; display:flex; justify-content:center;">
+      <img class="sheet" src="/home/xtsulyts/Escritorio/juego_plataformero_uner_26/game/assets/Virus/virus_sheet.png" style="height:38px;">
+    </div>
+    <p style="font-size:10px; margin-top:8px;">16×16 px por frame. El cuerpo "respira" (pulso de radio) y las 14 espigas de largo variable tienen jitter individual por frame — lee como si flotara/vibrara en el aire, no como sprite estático.</p>
+  </div>
+
+  <h2 class="heading pix">Comportamiento</h2>
+  <ul class="tight">
+    <li>Vuelo errático con rebote: cada 1.5–2.5 s elige un ángulo nuevo al azar y vuela en línea recta a velocidad constante (55 px/s).</li>
+    <li>Si sale de su caja de patrulla, rebota eligiendo un ángulo que lo devuelve adentro.</li>
+    <li>Al tocar a Lio: -1 vida + empuje horizontal (knockback) + pequeño salto hacia arriba. Comparte el cooldown de invulnerabilidad con el daño de zombie.</li>
+    <li>5 instancias en el Nivel 1, en 3 tamaños (nativo 16×16 y variantes más chicas de 10–13 px) para variar la lectura visual sin nuevo arte.</li>
+  </ul>
+
+  <h2 class="heading pix">Paleta de colores</h2>
+  <div class="palette">
+    <div class="item"><div class="swatch" style="background:#B03A4A;"></div>#B03A4A<br>Sombra</div>
+    <div class="item"><div class="swatch" style="background:#CE5260;"></div>#CE5260<br>Base</div>
+    <div class="item"><div class="swatch" style="background:#E8727C;"></div>#E8727C<br>Luz</div>
+    <div class="item"><div class="swatch" style="background:#FA9CA4;"></div>#FA9CA4<br>Punta de espiga</div>
+  </div>
+  <p class="muted" style="margin-top:8px;">Una sola familia de tonos rosa/rojo (a pedido: "que no haya tanto contraste, todo del color de las puntas, pero con sombra/luz") — el cuerpo usa los mismos 4 tonos que las espigas, repartidos distinto para dar volumen.</p>
+
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 11</span></div>
+</div>
+
+<!-- PAGE 12 — HERRAMIENTAS / PIPELINE -->
+<div class="page dark">
+  <div class="pill pix">Herramientas y pipeline</div>
+  <h1 class="pix title small">Cómo se está produciendo</h1>
+
+  <div class="box">
+    <h4>GDevelop</h4>
+    <p style="font-size:10.5px;">Motor del prototipo — export HTML5, behavior Platformer Character nativo. Edición del proyecto (<span class="pix" style="font-size:8px;">game/game.json</span>) directa, con backups automáticos antes de cada cambio.</p>
+  </div>
+  <div class="box">
+    <h4>Python + Pillow</h4>
+    <p style="font-size:10.5px;">Generación procedural de todos los sprites y props del juego (zombies, virus, antídoto, mochila, mobiliario) — scripts propios, escritos con asistencia de IA, pero el arte final no sale de un generador de imágenes por IA.</p>
+  </div>
+  <div class="box">
+    <h4>Python + numpy</h4>
+    <p style="font-size:10.5px;">Síntesis de audio (música y SFX) en formato WAV, estilo chiptune. Mismo criterio que el arte: nada de librerías CC0 de terceros ni IA-audio.</p>
+  </div>
+  <div class="box">
+    <h4>OpenGameArt.org</h4>
+    <p style="font-size:10.5px;">Banco de assets CC0; de ahí sale el sprite base del personaje jugable (Forest Boy, recortado y repaletado a celeste/blanco).</p>
+  </div>
+  <div class="footer"><span>Paciente Zero — UNER 2026 (avance, borrador)</span><span>Página 12</span></div>
+</div>
+
+</body>
+</html>
