@@ -235,7 +235,8 @@ def ensure_resource(d, name, file):
 # ------------------------------------------------ filtrado de eventos de Level1
 
 INDIVIDUAL = re.compile(r"^(Zombie(F|M|T|D|N|O|V|Marcha|End\d)|Virus\d|Horda\w*)$")
-L1_ONLY_VARS = re.compile(r"(Zombie\w*Dir|Virus\d(Angle|NextChange)|CanGlide)")
+# NocheCalor: el grupo de la noche de Level1 (wire_noche_n1.py) no va al lab
+L1_ONLY_VARS = re.compile(r"(Zombie\w*Dir|Virus\d(Angle|NextChange)|CanGlide|NocheCalor)")
 
 
 def refs(instr, names):

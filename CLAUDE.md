@@ -55,6 +55,10 @@ razonamiento de por qué se llegó hasta acá.
   (gitignored) con `gdexport`, que viene dentro de
   `~/Escritorio/gdevelop-mcp/node_modules/.bin/`. No hay `butler`: el
   zip se sube a mano.
+- **Jugar sin abrir GDevelop:** `scripts/jugar_web.sh` exporta a
+  `/tmp/paciente-zero-web`, inyecta `window.__game` y sirve en
+  `http://localhost:8765/index.html`. Trucos de consola (saltar de escena,
+  variables, teletransporte, capas) documentados en su cabecera.
 
 ## Motor y herramientas
 
@@ -99,6 +103,9 @@ razonamiento de por qué se llegó hasta acá.
 - **Acciones de extensiones de objeto** (p. ej. `XOffset`/`YOffset` de
   TiledSprite) llevan el prefijo de la extensión en el tipo:
   `TiledSpriteObject::XOffset`. Sin él, la acción se descarta al compilar.
+  Lo mismo la opacidad: `Opacity` es solo de Sprite; en TiledSprite es
+  `TiledSpriteObject::SetOpacity` (la niebla de L1 estuvo a 255 hasta el
+  16/10; el Diagnostic report de GDevelop sí lo marca).
 - **BitmapText:** la acción de texto es `BitmapText::BitmapTextObject::SetText`
   (`BitmapText::SetText` se descarta al compilar; `BitmapText::SetTint`
   sí va sin el segmento del objeto). Fuente del HUD: `gen_font.py`.
@@ -214,13 +221,86 @@ razonamiento de por qué se llegó hasta acá.
   (mudo en pausa / nota / fin); `sfx_chispazo` (pitch al azar) cuando un
   tubo cambia de estado a menos de 240 px de Lio.
 
+- **Minivirus (15/10):** `wire_minivirus.py` (L1/L2/L3). El zombie
+  infectado (`Infected=1`) escupe 1 virus (mismo sprite y tamaño que los
+  voladores) si Lio está a <200 px: 0.8 s después del contagio y cada
+  2.5 s, con aviso de 0.45 s (contorno que parpadea + chispazo grave).
+  Vuela como los voladores (55 px/s, rumbo nuevo cada 1.5-2.5 s) pero cada
+  rumbo apunta a Lio ±35°; vida de 5 s en L1 (bajada el 15/10 porque el final se hacía difícil) y 8 s en L2/L3; se desvanece al final. Brilla por
+  cercanía como los bordes de plataforma (efecto Glow, outerStrength 0→3
+  entre 150 y 40 px; ámbar L1, verde L2/L3); los virus voladores (grupo
+  `Virus`) brillan igual, sin cambiar su vuelo. Jefe: escupe en el estado 0
+  (aviso con contorno desde 0.5 s, escupe a 1.0 s) desde BossHP 2: 1 virus,
+  2 con BossHP 1. Golpe = −1 vida, Invuln 1 s, knockback de 40 px. No se
+  pisan ni contagian zombies. Var de objeto `Spit` en los zombies, scene
+  var `BossSpit` en L3. Verificado en runtime (puppeteer). Playtest de L1 (15/10, usuario): muy
+  entretenido con varios virus a la vez, se esquivan saltando por encima.
+  Falta playtest de L2/L3 y del jefe.
+
+- **Noche del Nivel 1 (15/10):** `gen_noche_n1.py` + `gen_luz_luna.py`
+  (+ `gen_sfx.py` → `fuego_sfx()`) → `wire_noche_n1.py`. Idea: oscurecer
+  todo y devolver la luz solo donde importa.
+  - Fondo: cielo con degradé, nubes a la deriva delante de la Luna, efecto
+    `Adjustment` (objeto) que oscurece y desatura más cuanto más lejos
+    (City*, Obelisco), 3 tiras de niebla sobre la base de cada skyline.
+    El muro, el caño y el río también van oscurecidos (en sombra).
+  - Fuego: 6 tachos con llama animada + halo que titila (capa nueva
+    `Atmos` en L1), 4 de ellos agregados con la var de instancia `Noche`.
+    También 3 incendios lejanos con humo (parallax f=0.2), conos de luz de
+    sodio en los 5 faroles (el de x=526 falla) y un crepitar en loop en el
+    canal 3 según la cercanía a un fuego.
+  - Luna horneada: los props de L1 usan copias `*_luna.png` (canto de
+    arriba frío, derecha 30 %, izquierda en sombra), y Lio y los zombies
+    llevan un tinte frío (`ChangeColor`) que se entibia cerca de un fuego.
+    Árboles y faroles quedan sin luna (sus `*_luz.png` salen del original).
+  - `wire_levels23.py` ignora el grupo gracias a la var `NocheCalor`
+    (`L1_ONLY_VARS`), así un `--force` no lleva el tinte al lab.
+  - Falta playtest: niebla (Alpha 170/130/70), brillo de los fondos,
+    intensidad de los halos y volumen del fuego.
+
+- **Virus con patrón fijo (16/10):** `wire_virus_patron.py` (L1/L2). Playtest
+  (hija del usuario): esperar al vuelo random era "frustrante" (simulado:
+  esperas de hasta 4-5 s). Ahora `X = CX + AX·sin(t·WX+PX)`, `Y = CY +
+  AY·sin(t·WY+PY)` con vars de objeto y scene var `VirusT` (+TimeDelta, se
+  congela en pausa): L1 ascensor (V3), péndulo (V4), ascensor en el medio
+  del puente x=926 (V2; era un ocho en x=850 que contagiaba a ZombieM/N y
+  se juntaban zombies escupiendo), dos círculos opuestos al final (V5/V1); L2 ocho, péndulo, círculo. Espera máx ~1 s.
+  Los minivirus siguen erráticos (contraste: obstáculo de timing vs
+  amenaza que persigue). Re-correr después de `wire_levels23.py --force`.
+  Falta playtest.
+
+- **Fix L1 (16/10):** `fix_n1_horda_piso_end3.py` (idempotente). HordaPiso
+  (el jumpthru invisible de la horda) solo es plataforma con HordaActive
+  1-2; antes flotaba invisible en el aire pasando a la anciana (estado 0) y
+  después de la horda (estado 3). Sacada la instancia de ZombieEnd3 (usaba
+  el sprite de ZombieT, exclusivo del jefe). ZombieMarcha de x=-6 → x=340.
+
+- **Ciudad por los ventanales de L2 (16/10):** `gen_lab_ventanal.py` →
+  `wire_lab_ventanal.py`. LabFar de L2 usa `lab_far_ventanal.png` (2
+  ventanales de 94x90 por tile, vidrio casi transparente); L3 sigue con
+  `lab_far.png`. Capa nueva `BG_city` (detrás de BG_far) con copias de la
+  noche de L1 (cielo, nubes, Luna, City*, 5 incendios + humo), 40 px más
+  arriba (piso alto) y el mismo parallax; la pared va 1:1. `LabVentanaLuz`:
+  resplandor anaranjado bajo cada ventanal que titila. Re-correr después
+  de `wire_levels23.py --force`. Falta playtest.
+
+- **Subsuelo del lab (18/10, L2/L3):** `gen_lab_subsuelo.py` →
+  `wire_lab_subsuelo.py`. El bloque negro bajo el piso pasa a ser el corte
+  del edificio: `LabSubsuelo` (TiledSprite, uno por tramo de Ground, filas
+  16..95) con losa, ducto, cañerías y sala de contención; tubos
+  `Contencion` / `ContencionRota` (virus que flota adentro, cuadro inicial
+  al azar) con halo `ContencionGlow` que late (los rotos titilan). L2: 33
+  tubos (7 rotos), L3: 5 (2 rotos). Solo decorado: falta que los rotos
+  suelten un virus y el tramo jugable por ducto. Re-correr después de
+  `wire_levels23.py --force`.
+
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
   CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →
   `wire_pixel_texts.py` → `wire_mochila_niveles.py` → `wire_notas.py` →
   `wire_bordes_plataforma.py`. También re-correr `wire_notas.py` después
-  de `fix_pause_toggle.py` o `wire_pause_panel.py`. `wire_lab_luces.py` y
-  `wire_parallax.py` son independientes (re-correr el de luces después de
-  `wire_levels23.py --force`). Arte: `gen_mochila.py`
+  de `fix_pause_toggle.py` o `wire_pause_panel.py`. `wire_lab_luces.py`,
+  `wire_parallax.py`, `wire_minivirus.py`, `wire_noche_n1.py`, `wire_virus_patron.py`, `wire_lab_ventanal.py` y `wire_lab_subsuelo.py` son independientes (re-correr
+  el de luces, el de minivirus, el de virus patrón y el de ventanales después de `wire_levels23.py --force`). Arte: `gen_mochila.py`
   antes de `gen_menu_ui.py` (la ayuda de la pausa usa `mochila_worn.png`);
   `gen_notas.py`, `gen_borde_plataforma.py`, `gen_luz_borde.py`.
 

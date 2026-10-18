@@ -15,6 +15,7 @@ SFX (consigna pide al menos los de colisión: stomp/kill y daño):
   sfx_select.wav    confirmar en el menú (blip)
   sfx_zumbido.wav   zumbido de tubo fluorescente del lab (loop 2 s, 14/10)
   sfx_chispazo.wav  chispazo eléctrico de un tubo que falla (14/10)
+  sfx_fuego.wav     crepitar de los tachos con fuego del Nivel 1 (loop 3 s, 15/10)
 
 MÚSICA — procedural, definitiva (CC0 descartado por completo, ver
 AUDIO_CREDITS.txt):
@@ -193,6 +194,31 @@ def lab_sfx():
     save("sfx_chispazo", y, target=0.55)
 
 
+
+def fuego_sfx():
+    """tachos con fuego del Nivel 1 (wire_noche_n1.py). Generador aleatorio
+    propio, igual que lab_sfx(): no cambia ningún otro WAV."""
+    rng = np.random.default_rng(1510)
+    n = int(3.0 * SR)
+    # rumor grave: ruido pasado por un promedio móvil (pasa-bajos casero) que
+    # "respira" despacio; 3 s = ciclos enteros de 1/3 y 2/3 Hz, el loop cierra
+    base = rng.uniform(-1, 1, n)
+    k = 120
+    rumble = np.convolve(base, np.ones(k) / k, mode="same") * 6
+    t = np.arange(n) / SR
+    rumble *= 0.75 + 0.25 * np.sin(2 * np.pi * t / 3) * np.sin(2 * np.pi * 2 * t / 3)
+    # crujidos: chasquidos cortos de ruido agudo, al azar
+    crack = np.zeros(n)
+    for _ in range(46):
+        pos = int(rng.uniform(0.01, 2.97) * SR)
+        ln = int(SR * rng.uniform(0.001, 0.005))
+        amp = rng.uniform(0.25, 1.0)
+        burst = rng.uniform(-1, 1, ln) * np.exp(-np.arange(ln) / (ln / 3))
+        crack[pos:pos + ln] += burst[:n - pos] * amp
+    crack = np.diff(crack, prepend=0)                            # más seco y agudo
+    save("sfx_fuego", rumble * 0.55 + crack * 0.6, fade_ms=40, loop=True, target=0.5)
+
+
 def main():
     np.random.seed(0)
     print("SFX ->", OUT)
@@ -201,6 +227,8 @@ def main():
     music()
     print("Luces del lab ->", OUT)
     lab_sfx()
+    print("Fuego del Nivel 1 ->", OUT)
+    fuego_sfx()
     cred = f"{OUT}/AUDIO_CREDITS.txt"
     if not os.path.exists(cred):
         with open(cred, "w") as f:
