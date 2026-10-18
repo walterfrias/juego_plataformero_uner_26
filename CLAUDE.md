@@ -76,7 +76,10 @@ razonamiento de por qué se llegó hasta acá.
 
 - **GDevelop tiene que estar CERRADO** antes de editar el JSON por
   script o por MCP. Si está abierto, al guardar pisa los cambios (así
-  se perdió trabajo el 06/09).
+  se perdió trabajo el 06/09; el 18/10 estuvo abierto durante tres
+  scripts y por suerte no guardó). Los wire scripts nuevos llaman a
+  `asegurar_gdevelop_cerrado()` (`scripts/gdevelop_cerrado.py`) y cortan si
+  lo encuentran abierto: agregarlo a todo script que escriba game.json.
 - **Comillas en parámetros:** los de tipo "expresión de string"
   (nombre de escena, nombre de efecto, timers) necesitan comillas
   escapadas (`"\"Level1\""`); si no, compilan a `""`. Otros tipos
@@ -97,6 +100,10 @@ razonamiento de por qué se llegó hasta acá.
   instancias, y las acciones sobre ese mismo objeto solo afectan a las
   filtradas. Para actuar sobre todas, usar un evento cuyas condiciones no
   lo mencionen (así se arregló el bug de los "4 zombies rotos").
+- **Probar timing con un robot DENTRO del juego**
+  (`gdjs.registerRuntimeScenePostEventsCallback` + `simulateRightKey` /
+  `simulateJumpKey` del PlatformerObject): reacciona en el mismo frame. Con
+  puppeteer leyendo el estado por CDP llega tarde y el fallo es del robot.
 - **Toggles:** dos eventos hermanos `tecla & X=0 → X=1` y `tecla & X=1 →
   X=0` se deshacen en el mismo frame. Usar un evento padre con
   sub-eventos y un estado intermedio (ver `scripts/fix_pause_toggle.py`).
@@ -308,12 +315,39 @@ razonamiento de por qué se llegó hasta acá.
   estalla detrás, antídoto, salir flotando, pisar a la enfermera.
   Re-correr después de `wire_levels23.py --force` y de `wire_minivirus.py`.
 
+- **Pistones en lugar de camillas, y pozos (18/10, L2):** las camillas
+  flotaban (ni colgadas de un pórtico convencían) y no eran divertidas.
+  `gen_lab_piston.py` → `wire_lab_pistones.py` (saca las Camilla y sus
+  PlatEdge; re-correr después de `wire_levels23.py --force`): `Piston`
+  (40x10, plataforma maciza) + `PistonVastago`, 2 en el pozo de 140 y 3 en
+  el de 200, huecos de 20 px. `Y = 110 + 200·max(0, sin(t·W+Ph))^1.5`:
+  media vuelta arriba al ras del piso, media hundido (quedarse = caer).
+  Aviso: luces rojas desde sin = −0.85 (~0.5 s antes de bajar). Desfase en
+  ola LAG = 2.0 rad: cuando el tuyo se pone rojo, el de adelante acaba de
+  subir en verde. Robot dentro del juego (jugador prudente: se frena en el
+  borde, salta parado, no salta a uno en rojo): 10/10 cruces sin perder
+  vidas. **Lio salta ~28 px PARADO** (40-45 con carrera). Pozos:
+  `PozoFondo` + `PozoBordeL/R` en los 7 pozos de L2 (en
+  `wire_lab_subsuelo.py`), antes se veía un bloque violeta.
+
+- **Luces de ambiente del lab (18/10, L2/L3):** `gen_lab_ambiente.py` →
+  `wire_lab_ambiente.py` (después de `wire_lab_luces.py`). Todo en `Atmos`
+  por encima de `LabSombra` (si no, la sombra lo apaga). Zonas oscuras:
+  `LuzTanque` (halo verde de los tanques de lab_near + charco en el piso,
+  burbujea) y `LuzMonitor` (cian, parpadeo corto ocasional). Zona de
+  ALARMA (L2 2940..3800 y la arena de L3): `Baliza` en los pilares (cada
+  112 px desde LabFar.x) con `BalizaHaz` que barre ±60° (`SetAngle`, origen
+  y centro en la punta) y `AlarmaTinte` rojo que late; en L3 late más rápido
+  según `BossHP` (3 + (3 − BossHP)·1.5 rad/s, medido: 2 → 4 picos en 4 s);
+  se apaga con Won. Falta playtest: intensidad del tinte (máx 38), si los
+  haces distraen al pelear con el jefe.
+
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
   CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →
   `wire_pixel_texts.py` → `wire_mochila_niveles.py` → `wire_notas.py` →
   `wire_bordes_plataforma.py`. También re-correr `wire_notas.py` después
   de `fix_pause_toggle.py` o `wire_pause_panel.py`. `wire_lab_luces.py`,
-  `wire_parallax.py`, `wire_minivirus.py`, `wire_noche_n1.py`, `wire_virus_patron.py`, `wire_lab_ventanal.py` y `wire_lab_subsuelo.py` son independientes (re-correr
+  `wire_parallax.py`, `wire_minivirus.py`, `wire_noche_n1.py`, `wire_virus_patron.py`, `wire_lab_ventanal.py`, `wire_lab_subsuelo.py`, `wire_lab_ambiente.py` y `wire_lab_pistones.py` son independientes (re-correr
   el de luces, el de minivirus, el de virus patrón y el de ventanales después de `wire_levels23.py --force`). Arte: `gen_mochila.py`
   antes de `gen_menu_ui.py` (la ayuda de la pausa usa `mochila_worn.png`);
   `gen_notas.py`, `gen_borde_plataforma.py`, `gen_luz_borde.py`.

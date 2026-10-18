@@ -53,7 +53,7 @@ IMGS = {"Level1": "borde_plataforma.png",                 # ámbar de farol
         "Level2": "borde_plataforma_lab.png", "Level3": "borde_plataforma_lab.png"}
 EDGE_H, LINE_ROW = 7, 3
 NEAR, FAR, MAX = 40, 150, 230
-SKIP = {"Ground", "Poste", "HordaPiso", "SubsueloPiso"}   # SubsueloPiso: piso invisible del ducto de L2
+SKIP = {"Ground", "Poste", "HordaPiso", "SubsueloPiso", "Piston"}   # SubsueloPiso: piso invisible del ducto de L2; Piston: se mueve en Y y trae su franja
 # árboles y faroles: luz pintada sobre el propio sprite (gen_luz_borde.py),
 # no barra: en formas orgánicas la barra se leía como una tabla flotando
 RIM = ("ArbolBajo", "ArbolAlto", "Farol")

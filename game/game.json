@@ -3066,6 +3066,94 @@
         "name": "escotilla_borde.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Lab/luz_tanque.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "luz_tanque.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/luz_monitor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "luz_monitor.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/baliza.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "baliza.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/baliza_haz.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "baliza_haz.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/alarma_tinte.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "alarma_tinte.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/pozo_fondo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pozo_fondo.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/pozo_borde_l.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pozo_borde_l.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/pozo_borde_r.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pozo_borde_r.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/piston_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "piston_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/piston_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "piston_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Lab/piston_vastago.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "piston_vastago.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -40180,76 +40268,6 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 16,
-          "layer": "",
-          "name": "Camilla",
-          "width": 48,
-          "x": 2484,
-          "y": 110,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Dir",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "name": "MinX",
-              "type": "number",
-              "value": 2484
-            },
-            {
-              "name": "MaxX",
-              "type": "number",
-              "value": 2568
-            },
-            {
-              "name": "Speed",
-              "type": "number",
-              "value": 40
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 16,
-          "layer": "",
-          "name": "Camilla",
-          "width": 48,
-          "x": 2764,
-          "y": 110,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Dir",
-              "type": "number",
-              "value": 1
-            },
-            {
-              "name": "MinX",
-              "type": "number",
-              "value": 2764
-            },
-            {
-              "name": "MaxX",
-              "type": "number",
-              "value": 2908
-            },
-            {
-              "name": "Speed",
-              "type": "number",
-              "value": 60
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 155,
           "layer": "",
           "name": "AirFlow",
@@ -40569,46 +40587,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "width": 48,
-          "height": 7,
-          "layer": "",
-          "name": "PlatEdge",
-          "x": 2484,
-          "y": 107,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Owner",
-              "type": "number",
-              "value": 2484
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "width": 48,
-          "height": 7,
-          "layer": "",
-          "name": "PlatEdge",
-          "x": 2764,
-          "y": 107,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Owner",
-              "type": "number",
-              "value": 2764
-            }
-          ]
         },
         {
           "angle": 0,
@@ -42793,11 +42771,491 @@
         },
         {
           "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzTanque",
+          "persistentUuid": "d1518e5c-82eb-4fc0-931f-21028f7766ab",
+          "width": 0,
+          "x": 1768,
+          "y": 42,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "d37fef93-10a2-4b5b-a8ef-d887e0e944de",
+          "width": 0,
+          "x": 1843,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 1.7
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "3924ed34-7d6d-4b0c-9cdc-75f49c852404",
+          "width": 0,
+          "x": 1873,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 3.4
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzTanque",
+          "persistentUuid": "29f93721-f5ad-4b0b-84be-0c931ba202d8",
+          "width": 0,
+          "x": 1992,
+          "y": 42,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.89
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "38d376e2-f6ca-4625-a685-ae15fc7844be",
+          "width": 0,
+          "x": 2067,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.52
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "431df0cb-9490-43a5-893f-9215498d4002",
+          "width": 0,
+          "x": 2097,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2.22
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "804e77d8-7c2a-4d15-8f1a-312f0918f461",
+          "width": 0,
+          "x": 2963,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 3.92
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "ed9f3283-55b5-4a81-a27d-3af79001c0b1",
+          "width": 0,
+          "x": 2993,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 5.62
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzTanque",
+          "persistentUuid": "8af62248-aeb0-4113-8bfc-a2f8ea013b48",
+          "width": 0,
+          "x": 3112,
+          "y": 42,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.28
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "7f882524-5fc4-4ceb-99c9-fcbabeb7a6dd",
+          "width": 0,
+          "x": 3187,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2.74
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "f98f69dc-8273-4a07-af72-589b5b6969a5",
+          "width": 0,
+          "x": 3217,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 4.44
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzTanque",
+          "persistentUuid": "18848b36-d7a6-485f-b979-187a073cc4bd",
+          "width": 0,
+          "x": 3336,
+          "y": 42,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 1.17
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "9f6ef91d-58ed-4ccc-b4bb-ce9cc9e0e89b",
+          "width": 0,
+          "x": 3411,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 1.56
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "383857e3-fccd-4857-9826-e2728ed1f7e1",
+          "width": 0,
+          "x": 3441,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 3.26
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzTanque",
+          "persistentUuid": "65bf596f-be4c-4081-b768-d2457c0662da",
+          "width": 0,
+          "x": 3560,
+          "y": 42,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2.06
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "be320371-e08f-4444-8fa1-bd6b1f88a513",
+          "width": 0,
+          "x": 3635,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.38
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "237ed86f-c8e4-4177-ae07-4817696083cc",
+          "width": 0,
+          "x": 3665,
+          "y": 61,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2.08
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 270,
+          "layer": "Atmos",
+          "name": "AlarmaTinte",
+          "persistentUuid": "ace56a79-fd49-4298-849b-d24ae0459002",
+          "width": 860,
+          "x": 2940,
+          "y": -65,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "BalizaHaz",
+          "persistentUuid": "6b7bfbd8-3d02-46bb-8871-afd424f8c2af",
+          "width": 0,
+          "x": 3060,
+          "y": -32,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "Baliza",
+          "persistentUuid": "4b68b4c3-f162-41ce-a9bb-7956751a5650",
+          "width": 0,
+          "x": 3055,
+          "y": -36,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "BalizaHaz",
+          "persistentUuid": "5511c528-e3a2-410f-a9b1-6bf44984d6de",
+          "width": 0,
+          "x": 3396,
+          "y": -32,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2.1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "Baliza",
+          "persistentUuid": "e6f95474-9f33-485f-b39f-e324f48d1368",
+          "width": 0,
+          "x": 3391,
+          "y": -36,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "BalizaHaz",
+          "persistentUuid": "23dbfc9b-a6ad-4779-9170-3e3f3d44b5a5",
+          "width": 0,
+          "x": 3732,
+          "y": -32,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 4.2
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "Baliza",
+          "persistentUuid": "7f078023-7dc4-462f-9927-2890b7a0313b",
+          "width": 0,
+          "x": 3727,
+          "y": -36,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
           "customSize": true,
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "6f2e7a15-d422-4b16-a0b3-bba9a92ee964",
+          "persistentUuid": "de8ef57a-f7cb-41de-a77b-48252e62f2a6",
           "width": 620,
           "x": -200,
           "y": 126,
@@ -42812,7 +43270,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "0656e0a2-75f0-46d4-af71-b65f7a967d97",
+          "persistentUuid": "7abd4aaa-63b7-48fa-b3f0-bfceed60e72b",
           "width": 0,
           "x": -190,
           "y": 144,
@@ -42838,7 +43296,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "9102311f-0755-4c6e-b19f-fb0da085bde9",
+          "persistentUuid": "e8120e96-e82b-40f3-b274-d07237d0328d",
           "width": 0,
           "x": -178,
           "y": 152,
@@ -42853,7 +43311,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "3ed21408-2efc-4419-a862-f5f641610d78",
+          "persistentUuid": "6c42eafb-64b1-4b43-8dfa-9a393cee78b8",
           "width": 0,
           "x": -108,
           "y": 144,
@@ -42879,7 +43337,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "0e012e2d-bfd1-4c58-8de2-a95888cc1dfc",
+          "persistentUuid": "e7f4dffe-d815-4514-b1e5-5ebcb8d0fe79",
           "width": 0,
           "x": -96,
           "y": 152,
@@ -42894,7 +43352,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "575ad8a0-697f-4aa6-baa8-c33dc45d8cd2",
+          "persistentUuid": "f985c091-8ed6-40d5-81fc-e827fd91886a",
           "width": 0,
           "x": -1,
           "y": 144,
@@ -42920,7 +43378,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "ecf6a625-ba87-4e9d-aa03-14f4260267b3",
+          "persistentUuid": "58e7c632-df89-4286-a1a8-f481ca131a2b",
           "width": 0,
           "x": 11,
           "y": 152,
@@ -42935,7 +43393,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "5ba0751a-880d-4ca6-ad67-f2aedd383cbf",
+          "persistentUuid": "72b7b9d7-68ec-4f5b-bdd5-9431723abefe",
           "width": 0,
           "x": 121,
           "y": 144,
@@ -42961,7 +43419,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "101c2504-b65b-4fad-8f2a-c585fcc85072",
+          "persistentUuid": "747d22c2-b1d2-47ed-a6be-ac754e53adf5",
           "width": 0,
           "x": 133,
           "y": 152,
@@ -42976,7 +43434,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "716fecc2-5cbc-459f-8b14-f9232d12b6ff",
+          "persistentUuid": "820c93a2-7467-40d0-a9a1-209bf4c27bcc",
           "width": 0,
           "x": 215,
           "y": 144,
@@ -43002,7 +43460,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "a06cfcda-8058-4ba9-a39d-38eea17d88ec",
+          "persistentUuid": "9f5addde-dca0-40cf-a154-e63c49460dfe",
           "width": 0,
           "x": 227,
           "y": 152,
@@ -43017,7 +43475,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "4b6d6eea-7840-4d56-b21c-e48318242da0",
+          "persistentUuid": "74557ed9-f8b5-4c93-89a0-ef1d32f8bf04",
           "width": 0,
           "x": 335,
           "y": 144,
@@ -43043,7 +43501,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "a5d9f79d-37b1-441b-96d6-ccdfe64f9edc",
+          "persistentUuid": "9596a8d8-bfb7-491a-8c22-57783eed2059",
           "width": 0,
           "x": 347,
           "y": 152,
@@ -43058,7 +43516,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "4dba42bd-9ef5-4d8e-8cb4-00090b93ef5d",
+          "persistentUuid": "0d425626-b3d2-4929-b846-1c899bfbc838",
           "width": 452,
           "x": 448,
           "y": 126,
@@ -43073,7 +43531,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "ff4abc53-5e49-426c-9a32-6858badaf70c",
+          "persistentUuid": "b076f93b-bdf3-4cc9-915a-e84e85dfaa55",
           "width": 0,
           "x": 478,
           "y": 144,
@@ -43099,7 +43557,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "09733076-f516-4312-8cdf-67910db83d9d",
+          "persistentUuid": "681e8579-e3fb-4d49-8412-12af999cf3dc",
           "width": 0,
           "x": 490,
           "y": 152,
@@ -43114,7 +43572,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "525524d0-d17e-42e2-a979-05602173cdbf",
+          "persistentUuid": "1e76a2e3-0b81-4146-a6e9-d8bdcf0ca357",
           "width": 0,
           "x": 562,
           "y": 144,
@@ -43140,7 +43598,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "4f1078a0-3c2d-4285-a384-45463bd0fe11",
+          "persistentUuid": "26f0367f-ec27-49ef-81c2-fe466a83d8c8",
           "width": 0,
           "x": 574,
           "y": 152,
@@ -43155,7 +43613,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "fe56728a-9ea1-4568-bd12-b53015b41eb5",
+          "persistentUuid": "2f40d8ab-3a55-4550-9c46-5840ee0cd097",
           "width": 0,
           "x": 666,
           "y": 144,
@@ -43181,7 +43639,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "98e89d3d-f51b-445e-b43a-4c5668950efa",
+          "persistentUuid": "aa90d46b-b79a-418f-926d-9bb292413b78",
           "width": 0,
           "x": 678,
           "y": 152,
@@ -43196,7 +43654,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "3eb6da79-f028-4e77-8a7e-220f16e9e201",
+          "persistentUuid": "500b2786-4e31-4216-a8f1-16b49810e7f3",
           "width": 0,
           "x": 797,
           "y": 144,
@@ -43222,7 +43680,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "9e4de0fa-7774-4ed3-9fd0-816510de0ce6",
+          "persistentUuid": "00251a37-e364-47c2-8b06-cab368051e80",
           "width": 0,
           "x": 809,
           "y": 152,
@@ -43237,7 +43695,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "534c1d3e-c973-4b68-8fd5-d5c17f18083d",
+          "persistentUuid": "7e2a49a5-5175-4fd7-8380-7a36836956c3",
           "width": 302,
           "x": 966,
           "y": 126,
@@ -43252,7 +43710,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "8ce88d63-8c81-4086-ac53-09d64b8b9927",
+          "persistentUuid": "8c653d6c-f0de-4fdf-83f0-0bee4eafed03",
           "width": 0,
           "x": 990,
           "y": 144,
@@ -43278,7 +43736,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "9694020a-1990-4973-bfde-5f1932b9e271",
+          "persistentUuid": "8776ddf1-57e0-4dab-8642-90d6c822024b",
           "width": 0,
           "x": 1002,
           "y": 152,
@@ -43293,7 +43751,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "8c8eb63c-b8d7-43e4-851e-f97a45efd05d",
+          "persistentUuid": "ca41a825-3c61-4be3-9953-b50241e452ae",
           "width": 0,
           "x": 1048,
           "y": 144,
@@ -43319,7 +43777,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "1d1152f7-7739-4551-acc3-a5a16c75d74b",
+          "persistentUuid": "b68ee1de-24d7-49b3-857a-6afc5b50c21f",
           "width": 0,
           "x": 1060,
           "y": 152,
@@ -43334,7 +43792,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "1555b50e-7957-4188-b70a-be3cabef6e6a",
+          "persistentUuid": "f43bf408-0903-444e-b74c-aafa285234a1",
           "width": 0,
           "x": 1120,
           "y": 144,
@@ -43360,7 +43818,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "3b079e19-94a0-406c-a002-b3bdfb813c5f",
+          "persistentUuid": "66add68e-ca9a-45c0-a62b-a572a89e8cac",
           "width": 0,
           "x": 1132,
           "y": 152,
@@ -43375,7 +43833,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "0203ba21-889d-4cab-8e5b-5e0fa98754fd",
+          "persistentUuid": "9e120bed-fa95-470e-a4af-aa3b5c5ab4cb",
           "width": 0,
           "x": 1192,
           "y": 144,
@@ -43401,7 +43859,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "8f3189f8-d007-4141-aa9d-6b8a2cee5e2a",
+          "persistentUuid": "efa41008-44f3-47f3-8504-711e53b202de",
           "width": 0,
           "x": 1204,
           "y": 152,
@@ -43416,7 +43874,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "d189c873-a0bb-4397-bead-1cafdaa67170",
+          "persistentUuid": "688f7ce9-6d33-4fb3-a604-f6df3487fb38",
           "width": 322,
           "x": 1378,
           "y": 126,
@@ -43431,7 +43889,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "2b97063e-b4d9-4dfe-9681-2ced678f2996",
+          "persistentUuid": "f5ecd43b-0234-4ec9-8e39-48892da94ba0",
           "width": 0,
           "x": 1384,
           "y": 144,
@@ -43457,7 +43915,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "efffe6a2-d6d7-4e6a-97e4-42e9c8782529",
+          "persistentUuid": "c62874da-0bf7-4658-bc03-8c0dd9cca587",
           "width": 0,
           "x": 1396,
           "y": 152,
@@ -43472,7 +43930,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "2f003b2e-a2ef-4c69-a949-b7bfa1ae7497",
+          "persistentUuid": "a2dc9673-95cd-45fe-a691-47733cfe501a",
           "width": 0,
           "x": 1470,
           "y": 144,
@@ -43498,7 +43956,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "21a30035-0449-4b77-8085-43c2b9acab28",
+          "persistentUuid": "02415eb7-b2f0-4aaf-9981-cf426e6a7b88",
           "width": 0,
           "x": 1482,
           "y": 152,
@@ -43513,7 +43971,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "f5f9cefd-b592-44d5-9a7e-af01faa18029",
+          "persistentUuid": "58ed1348-3506-4915-89f5-8584fb6117d4",
           "width": 0,
           "x": 1559,
           "y": 144,
@@ -43539,7 +43997,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "2e61e4bd-b854-4abb-8521-e903ceff5097",
+          "persistentUuid": "e8fe2a17-d8a3-4147-9e06-64f5d8d80004",
           "width": 0,
           "x": 1571,
           "y": 152,
@@ -43554,7 +44012,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "1955c4ea-9de8-489e-b643-0467006f3633",
+          "persistentUuid": "5e15019b-d215-4d26-bf8b-19f6d92c3d2e",
           "width": 422,
           "x": 1728,
           "y": 126,
@@ -43569,7 +44027,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "79ef73f5-fba3-408a-adae-15a6dad9c7cc",
+          "persistentUuid": "9c44e214-cbfa-4870-98d3-27ae38d469a9",
           "width": 0,
           "x": 1761,
           "y": 144,
@@ -43595,7 +44053,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "1b9213b8-34a9-400f-a77e-7ba83b2c503e",
+          "persistentUuid": "a2b1b13c-25fe-433b-b7c5-df471ca6c32e",
           "width": 0,
           "x": 1773,
           "y": 152,
@@ -43610,7 +44068,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "575419db-dfa3-4741-8177-00f72fad4899",
+          "persistentUuid": "1f457861-d4b8-4485-8cc4-f8929b59d7aa",
           "width": 0,
           "x": 1837,
           "y": 144,
@@ -43636,7 +44094,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "5e96522b-bee6-498a-8a97-67f745a6a6ef",
+          "persistentUuid": "d07ffef7-b55f-4af8-9a67-31386921feae",
           "width": 0,
           "x": 1849,
           "y": 152,
@@ -43651,7 +44109,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "60fc11d3-513a-4145-86ac-5c21a9d0245c",
+          "persistentUuid": "e0b72736-ea8e-4124-821d-db8067bf2223",
           "width": 0,
           "x": 1923,
           "y": 144,
@@ -43677,7 +44135,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "b4820687-7640-434e-920d-5e73088fa64c",
+          "persistentUuid": "409494a8-7c0f-4e97-868f-200ad3840c3f",
           "width": 0,
           "x": 1935,
           "y": 152,
@@ -43692,7 +44150,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "346df80a-39a6-4af1-9ebc-b1250803bd00",
+          "persistentUuid": "1108290e-6179-4347-8794-091b0cdc6670",
           "width": 0,
           "x": 2024,
           "y": 144,
@@ -43718,7 +44176,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "466036f9-cd5f-446c-a878-a2596e58e145",
+          "persistentUuid": "71a089e4-899b-4b80-bfc6-4cfe6d3fb74a",
           "width": 0,
           "x": 2036,
           "y": 152,
@@ -43733,7 +44191,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "96215db0-f294-4444-b1a5-3108b029cc1a",
+          "persistentUuid": "4ebb950f-9d12-4fc7-bc9f-6a6bba7b0a99",
           "width": 302,
           "x": 2178,
           "y": 126,
@@ -43748,7 +44206,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "05016974-4370-4dec-8653-b38602f15720",
+          "persistentUuid": "41fbf6c4-399f-4884-adfe-fe1d88464f3b",
           "width": 0,
           "x": 2202,
           "y": 144,
@@ -43774,7 +44232,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "5d760933-7ae4-4515-854f-94534aa97453",
+          "persistentUuid": "0ebb978e-3d1e-4792-91ae-4931818610c2",
           "width": 0,
           "x": 2214,
           "y": 152,
@@ -43789,7 +44247,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "3f4b1dd4-7f80-44f1-b3c4-02aba8fb1a86",
+          "persistentUuid": "4bddf42a-44ec-4ef8-ad0e-5ccbd0929732",
           "width": 0,
           "x": 2272,
           "y": 144,
@@ -43815,7 +44273,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "f7b9e56c-f64e-4bb0-b41b-f31a15539312",
+          "persistentUuid": "ab7c040d-e812-4944-a6f9-026ba0a7d215",
           "width": 0,
           "x": 2284,
           "y": 152,
@@ -43830,7 +44288,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "31116844-c351-4411-8b3a-6fca6d43f520",
+          "persistentUuid": "54356911-fa5a-4784-b732-55b680b9721a",
           "width": 0,
           "x": 2399,
           "y": 144,
@@ -43856,7 +44314,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "4919e9ea-8586-4fe4-9ab6-98d7817d44ce",
+          "persistentUuid": "1eac726a-a364-4bb7-b38c-abc7a29bcba4",
           "width": 0,
           "x": 2411,
           "y": 152,
@@ -43871,7 +44329,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "f1eb6c75-577c-4b52-bf3a-44b4c80bbe17",
+          "persistentUuid": "037001fd-cc6d-48e0-bdaf-0eface98ff38",
           "width": 140,
           "x": 2620,
           "y": 126,
@@ -43886,7 +44344,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "c2e66226-388b-4fcc-9554-a77730969f40",
+          "persistentUuid": "5422e1e6-ffb9-4071-a989-888bf40a8381",
           "width": 0,
           "x": 2629,
           "y": 144,
@@ -43912,7 +44370,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "35bf2626-c64b-45af-b378-452ab204b435",
+          "persistentUuid": "c27725f7-853c-4956-9043-2b5457de0fe8",
           "width": 0,
           "x": 2641,
           "y": 152,
@@ -43927,7 +44385,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "74be9b9a-a500-4800-ba15-9d5514ec4256",
+          "persistentUuid": "77caf52d-cf2d-4751-8775-a5196048c498",
           "width": 940,
           "x": 2960,
           "y": 126,
@@ -43942,7 +44400,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "1a7b50b1-48a9-47d3-9a7a-c1897e81d44d",
+          "persistentUuid": "dc758314-ba80-42f0-92a0-04385ec53050",
           "width": 0,
           "x": 3003,
           "y": 144,
@@ -43968,7 +44426,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "95b29890-b164-4381-8a62-945866bb24c5",
+          "persistentUuid": "f77bd3cd-e7b5-4ab6-8a6a-7ac1ebdce8a7",
           "width": 0,
           "x": 3015,
           "y": 152,
@@ -43983,7 +44441,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "cc415948-cf9b-4945-a100-608721454da2",
+          "persistentUuid": "9c7528e5-97aa-4fb1-957d-3b1376486db4",
           "width": 0,
           "x": 3149,
           "y": 144,
@@ -44009,7 +44467,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "819bc460-9bd6-4411-ab5a-09e5e3c3fdd4",
+          "persistentUuid": "58c0eec4-2e42-4f73-972d-fe8e31630b36",
           "width": 0,
           "x": 3161,
           "y": 152,
@@ -44024,7 +44482,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "847ee7e6-05bd-4ad0-8e20-ea0b583cc8d5",
+          "persistentUuid": "8fe4eadd-cf5c-4f9f-959c-6665bac71407",
           "width": 0,
           "x": 3296,
           "y": 144,
@@ -44050,7 +44508,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "f3cea573-7e2e-4983-9141-38dcd2531d1d",
+          "persistentUuid": "832e7ca2-01a8-43f9-a19f-5de93a85e67a",
           "width": 0,
           "x": 3308,
           "y": 152,
@@ -44065,7 +44523,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "bb4da44f-5065-4e49-9d16-2d94450583d8",
+          "persistentUuid": "1553577f-85f1-4b25-9fdd-6d305a63de41",
           "width": 0,
           "x": 3366,
           "y": 144,
@@ -44091,7 +44549,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "795b1cb7-5cd6-4e25-9cdf-bcfc601b9280",
+          "persistentUuid": "4065a2e0-556a-4da1-b523-45ec240b548c",
           "width": 0,
           "x": 3378,
           "y": 152,
@@ -44106,7 +44564,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "1a0b2e0c-5473-4437-81ed-30eb1864c88f",
+          "persistentUuid": "222b23e3-9807-48fe-aa4e-cdb8926879a9",
           "width": 0,
           "x": 3470,
           "y": 144,
@@ -44132,7 +44590,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "6c1d02b4-1ad0-4982-b697-e95f3462c519",
+          "persistentUuid": "f8d76821-d280-47a2-a8f6-7b955a2f1022",
           "width": 0,
           "x": 3482,
           "y": 152,
@@ -44147,7 +44605,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "64687034-fcc9-46c6-8cec-480dff37f46f",
+          "persistentUuid": "465e0859-81a9-436e-aa40-5fec053c62ac",
           "width": 0,
           "x": 3597,
           "y": 144,
@@ -44173,7 +44631,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "bc433ac9-e579-43cd-b637-544acbf16c73",
+          "persistentUuid": "3a147229-b8da-4d20-924d-7d065eb5c8de",
           "width": 0,
           "x": 3609,
           "y": 152,
@@ -44188,7 +44646,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "82b48b9a-2610-4876-bc81-94d711ebc644",
+          "persistentUuid": "35ad8b33-f6e8-4512-834f-a8600d504f44",
           "width": 0,
           "x": 3668,
           "y": 144,
@@ -44214,7 +44672,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "45f279bd-6e4f-47b1-84fb-535835d13c37",
+          "persistentUuid": "23efde28-e943-4ffb-88bc-d361db50f39b",
           "width": 0,
           "x": 3680,
           "y": 152,
@@ -44229,7 +44687,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "ec9556bf-9b77-4367-9456-34b6edef699a",
+          "persistentUuid": "f32ab4ea-ac7e-45b2-a46c-dcd664797e8d",
           "width": 0,
           "x": 3788,
           "y": 144,
@@ -44255,11 +44713,326 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "ac3d42d3-061b-4461-a0d9-86210c137ec1",
+          "persistentUuid": "53a9f37d-a57a-47db-a56a-8b096051b918",
           "width": 0,
           "x": 3800,
           "y": 152,
           "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "PozoFondo",
+          "persistentUuid": "7c6fdd07-318a-49fb-846a-8c2448a205a3",
+          "width": 28,
+          "x": 420,
+          "y": 110,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeL",
+          "persistentUuid": "f6ba47e3-9727-49d5-b918-e0131f4ee1a3",
+          "width": 0,
+          "x": 420,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeR",
+          "persistentUuid": "eb058315-014c-4c28-84b9-ec415fddcc7e",
+          "width": 0,
+          "x": 444,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "PozoFondo",
+          "persistentUuid": "256f6b50-349f-40dc-b9e7-cb7a5d187cf1",
+          "width": 28,
+          "x": 900,
+          "y": 110,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeL",
+          "persistentUuid": "1a958ba2-863c-4c80-ba40-e47ef1224963",
+          "width": 0,
+          "x": 900,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeR",
+          "persistentUuid": "88cb3dfc-3024-4536-80ae-371afc8af495",
+          "width": 0,
+          "x": 924,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "PozoFondo",
+          "persistentUuid": "e8a2ba38-35a2-46ac-8e1c-37efe28bb2bc",
+          "width": 28,
+          "x": 1350,
+          "y": 110,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeL",
+          "persistentUuid": "515aaac9-a22d-405b-a4a5-8d4c1268712f",
+          "width": 0,
+          "x": 1350,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeR",
+          "persistentUuid": "704b12ef-9eea-4cdc-927f-8f2b72c89fa7",
+          "width": 0,
+          "x": 1374,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "PozoFondo",
+          "persistentUuid": "2949408e-b154-4ce3-983d-55fd2e10d24e",
+          "width": 28,
+          "x": 1700,
+          "y": 110,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeL",
+          "persistentUuid": "d6404fb5-1a66-4a78-b70f-66b5497b9009",
+          "width": 0,
+          "x": 1700,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeR",
+          "persistentUuid": "157d8eea-bb03-413e-80ec-a74428df59c1",
+          "width": 0,
+          "x": 1724,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "PozoFondo",
+          "persistentUuid": "ae12fef5-9ce8-479e-9ed4-5dc891a9a4e8",
+          "width": 28,
+          "x": 2150,
+          "y": 110,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeL",
+          "persistentUuid": "6ebd7d54-5771-4245-b566-65719071ef2f",
+          "width": 0,
+          "x": 2150,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeR",
+          "persistentUuid": "b547a3b2-9577-478a-aac3-c9ee6856a92c",
+          "width": 0,
+          "x": 2174,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "PozoFondo",
+          "persistentUuid": "dbb09d17-041c-49f5-9754-a84622a146b8",
+          "width": 140,
+          "x": 2480,
+          "y": 110,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeL",
+          "persistentUuid": "54e00734-f817-46d1-bd4c-510e9f7e66b3",
+          "width": 0,
+          "x": 2480,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeR",
+          "persistentUuid": "409abcbf-e8a3-4c96-8083-9fe526e058d6",
+          "width": 0,
+          "x": 2616,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "PozoFondo",
+          "persistentUuid": "220db6d0-97b2-48b1-91ba-ae4696d941fa",
+          "width": 200,
+          "x": 2760,
+          "y": 110,
+          "zOrder": -3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeL",
+          "persistentUuid": "c569feea-e119-4b0e-8646-3fdac1e31851",
+          "width": 0,
+          "x": 2760,
+          "y": 110,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PozoBordeR",
+          "persistentUuid": "f839800a-b16c-4ce5-a13d-db54d5796b0c",
+          "width": 0,
+          "x": 2956,
+          "y": 110,
+          "zOrder": -2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -44383,6 +45156,266 @@
           "stringProperties": [],
           "initialVariables": [],
           "persistentUuid": "79fccff1-0f16-5cc4-aa01-0db5cea0fcd6"
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Piston",
+          "persistentUuid": "86e649ca-853f-4280-8963-4def8a9700a8",
+          "width": 0,
+          "x": 2500,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "W",
+              "type": "number",
+              "value": 1.9
+            },
+            {
+              "name": "Ph",
+              "type": "number",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 260,
+          "layer": "",
+          "name": "PistonVastago",
+          "persistentUuid": "d064fde5-d008-4fd3-8fc8-9a19ae5bdbe5",
+          "width": 12,
+          "x": 2514,
+          "y": 120,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Owner",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Piston",
+          "persistentUuid": "c0c053b2-6db7-4b5e-bf4f-4921be1a7633",
+          "width": 0,
+          "x": 2560,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 2
+            },
+            {
+              "name": "W",
+              "type": "number",
+              "value": 1.9
+            },
+            {
+              "name": "Ph",
+              "type": "number",
+              "value": -2.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 260,
+          "layer": "",
+          "name": "PistonVastago",
+          "persistentUuid": "94bc5a05-58b1-4715-bd1f-5a6affbad0ad",
+          "width": 12,
+          "x": 2574,
+          "y": 120,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Owner",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Piston",
+          "persistentUuid": "fef92df9-1356-4577-b86c-272808ee58c6",
+          "width": 0,
+          "x": 2780,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "name": "W",
+              "type": "number",
+              "value": 2.1
+            },
+            {
+              "name": "Ph",
+              "type": "number",
+              "value": 1.3
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 260,
+          "layer": "",
+          "name": "PistonVastago",
+          "persistentUuid": "b0ee431b-dc36-4535-a204-5a75e3e16488",
+          "width": 12,
+          "x": 2794,
+          "y": 120,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Owner",
+              "type": "number",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Piston",
+          "persistentUuid": "93349faa-b60f-4d6e-85b6-20b4f3e60a8d",
+          "width": 0,
+          "x": 2840,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 4
+            },
+            {
+              "name": "W",
+              "type": "number",
+              "value": 2.1
+            },
+            {
+              "name": "Ph",
+              "type": "number",
+              "value": -0.7
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 260,
+          "layer": "",
+          "name": "PistonVastago",
+          "persistentUuid": "18fc6444-cb2a-4721-bc7c-ba694fe72b49",
+          "width": 12,
+          "x": 2854,
+          "y": 120,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Owner",
+              "type": "number",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Piston",
+          "persistentUuid": "bc60e57d-e56b-4d75-a481-6f2ed1e2526a",
+          "width": 0,
+          "x": 2900,
+          "y": 110,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 5
+            },
+            {
+              "name": "W",
+              "type": "number",
+              "value": 2.1
+            },
+            {
+              "name": "Ph",
+              "type": "number",
+              "value": -2.7
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 260,
+          "layer": "",
+          "name": "PistonVastago",
+          "persistentUuid": "0b66931e-2387-484e-bbb1-80add54e43d3",
+          "width": 12,
+          "x": 2914,
+          "y": 120,
+          "zOrder": -1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Owner",
+              "type": "number",
+              "value": 5
+            }
+          ]
         }
       ],
       "objects": [
@@ -50261,6 +51294,229 @@
           ]
         },
         {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LuzTanque",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "luz_tanque.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LuzMonitor",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "luz_monitor.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Baliza",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "baliza.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "BalizaHaz",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "baliza_haz.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 35,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 35,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "AlarmaTinte",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "alarma_tinte.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "assetStoreId": "",
           "height": 16,
           "name": "LabSubsuelo",
@@ -50270,6 +51526,99 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "PozoFondo",
+          "texture": "pozo_fondo.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 320,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "PozoBordeL",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "pozo_borde_l.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "PozoBordeR",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "pozo_borde_r.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -50603,6 +51952,102 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Piston",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Id",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "W",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Ph",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "piston_0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "piston_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "PistonVastago",
+          "texture": "piston_vastago.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 320,
+          "variables": [
+            {
+              "name": "Owner",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -50822,7 +52267,31 @@
             "objectName": "LabVentanaLuz"
           },
           {
+            "objectName": "LuzTanque"
+          },
+          {
+            "objectName": "LuzMonitor"
+          },
+          {
+            "objectName": "Baliza"
+          },
+          {
+            "objectName": "BalizaHaz"
+          },
+          {
+            "objectName": "AlarmaTinte"
+          },
+          {
             "objectName": "LabSubsuelo"
+          },
+          {
+            "objectName": "PozoFondo"
+          },
+          {
+            "objectName": "PozoBordeL"
+          },
+          {
+            "objectName": "PozoBordeR"
           },
           {
             "objectName": "Contencion"
@@ -50838,6 +52307,12 @@
           },
           {
             "objectName": "EscotillaBorde"
+          },
+          {
+            "objectName": "Piston"
+          },
+          {
+            "objectName": "PistonVastago"
           }
         ]
       },
@@ -60806,6 +62281,125 @@
             "textG": 0,
             "textR": 0
           },
+          "comment": "Luces de ambiente (wire_lab_ambiente.py): resplandor de tanques y monitores en las zonas oscuras; zona de alarma con balizas que barren y tinte rojo que late.",
+          "comment2": "",
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "LuzTanque",
+          "objectsToPick": "LuzTanque",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "LuzTanque",
+                    "=",
+                    "round(255 * (0.8 + 0.12 * sin(TimeFromStart() * 1.3 + LuzTanque.Variable(Seed)) + 0.06 * sin(TimeFromStart() * 4.1 + LuzTanque.Variable(Seed) * 2)))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "LuzMonitor",
+          "objectsToPick": "LuzMonitor",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "LuzMonitor",
+                    "=",
+                    "round(255 * (0.85 - 0.6 * floor(0.5 * sin(TimeFromStart() * 7 + LuzMonitor.Variable(Seed) * 3) + 0.52)))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "BalizaHaz",
+          "objectsToPick": "BalizaHaz",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "BalizaHaz",
+                    "=",
+                    "60 * sin(TimeFromStart() * 2.4 + BalizaHaz.Variable(Seed))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "BalizaHaz",
+                    "=",
+                    "round(255 * (0.3 + 0.7 * abs(cos(TimeFromStart() * 2.4 + BalizaHaz.Variable(Seed)))))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Opacity"
+              },
+              "parameters": [
+                "AlarmaTinte",
+                "=",
+                "round(38 * (0.5 + 0.5 * sin(TimeFromStart() * (3))) * (1 - Variable(Won)))"
+              ]
+            }
+          ],
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Subsuelo del lab (wire_lab_subsuelo.py): tubos de contención con virus (cuadro inicial al azar para que no floten sincronizados) y halo verde que late (los rotos titilan).",
           "comment2": "",
           "_lab_subsuelo": true
@@ -61244,6 +62838,143 @@
             }
           ],
           "_lab_subsuelo": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Pistones (wire_lab_pistones.py): Y = 110 + 200·max(0, sin(t·W+Ph))^1.5 (arriba media vuelta, después se hunden). Aviso: luces rojas que parpadean antes de bajar. El vástago sigue al cabezal (Owner = Id).",
+          "comment2": "",
+          "_lab_pistones": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Piston",
+          "objectsToPick": "Piston",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "Piston",
+                    "=",
+                    "110 + 200 * pow(max(0, sin(TimeFromStart() * Piston.Variable(W) + Piston.Variable(Ph))), 1.5)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "Piston",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "sin(TimeFromStart() * Piston.Variable(W) + Piston.Variable(Ph))",
+                        ">",
+                        "-0.85"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "sin(TimeFromStart() * Piston.Variable(W) + Piston.Variable(Ph))",
+                        "<=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "cos(TimeFromStart() * Piston.Variable(W) + Piston.Variable(Ph))",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeSprite"
+                      },
+                      "parameters": [
+                        "Piston",
+                        "=",
+                        "mod(floor(TimeFromStart() * 12), 2)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "PistonVastago",
+                        "Owner",
+                        "=",
+                        "Piston.Variable(Id)"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "PistonVastago",
+                        "=",
+                        "Piston.X() + 14"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "PistonVastago",
+                        "=",
+                        "Piston.Y() + 10"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_pistones": true
         }
       ],
       "layers": [
@@ -62653,11 +64384,266 @@
         },
         {
           "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzTanque",
+          "persistentUuid": "5bc8001e-ea2d-4ec8-8270-e69827730feb",
+          "width": 0,
+          "x": -24,
+          "y": 82,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "539f2810-0a04-4134-ae74-52d8bf01aa9b",
+          "width": 0,
+          "x": 51,
+          "y": 101,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 1.7
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "0fccdba9-220c-47cc-8295-aa1719e8bf36",
+          "width": 0,
+          "x": 81,
+          "y": 101,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 3.4
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzTanque",
+          "persistentUuid": "f431484c-3582-45c5-9e4d-f3940a58e903",
+          "width": 0,
+          "x": 200,
+          "y": 82,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.89
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "8c38cff2-56b5-402b-b6c8-dc0054c11a87",
+          "width": 0,
+          "x": 275,
+          "y": 101,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.52
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "6783ff68-1aae-4580-a564-fcce4924f669",
+          "width": 0,
+          "x": 305,
+          "y": 101,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2.22
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzTanque",
+          "persistentUuid": "fbc6f4d0-4dd2-44c2-9951-723fc8ec3c6b",
+          "width": 0,
+          "x": 424,
+          "y": 82,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 1.78
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "LuzMonitor",
+          "persistentUuid": "57473fd8-281b-46c8-bdef-d8e70aaa4aac",
+          "width": 0,
+          "x": 499,
+          "y": 101,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 5.62
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 270,
+          "layer": "Atmos",
+          "name": "AlarmaTinte",
+          "persistentUuid": "5eec044b-805e-4d81-bfc9-001b456014d7",
+          "width": 600,
+          "x": -60,
+          "y": -25,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "BalizaHaz",
+          "persistentUuid": "6060c2d3-d278-4334-b04f-c1124af240c1",
+          "width": 0,
+          "x": 148,
+          "y": 8,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "Baliza",
+          "persistentUuid": "36c12902-4bd2-48b3-a96e-2e262b926a49",
+          "width": 0,
+          "x": 143,
+          "y": 4,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "BalizaHaz",
+          "persistentUuid": "54aa4978-a26f-4739-b720-a5c54e6e50c0",
+          "width": 0,
+          "x": 372,
+          "y": 8,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 2.1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "Baliza",
+          "persistentUuid": "f3af5701-5f97-42e9-a2eb-2d6e8eb48f3a",
+          "width": 0,
+          "x": 367,
+          "y": 4,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
           "customSize": true,
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "3e45002a-3139-421b-b77e-5ec5d8677b02",
+          "persistentUuid": "ed658ab4-67c7-4633-93ef-d307f7474fcb",
           "width": 560,
           "x": -40,
           "y": 166,
@@ -62672,7 +64658,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "7a3d3d36-2fe7-44f6-b9e3-87e0cae5a5dd",
+          "persistentUuid": "6b1c25ae-1ae6-4efa-8e98-db548e89a02d",
           "width": 0,
           "x": 1,
           "y": 184,
@@ -62698,7 +64684,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "149853fd-3a43-4912-a545-24fcbf40cd77",
+          "persistentUuid": "63a53529-6c23-4dcb-965e-3a5fcd9953d9",
           "width": 0,
           "x": 13,
           "y": 192,
@@ -62713,7 +64699,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "61b9897a-526f-434e-80cc-8d5f7268c683",
+          "persistentUuid": "bcd0f8d4-de60-4da7-9d6e-7da86295783b",
           "width": 0,
           "x": 131,
           "y": 184,
@@ -62739,7 +64725,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "9395d3ed-f7ab-44e6-84f0-849fadfad02a",
+          "persistentUuid": "6df01ad2-1d2d-4667-b442-315b2a381734",
           "width": 0,
           "x": 143,
           "y": 192,
@@ -62754,7 +64740,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "ce03feb0-050e-481a-907b-9eaea1a32908",
+          "persistentUuid": "4aab3653-955e-4a9c-a084-b9bc6bae0b9c",
           "width": 0,
           "x": 218,
           "y": 184,
@@ -62780,7 +64766,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "876a75ae-4753-4f55-98c1-dcdf404a14f4",
+          "persistentUuid": "24dc74aa-9c07-4882-b148-0aaff0fac283",
           "width": 0,
           "x": 230,
           "y": 192,
@@ -62795,7 +64781,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "fb2e119a-19ec-4f78-b100-cc09d46a9aae",
+          "persistentUuid": "9b51a364-aad0-4691-8e30-58cab90659f1",
           "width": 0,
           "x": 286,
           "y": 184,
@@ -62821,7 +64807,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "3dbc6583-99dc-4d73-89d6-cdd30af417bb",
+          "persistentUuid": "4fb715cf-d2f4-4946-848a-b92c19eee9bc",
           "width": 0,
           "x": 298,
           "y": 192,
@@ -62836,7 +64822,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "fcb17070-32ee-4099-a362-29e91738c8c3",
+          "persistentUuid": "04edd9c7-c3e0-4dcb-8946-7cf7f151197f",
           "width": 0,
           "x": 394,
           "y": 184,
@@ -62862,7 +64848,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "b5f9c25c-5b17-458c-9464-0b53834932fa",
+          "persistentUuid": "b2c8cb4c-ce88-4838-a139-88aab75fd2cc",
           "width": 0,
           "x": 406,
           "y": 192,
@@ -66163,6 +68149,229 @@
           ]
         },
         {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LuzTanque",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "luz_tanque.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "LuzMonitor",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "luz_monitor.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Baliza",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "baliza.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "BalizaHaz",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "baliza_haz.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 35,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 35,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "AlarmaTinte",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "alarma_tinte.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "assetStoreId": "",
           "height": 16,
           "name": "LabSubsuelo",
@@ -66172,6 +68381,99 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "PozoFondo",
+          "texture": "pozo_fondo.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 320,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "PozoBordeL",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "pozo_borde_l.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "PozoBordeR",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "pozo_borde_r.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -66586,7 +68888,31 @@
             "objectName": "MiniVirus"
           },
           {
+            "objectName": "LuzTanque"
+          },
+          {
+            "objectName": "LuzMonitor"
+          },
+          {
+            "objectName": "Baliza"
+          },
+          {
+            "objectName": "BalizaHaz"
+          },
+          {
+            "objectName": "AlarmaTinte"
+          },
+          {
             "objectName": "LabSubsuelo"
+          },
+          {
+            "objectName": "PozoFondo"
+          },
+          {
+            "objectName": "PozoBordeL"
+          },
+          {
+            "objectName": "PozoBordeR"
           },
           {
             "objectName": "Contencion"
@@ -75747,6 +78073,125 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Luces de ambiente (wire_lab_ambiente.py): resplandor de tanques y monitores en las zonas oscuras; zona de alarma con balizas que barren y tinte rojo que late.",
+          "comment2": "",
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "LuzTanque",
+          "objectsToPick": "LuzTanque",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "LuzTanque",
+                    "=",
+                    "round(255 * (0.8 + 0.12 * sin(TimeFromStart() * 1.3 + LuzTanque.Variable(Seed)) + 0.06 * sin(TimeFromStart() * 4.1 + LuzTanque.Variable(Seed) * 2)))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "LuzMonitor",
+          "objectsToPick": "LuzMonitor",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "LuzMonitor",
+                    "=",
+                    "round(255 * (0.85 - 0.6 * floor(0.5 * sin(TimeFromStart() * 7 + LuzMonitor.Variable(Seed) * 3) + 0.52)))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "BalizaHaz",
+          "objectsToPick": "BalizaHaz",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "BalizaHaz",
+                    "=",
+                    "60 * sin(TimeFromStart() * 2.4 + BalizaHaz.Variable(Seed))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "BalizaHaz",
+                    "=",
+                    "round(255 * (0.3 + 0.7 * abs(cos(TimeFromStart() * 2.4 + BalizaHaz.Variable(Seed)))))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_ambiente": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Opacity"
+              },
+              "parameters": [
+                "AlarmaTinte",
+                "=",
+                "round(38 * (0.5 + 0.5 * sin(TimeFromStart() * (3 + (3 - Variable(BossHP)) * 1.5))) * (1 - Variable(Won)))"
+              ]
+            }
+          ],
+          "_lab_ambiente": true
         },
         {
           "type": "BuiltinCommonInstructions::Comment",

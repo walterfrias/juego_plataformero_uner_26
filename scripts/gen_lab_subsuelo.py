@@ -24,6 +24,9 @@ Qué crea (en game/assets/Lab/):
   - contencion_glow.png  48x56 : halo verde detrás del tubo.
   - escotilla_borde.png   4x16 : franja de peligro a los lados de la boca del
                                  ducto jugable (Nivel 2).
+  - pozo_fondo.png      128x96 : interior de los pozos de L2 (el subsuelo
+                                 hundido, en sombra), tileable en X.
+  - pozo_borde_l/_r.png   4x96 : cantos de la losa cortada a cada lado.
 
 Uso:  python3 scripts/gen_lab_subsuelo.py      (desde la raíz del repo)
 """
@@ -238,6 +241,52 @@ def contencion_vacia():
     img.save(f"{OUT}/contencion_vacia.png")
 
 
+def pozo():
+    """Interior de los pozos de L2 (y 110..206): hasta el 18/10 se veía el
+    color de fondo de la escena, un bloque violeta plano. Ahora es el mismo
+    corte del subsuelo pero hundido: la pared del fondo (lab_subsuelo más
+    oscuro y desaturado) que se va a negro hacia abajo, y los cantos de la
+    losa cortada a los costados. Los vidrios rotos (GlassSpikes) van delante.
+      pozo_fondo.png   128x96  tileable en X (filas 0..15: losa del fondo;
+                               16..95: lab_subsuelo en sombra)
+      pozo_borde_l.png   4x96  canto izquierdo (cara de la losa, iluminada)
+      pozo_borde_r.png   4x96  canto derecho (en sombra)"""
+    sub = Image.open(f"{OUT}/lab_subsuelo.png").convert("RGBA")
+    w, h = 128, 96
+    img = Image.new("RGBA", (w, h), (8, 11, 14, 255))
+    img.paste(sub, (0, 16))
+    px = img.load()
+    for y in range(h):
+        # más oscuro cuanto más hondo; el fondo de todo casi negro
+        k = 0.42 * (1 - y / h) ** 1.3 + 0.05
+        for x in range(w):
+            r, g, b, _ = px[x, y]
+            gray = (r + g + b) / 3
+            r, g, b = (gray * 0.4 + c * 0.6 for c in (r, g, b))        # desaturado
+            px[x, y] = (int(r * k + 4), int(g * k + 6), int(b * k + 8), 255)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, w, 15], fill=(18, 24, 28, 255))                  # losa del fondo
+    d.line([(0, 15), (w, 15)], fill=(10, 14, 18, 255))
+    img.save(f"{OUT}/pozo_fondo.png")
+
+    for side in ("l", "r"):
+        e = Image.new("RGBA", (4, h), (0, 0, 0, 0))
+        d = ImageDraw.Draw(e)
+        for y in range(h):
+            t = y / (h - 1)
+            lit = lerp(METAL if side == "l" else SLAB, (10, 14, 18), min(1, t * 1.4))
+            dk = lerp(SLAB_DK, (6, 9, 12), min(1, t * 1.4))
+            if side == "l":                  # cara iluminada contra el borde
+                d.point((0, y), fill=lit)
+                d.point((1, y), fill=dk)
+                d.point((2, y), fill=dk[:3] + (140,))
+            else:
+                d.point((3, y), fill=dk)
+                d.point((2, y), fill=dk[:3] + (160,))
+        d.line([(0, 0), (3, 0)], fill=FLOOR_GAP)                        # canto de la baldosa
+        e.save(f"{OUT}/pozo_borde_{side}.png")
+
+
 def escotilla_borde():
     """Borde de la boca del ducto jugable (Nivel 2): franja de peligro
     vertical de 4x16 sobre el canto de la baldosa, a cada lado del agujero.
@@ -275,4 +324,5 @@ if __name__ == "__main__":
     contencion_vacia()
     contencion_glow()
     escotilla_borde()
-    print("ok: lab_subsuelo, contencion[_rota]_0..3, contencion_vacia, contencion_glow, escotilla_borde")
+    pozo()
+    print("ok: lab_subsuelo, contencion[_rota]_0..3, contencion_vacia, contencion_glow, escotilla_borde, pozo")

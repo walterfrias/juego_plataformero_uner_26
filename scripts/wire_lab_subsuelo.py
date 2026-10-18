@@ -55,6 +55,10 @@ Edita game/game.json (backup .bak-<ts>, idempotente; eventos marcados con
     salida (se lo puede pisar al bajar flotando). Las posiciones de los tubos se calculan con el
     piso ORIGINAL (no se corren por el ducto); el script restaura el Ground
     original antes de volver a aplicarlo (idempotente).
+  - PozoFondo + PozoBordeL/R (18/10): el interior de cada pozo (entre dos
+    tramos de piso) era el color de fondo de la escena, un bloque violeta;
+    ahora es el subsuelo hundido en sombra (pozo_fondo.png) con los cantos de
+    la losa cortada. z -3/-2, detrás de los vidrios rotos (GlassSpikes, z -1).
   Todo en la capa de juego (""), z 2..4: el piso (Ground) está en z 1 y
   nada jugable pasa por debajo del canto del piso. Sin comportamientos (no
   colisionan; wire_bordes_plataforma.py no los toma).
@@ -69,12 +73,15 @@ import random
 import shutil
 import uuid
 
+from gdevelop_cerrado import asegurar_gdevelop_cerrado
+
 GAME = "game/game.json"
 MARK = "_lab_subsuelo"
 SCENES = ("Level2", "Level3")
 SUB, TUBE, ROTA, GLOW = "LabSubsuelo", "Contencion", "ContencionRota", "ContencionGlow"
 DPISO, DBORDE = "SubsueloPiso", "EscotillaBorde"
-MINE = {SUB, TUBE, ROTA, GLOW, DPISO, DBORDE}
+POZO, POZO_L, POZO_R = "PozoFondo", "PozoBordeL", "PozoBordeR"
+MINE = {SUB, TUBE, ROTA, GLOW, DPISO, DBORDE, POZO, POZO_L, POZO_R}
 SLAB = 16            # filas de baldosa de lab_floor.png; el subsuelo va debajo
 SUB_H = 80
 GRATE = 66           # fila del piso de rejilla dentro de lab_subsuelo.png
@@ -100,7 +107,8 @@ D_ANTI = (1180, D_FLOOR - 22)                  # antídoto (16x16 + margen)
 D_PATROL = {"ZombieInv": (None, 1000, 1150), "ZombieEnf": (1290, 1272, 1330)}   # valores absolutos: idempotente
 D_NS = uuid.UUID("5b1d0c70-18a0-4c2d-9b1e-000000000000")
 PCY = "(Player.Y() + Player.Height() / 2)"
-RES = (["lab_subsuelo.png", "contencion_glow.png", "contencion_vacia.png", "escotilla_borde.png"]
+RES = (["lab_subsuelo.png", "contencion_glow.png", "contencion_vacia.png", "escotilla_borde.png",
+        "pozo_fondo.png", "pozo_borde_l.png", "pozo_borde_r.png"]
        + [f"contencion_{i}.png" for i in range(4)]
        + [f"contencion_rota_{i}.png" for i in range(4)])
 
@@ -302,8 +310,12 @@ def wire_scene(sc, seed, breaks):
     sub["effects"] = []
     sub["variables"] = []
     base = next(o for o in sc["objects"] if o["name"] == "LampGlow")   # un Sprite cualquiera
+    pozo = copy.deepcopy(sub)
+    pozo.update(name=POZO, texture="pozo_fondo.png")
     sc["objects"] += [
-        sub,
+        sub, pozo,
+        sprite_obj(base, POZO_L, ["pozo_borde_l.png"], 1),
+        sprite_obj(base, POZO_R, ["pozo_borde_r.png"], 1),
         sprite_obj(base, TUBE, [f"contencion_{i}.png" for i in range(4)], 0.28),
         rota_obj(base),
         sprite_obj(base, GLOW, ["contencion_glow.png"], 1, [("Seed", 0), ("Fast", 0)]),
@@ -314,7 +326,8 @@ def wire_scene(sc, seed, breaks):
                     behaviors=copy.deepcopy(ground["behaviors"]))   # plataforma maciza, como el piso
         sc["objects"] += [piso, sprite_obj(base, DBORDE, ["escotilla_borde.png"], 1)]
     if "children" in fs:
-        fs["children"] += [{"objectName": n} for n in (SUB, TUBE, ROTA, GLOW) + ((DPISO, DBORDE) if ducto else ())]
+        fs["children"] += [{"objectName": n} for n in (SUB, POZO, POZO_L, POZO_R, TUBE, ROTA, GLOW)
+                           + ((DPISO, DBORDE) if ducto else ())]
 
     # ---- instancias: un subsuelo por tramo de piso + tubos repartidos ----
     rnd = random.Random(seed)
@@ -337,6 +350,13 @@ def wire_scene(sc, seed, breaks):
             new.append(inst(GLOW, x - 12, tube_y - 8, 3, vars_=[("Seed", seed_v), ("Fast", int(rota))]))
             new.append(inst(ROTA if rota else TUBE, x, tube_y, 4))
             x += rnd.randint(GAP_MIN, GAP_MAX)
+    # interior de los pozos (entre tramos de piso ORIGINALES: la boca y la
+    # salida del ducto no cuentan), detrás de los vidrios rotos (z -1)
+    for a, b in zip(floors, floors[1:]):
+        x0, x1 = a["x"] + a["width"], b["x"]
+        new.append(inst(POZO, x0, a["y"], -3, x1 - x0, a["height"]))
+        new.append(inst(POZO_L, x0, a["y"], -2))
+        new.append(inst(POZO_R, x1 - 4, a["y"], -2))
     sc["instances"] += new
     if ducto:
         apply_ducto(sc)
@@ -365,11 +385,12 @@ def wire_scene(sc, seed, breaks):
             f"{sc['name']} no tiene MiniVirus: corré wire_minivirus.py primero"
         sc["events"] += break_events()
     tubes = sum(1 for i in new if i["name"] in (TUBE, ROTA))
-    print(f"{sc['name']}: {len(floors)} tramos de piso | {tubes} tubos ({n_rota} rotos"
+    print(f"{sc['name']}: {len(floors)} tramos de piso | {len(floors) - 1} pozos | {tubes} tubos ({n_rota} rotos"
           f"{', estallan' if breaks else ', decorado'})")
 
 
 def main():
+    asegurar_gdevelop_cerrado()
     ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H-%M-%S-%fZ")
     shutil.copy(GAME, f"{GAME}.bak-{ts}")
     print("backup", f"{GAME}.bak-{ts}")
