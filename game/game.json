@@ -3050,6 +3050,14 @@
         "name": "contencion_rota_3.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Lab/contencion_vacia.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "contencion_vacia.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -42795,7 +42803,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "353d575d-671e-4fab-ac28-eaf0ace726e7",
+          "persistentUuid": "1e0479ee-f9c3-4c15-9383-ea28be3a3729",
           "width": 620,
           "x": -200,
           "y": 126,
@@ -42810,7 +42818,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "c7ae979e-31f0-4b92-912d-848acd0a53d1",
+          "persistentUuid": "a5bc8177-c3c9-4bca-8b92-1bafc9b485fa",
           "width": 0,
           "x": -190,
           "y": 144,
@@ -42836,7 +42844,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "f5a96962-20fd-4ff2-a8b1-a6126d95b1ba",
+          "persistentUuid": "947c7fd5-62ff-4d5f-a917-2630fc4d8be4",
           "width": 0,
           "x": -178,
           "y": 152,
@@ -42851,7 +42859,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "d1964ea2-f30b-4ade-b8e6-a14dfd12116f",
+          "persistentUuid": "5e6fbc6e-b4cd-42ef-9797-f45f4dd61b9b",
           "width": 0,
           "x": -108,
           "y": 144,
@@ -42877,7 +42885,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "25400f3c-181e-444b-a378-24259ed6ebf4",
+          "persistentUuid": "26d40c62-c7a9-4f9c-9f56-d576ab691d22",
           "width": 0,
           "x": -96,
           "y": 152,
@@ -42892,7 +42900,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "0df1e35a-aedf-4acb-b8f1-c452da33b24f",
+          "persistentUuid": "2e5853c7-da0d-4a62-b91d-2e40df059654",
           "width": 0,
           "x": -1,
           "y": 144,
@@ -42918,7 +42926,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "0733de54-c8a6-4eee-94ae-f84297d1576d",
+          "persistentUuid": "31c61d87-f2ba-40d3-adeb-ff0eb8ce6dc1",
           "width": 0,
           "x": 11,
           "y": 152,
@@ -42933,7 +42941,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "34be3a41-eab9-4999-8130-b932a82dabbd",
+          "persistentUuid": "04a3bcc5-8c73-4c40-9a57-6fb6f9c35f1d",
           "width": 0,
           "x": 121,
           "y": 144,
@@ -42959,7 +42967,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "d6e1f4e2-2780-46ca-bd32-dc8d63f54fc2",
+          "persistentUuid": "431c8f36-08ff-40fa-87e4-4c5cfe95f7b6",
           "width": 0,
           "x": 133,
           "y": 152,
@@ -42974,7 +42982,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "5ccce1a3-0293-4953-866a-18641940654f",
+          "persistentUuid": "7cc625f5-af54-47c0-8777-0cf99bdada9f",
           "width": 0,
           "x": 215,
           "y": 144,
@@ -43000,7 +43008,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "e8d02f4a-0277-49b5-89ea-5b677d7771b8",
+          "persistentUuid": "73871785-80a1-4040-aa0a-d80c4c26b922",
           "width": 0,
           "x": 227,
           "y": 152,
@@ -43015,7 +43023,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "d5d8bb9c-17fd-46e3-ace1-5ea820d20ede",
+          "persistentUuid": "558bce5c-c4ec-4722-ac5a-2fe82e533ca8",
           "width": 0,
           "x": 335,
           "y": 144,
@@ -43041,7 +43049,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "9482a255-cd16-4394-92ed-efe46f6c7b62",
+          "persistentUuid": "5ea8bd1e-caa5-4c3a-ab30-5802ef1a9fbb",
           "width": 0,
           "x": 347,
           "y": 152,
@@ -43056,7 +43064,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "66e77dec-0688-4433-bc19-2d6666c924e9",
+          "persistentUuid": "509681e0-c8c0-4f6a-a259-1267ae878c84",
           "width": 452,
           "x": 448,
           "y": 126,
@@ -43071,7 +43079,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "071d660c-40b2-4bc2-93f7-6b8c38163102",
+          "persistentUuid": "91e555d0-7ad4-47d3-af93-6b56d381cf15",
           "width": 0,
           "x": 478,
           "y": 144,
@@ -43097,7 +43105,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "a6edd715-ff31-4bcb-b76d-0edc0a55a948",
+          "persistentUuid": "c5837a57-df59-43db-bc56-d39b0c4b02e1",
           "width": 0,
           "x": 490,
           "y": 152,
@@ -43112,7 +43120,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "93cec72c-747f-45db-a0a2-601c553b75a6",
+          "persistentUuid": "01020160-3412-4020-b3b5-6da6ab2c1b85",
           "width": 0,
           "x": 562,
           "y": 144,
@@ -43138,7 +43146,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "24b2b36f-64e6-44b6-b65b-b642137ba22c",
+          "persistentUuid": "c2e6ef95-9b0f-4687-9772-7731ca1f4106",
           "width": 0,
           "x": 574,
           "y": 152,
@@ -43153,7 +43161,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "06012b32-613f-449d-9275-c1974312e7eb",
+          "persistentUuid": "14096cd0-f54a-4f95-9787-e2878dcf3cd6",
           "width": 0,
           "x": 666,
           "y": 144,
@@ -43179,7 +43187,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "45d504e8-223c-4927-97d6-5d19415461cd",
+          "persistentUuid": "1c76adca-fa6c-41ff-8a81-359f239ea00a",
           "width": 0,
           "x": 678,
           "y": 152,
@@ -43194,7 +43202,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "807ed07a-3de0-4f90-b0d6-dcc7f70b9932",
+          "persistentUuid": "0d0ffb5f-d918-4ac7-9abc-f1bd5dc0ddcd",
           "width": 0,
           "x": 797,
           "y": 144,
@@ -43210,7 +43218,7 @@
             {
               "name": "Fast",
               "type": "number",
-              "value": 1
+              "value": 0
             }
           ]
         },
@@ -43219,8 +43227,8 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "ContencionRota",
-          "persistentUuid": "bf044042-a0fd-4f65-b5e9-5269bb53cd88",
+          "name": "Contencion",
+          "persistentUuid": "a41123c9-a8c4-4007-a66f-a003aa32cf81",
           "width": 0,
           "x": 809,
           "y": 152,
@@ -43235,7 +43243,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "9dbd70ae-b90a-4d83-a679-0691d34071bb",
+          "persistentUuid": "c6eff956-b194-45c5-9f1d-89fdd8cee206",
           "width": 422,
           "x": 928,
           "y": 126,
@@ -43250,7 +43258,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "15bcfe91-8b75-4231-aa0c-6ac5110d3a6f",
+          "persistentUuid": "03f3d91d-1aff-42c4-9ee8-70d443ef6ebe",
           "width": 0,
           "x": 949,
           "y": 144,
@@ -43276,7 +43284,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "962aea28-0439-4492-b6ad-46dce952cab7",
+          "persistentUuid": "e9595ff2-3bdb-4fad-9b49-e40997f1f354",
           "width": 0,
           "x": 961,
           "y": 152,
@@ -43291,7 +43299,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "46e072e3-e0d0-4d20-8ff2-3be72cb9a482",
+          "persistentUuid": "27f423de-418f-4279-81f6-311bef17e032",
           "width": 0,
           "x": 1048,
           "y": 144,
@@ -43317,7 +43325,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "485d0bf2-f3da-48f2-8912-8f80334825dd",
+          "persistentUuid": "8029994c-6055-4212-b176-0924c4760415",
           "width": 0,
           "x": 1060,
           "y": 152,
@@ -43332,7 +43340,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "902ee777-cbad-4b1b-b458-0729c57501dd",
+          "persistentUuid": "a1e004fb-15e6-44a1-be8b-6b98865427ad",
           "width": 0,
           "x": 1120,
           "y": 144,
@@ -43358,7 +43366,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "59c02993-35d3-4281-8c1f-cce5060ca2a0",
+          "persistentUuid": "47c3676a-eae3-4728-a1a5-524dcf2456bb",
           "width": 0,
           "x": 1132,
           "y": 152,
@@ -43373,7 +43381,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "594eaeb6-b48b-4dd5-a3bc-081c18f4540a",
+          "persistentUuid": "7960283a-2e5c-4b57-b0d6-944a7bb24460",
           "width": 0,
           "x": 1227,
           "y": 144,
@@ -43399,7 +43407,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "09a73fb5-6004-4200-9100-49b00067d21e",
+          "persistentUuid": "6f6f1d68-e522-4ac0-896b-09945ad70064",
           "width": 0,
           "x": 1239,
           "y": 152,
@@ -43414,7 +43422,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "c935f08a-ba20-4339-8a56-1d2520242360",
+          "persistentUuid": "558451a2-4f30-486e-bdbb-ed8cb978cf7b",
           "width": 322,
           "x": 1378,
           "y": 126,
@@ -43429,7 +43437,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "8c72e044-464f-4cad-9480-ffd13f06509e",
+          "persistentUuid": "b554330d-6232-42b2-af84-5fde4f8dd96d",
           "width": 0,
           "x": 1384,
           "y": 144,
@@ -43455,7 +43463,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "6ee334b1-9939-4e15-be0b-5e81b8cd07b4",
+          "persistentUuid": "a5f1a022-8100-48f6-802f-37b92c4d139d",
           "width": 0,
           "x": 1396,
           "y": 152,
@@ -43470,7 +43478,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "0c78c6eb-e2bb-4288-a6c9-9f6626e873a7",
+          "persistentUuid": "5a865f61-bd09-45d2-a692-ffecaceb7d71",
           "width": 0,
           "x": 1470,
           "y": 144,
@@ -43496,7 +43504,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "5b2bc051-f54b-43d7-81f0-9d776380aafe",
+          "persistentUuid": "37be16a3-7e28-445a-9bb3-3866ba4823aa",
           "width": 0,
           "x": 1482,
           "y": 152,
@@ -43511,7 +43519,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "3cc97eb0-49e2-460b-98b9-56db1d84c6f9",
+          "persistentUuid": "85e6e76c-0174-48dc-b6ca-69f055c26709",
           "width": 0,
           "x": 1559,
           "y": 144,
@@ -43537,7 +43545,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "0b4dc8ed-eb9c-4c37-ba6e-e2595cc52d9e",
+          "persistentUuid": "b3b85037-9c34-4efc-9e14-7ce5126406ac",
           "width": 0,
           "x": 1571,
           "y": 152,
@@ -43552,7 +43560,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "b3913073-ebc7-442f-b02c-d820fa5f1856",
+          "persistentUuid": "e561c8c0-8d5a-4980-b963-94c21dd4d26f",
           "width": 422,
           "x": 1728,
           "y": 126,
@@ -43567,7 +43575,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "3ed327e9-26ae-4681-92eb-346fb35073b7",
+          "persistentUuid": "c897cfe6-9255-461b-aa0d-0dd1f96117c6",
           "width": 0,
           "x": 1761,
           "y": 144,
@@ -43593,7 +43601,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "c49fadb0-75af-4213-9aa7-a9fa4bc72d45",
+          "persistentUuid": "210298f3-9f10-4b77-aeca-63e87bf28f2c",
           "width": 0,
           "x": 1773,
           "y": 152,
@@ -43608,7 +43616,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "01e5879d-cbe5-47ec-83a0-6ca43b1cb10b",
+          "persistentUuid": "d9bd37d6-5632-4e58-beb9-6d8b51bab8d2",
           "width": 0,
           "x": 1837,
           "y": 144,
@@ -43634,7 +43642,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "3932e96e-619f-4bde-8094-1369baf1f715",
+          "persistentUuid": "11698865-a55f-4ab9-9f7f-d0173657ccac",
           "width": 0,
           "x": 1849,
           "y": 152,
@@ -43649,7 +43657,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "a8a1a607-198f-46af-8a82-dd462c86def6",
+          "persistentUuid": "a95a8b7b-0ae3-448d-98cc-5fe0a74c9a88",
           "width": 0,
           "x": 1923,
           "y": 144,
@@ -43675,7 +43683,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "df256de5-d601-4545-9b37-7641b9400b3c",
+          "persistentUuid": "15b50798-68b4-48a4-8b7f-aacc17aa9c38",
           "width": 0,
           "x": 1935,
           "y": 152,
@@ -43690,7 +43698,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "031652ae-2aec-4390-8908-e06ebafd61f2",
+          "persistentUuid": "f3004852-9bb8-408d-9e5f-8cd767012cb2",
           "width": 0,
           "x": 2024,
           "y": 144,
@@ -43716,7 +43724,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "ac50d25a-e6ec-4ace-8927-339fbf35ab61",
+          "persistentUuid": "277c6caf-5246-43cb-b20c-e99bcdd2235d",
           "width": 0,
           "x": 2036,
           "y": 152,
@@ -43731,7 +43739,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "64c6c38a-5307-4024-b53a-453f7a1546d7",
+          "persistentUuid": "609f28c9-7001-4bf3-b9bc-c7392b60cfc2",
           "width": 302,
           "x": 2178,
           "y": 126,
@@ -43746,7 +43754,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "68b747ba-bc98-471c-bf66-9e709bb5b565",
+          "persistentUuid": "bed161aa-d267-4fec-b1b0-8192a97344ac",
           "width": 0,
           "x": 2202,
           "y": 144,
@@ -43772,7 +43780,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "75094870-eede-4d76-a42b-741a3c898679",
+          "persistentUuid": "29cea502-d55c-47b9-8e0a-58c92a2aa774",
           "width": 0,
           "x": 2214,
           "y": 152,
@@ -43787,7 +43795,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "9e98da52-f49f-4ab9-a920-208d66496097",
+          "persistentUuid": "5e19ee4a-e07d-43d2-ba10-bdb10d5b34eb",
           "width": 0,
           "x": 2272,
           "y": 144,
@@ -43813,7 +43821,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "330f3e30-b3dc-4bb8-848b-7a8e13e3df65",
+          "persistentUuid": "18d29ca8-b90e-4802-8602-ed43a82f2775",
           "width": 0,
           "x": 2284,
           "y": 152,
@@ -43828,7 +43836,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "a606cb76-eeda-4f9e-be85-f17fca09e489",
+          "persistentUuid": "d409789f-a1a5-4754-9a72-b67786367110",
           "width": 0,
           "x": 2399,
           "y": 144,
@@ -43854,7 +43862,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "2539e6bb-e0f2-4c7d-a333-31d967ef8fcc",
+          "persistentUuid": "1fb11538-acf5-444c-81d6-c68754ee8686",
           "width": 0,
           "x": 2411,
           "y": 152,
@@ -43869,7 +43877,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "6da25342-e0d7-498f-a3de-d80f1be06afb",
+          "persistentUuid": "f6461edc-ad10-4842-a28c-dd17bacc7a0c",
           "width": 140,
           "x": 2620,
           "y": 126,
@@ -43884,7 +43892,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "746ded48-afe5-428e-b6de-974aaae26eba",
+          "persistentUuid": "8935d3fa-449b-4405-bdf4-1dccca90b8ac",
           "width": 0,
           "x": 2629,
           "y": 144,
@@ -43910,7 +43918,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "a1e53940-20eb-4797-b9b2-a10af8dfe1d4",
+          "persistentUuid": "c36d5402-b668-4db4-994e-94f7fa77b4c0",
           "width": 0,
           "x": 2641,
           "y": 152,
@@ -43925,7 +43933,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "26d336af-1885-45af-b893-b97f0fc913cd",
+          "persistentUuid": "41fedb66-709a-4b3f-afdf-b279bf8636f6",
           "width": 940,
           "x": 2960,
           "y": 126,
@@ -43940,7 +43948,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "c30a23e8-62ed-4311-afe9-52aa0834251f",
+          "persistentUuid": "5f97064d-fa20-45b8-ada3-63d91697ddc1",
           "width": 0,
           "x": 3003,
           "y": 144,
@@ -43956,7 +43964,7 @@
             {
               "name": "Fast",
               "type": "number",
-              "value": 1
+              "value": 0
             }
           ]
         },
@@ -43965,8 +43973,8 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "ContencionRota",
-          "persistentUuid": "53207e4f-a52e-491b-84fd-4359bec69c3f",
+          "name": "Contencion",
+          "persistentUuid": "e85c5430-2b4b-46f8-ae2a-0c06cab6a2a4",
           "width": 0,
           "x": 3015,
           "y": 152,
@@ -43981,7 +43989,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "24874cee-2b0d-4cb6-b31d-d510a1a7c0b0",
+          "persistentUuid": "c54c04a7-e522-4590-b66d-abab321b4d40",
           "width": 0,
           "x": 3149,
           "y": 144,
@@ -44007,7 +44015,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "91a49fa1-8fbc-49fb-b597-1889e9944d22",
+          "persistentUuid": "d66503f9-aca8-43a8-a74d-84033b5c787f",
           "width": 0,
           "x": 3161,
           "y": 152,
@@ -44022,7 +44030,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "2f081dc7-396d-485f-bd07-66d39a690f32",
+          "persistentUuid": "6dd85849-7ed6-4825-905b-e6494dfd818a",
           "width": 0,
           "x": 3296,
           "y": 144,
@@ -44048,7 +44056,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "64d58185-8b03-4ba2-9091-64e4fc43edeb",
+          "persistentUuid": "3874d703-dace-4ec7-8c55-5f3c612e712a",
           "width": 0,
           "x": 3308,
           "y": 152,
@@ -44063,7 +44071,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "97a759b7-0d40-48f0-af38-4ab376059298",
+          "persistentUuid": "908ccc6f-ae5f-4058-8b29-f886ce9cf2a0",
           "width": 0,
           "x": 3366,
           "y": 144,
@@ -44089,7 +44097,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "9b49a445-84eb-43a7-bd29-233264fe5211",
+          "persistentUuid": "16ef908c-8248-4576-a40a-d65657fb6fa6",
           "width": 0,
           "x": 3378,
           "y": 152,
@@ -44104,7 +44112,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "35aa9bd8-5dad-4274-8c87-b16f9dd959df",
+          "persistentUuid": "212ca531-9806-4ae4-99b3-cebd869ea8d8",
           "width": 0,
           "x": 3470,
           "y": 144,
@@ -44130,7 +44138,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "02e595cd-2989-434e-85af-5c481689e9c4",
+          "persistentUuid": "a3fc58ba-dfc8-4428-85a2-df5596c21537",
           "width": 0,
           "x": 3482,
           "y": 152,
@@ -44145,7 +44153,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "91b58d8b-22e8-4feb-9bb3-7bbf76da3ea8",
+          "persistentUuid": "7d589898-ea8f-4865-9904-ddaed6519b4c",
           "width": 0,
           "x": 3597,
           "y": 144,
@@ -44171,7 +44179,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "af680796-ced9-416c-bd56-037d0a54b460",
+          "persistentUuid": "f8cec8f0-b636-4ce0-a38d-a4988bb3a87a",
           "width": 0,
           "x": 3609,
           "y": 152,
@@ -44186,7 +44194,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "b35ae17f-68fb-452c-8b71-806f95c1c310",
+          "persistentUuid": "18e4d7bc-398c-4b37-987e-359e80efa2d4",
           "width": 0,
           "x": 3668,
           "y": 144,
@@ -44212,7 +44220,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "84f7384d-124f-431f-9b7d-feed2ad3def2",
+          "persistentUuid": "4da0397b-b02d-4fad-b2f3-dc14e29569b4",
           "width": 0,
           "x": 3680,
           "y": 152,
@@ -44227,7 +44235,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "ad6e5943-470c-4756-aace-754584120bfb",
+          "persistentUuid": "039ee16d-d8a4-46d9-b0bb-f7d1a790f593",
           "width": 0,
           "x": 3788,
           "y": 144,
@@ -44253,7 +44261,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "4dada9e2-7001-4709-8dbb-a3d4fea96630",
+          "persistentUuid": "a057d457-4d75-41b7-a00a-72ddcec37111",
           "width": 0,
           "x": 3800,
           "y": 152,
@@ -50247,7 +50255,18 @@
           "name": "ContencionRota",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Estado",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "BaseX",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -50313,6 +50332,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "contencion_rota_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Vacia",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "contencion_vacia.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -60677,6 +60725,326 @@
             }
           ],
           "_lab_subsuelo": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Tubos rotos (wire_lab_subsuelo.py): Lio a menos de 80 px -> tiembla 0.6 s con crujido -> estalla (Vacia), se apaga su halo y sale un MiniVirus apuntado a Lio. Una vez por tubo (Estado 0/1/2).",
+          "comment2": "",
+          "_lab_subsuelo": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "ContencionRota",
+          "objectsToPick": "ContencionRota",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ContencionRota",
+                    "Estado",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "abs((Player.X() + Player.Width() / 2) - (ContencionRota.X() + 12))",
+                    "<",
+                    "80"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Over",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Won",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "ContencionRota",
+                    "Estado",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "ContencionRota",
+                    "BaseX",
+                    "=",
+                    "ContencionRota.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "ContencionRota",
+                    "\"Crack\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "sfx_chispazo.wav",
+                    "no",
+                    "GlobalVariable(SfxVolume) * 0.6",
+                    "0.45"
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_subsuelo": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "ContencionRota",
+          "objectsToPick": "ContencionRota",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ContencionRota",
+                    "Estado",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "ContencionRota",
+                    "=",
+                    "ContencionRota.Variable(BaseX) + round(sin(TimeFromStart() * 70))"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectTimer"
+                      },
+                      "parameters": [
+                        "ContencionRota",
+                        "\"Crack\"",
+                        "0.6"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "ContencionRota",
+                        "Estado",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "ContencionRota",
+                        "=",
+                        "ContencionRota.Variable(BaseX)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "ContencionRota",
+                        "\"Vacia\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "sfx_chispazo.wav",
+                        "no",
+                        "GlobalVariable(SfxVolume) * 0.9",
+                        "1.8"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "MiniVirus",
+                            "(ContencionRota.Variable(BaseX) + 12) - 8",
+                            "(ContencionRota.Y() + 20) - 8",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "MiniVirus",
+                            "=",
+                            "900"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "MiniVirus",
+                            "Ang",
+                            "=",
+                            "atan2((Player.Y() + Player.Height() / 2) - (ContencionRota.Y() + 20), (Player.X() + Player.Width() / 2) - (ContencionRota.Variable(BaseX) + 12))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "MiniVirus",
+                            "Next",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "MiniVirus",
+                            "\"Life\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "MiniVirus",
+                            "\"Retarget\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "ContencionGlow",
+                            ">=",
+                            "ContencionRota.Variable(BaseX) - 13"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "ContencionGlow",
+                            "<=",
+                            "ContencionRota.Variable(BaseX) - 11"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "ContencionGlow",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "_lab_subsuelo": true
         }
       ],
       "layers": [
@@ -62090,7 +62458,7 @@
           "height": 80,
           "layer": "",
           "name": "LabSubsuelo",
-          "persistentUuid": "3e625a17-653e-44ac-aeec-ad6837a34315",
+          "persistentUuid": "d923f10b-98fa-4732-ac2e-00b579220d02",
           "width": 560,
           "x": -40,
           "y": 166,
@@ -62105,7 +62473,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "d81f12ce-18e7-4f15-9b03-54bcf123ed8b",
+          "persistentUuid": "4dfd7136-1357-4e33-819a-c5216c1bc08d",
           "width": 0,
           "x": 1,
           "y": 184,
@@ -62131,7 +62499,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "b1b8b457-c1fc-4334-a193-825630c1a28e",
+          "persistentUuid": "16fad6dd-992c-4bd5-a2aa-950b0f41ee67",
           "width": 0,
           "x": 13,
           "y": 192,
@@ -62146,7 +62514,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "a827be7a-c6f2-4857-81e8-7521db9656b0",
+          "persistentUuid": "7d3975b7-2df3-4b3d-bc92-218bf6ca24ef",
           "width": 0,
           "x": 131,
           "y": 184,
@@ -62172,7 +62540,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "2375fa85-a9bc-4819-982d-89a696b48bdc",
+          "persistentUuid": "c5adb17e-7e10-4afc-a2db-5593838fe907",
           "width": 0,
           "x": 143,
           "y": 192,
@@ -62187,7 +62555,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "7eb71573-d27d-48c2-84dc-e233824ee2c7",
+          "persistentUuid": "21b075d4-92ea-41fc-8883-6f2ad6b9f702",
           "width": 0,
           "x": 218,
           "y": 184,
@@ -62213,7 +62581,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "e5310518-b0a1-4a0f-982e-7409e06153c2",
+          "persistentUuid": "e9954bea-bd80-438d-9ba7-d6563e17b079",
           "width": 0,
           "x": 230,
           "y": 192,
@@ -62228,7 +62596,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "7f9d792c-45d7-4197-a091-82f6d758564f",
+          "persistentUuid": "0eaeffff-ac15-4d55-920b-e5fde9dd2af1",
           "width": 0,
           "x": 286,
           "y": 184,
@@ -62254,7 +62622,7 @@
           "height": 0,
           "layer": "",
           "name": "Contencion",
-          "persistentUuid": "0e9b7db8-a8f8-4edb-9c5a-0c2942ba3478",
+          "persistentUuid": "2d98d468-cd1e-4ff8-a512-fde2924f0408",
           "width": 0,
           "x": 298,
           "y": 192,
@@ -62269,7 +62637,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionGlow",
-          "persistentUuid": "24c59168-afb0-4658-b9e3-7e9c38176bed",
+          "persistentUuid": "8a742f60-3abd-4216-a9ad-4280b1987a2d",
           "width": 0,
           "x": 394,
           "y": 184,
@@ -62295,7 +62663,7 @@
           "height": 0,
           "layer": "",
           "name": "ContencionRota",
-          "persistentUuid": "cf2f979d-cb44-4b3f-b1bb-aba89c551791",
+          "persistentUuid": "800a2d4f-45e1-48a6-8101-c888743f05f5",
           "width": 0,
           "x": 406,
           "y": 192,
@@ -65704,7 +66072,18 @@
           "name": "ContencionRota",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Estado",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "BaseX",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -65770,6 +66149,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "contencion_rota_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Vacia",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "contencion_vacia.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",

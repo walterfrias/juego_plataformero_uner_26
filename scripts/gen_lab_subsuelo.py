@@ -19,7 +19,9 @@ Qué crea (en game/assets/Lab/):
                                  sube y baja y gira).
   - contencion_rota_0..3.png   : el mismo tubo con el vidrio rajado y el
                                  líquido más bajo (los que se rompen).
-  - contencion_glow.png  48x56 : halo verde del tubo (capa Atmos, aditivo).
+  - contencion_vacia.png  24x40 : el tubo roto después de estallar (sin virus,
+                                 vidrio partido, charco en el fondo).
+  - contencion_glow.png  48x56 : halo verde detrás del tubo.
 
 Uso:  python3 scripts/gen_lab_subsuelo.py      (desde la raíz del repo)
 """
@@ -203,6 +205,37 @@ def contencion():
             img.save(f"{OUT}/{name}_{i}.png")
 
 
+def contencion_vacia():
+    """El tubo roto después de estallar: sin virus, vidrio partido arriba,
+    charco de líquido en el fondo."""
+    w, h = 24, 40
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    # vidrio que quedó: solo la mitad de abajo, con borde dentado
+    jag = [22, 19, 24, 20, 17, 21, 25, 18, 22, 20, 23, 19, 21, 24, 20, 22, 18, 21]
+    for i, x in enumerate(range(3, 21)):
+        d.line([(x, jag[i]), (x, 33)], fill=TANK_GLASS[:3] + (110,))
+        d.point((x, jag[i]), fill=(200, 235, 228, 220))
+    d.line([(3, 22), (3, 33)], fill=METAL_DK)
+    d.line([(20, 20), (20, 33)], fill=METAL_DK)
+    # restos de líquido en el fondo
+    d.rectangle([4, 30, 19, 33], fill=LIQUID[:3] + (200,))
+    d.line([(4, 30), (19, 30)], fill=LIQUID_HI)
+    # tapa (torcida) y base
+    d.rectangle([1, 1, 22, 4], fill=METAL)
+    d.line([(1, 1), (22, 0)], fill=METAL_LIT)
+    d.line([(1, 4), (22, 4)], fill=METAL_DK)
+    d.rectangle([0, 34, 23, 39], fill=METAL)
+    d.line([(0, 34), (23, 34)], fill=METAL_LIT)
+    d.rectangle([0, 38, 23, 39], fill=METAL_DK)
+    d.point((4, 36), fill=(255, 70, 60, 255))     # alarma en rojo
+    d.point((19, 36), fill=(255, 70, 60, 255))
+    # vidrios en el piso de rejilla, a los costados
+    for (x, y) in ((-0, 39), (2, 38), (21, 38), (23, 39)):
+        d.point((x, y), fill=(200, 235, 228, 255))
+    img.save(f"{OUT}/contencion_vacia.png")
+
+
 def contencion_glow():
     w, h = 48, 56
     img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
@@ -224,5 +257,6 @@ def contencion_glow():
 if __name__ == "__main__":
     lab_subsuelo()
     contencion()
+    contencion_vacia()
     contencion_glow()
-    print("ok: lab_subsuelo, contencion[_rota]_0..3, contencion_glow")
+    print("ok: lab_subsuelo, contencion[_rota]_0..3, contencion_vacia, contencion_glow")

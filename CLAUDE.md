@@ -290,9 +290,13 @@ razonamiento de por qué se llegó hasta acá.
   16..95) con losa, ducto, cañerías y sala de contención; tubos
   `Contencion` / `ContencionRota` (virus que flota adentro, cuadro inicial
   al azar) con halo `ContencionGlow` que late (los rotos titilan). L2: 33
-  tubos (7 rotos), L3: 5 (2 rotos). Solo decorado: falta que los rotos
-  suelten un virus y el tramo jugable por ducto. Re-correr después de
-  `wire_levels23.py --force`.
+  tubos (5 rotos), L3: 5 (2 rotos, solo decorado). **En L2 los rotos
+  estallan:** Lio a <80 px → tiembla 0.6 s con crujido → anim `Vacia`, se
+  apaga el halo y sale un `MiniVirus` apuntado a Lio (lógica de
+  `wire_minivirus.py`, que tiene que correr antes). Var `Estado` 0/1/2, una
+  vez por tubo. Ningún roto a <100 px de un hueco (knockback). Verificado en
+  runtime con teclas. Falta: tramo jugable por ducto. Re-correr después de
+  `wire_levels23.py --force` y de `wire_minivirus.py`.
 
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
   CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →
