@@ -30,6 +30,8 @@ import datetime
 import json
 import shutil
 
+from gdevelop_cerrado import asegurar_gdevelop_cerrado
+
 from wire_score_hud import act, comment, ev, put_object
 
 GAME = "game/game.json"
@@ -56,9 +58,11 @@ LEVELS = {
         "dark": [(1740, 2200, 140), (2940, 3800, 140)],
     },
     "Level3": {
+        # desde el 18/10 el lab de L3 es solo el tramo de salida del recorrido
+        # (wire_l3_recorrido.py: x −2140..−1770); la arena es la calle
         "ceiling": -24, "screen_top": -25,
-        "lamps": [(100, FLICKER), (340, STEADY)],
-        "dark": [(-60, 540, 90)],                        # la arena entera, más suave
+        "lamps": [(-2040, FLICKER), (-1880, STEADY)],
+        "dark": [(-2180, -1780, 90)],
     },
 }
 
@@ -200,6 +204,7 @@ def wire(lay, cfg):
 
 
 def main():
+    asegurar_gdevelop_cerrado()
     shutil.copy(GAME, GAME + ".bak-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
     g = json.load(open(GAME, encoding="utf-8"))
     res = g["resources"]["resources"]

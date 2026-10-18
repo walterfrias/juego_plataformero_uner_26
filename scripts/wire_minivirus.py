@@ -41,6 +41,7 @@ import json
 import shutil
 
 from wire_score_hud import act, comment, ev, put_object
+from gdevelop_cerrado import asegurar_gdevelop_cerrado
 
 GAME = "game/game.json"
 GROUP = "Minivirus (wire_minivirus.py)"
@@ -227,7 +228,9 @@ def wire(lay, src, boss):
     if boss:
         ensure_var(lay["variables"], "BossSpit")
         evs += boss_events()
-    else:
+    # zombies infectados: en L1/L2 siempre; en L3 desde que tiene recorrido con
+    # zombies (wire_l3_recorrido.py, 18/10)
+    if any(g["name"] == "Zombies" for g in lay.get("objectsGroups", [])):
         zg = next(g for g in lay["objectsGroups"] if g["name"] == "Zombies")
         names = {o["name"] for o in zg["objects"]}
         for o in lay["objects"]:
@@ -251,6 +254,7 @@ def wire(lay, src, boss):
 
 
 def main():
+    asegurar_gdevelop_cerrado()
     shutil.copy(GAME, GAME + ".bak-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
     g = json.load(open(GAME, encoding="utf-8"))
     lays = {l["name"]: l for l in g["layouts"]}

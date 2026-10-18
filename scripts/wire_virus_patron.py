@@ -36,6 +36,8 @@ import os
 import re
 import shutil
 
+from gdevelop_cerrado import asegurar_gdevelop_cerrado
+
 GAME = "game/game.json"
 H = math.pi / 2
 KEYS = ("CX", "CY", "AX", "AY", "WX", "WY", "PX", "PY")
@@ -63,6 +65,17 @@ PATRONES = {
         "Virus2": (1550, 34, 90, 30, 1.4, 2.8, 0, H),
         # círculo en el pasillo abierto
         "Virus3": (1980, 52, 32, 32, 2.2, 2.2, 0, H),
+    },
+    # Nivel 3 (recorrido nuevo, 18/10; diseño en l3_recorrido.py): piso en y=150
+    # (+40 respecto de L1) y x de diseño − 2100. Mismos patrones que L1.
+    "Level3": {
+        # ascensor sobre el hueco de 28 px de la calle del hospital (x diseño 520..548)
+        "Virus1": (534 - 8 - 2100, 87, 0, 37, 0, 2.4, 0, 0),
+        # péndulo sobre el puente de la plaza (900..988)
+        "Virus2": (944 - 8 - 2100, 84, 60, 34, 1.6, 3.2, 0, H),
+        # círculo a la altura de los cables de la obra (cable en y 70): cruza
+        # por donde pasa Lio colgado; hay que esperar a que esté del otro lado
+        "Virus3": (1395 - 8 - 2100, 40, 32, 32, 2.0, 2.0, 0, H),
     },
 }
 
@@ -111,6 +124,7 @@ def new_events():
 
 
 def main():
+    asegurar_gdevelop_cerrado()
     # con microsegundos: dos corridas en el mismo segundo pisaban el backup
     ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H-%M-%S-%fZ")
     shutil.copy(GAME, f"{GAME}.bak-{ts}")
@@ -123,8 +137,9 @@ def main():
             continue
         evs = lay["events"]
         idx = [i for i, e in enumerate(evs) if is_old(lay["name"], e)]
-        assert idx, f"{lay['name']}: no encontré los eventos de vuelo"
-        at = idx[0]
+        # L3 nunca tuvo vuelo random (sus virus los trajo wire_l3_recorrido.py): al final
+        assert idx or lay["name"] == "Level3", f"{lay['name']}: no encontré los eventos de vuelo"
+        at = idx[0] if idx else len(evs)
         lay["events"] = [e for i, e in enumerate(evs) if i not in set(idx)]
         lay["events"][at:at] = new_events()
 

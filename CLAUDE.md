@@ -100,6 +100,15 @@ razonamiento de por qué se llegó hasta acá.
   instancias, y las acciones sobre ese mismo objeto solo afectan a las
   filtradas. Para actuar sobre todas, usar un evento cuyas condiciones no
   lo mencionen (así se arregló el bug de los "4 zombies rotos").
+- **Escaleras (Ladder):** agarrarse lo decide la tecla **Ladder**, no Up
+  (`_checkTransitionOnLadder`). La W simulaba solo Up: con WASD no se
+  trepaba ningún poste (ni en L1). `fix_w_escalera.py` agrega
+  `PlatformBehavior::SimulateLadderKey` al evento de la W en todas las escenas.
+- **Paredes que tocan el piso por el costado no frenan:** una plataforma
+  maciza vertical cuya base está a la altura del piso (la pared de 350 px de
+  la arena de L3, una valla) el motor la toma como piso: deja de ser
+  obstáculo o "sube" a Lio arriba de la pared. Límites de nivel/arena: por
+  evento (`PosX < x → SetX x`), no con plataformas.
 - **Probar timing con un robot DENTRO del juego**
   (`gdjs.registerRuntimeScenePostEventsCallback` + `simulateRightKey` /
   `simulateJumpKey` del PlatformerObject): reacciona en el mismo frame. Con
@@ -341,6 +350,26 @@ razonamiento de por qué se llegó hasta acá.
   según `BossHP` (3 + (3 − BossHP)·1.5 rad/s, medido: 2 → 4 picos en 4 s);
   se apaga con Won. Falta playtest: intensidad del tinte (máx 38), si los
   haces distraen al pelear con el jefe.
+
+- **Nivel 3 nuevo: recorrido + arena del Obelisco (18/10):** diseño como
+  datos en `scripts/l3_recorrido.py` (la maqueta y el cableo leen lo mismo);
+  `gen_l3_calle.py` (valla, tablón y caño de andamio) → `wire_l3_recorrido.py`.
+  El recorrido va en **x negativas** (−2140..0) y la arena queda en 0..480: la
+  lógica del jefe no se tocó. Tramos: salida del lab → calle del hospital →
+  plaza (puente) → obra en la 9 de Julio (poste, cables, hierros) → llegada
+  (zombies que marchan) → arena (Obelisco, andamios). Sistemas copiados de
+  L2: grupo Zombies (policía, hincha, repartidor en la calle; médico en el
+  lab: patrulla, pisotón, choque, contagio, gas) y Virus (golpe; patrón en
+  `wire_virus_patron.py`, escupitajos de infectados en `wire_minivirus.py`).
+  El jefe duerme (`BossActivo`) hasta que Lio entra (X ≥ 10): valla, cámara
+  trabada, checkpoint y cartel. 5 checkpoints. Verificado con teclas reales:
+  hueco con carrera, poste + cables, entrar y no poder volver, paredes. El
+  Obelisco de la arena es el sprite de fondo al doble (provisorio, va con el
+  jefe nuevo). **No usar `wire_levels23.py --force`**: regenera L3 como
+  arena sola.
+  Orden si se regenera L3: `wire_l3_recorrido.py` → `wire_virus_patron.py` →
+  `wire_minivirus.py` → `wire_lab_luces.py` → `wire_lab_subsuelo.py` →
+  `wire_lab_ambiente.py` → `fix_w_escalera.py`.
 
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
   CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →

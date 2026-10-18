@@ -56,8 +56,10 @@ T = "TimeFromStart()"
 SCENES = {
     "Level2": {"dark": [(1740, 2200), (2940, 3800)], "alarm": (2940, 3800),
                "beacons": [3060, 3396, 3732], "rate": "3"},
-    "Level3": {"dark": [(-60, 540)], "alarm": (-60, 540),
-               "beacons": [148, 372], "rate": "3 + (3 - Variable(BossHP)) * 1.5"},
+    # L3 (desde el 18/10): el lab es el tramo de salida; la arena es la calle,
+    # sin pared donde colgar balizas (solo el tinte que late con BossHP)
+    "Level3": {"dark": [(-2180, -1780)], "alarm": (-60, 540),
+               "beacons": [], "rate": "3 + (3 - Variable(BossHP)) * 1.5"},
 }
 
 
