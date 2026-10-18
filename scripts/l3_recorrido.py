@@ -27,7 +27,7 @@ TRAMOS = [
     (0, LAB_END, "1. Salida del laboratorio"),
     (LAB_END, 760, "2. La calle del hospital"),
     (760, 1200, "3. La plaza"),
-    (1200, 1720, "4. Obra en la 9 de Julio"),
+    (1200, 1720, "4. Obra en Corrientes"),
     (1720, ARENA_X0, "5. Llegando al Obelisco"),
     (ARENA_X0, ARENA_X1, "6. Arena: Paciente Zero"),
 ]
@@ -88,5 +88,22 @@ PROPS = [
     # 6. arena
     ("PacienteZero", ARENA_X0 + 360, 82, {}),
 ]
+# fachadas porteñas detrás de la vereda (gen_l3_fachadas.py; capa BG_near): "entre
+# edificios, no en la costanera" (usuario 18/10). La plaza y la llegada al Obelisco
+# quedan abiertas: el cambio de cerrado a abierto marca que se llega.
+FACHADA_W = {"frances": 112, "deptos": 96, "ph": 80, "bar": 104}
+
+
+def _fila(x0, modelos):
+    out, x = [], x0
+    for m in modelos:
+        out.append((m, x))
+        x += FACHADA_W[m]
+    return out
+
+
+FACHADAS = (_fila(330, ["deptos", "ph", "frances", "bar"])                        # calle del hospital
+            + _fila(1206, ["frances", "deptos", "ph", "bar", "deptos"])           # obra en Corrientes
+            + _fila(1722, ["frances", "ph", "deptos"]))                           # se abre hacia el Obelisco
 CHECKPOINTS = [330, 988, 1500, 1906, ARENA_X0 - 20]   # x de los checkpoints (Lio sobre el piso)
-OBELISCO_ARENA = (ARENA_X0 + 214, 2.0)               # x y escala del Obelisco grande del fondo
+OBELISCO_ARENA = ARENA_X0 + 232                      # x del CENTRO del Obelisco de la arena (obelisco_cerca.png, 48x176)

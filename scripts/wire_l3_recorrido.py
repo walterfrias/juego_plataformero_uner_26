@@ -25,7 +25,7 @@ Edita game/game.json (backup .bak-<ts>, idempotente; eventos marcados con
   - zombies de L2 (grupo Zombies: patrulla, pisotón, choque, contagio, gas) y
     virus de L2 (grupo Virus: golpe a Lio). El vuelo con patrón lo pone
     wire_virus_patron.py y los escupitajos de los infectados wire_minivirus.py.
-  - arena: el Obelisco grande al fondo; los estantes del lab pasan a ser
+  - arena: el Obelisco (obelisco_cerca.png) al fondo; los estantes del lab pasan a ser
     tablones de andamio con sus caños (si no, flotarían).
   - el jefe DUERME hasta que Lio entra a la arena (x ≥ ARENA_GATE): ahí se
     cierra una valla detrás (Barricada: solo imagen; el límite es un evento que
@@ -72,7 +72,7 @@ FROM_L2 = ZOMBIES + VIRUS + ["InfectedGasFX"]
 NEW = ["Barricada", "AndamioPoste"]
 MINE = set(FROM_L1) | set(RENAMED_L1.values()) | set(FROM_L2) | set(NEW)
 CITY_LAYER = "BG_city"
-RES = ["valla.png", "andamio_tablon.png", "andamio_poste.png"]
+RES = ["valla.png", "andamio_tablon.png", "andamio_poste.png", "obelisco_cerca.png"]
 
 # capa y z de cada objeto (los de L1 como en L1; el fondo, todo en BG_city)
 PLACE = {
@@ -165,6 +165,12 @@ def main():
         o = copy.deepcopy(o1[src])
         o["name"] = dst
         new_objs.append(o)
+    # el Obelisco de la arena: arte propio (gen_l3_calle.py), sin el Adjustment que
+    # en L1 lo oscurece por estar lejos
+    ob = next(o for o in new_objs if o["name"] == "ObeliscoGrande")
+    ob["effects"] = []
+    ob["animations"][0]["directions"][0]["sprites"] = [dict(
+        ob["animations"][0]["directions"][0]["sprites"][0], image="obelisco_cerca.png")]
     new_objs += [copy.deepcopy(o2[n]) for n in FROM_L2]
     # la valla es solo imagen: el límite de la arena lo ponen eventos (ver CLAMP abajo).
     # Como plataforma no frenaba: tocando el piso por el costado, el motor la tomaba
@@ -250,10 +256,8 @@ def main():
         new.append(inst("NocheIncendio", b, l1i["NocheIncendio"]["y"] + R.DY_L1,
                         vars_=[("Base", b), ("Seed", round(1.3 + k * 1.7, 2))]))
         new.append(inst("NocheHumo", b + 38, l1i["NocheHumo"]["y"] + R.DY_L1, vars_=[("Base", b + 38)]))
-    # arena: Obelisco grande (por ahora el sprite de fondo al doble) y andamios
-    ob_x, ob_s = R.OBELISCO_ARENA
-    ob_w, ob_h = 18 * ob_s, 122 * ob_s
-    new.append(inst("ObeliscoGrande", ob_x + OX, R.FLOOR - ob_h, ob_w, ob_h))
+    # arena: el Obelisco (48x176, tamaño nativo, apoyado en el piso) y andamios
+    new.append(inst("ObeliscoGrande", R.OBELISCO_ARENA + OX - 24, R.FLOOR - 176))
     for e in (i for i in sc["instances"] if i["name"] == "Estante"):
         for px in (e["x"] + 4, e["x"] + e["width"] - 8):
             new.append(inst("AndamioPoste", px, e["y"] + 6, 4, R.FLOOR - e["y"] - 6))

@@ -363,13 +363,20 @@ razonamiento de por qué se llegó hasta acá.
   `wire_virus_patron.py`, escupitajos de infectados en `wire_minivirus.py`).
   El jefe duerme (`BossActivo`) hasta que Lio entra (X ≥ 10): valla, cámara
   trabada, checkpoint y cartel. 5 checkpoints. Verificado con teclas reales:
-  hueco con carrera, poste + cables, entrar y no poder volver, paredes. El
-  Obelisco de la arena es el sprite de fondo al doble (provisorio, va con el
-  jefe nuevo). **No usar `wire_levels23.py --force`**: regenera L3 como
+  hueco con carrera, poste + cables, entrar y no poder volver, paredes. **No usar `wire_levels23.py --force`**: regenera L3 como
   arena sola.
   Orden si se regenera L3: `wire_l3_recorrido.py` → `wire_virus_patron.py` →
   `wire_minivirus.py` → `wire_lab_luces.py` → `wire_lab_subsuelo.py` →
-  `wire_lab_ambiente.py` → `fix_w_escalera.py`.
+  `wire_lab_ambiente.py` → `fix_w_escalera.py` → `wire_jefe.py`.
+- **Jefe definitivo y Obelisco (18/10):** `gen_jefe.py` → `wire_jefe.py`.
+  Paciente Zero = masa viral (paleta del virus, corona de espículas) con el
+  paciente fundido adelante (cara, bata rota, brazo con la pulsera de
+  internación) y seudópodos. 64x68 nativo (misma colisión), máscara ajustada
+  al cuerpo. Animaciones por estado: Walk (0 y 2), Carga (1: se hincha) y
+  Expuesto (3: núcleo verde arriba = pisalo). La pelea no cambió. Obelisco
+  de la arena: `obelisco_cerca.png` (48x176, `gen_l3_calle.py`): luna de la
+  izquierda, reflector cálido abajo, cinta de cuarentena. Verificado: la
+  secuencia de estados/animaciones y el pisotón con la máscara nueva.
 
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
   CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →
