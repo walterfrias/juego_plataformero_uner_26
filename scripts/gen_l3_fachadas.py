@@ -17,6 +17,8 @@ Cuatro módulos (la fila de abajo de cada imagen apoya en el piso, y = 150):
                                  dentro (luz cálida), toldo, piso de arriba
   calle_subsuelo.png     32x80   debajo de la vereda: asfalto, caños y tierra
                                  (reemplaza al muro de la costanera de L1)
+  calle_pozo.png         32x96   interior de los pozos de la calle: el corte de
+                                 calle hundido y en sombra
 Apocalipsis: ventanas tapiadas, vidrios rotos, cruz roja de cuarentena en las
 puertas. Noche: tonos bajos para no competir con el plano de juego, canto
 izquierdo iluminado por la luna, alguna ventana prendida (cálida o de TV).
@@ -247,11 +249,31 @@ def calle_subsuelo():
     return img
 
 
+def calle_pozo():
+    """interior de los pozos de la calle (y 150..246): el corte de calle hundido y
+    en sombra, a negro hacia el fondo. Sin esto se veía el fondo de la ciudad
+    (estrellas y edificios) por el pozo, como un agujero al cielo."""
+    sub = calle_subsuelo()
+    W, H = 32, 96
+    img = Image.new("RGBA", (W, H), (6, 6, 9, 255))
+    img.paste(sub, (0, 10))
+    px = img.load()
+    for y in range(H):
+        k = 0.5 * (1 - y / H) ** 1.2 + 0.06
+        for x in range(W):
+            r, g, b, _ = px[x, y]
+            px[x, y] = (int(r * k + 3), int(g * k + 3), int(b * k + 5), 255)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W - 1, 9], fill=(14, 15, 20, 255))         # canto de la vereda cortada
+    return img
+
+
 def main():
     for name, fn in (("fachada_frances", frances), ("fachada_deptos", deptos),
-                     ("fachada_ph", ph), ("fachada_bar", bar), ("calle_subsuelo", calle_subsuelo)):
+                     ("fachada_ph", ph), ("fachada_bar", bar), ("calle_subsuelo", calle_subsuelo),
+                     ("calle_pozo", calle_pozo)):
         fn().save(f"{OUT}/{name}.png")
-    print("fachada_frances, fachada_deptos, fachada_ph, fachada_bar, calle_subsuelo  ->", OUT)
+    print("fachada_frances, fachada_deptos, fachada_ph, fachada_bar, calle_subsuelo, calle_pozo  ->", OUT)
 
 
 if __name__ == "__main__":

@@ -219,6 +219,29 @@ def fuego_sfx():
     save("sfx_fuego", rumble * 0.55 + crack * 0.6, fade_ms=40, loop=True, target=0.5)
 
 
+def policia_sfx():
+    """el policía zombie del Nivel 3 (wire_l3_mecanicas.py): el clic del gatillo
+    (aviso) y el disparo. Generador aleatorio propio, como lab_sfx() y
+    fuego_sfx(): no cambia ningún otro WAV."""
+    rng = np.random.default_rng(1810)
+    # clic: dos chasquidos metálicos muy cortos (martillo que se arma)
+    n = int(0.09 * SR)
+    clic = np.zeros(n)
+    for pos, amp in ((0.0, 0.8), (0.045, 1.0)):
+        i = int(pos * SR)
+        ln = int(0.006 * SR)
+        clic[i:i + ln] += rng.uniform(-1, 1, ln) * np.exp(-np.arange(ln) / (ln / 4)) * amp
+    clic = np.diff(clic, prepend=0)                              # seco y agudo
+    save("sfx_gatillo", clic, fade_ms=2, target=0.45)
+    # disparo: golpe de ruido que cae rápido + "pum" grave + cola corta
+    n = int(0.32 * SR)
+    t = np.arange(n) / SR
+    crack = rng.uniform(-1, 1, n) * np.exp(-t / 0.018)
+    boom = np.sin(2 * np.pi * (110 * t - 60 * t * t)) * np.exp(-t / 0.06)
+    cola = np.convolve(rng.uniform(-1, 1, n), np.ones(40) / 40, mode="same") * np.exp(-t / 0.12) * 3
+    save("sfx_disparo", crack * 0.9 + boom * 0.8 + cola * 0.35, fade_ms=8, target=0.55)
+
+
 def main():
     np.random.seed(0)
     print("SFX ->", OUT)
@@ -229,6 +252,8 @@ def main():
     lab_sfx()
     print("Fuego del Nivel 1 ->", OUT)
     fuego_sfx()
+    print("Policía del Nivel 3 ->", OUT)
+    policia_sfx()
     cred = f"{OUT}/AUDIO_CREDITS.txt"
     if not os.path.exists(cred):
         with open(cred, "w") as f:

@@ -14,6 +14,10 @@ Crea (game/assets/City/):
                             como plataforma de la arena (mismo tamaño)
   andamio_poste.png   4x8   caño del andamio, tileable en Y: sostiene los
                             tablones (si no, flotarían como las camillas)
+  estatua_columna_izq/der.png 74x130  monumento con columna (pedestal = y 122,
+                            capitel = y 70) y la Libertad de bronce arriba
+  estatua_busto_izq/der.png   64x80  pedestal alto (y 96) con el busto de un
+                            prócer con barbijo (las plataformas de la arena)
   obelisco_cerca.png 48x176 el Obelisco de la arena: pedestal con cinta de
                             cuarentena, fuste, punta y ventanita; luna desde la
                             izquierda y reflector cálido desde abajo
@@ -148,9 +152,115 @@ def obelisco():
     img.save(f"{OUT}/obelisco_cerca.png")
 
 
+# --- estatuas de la arena (18/10): las plataformas de la pelea con el jefe pasan a ser
+# monumentos de la vía pública (pedido del usuario). Las superficies coinciden EXACTO con
+# las 6 plataformas que ya estaban (alturas 122 / 96 / 70 del mundo, 64 px de ancho):
+# la pelea no cambia. Coordenadas de cada imagen relativas a su esquina (ver wire).
+GRAN = [(54, 56, 66, 255), (78, 80, 92, 255), (104, 106, 118, 255), (138, 140, 150, 255)]   # granito
+BRON = [(30, 56, 52, 255), (50, 92, 84, 255), (76, 130, 116, 255), (120, 176, 154, 255)]    # bronce con pátina
+
+
+def _block(img, x0, y0, x1, y1, tones):
+    """bloque de piedra con luz de luna de la izquierda, junta y canto de arriba."""
+    px = img.load()
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            t = (x - x0) / max(1, x1 - x0)
+            i = 2 if t * 16 < 10 - BAYER[y % 4][x % 4] * 0.5 else 1
+            px[x, y] = tones[i]
+    d = ImageDraw.Draw(img)
+    d.line([(x0, y0), (x1 - 1, y0)], fill=tones[3])            # canto de arriba (se pisa)
+    d.line([(x0, y0 + 1), (x1 - 1, y0 + 1)], fill=tones[2])
+    d.line([(x0, y0), (x0, y1 - 1)], fill=tones[3])
+    d.line([(x1 - 1, y0), (x1 - 1, y1 - 1)], fill=tones[0])
+
+
+def _outline(img):
+    src = img.copy()
+    sp, px = src.load(), img.load()
+    W, H = img.size
+    for y in range(H):
+        for x in range(W):
+            if sp[x, y][3] == 0 and any(0 <= x + a < W and 0 <= y + b < H and sp[x + a, y + b][3]
+                                        for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1))):
+                px[x, y] = (24, 24, 34, 255)
+
+
+def estatua_columna():
+    """74x130, esquina en el mundo (30, 20) a la izquierda: pedestal (superficie y=122 →
+    fila 102, x 10..74), columna, capitel ancho (superficie y=70 → fila 50, x 0..64) y una
+    figura de bronce arriba (la Libertad con la antorcha)."""
+    W, H = 74, 130
+    img = Image.new("RGBA", (W, H), T)
+    d = ImageDraw.Draw(img)
+    _block(img, 10, 102, 74, H, GRAN)                          # pedestal: primer escalón
+    d.rectangle([28, 110, 56, 120], fill=GRAN[0])               # placa
+    d.line([(31, 113), (53, 113)], fill=GRAN[2])
+    d.line([(31, 116), (47, 116)], fill=GRAN[2])
+    for x in range(10, 74):                                     # cinta de cuarentena
+        img.putpixel((x, 124), TAPE_Y if (x // 3) % 2 == 0 else TAPE_K)
+    _block(img, 24, 58, 48, 102, GRAN)                          # fuste de la columna
+    for x in (28, 33, 38, 43):                                  # estrías
+        d.line([(x, 60), (x, 100)], fill=GRAN[1])
+    _block(img, 0, 50, 64, 58, GRAN)                            # capitel: plataforma alta
+    d.line([(4, 56), (60, 56)], fill=GRAN[0])
+    # figura de bronce sobre el capitel (de pie, brazo en alto con la antorcha)
+    px = img.load()
+    for y in range(14, 50):
+        half = 3 + (y - 14) * 0.18                              # túnica que se abre hacia abajo
+        for x in range(int(32 - half), int(32 + half) + 1):
+            px[x, y] = BRON[2] if x < 32 else BRON[1]
+    d.ellipse([28, 6, 35, 14], fill=BRON[2])                    # cabeza
+    d.point((29, 8), fill=BRON[3])
+    d.line([(35, 18), (42, 6)], fill=BRON[1], width=2)          # brazo en alto
+    d.rectangle([41, 1, 44, 5], fill=BRON[2])                   # antorcha
+    d.point((42, 0), fill=(236, 176, 112, 255))
+    d.line([(29, 20), (26, 30)], fill=BRON[1], width=2)         # el otro brazo
+    d.line([(30, 24), (30, 46)], fill=BRON[3])                  # pliegue con luz
+    d.line([(36, 30), (40, 34)], fill=(150, 70, 140, 255), width=2)   # alguien la pintó
+    _outline(img)
+    return img
+
+
+def estatua_busto():
+    """64x80, esquina en el mundo (110, 70) a la izquierda: pedestal alto (superficie y=96 →
+    fila 80-54=26, x 0..64) con el busto de un prócer arriba… con barbijo."""
+    W, H = 64, 80
+    img = Image.new("RGBA", (W, H), T)
+    d = ImageDraw.Draw(img)
+    _block(img, 0, 26, 64, H, GRAN)                             # pedestal: escalón del medio
+    _block(img, 4, 34, 60, 37, GRAN)                            # moldura
+    d.rectangle([18, 46, 46, 58], fill=GRAN[0])                 # placa
+    for yy in (49, 52, 55):
+        d.line([(21, yy), (43 - (yy % 4) * 3, yy)], fill=GRAN[2])
+    d.line([(10, 66), (26, 62), (34, 70)], fill=(90, 170, 120, 255), width=2)   # graffiti
+    # busto (hombros + cabeza) apoyado en el pedestal, detrás de donde se para Lio
+    d.rectangle([20, 18, 44, 25], fill=BRON[1])                 # hombros
+    d.line([(20, 18), (44, 18)], fill=BRON[2])
+    d.rectangle([27, 4, 37, 17], fill=BRON[2])                  # cabeza
+    d.rectangle([35, 4, 37, 17], fill=BRON[1])
+    d.rectangle([27, 2, 37, 5], fill=BRON[1])                   # pelo
+    d.point((29, 8), fill=BRON[0])
+    d.point((34, 8), fill=BRON[0])
+    d.rectangle([27, 11, 37, 15], fill=(220, 226, 228, 255))    # barbijo
+    d.line([(27, 13), (37, 13)], fill=(170, 180, 186, 255))
+    d.line([(26, 10), (27, 11)], fill=(220, 226, 228, 255))     # elásticos
+    d.line([(38, 10), (37, 11)], fill=(220, 226, 228, 255))
+    _outline(img)
+    return img
+
+
+def estatuas():
+    for name, fn in (("estatua_columna", estatua_columna), ("estatua_busto", estatua_busto)):
+        im = fn()
+        im.save(f"{OUT}/{name}_izq.png")
+        im.transpose(Image.FLIP_LEFT_RIGHT).save(f"{OUT}/{name}_der.png")
+
+
 if __name__ == "__main__":
     valla()
     tablon()
     poste()
     obelisco()
-    print(f"valla, andamio_tablon, andamio_poste, obelisco_cerca  ->  {OUT}/")
+    estatuas()
+    print(f"valla, andamio_tablon, andamio_poste, obelisco_cerca, estatua_columna/busto_izq/der  ->  {OUT}/")

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 wire_jefe.py  —  Paciente Zero definitivo (18/10): reemplaza el sprite del
-jefe (el zombie T agrandado al doble) por el de gen_jefe.py y le da una
-animación a cada estado de la pelea. La pelea (tiempos, velocidades, vida,
+jefe (el zombie T agrandado al doble) por el de gen_jefe.py (desde el 18/10:
+el CIENTÍFICO con guardapolvo y camiseta de Argentina; antes, una masa viral
+que el usuario descartó) y le da una animación a cada estado de la pelea. La pelea (tiempos, velocidades, vida,
 escupitajos) NO cambia.
 
 Requiere: gen_jefe.py (game/assets/Jefe/).
@@ -10,11 +11,11 @@ Requiere: gen_jefe.py (game/assets/Jefe/).
 Edita game/game.json (backup .bak-<ts>, idempotente), en Level3:
   - objeto PacienteZero: animaciones
         Walk      6 cuadros, en loop      (estado 0 y la embestida, estado 2)
-        Carga     3 cuadros, sin loop     (estado 1: se hincha antes de embestir)
-        Expuesto  4 cuadros, en loop      (estado 3: núcleo verde arriba = pisalo)
+        Carga     3 cuadros, sin loop     (estado 1: se agacha y levanta la jeringa)
+        Expuesto  4 cuadros, en loop      (estado 3: de rodillas, estrellitas = pisalo)
     con máscara de colisión ajustada al cuerpo (la caja entera de 64x68 hacía
-    que Lio "pisara" el aire sobre las espículas; aplastado, el cuerpo de
-    Expuesto empieza más abajo). Se mantiene el efecto InfectedOutline.
+    que Lio "pisara" el aire; de rodillas, el cuerpo de Expuesto empieza más
+    abajo). Se mantiene el efecto InfectedOutline.
   - eventos del jefe: donde el estado pasaba a 1 se congelaba la animación
     (PauseAnimation) → ahora "Carga"; donde pasaba a 3 (expuesto) → "Expuesto";
     donde vuelve a 0 o arranca la embestida (2) → "Walk". Se reconocen por la
@@ -32,10 +33,12 @@ from gdevelop_cerrado import asegurar_gdevelop_cerrado
 GAME = "game/game.json"
 BOSS = "PacienteZero"
 # nombre: (prefijo, cuadros, s entre cuadros, loop, máscara (x0, y0, x1, y1))
+# máscaras para el científico (18/10; antes la masa viral, más ancha): el cuerpo con el
+# guardapolvo y la cabeza; en Expuesto está de rodillas → el borde de arriba baja a y 20
 ANIMS = {
-    "Walk": ("jefe_walk", 6, 0.13, True, (6, 14, 58, 68)),
-    "Carga": ("jefe_carga", 3, 0.27, False, (4, 8, 60, 68)),
-    "Expuesto": ("jefe_expuesto", 4, 0.18, True, (4, 22, 58, 68)),
+    "Walk": ("jefe_walk", 6, 0.13, True, (14, 6, 44, 68)),
+    "Carga": ("jefe_carga", 3, 0.27, False, (14, 10, 46, 68)),
+    "Expuesto": ("jefe_expuesto", 4, 0.18, True, (12, 20, 44, 68)),
 }
 STATE_ANIM = {0: "Walk", 1: "Carga", 2: "Walk", 3: "Expuesto"}
 

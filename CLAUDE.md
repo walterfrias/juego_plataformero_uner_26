@@ -109,6 +109,13 @@ razonamiento de por qué se llegó hasta acá.
   la arena de L3, una valla) el motor la toma como piso: deja de ser
   obstáculo o "sube" a Lio arriba de la pared. Límites de nivel/arena: por
   evento (`PosX < x → SetX x`), no con plataformas.
+- **En L2 y L3 Lio tiene la MOCHILA (viene de L1) y planea:** mantener J
+  cayendo → MaxFallingSpeed 80 (si no, 600). Saltando y planeando está ~0.8 s
+  en el aire; sin mochila, ~0.38 s. Todo lo que dependa del tiempo en el aire
+  se prueba con `TieneMochila = 1` (global) y entrando a la escena desde otra
+  (el Once que habilita el planeo lo lee al empezar). Para que el robot planee
+  hay que apretar J "de verdad": `game.getInputManager().onKeyPressed(74)`
+  (el planeo usa KeyFromTextPressed, no los controles simulados).
 - **Probar timing con un robot DENTRO del juego**
   (`gdjs.registerRuntimeScenePostEventsCallback` + `simulateRightKey` /
   `simulateJumpKey` del PlatformerObject): reacciona en el mismo frame. Con
@@ -365,15 +372,86 @@ razonamiento de por qué se llegó hasta acá.
   trabada, checkpoint y cartel. 5 checkpoints. Verificado con teclas reales:
   hueco con carrera, poste + cables, entrar y no poder volver, paredes. **No usar `wire_levels23.py --force`**: regenera L3 como
   arena sola.
-  Orden si se regenera L3: `wire_l3_recorrido.py` → `wire_virus_patron.py` →
+  Orden si se regenera L3: `wire_l3_recorrido.py` → `wire_l3_mecanicas.py` → `wire_l3_luces.py` → `wire_virus_patron.py` →
   `wire_minivirus.py` → `wire_lab_luces.py` → `wire_lab_subsuelo.py` →
   `wire_lab_ambiente.py` → `fix_w_escalera.py` → `wire_jefe.py`.
+- **L3 entre edificios (18/10):** "no en la costanera sino entre edificios".
+  `gen_l3_fachadas.py` (fachadas porteñas: francés, departamentos de los 60, PH,
+  bar de esquina con vidrieras cálidas; tapiadas, vidrios rotos, cruces de
+  cuarentena; corte de calle y su pozo) → `wire_l3_recorrido.py` (ubicación en
+  `l3_recorrido.FACHADAS`, capa BG_near, sin colisión). Calle del hospital y
+  Corrientes cerradas entre edificios; la plaza y la llegada al Obelisco
+  abiertas. Debajo de la vereda: corte de calle (no el muro del río). Los
+  pozos de la calle llevan `PozoCalle` (si no, se veía el cielo por el pozo).
+  Además, dos filas de edificios con detalle detrás de las fachadas
+  (`gen_l3_ciudad_capas.py`: CiudadTrasera f 0.70 con torres, tanques y
+  antenas con luz roja; CiudadMedia f 0.85 con clásicos con cúpulas,
+  medianeras con publicidades despintadas, torre vidriada, alguna ventana en
+  llamas), en BG_city delante de la silueta de L1: "en el centro casi no se ve
+  el cielo".
+- **Luces de L3 e incendios entre edificios (18/10):** `gen_l3_luces.py` →
+  `wire_l3_luces.py` (después de `wire_l3_recorrido.py`). Llamas animadas,
+  humo y cielo naranja sobre TECHOS REALES de las filas de fondo: el generador
+  de las filas exporta `ciudad_capas.json` (edificios: tipo, x, ancho, techo) y
+  el cableo elige hasta 3 por fila con el techo a la vista (no vidriadas).
+  Se mueven con el parallax de su fila (X = Base + (1−F)·cámara, como el
+  XOffset de la tira): quedan pegados al techo (verificado con la cámara
+  corrida). z en BG_city: resplandor trasera 9, trasera 10, fuego trasera 11,
+  resplandor media 12, media 13, fuego media 14. Llamas traseras ~65 % de
+  opacidad, medias ~85 %. En las fachadas: luz naranja que titila detrás de
+  cada tacho con fuego y luz de sodio detrás de cada farol (Decor).
+- **Policía zombie que dispara a mansalva (18/10, L3):** en `wire_l3_mecanicas.py`
+  (+ `gen_sfx.py → policia_sfx()`: sfx_gatillo y sfx_disparo con generador propio,
+  ningún otro WAV cambió). Si Lio está a <240 px: aviso 0.5 s (destello en la
+  mano + clic) y un tiro desde la MANO (altura del pecho, 150 px/s) hacia donde
+  mira, cada ~1.7 s; −1 vida. Se esquiva con un salto planeado (robot con
+  mochila: 7/7). Desde la cintura "no se veía natural"; ráfagas al pecho
+  tenían una ventana de salto demasiado chica (3 balas ~2/6, 2 balas 5/7).
+- **Zombies de todos los niveles en L3 (18/10):** en el nivel final vuelven
+  todos (13, uno de cada tipo salvo el T del jefe): personal del lab
+  (médico, enfermera, investigador) a la salida, vecinos de L1 (M, F) y
+  policía en la calle, anciana (8 px/s) y la de pelo largo en la plaza,
+  repartidor y corredor (J, 45 px/s) en Corrientes, y una marcha mezclada (N,
+  O, hincha) en la llegada. Los de L1 se copian con sus dibujos y se les
+  agregan las variables de patrulla del grupo Zombies (`ZOMBIES_L1` en
+  `wire_l3_recorrido.py`; el corredor sale de ZombieEnd1). Verificado: las 13
+  patrullas en rango y pisotón a un zombie de L1.
+  **"Que esté infestada" (18/10):** 18 jugables (se sumaron 5) + una
+  **multitud de fondo** de 14 (`l3_recorrido.FONDO`): al 80 % y en SILUETA
+  (`gen_l3_siluetas.py`: forma plana oscura, borde de luna, ojos rojos; los
+  sprites teñidos competían con los jugables), pies 2 px debajo del borde de
+  la vereda (más arriba parecían flotar), en BG_near delante de las
+  fachadas, grupo propio `ZombiesFondo` (NO en Zombies: no golpean ni se
+  pisan), con su patrulla lenta; también hay público en la arena. Regla en
+  los datos: ninguna patrulla a menos de 40 px de un checkpoint.
+- **L3 sin pozos: peligros de calle (18/10):** los pozos no tenían sentido en
+  una calle del centro. Calle continua y, por tramo (`l3_recorrido.py` →
+  `gen_l3_mecanicas.py` → `wire_l3_mecanicas.py`, después de
+  `wire_l3_recorrido.py`): **toldo que rebota**
+  (BounceVel −440: sube ≈84 px, por arriba del policía zombie), **charco
+  electrificado** bajo los cables de Corrientes (como caer a un pozo: −1 vida y
+  al checkpoint) y **vapor del subte** (ciclo aviso/sopla/nada; eleva a 150
+  px/s) que sube a **marquesinas** por arriba de los zombies que marchan.
+  Ciclos con `mod(TimeFromStart() + Fase, período)`: se congelan en pausa.
+  La plaza queda de respiro. Checkpoints al comienzo de cada tramo.
+  Verificado en runtime: toldo (+84 px), charco (vida y checkpoint), vapor
+  (sube y queda en la marquesina). Las macetas que caían se sacaron (pedido
+  del usuario, 18/10): código, arte y recursos.
+- **Estatuas en la arena (18/10, pedido del usuario):** las plataformas de la
+  pelea son monumentos de la vía pública (`gen_l3_calle.py`): a cada lado una
+  columna con la Libertad de bronce (pedestal = y 122, capitel = y 70) y un
+  pedestal con un prócer con barbijo (y 96). Las superficies coinciden EXACTO
+  con las 6 `Estante` de antes, que quedan invisibles (la colisión y los
+  bordes por cercanía siguen): la pelea no cambió. Verificado: Lio se apoya
+  en las 6 a la altura de siempre. Reemplazan a los andamios.
 - **Jefe definitivo y Obelisco (18/10):** `gen_jefe.py` → `wire_jefe.py`.
-  Paciente Zero = masa viral (paleta del virus, corona de espículas) con el
-  paciente fundido adelante (cara, bata rota, brazo con la pulsera de
-  internación) y seudópodos. 64x68 nativo (misma colisión), máscara ajustada
-  al cuerpo. Animaciones por estado: Walk (0 y 2), Carga (1: se hincha) y
-  Expuesto (3: núcleo verde arriba = pisalo). La pelea no cambió. Obelisco
+  Paciente Zero = **el científico que empezó todo** (el usuario descartó la
+  masa viral, que queda en el historial de git, commit 8fdc8aa): pelo blanco
+  revuelto, anteojos con un vidrio rajado, guardapolvo abierto con la
+  credencial y la **camiseta de Argentina** debajo, jeringa con el líquido
+  verde. Mismo estilo que los zombies, al doble: 64x68 (misma colisión),
+  máscara ajustada al cuerpo. Walk (0 y 2), Carga (1: se agacha y levanta la
+  jeringa) y Expuesto (3: de rodillas, estrellitas = pisalo). La pelea no cambió. Obelisco
   de la arena: `obelisco_cerca.png` (48x176, `gen_l3_calle.py`): luna de la
   izquierda, reflector cálido abajo, cinta de cuarentena. Verificado: la
   secuencia de estados/animaciones y el pisotón con la máscara nueva.
@@ -424,5 +502,8 @@ razonamiento de por qué se llegó hasta acá.
    entrega solo pulido, balance y bugs; lo único "nuevo" admitido es
    contenido con piezas existentes si el playtest muestra que no se llega
    a los 30 min de la consigna. Contenido congelado el 28/10.
-7. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
+7. **Bug del Tutorial:** el planeo con la mochila de práctica baja
+   MaxFallingSpeed a 80 y no hay evento que la vuelva a 600 (L1/L2/L3 sí lo
+   tienen): después de planear una vez, Lio cae lento todo el Tutorial.
+8. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
    31/10/2026.
