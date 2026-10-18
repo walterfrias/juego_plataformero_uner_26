@@ -291,12 +291,22 @@ razonamiento de por qué se llegó hasta acá.
   `Contencion` / `ContencionRota` (virus que flota adentro, cuadro inicial
   al azar) con halo `ContencionGlow` que late (los rotos titilan). L2: 33
   tubos (5 rotos), L3: 5 (2 rotos, solo decorado). **En L2 los rotos
-  estallan:** Lio a <80 px → tiembla 0.6 s con crujido → anim `Vacia`, se
-  apaga el halo y sale un `MiniVirus` apuntado a Lio (lógica de
+  estallan:** Lio pasa por encima o por delante (|dx| < 20 px) → tiembla
+  0.6 s con crujido → anim `Vacia`, se apaga el halo y sale un `MiniVirus`
+  apuntado a Lio, que lo persigue desde atrás (lógica de
   `wire_minivirus.py`, que tiene que correr antes). Var `Estado` 0/1/2, una
-  vez por tubo. Ningún roto a <100 px de un hueco (knockback). Verificado en
-  runtime con teclas. Falta: tramo jugable por ducto. Re-correr después de
-  `wire_levels23.py --force` y de `wire_minivirus.py`.
+  vez por tubo. Ningún roto a <100 px de un hueco (knockback).
+  **Ducto jugable (L2, tramo 928..1350):** boca de 28 px en 966..994 con
+  bordes de peligro (`EscotillaBorde`; caer ahí no mata), corredor 966..1268
+  en la sala de contención (piso invisible `SubsueloPiso` en y 192, techo =
+  losa de Ground de 16 px), salida por un `AirFlow` + `Vent` en 1236..1268
+  (82 px de piso hasta el hueco de 1350). El antídoto del estante alto
+  (x 1195) bajó al corredor (siguen siendo 4). Patrullas: ZombieInv
+  1000..1150, ZombieEnf arranca en 1290 y patrulla 1272..1330. El script
+  restaura el Ground original antes de re-aplicar (uuid fijos) y calcula
+  los tubos con el piso original. Verificado con teclas: entrar, tubo que
+  estalla detrás, antídoto, salir flotando, pisar a la enfermera.
+  Re-correr después de `wire_levels23.py --force` y de `wire_minivirus.py`.
 
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
   CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →

@@ -22,6 +22,8 @@ Qué crea (en game/assets/Lab/):
   - contencion_vacia.png  24x40 : el tubo roto después de estallar (sin virus,
                                  vidrio partido, charco en el fondo).
   - contencion_glow.png  48x56 : halo verde detrás del tubo.
+  - escotilla_borde.png   4x16 : franja de peligro a los lados de la boca del
+                                 ducto jugable (Nivel 2).
 
 Uso:  python3 scripts/gen_lab_subsuelo.py      (desde la raíz del repo)
 """
@@ -236,6 +238,19 @@ def contencion_vacia():
     img.save(f"{OUT}/contencion_vacia.png")
 
 
+def escotilla_borde():
+    """Borde de la boca del ducto jugable (Nivel 2): franja de peligro
+    vertical de 4x16 sobre el canto de la baldosa, a cada lado del agujero.
+    Distingue la entrada (se puede caer, no mata) de los huecos con vidrios."""
+    w, h = 4, 16
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    for y in range(h):
+        d.line([(0, y), (w - 1, y)], fill=HAZ_Y if ((y // 3) % 2 == 0) else HAZ_K)
+    d.line([(0, 0), (w - 1, 0)], fill=(222, 190, 60, 255))
+    img.save(f"{OUT}/escotilla_borde.png")
+
+
 def contencion_glow():
     w, h = 48, 56
     img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
@@ -259,4 +274,5 @@ if __name__ == "__main__":
     contencion()
     contencion_vacia()
     contencion_glow()
-    print("ok: lab_subsuelo, contencion[_rota]_0..3, contencion_vacia, contencion_glow")
+    escotilla_borde()
+    print("ok: lab_subsuelo, contencion[_rota]_0..3, contencion_vacia, contencion_glow, escotilla_borde")

@@ -23,13 +23,38 @@ Edita game/game.json (backup .bak-<ts>, idempotente; eventos marcados con
   - ContencionGlow: halo verde detrás de cada tubo, late despacio (los rotos
     titilan más rápido).
   - Solo en Level2 (BREAK_SCENES), los rotos ESTALLAN (18/10): cuando Lio
-    pasa a menos de TRIGGER px (horizontal), el tubo tiembla CRACK s con un
+    pasa por encima o por delante (|dx| < TRIGGER = 20 px; con 80 estallaba
+    con Lio llegando y en el corredor el virus le salía encima: golpe
+    seguro), el tubo tiembla CRACK s con un
     crujido grave (aviso) y después estalla: animación "Vacia", chispazo
     agudo, se borra su halo y sale un MiniVirus desde adentro, apuntado a
     Lio (desde ahí lo maneja wire_minivirus.py: persigue, brilla, 8 s de
     vida, −1 vida al tocar). Cada tubo estalla una sola vez (var Estado
     0 sano / 1 temblando / 2 vacío). En L3 quedan de decorado: la arena del
     jefe ya tiene sus escupitajos.
+  - DUCTO JUGABLE (solo Level2, tramo de piso 928..1350, 18/10): una ruta
+    por debajo de las 3 patrullas de ese tramo.
+      entrada: agujero de 28 px en el piso (966..994) con bordes de peligro
+               (EscotillaBorde). Caer ahí NO mata (muerte = Y > 260; el
+               corredor está en y 192) y se puede saltar.
+      corredor: 966..1332 a la altura de la sala de contención. Piso
+               invisible SubsueloPiso (plataforma) y techo = una losa de
+               Ground de 16 px (el piso de arriba se sigue caminando). Los
+               tubos de ese tramo van detrás de Lio (z < 1); el roto de
+               x≈1132 estalla a su altura (hay que correr: 95 vs 55 px/s).
+               El antídoto del estante alto (x 1195) baja al corredor: siguen
+               siendo 4 (el total está fijo en el HUD y en el bonus).
+      salida:  ducto de aire (AirFlow + Vent, los de siempre: 140 px/s hacia
+               arriba) en 1236..1268, por un agujero en la losa: quedan 82
+               px de piso hasta el hueco de 1350 (en 1300 la salida tiraba a
+               Lio al pozo). Caer en él desde arriba lo vuelve a subir.
+    Las paredes del corredor son Ground macizo (928..966 y 1268..1350) SIN
+    subsuelo pintado, así se leen como pared. Ningún zombie cruza los
+    agujeros (no tienen gravedad: flotarían): ZombieInv MinX 960→1000;
+    ZombieEnf arranca en 1290 y patrulla 1272..1330, a la derecha de la
+    salida (se lo puede pisar al bajar flotando). Las posiciones de los tubos se calculan con el
+    piso ORIGINAL (no se corren por el ducto); el script restaura el Ground
+    original antes de volver a aplicarlo (idempotente).
   Todo en la capa de juego (""), z 2..4: el piso (Ground) está en z 1 y
   nada jugable pasa por debajo del canto del piso. Sin comportamientos (no
   colisionan; wire_bordes_plataforma.py no los toma).
@@ -48,7 +73,8 @@ GAME = "game/game.json"
 MARK = "_lab_subsuelo"
 SCENES = ("Level2", "Level3")
 SUB, TUBE, ROTA, GLOW = "LabSubsuelo", "Contencion", "ContencionRota", "ContencionGlow"
-MINE = {SUB, TUBE, ROTA, GLOW}
+DPISO, DBORDE = "SubsueloPiso", "EscotillaBorde"
+MINE = {SUB, TUBE, ROTA, GLOW, DPISO, DBORDE}
 SLAB = 16            # filas de baldosa de lab_floor.png; el subsuelo va debajo
 SUB_H = 80
 GRATE = 66           # fila del piso de rejilla dentro de lab_subsuelo.png
@@ -58,11 +84,23 @@ MARGIN = 18                  # distancia a los bordes de cada tramo
 P_ROTA = 0.25
 PIT_SAFE = 100               # px del centro del tubo al borde de un hueco
 BREAK_SCENES = ("Level2",)
-TRIGGER, CRACK = 80, 0.6     # px (|dx| Lio-tubo) y s de temblor antes de estallar
+TRIGGER, CRACK = 20, 0.6     # px (|dx| Lio-tubo: Lio pasa por encima/delante) y s de temblor
 T = "TimeFromStart()"
 PCX = "(Player.X() + Player.Width() / 2)"
+# ducto jugable de L2 (ver docstring)
+DUCTO_SCENE = "Level2"
+D_X0, D_X1, D_Y, D_H = 928, 1350, 110, 96      # tramo de piso original
+D_IN = (966, 994)                              # boca (entrada)
+D_OUT = (1236, 1268)                           # ducto de aire (salida); 82 px de piso hasta el hueco de 1350
+D_FLOOR = D_Y + SLAB + GRATE                   # 192: piso de rejilla del corredor
+D_AIR_TOP = 90                                 # Lio flota con los pies ~20 px sobre el piso
+D_ANTI = (1180, D_FLOOR - 22)                  # antídoto (16x16 + margen)
+# patrullas que cruzaban los agujeros: nombre -> (x inicial, MinX, MaxX); None = no cambia
+# (originales: ZombieInv 1020, 960..1150; ZombieEnf 1250, 1180..1330)
+D_PATROL = {"ZombieInv": (None, 1000, 1150), "ZombieEnf": (1290, 1272, 1330)}   # valores absolutos: idempotente
+D_NS = uuid.UUID("5b1d0c70-18a0-4c2d-9b1e-000000000000")
 PCY = "(Player.Y() + Player.Height() / 2)"
-RES = (["lab_subsuelo.png", "contencion_glow.png", "contencion_vacia.png"]
+RES = (["lab_subsuelo.png", "contencion_glow.png", "contencion_vacia.png", "escotilla_borde.png"]
        + [f"contencion_{i}.png" for i in range(4)]
        + [f"contencion_rota_{i}.png" for i in range(4)])
 
@@ -172,6 +210,77 @@ def inst(name, x, y, z, w=None, h=None, vars_=()):
             "initialVariables": [{"name": k, "type": "number", "value": v} for k, v in vars_]}
 
 
+def duid(tag):
+    """uuid fijo para las instancias del ducto: así se reconocen al re-correr."""
+    return str(uuid.uuid5(D_NS, tag))
+
+
+D_TAGS = ["orig", "wall_l", "slab", "wall_r", "air", "vent", "piso", "borde_l", "borde_r"]
+
+
+def restore_ducto(sc):
+    """Deja el tramo como estaba antes del ducto (Ground macizo 928..1350)."""
+    mine = {duid(t) for t in D_TAGS}
+    sc["instances"] = [i for i in sc["instances"] if i.get("persistentUuid") not in mine]
+    if not any(i["name"] == "Ground" and round(i["x"]) == D_X0 and round(i["height"]) == D_H
+               for i in sc["instances"]):
+        g = copy.deepcopy(next(i for i in sc["instances"] if i["name"] == "Ground"))
+        g.update(x=D_X0, y=D_Y, width=D_X1 - D_X0, height=D_H, persistentUuid=duid("orig"))
+        sc["instances"].append(g)
+
+
+def apply_ducto(sc):
+    inst_ = sc["instances"]
+    orig = next(i for i in inst_ if i["name"] == "Ground" and round(i["x"]) == D_X0
+                and round(i["height"]) == D_H)
+    inst_.remove(orig)
+
+    def piece(tag, x0, x1, h):
+        g = copy.deepcopy(orig)
+        g.update(x=x0, y=D_Y, width=x1 - x0, height=h, persistentUuid=duid(tag))
+        return g
+    inst_ += [piece("wall_l", D_X0, D_IN[0], D_H),       # pared izquierda (maciza)
+              piece("slab", D_IN[1], D_OUT[0], SLAB),     # techo del corredor = piso de arriba
+              piece("wall_r", D_OUT[1], D_X1, D_H)]       # pared derecha (maciza)
+
+    # el subsuelo pintado de este tramo pasa a ser el fondo del corredor (detrás de Lio)
+    strip = next(i for i in inst_ if i["name"] == SUB and round(i["x"]) == D_X0)
+    strip.update(x=D_IN[0], width=D_OUT[1] - D_IN[0], zOrder=-3)
+    for i in inst_:
+        if i["name"] in (TUBE, ROTA) and D_X0 <= i["x"] <= D_X1:
+            # un tubo metido en una pared: al corredor (con su halo, 12 px a la izq.)
+            nx = min(max(i["x"], D_IN[1] + 8), D_OUT[0] - TUBE_W - 8)
+            if nx != i["x"]:
+                g = next(g for g in inst_ if g["name"] == GLOW and round(g["x"]) == round(i["x"]) - 12)
+                g["x"], i["x"] = nx - 12, nx
+    for i in inst_:
+        if i["name"] in (TUBE, ROTA, GLOW) and D_X0 <= i["x"] + 12 <= D_X1:
+            i["zOrder"] = -2 if i["name"] == GLOW else -1
+
+    # piso invisible del corredor, bordes de la boca, ducto de aire de salida
+    inst_.append(dict(inst(DPISO, D_IN[0], D_FLOOR, 0, D_OUT[1] - D_IN[0], 8), persistentUuid=duid("piso")))
+    inst_.append(dict(inst(DBORDE, D_IN[0] - 4, D_Y, 2), persistentUuid=duid("borde_l")))
+    inst_.append(dict(inst(DBORDE, D_IN[1], D_Y, 2), persistentUuid=duid("borde_r")))
+    air = next(i for i in inst_ if i["name"] == "AirFlow")
+    vent = next(i for i in inst_ if i["name"] == "Vent")
+    inst_.append(dict(copy.deepcopy(air), x=D_OUT[0], y=D_AIR_TOP, width=D_OUT[1] - D_OUT[0],
+                      height=D_FLOOR - D_AIR_TOP, persistentUuid=duid("air")))
+    inst_.append(dict(copy.deepcopy(vent), x=D_OUT[0], y=D_FLOOR - 6, width=D_OUT[1] - D_OUT[0],
+                      height=6, persistentUuid=duid("vent")))
+
+    # antídoto del estante alto → corredor (busca en el tramo: idempotente)
+    anti = next(i for i in inst_ if i["name"] == "Antidoto" and D_X0 <= i["x"] <= D_X1)
+    anti.update(x=D_ANTI[0], y=D_ANTI[1])
+    # patrullas que cruzaban los agujeros
+    for name, (x, mn, mx) in D_PATROL.items():
+        z = next(i for i in inst_ if i["name"] == name and D_X0 <= i["x"] <= D_X1)
+        for var, val in (("MinX", mn), ("MaxX", mx)):
+            if val is not None:
+                next(v for v in z["initialVariables"] if v["name"] == var)["value"] = val
+        if x is not None:
+            z["x"] = x
+
+
 def wire_scene(sc, seed, breaks):
     # ---- limpieza (idempotente) ----
     sc["objects"] = [o for o in sc["objects"] if o["name"] not in MINE]
@@ -180,6 +289,9 @@ def wire_scene(sc, seed, breaks):
     fs = sc.get("objectsFolderStructure", {})
     if "children" in fs:
         fs["children"] = [c for c in fs["children"] if c.get("objectName") not in MINE]
+    ducto = sc["name"] == DUCTO_SCENE
+    if ducto:
+        restore_ducto(sc)
 
     # ---- objetos ----
     ground = next(o for o in sc["objects"] if o["name"] == "Ground")
@@ -196,8 +308,13 @@ def wire_scene(sc, seed, breaks):
         rota_obj(base),
         sprite_obj(base, GLOW, ["contencion_glow.png"], 1, [("Seed", 0), ("Fast", 0)]),
     ]
+    if ducto:
+        piso = copy.deepcopy(sub)
+        piso.update(name=DPISO, texture="lab_shelf.png",          # se oculta al empezar
+                    behaviors=copy.deepcopy(ground["behaviors"]))   # plataforma maciza, como el piso
+        sc["objects"] += [piso, sprite_obj(base, DBORDE, ["escotilla_borde.png"], 1)]
     if "children" in fs:
-        fs["children"] += [{"objectName": n} for n in (SUB, TUBE, ROTA, GLOW)]
+        fs["children"] += [{"objectName": n} for n in (SUB, TUBE, ROTA, GLOW) + ((DPISO, DBORDE) if ducto else ())]
 
     # ---- instancias: un subsuelo por tramo de piso + tubos repartidos ----
     rnd = random.Random(seed)
@@ -221,6 +338,8 @@ def wire_scene(sc, seed, breaks):
             new.append(inst(ROTA if rota else TUBE, x, tube_y, 4))
             x += rnd.randint(GAP_MIN, GAP_MAX)
     sc["instances"] += new
+    if ducto:
+        apply_ducto(sc)
 
     # ---- eventos ----
     sc["events"] += [
@@ -239,6 +358,8 @@ def wire_scene(sc, seed, breaks):
             # floor(0.5*sin + 0.7) = 1 solo si sin > 0.6: bajón corto (tubo roto)
             f" - {GLOW}.Variable(Fast) * 0.3 * floor(0.5 * sin({T} * 23 + {GLOW}.Variable(Seed) * 3) + 0.7)))"])]),
     ]
+    if ducto:
+        sc["events"].append(std([ins("BuiltinCommonInstructions::Once", [])], [ins("Hide", [DPISO])]))
     if breaks:
         assert any(o["name"] == "MiniVirus" for o in sc["objects"]), \
             f"{sc['name']} no tiene MiniVirus: corré wire_minivirus.py primero"
