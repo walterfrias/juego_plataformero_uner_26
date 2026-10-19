@@ -92,6 +92,7 @@ FONDO_OBJS = {t: "Fondo" + t for t in FONDO_TIPOS}           # ZombieF → Fondo
 # rojos. Primero eran los sprites teñidos y competían con los jugables (usuario 18/10)
 VIRUS = ["Virus1", "Virus2", "Virus3"]
 FROM_L2 = ZOMBIES_L2 + VIRUS + ["InfectedGasFX"]
+PIR_PAD = 14                       # = gen_l3_calle.PIR_PAD
 ESTATUAS = ["EstatuaColumnaIzq", "EstatuaBustoIzq", "EstatuaColumnaDer", "EstatuaBustoDer"]
 NEW = ["Barricada", "AndamioPoste", "PozoCalle"] + ESTATUAS + list(CAPAS)    # AndamioPoste: ya no se crea; queda para limpiar corridas viejas
 FACHADAS = {m: f"Fachada{m.capitalize()}" for m in R.FACHADA_W}     # frances → FachadaFrances…
@@ -371,7 +372,9 @@ def main():
         base = next(e for e in grupo if round(e["y"]) == 122)
         alta = next(e for e in grupo if round(e["y"]) == 70)
         busto = next(e for e in grupo if round(e["y"]) == 96)
-        new.append(inst(f"EstatuaColumna{lado}", min(base["x"], alta["x"]), 20))
+        # la columna pasó a ser una pirámide monolito (18/10): la imagen tiene PIR_PAD px de
+        # faldón a cada lado (gen_l3_calle.py)
+        new.append(inst(f"EstatuaColumna{lado}", min(base["x"], alta["x"]) - PIR_PAD, 20))
         new.append(inst(f"EstatuaBusto{lado}", busto["x"], 70))
     # barricada a la entrada de la arena (se cierra al entrar)
     new.append(inst("Barricada", -16, WALL_TOP, 16, WALL_H))

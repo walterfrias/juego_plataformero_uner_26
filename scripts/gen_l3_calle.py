@@ -14,8 +14,9 @@ Crea (game/assets/City/):
                             como plataforma de la arena (mismo tamaño)
   andamio_poste.png   4x8   caño del andamio, tileable en Y: sostiene los
                             tablones (si no, flotarían como las camillas)
-  estatua_columna_izq/der.png 74x130  monumento con columna (pedestal = y 122,
-                            capitel = y 70) y la Libertad de bronce arriba
+  estatua_columna_izq/der.png 102x130 pirámide monolito de basalto (tope = y 70)
+                            con la losa de granito adelante (y 122); hasta el 18/10
+                            era una columna con la Libertad
   estatua_busto_izq/der.png   64x80  pedestal alto (y 96) con el busto de un
                             prócer con barbijo (las plataformas de la arena)
   obelisco_cerca.png 48x176 el Obelisco de la arena: pedestal con cinta de
@@ -186,38 +187,61 @@ def _outline(img):
                 px[x, y] = (24, 24, 34, 255)
 
 
+# Las estatuas con columna pasaron a ser PIRÁMIDES ESTILO MONOLITO (18/10, pedido del usuario;
+# los bustos quedan). Mismas superficies: tope plano (y 70, x 0..64) y la losa de adelante
+# (y 122, x 10..74). Los faldones bajan PIR_PAD px más allá a cada lado (la imagen se ensancha
+# y wire_l3_recorrido.py la corre PIR_PAD a la izquierda): son decorado, no se pisan.
+PIR_PAD = 14
+BASALTO = [(18, 18, 26, 255), (30, 30, 42, 255), (46, 46, 62, 255), (96, 100, 122, 255)]
+RUNA = (110, 200, 80, 255)
+RUNA_S = (52, 92, 46, 255)
+
+
 def estatua_columna():
-    """74x130, esquina en el mundo (30, 20) a la izquierda: pedestal (superficie y=122 →
-    fila 102, x 10..74), columna, capitel ancho (superficie y=70 → fila 50, x 0..64) y una
-    figura de bronce arriba (la Libertad con la antorcha)."""
-    W, H = 74, 130
+    """(74 + 2·PIR_PAD)x130, esquina en el mundo (30 − PIR_PAD, 20) a la izquierda: pirámide
+    truncada de basalto negro (tope plano = y 70 → fila 50, x 0..64), runas verdes que laten
+    apagadas en la cara, y adelante la losa de granito (y 122 → fila 102, x 10..74)."""
+    P = PIR_PAD
+    W, H = 74 + 2 * P, 130
     img = Image.new("RGBA", (W, H), T)
-    d = ImageDraw.Draw(img)
-    _block(img, 10, 102, 74, H, GRAN)                          # pedestal: primer escalón
-    d.rectangle([28, 110, 56, 120], fill=GRAN[0])               # placa
-    d.line([(31, 113), (53, 113)], fill=GRAN[2])
-    d.line([(31, 116), (47, 116)], fill=GRAN[2])
-    for x in range(10, 74):                                     # cinta de cuarentena
-        img.putpixel((x, 124), TAPE_Y if (x // 3) % 2 == 0 else TAPE_K)
-    _block(img, 24, 58, 48, 102, GRAN)                          # fuste de la columna
-    for x in (28, 33, 38, 43):                                  # estrías
-        d.line([(x, 60), (x, 100)], fill=GRAN[1])
-    _block(img, 0, 50, 64, 58, GRAN)                            # capitel: plataforma alta
-    d.line([(4, 56), (60, 56)], fill=GRAN[0])
-    # figura de bronce sobre el capitel (de pie, brazo en alto con la antorcha)
     px = img.load()
-    for y in range(14, 50):
-        half = 3 + (y - 14) * 0.18                              # túnica que se abre hacia abajo
-        for x in range(int(32 - half), int(32 + half) + 1):
-            px[x, y] = BRON[2] if x < 32 else BRON[1]
-    d.ellipse([28, 6, 35, 14], fill=BRON[2])                    # cabeza
-    d.point((29, 8), fill=BRON[3])
-    d.line([(35, 18), (42, 6)], fill=BRON[1], width=2)          # brazo en alto
-    d.rectangle([41, 1, 44, 5], fill=BRON[2])                   # antorcha
-    d.point((42, 0), fill=(236, 176, 112, 255))
-    d.line([(29, 20), (26, 30)], fill=BRON[1], width=2)         # el otro brazo
-    d.line([(30, 24), (30, 46)], fill=BRON[3])                  # pliegue con luz
-    d.line([(36, 30), (40, 34)], fill=(150, 70, 140, 255), width=2)   # alguien la pintó
+    d = ImageDraw.Draw(img)
+    for y in range(50, H):
+        fila = (y - 50) // 11                                   # escalonada: cada hilada asoma 2 px
+        x0, x1 = P - min(P, 2 * fila), P + 64 + min(P, 2 * fila)
+        for x in range(x0, x1):
+            if x - x0 < 4:                                      # faldón izquierdo: luna
+                c = BASALTO[2] if (x - x0) + BAYER[y % 4][x % 4] * 0.4 < 3 else BASALTO[1]
+            elif x1 - x < 4:                                    # faldón derecho: sombra
+                c = BASALTO[0]
+            else:                                               # cara: casi negra, tramada
+                c = BASALTO[1] if BAYER[y % 4][x % 4] < 3 else BASALTO[0]
+            px[x, y] = c
+        if (y - 50) % 11 == 0 and y > 50:                       # canto de cada hilada (luna)
+            d.line([(x0, y), (x1 - 1, y)], fill=BASALTO[2])
+        if (y - 50) % 11 == 1 and y > 51:                       # juntas verticales
+            for jx in range(x0 + 8 + (fila % 2) * 9, x1 - 4, 18):
+                d.line([(jx, y), (jx, min(H - 1, y + 9))], fill=BASALTO[2] if jx < x0 + 30 else BASALTO[0])
+    d.line([(P, 50), (P + 63, 50)], fill=BASALTO[3])            # canto del tope (se pisa)
+    d.line([(P, 51), (P + 63, 51)], fill=BASALTO[2])
+    # runas en la cara (verde del lab, apagadas): columna de glifos
+    cx = P + 32
+    glifos = [((-3, 0), (3, 0), (0, -4)), ((-3, -2), (3, 2)), ((0, -3), (0, 3), (-3, 0)),
+              ((-3, 3), (0, -3), (3, 3)), ((-3, -3), (3, -3), (0, 3))]
+    for n, g in enumerate(glifos):
+        gy = 62 + n * 8
+        pts = [(cx + gx, gy + gy2) for gx, gy2 in g]
+        d.line(pts, fill=RUNA, width=1)
+        d.point(pts[::2], fill=(196, 250, 150, 255))
+    for gy in (60, 98):                                         # marco del panel
+        d.line([(cx - 7, gy), (cx + 7, gy)], fill=RUNA_S)
+    # losa de granito adelante (superficie y 122), con la cinta de cuarentena
+    _block(img, P + 10, 102, P + 74, H, GRAN)
+    d.rectangle([P + 28, 110, P + 56, 120], fill=GRAN[0])       # placa
+    d.line([(P + 31, 113), (P + 53, 113)], fill=GRAN[2])
+    d.line([(P + 31, 116), (P + 47, 116)], fill=GRAN[2])
+    for x in range(P + 10, P + 74):
+        img.putpixel((x, 124), TAPE_Y if (x // 3) % 2 == 0 else TAPE_K)
     _outline(img)
     return img
 

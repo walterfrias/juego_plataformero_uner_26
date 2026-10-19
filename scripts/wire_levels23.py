@@ -124,8 +124,8 @@ ARENA_W = 480
 ARENA_GROUND = 150
 # escalera a cada lado: 122 -> 96 -> 70. Arriba de 70 el jefe (top 82) no te
 # toca al embestir, y desde ahí se le cae encima cuando queda expuesto.
-L3_SHELVES = [(40, 122, 64), (110, 96, 64), (30, 70, 64),
-              (376, 122, 64), (306, 96, 64), (386, 70, 64)]
+L3_SHELVES = [(40, 122, 64), (132, 96, 64), (30, 70, 64),     # bustos y 96 corridos 22 px (wire_jefe_jeringa.py)
+              (376, 122, 64), (284, 96, 64), (386, 70, 64)]
 BOSS_W, BOSS_H = 64, 68
 BOSS_X = 360
 BOSS_HP = 3

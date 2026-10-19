@@ -33,13 +33,22 @@ from gdevelop_cerrado import asegurar_gdevelop_cerrado
 GAME = "game/game.json"
 BOSS = "PacienteZero"
 # nombre: (prefijo, cuadros, s entre cuadros, loop, máscara (x0, y0, x1, y1))
-# máscaras para el científico (18/10; antes la masa viral, más ancha): el cuerpo con el
-# guardapolvo y la cabeza; en Expuesto está de rodillas → el borde de arriba baja a y 20
+# máscaras para el científico estilo zombie x1.5 = 48x51 (18/10, "más chico"; antes x2 =
+# 64x68): el cuerpo con el guardapolvo y la cabeza, sin el brazo de la jeringa; en Expuesto
+# está de rodillas → el borde de arriba baja a y 11
 ANIMS = {
-    "Walk": ("jefe_walk", 6, 0.13, True, (14, 6, 44, 68)),
-    "Carga": ("jefe_carga", 3, 0.27, False, (14, 10, 46, 68)),
-    "Expuesto": ("jefe_expuesto", 4, 0.18, True, (12, 20, 44, 68)),
+    "Walk": ("jefe_walk", 6, 0.13, True, (12, 2, 33, 51)),
+    "Carga": ("jefe_carga", 3, 0.27, False, (12, 4, 33, 51)),
+    "Expuesto": ("jefe_expuesto", 4, 0.18, True, (12, 11, 34, 51)),
 }
+PISO = 150                       # y del piso de la arena: el jefe apoya los pies ahí
+# la pelea (de wire_levels23.py y wire_minivirus.py) usaba números del sprite de 64x68: el
+# centro (X + 32), de dónde escupe (Y + 16), los poof y la nota (X + 16/25/48, Y + 20/40) y
+# el tope derecho de la arena (412 = 480 − 4 − 64). Se pasan a fracciones de Width()/Height()
+# para que no dependan del tamaño (y un número que vuelva a aparecer se vuelve a convertir).
+OFFSETS = {("X", 32): 0.5, ("X", 16): 0.25, ("X", 25): 0.39, ("X", 48): 0.75,
+           ("Y", 16): 0.24, ("Y", 20): 0.29, ("Y", 40): 0.59}
+TOPE_DER = "480 - 4 - PacienteZero.Width()"
 STATE_ANIM = {0: "Walk", 1: "Carga", 2: "Walk", 3: "Expuesto"}
 
 
@@ -83,9 +92,30 @@ def main():
     # ---- objeto ----
     boss = next(o for o in sc["objects"] if o["name"] == BOSS)
     boss["animations"] = [animation(name, *spec) for name, spec in ANIMS.items()]
+    from PIL import Image
+    w, h = Image.open("game/assets/Jefe/jefe_walk_1.png").size
     for i in sc["instances"]:
         if i["name"] == BOSS:
-            i.update(customSize=True, width=64, height=68)          # 1:1 con el sprite nuevo
+            i.update(customSize=True, width=w, height=h, y=PISO - h)   # 1:1 con el sprite, pies en el piso
+
+    # ---- la lógica de la pelea, relativa al tamaño ----
+    import re
+    rx = re.compile(r"PacienteZero\.([XY])\(\) \+ (\d+)(?!\d)")
+    def conv(m):
+        f = OFFSETS.get((m.group(1), int(m.group(2))))
+        dim = "Width" if m.group(1) == "X" else "Height"
+        return m.group(0) if f is None else f"PacienteZero.{m.group(1)}() + PacienteZero.{dim}() * {f}"
+    fixed = 0
+    for e in walk(sc["events"]):
+        for a in e.get("conditions", []) + e.get("actions", []):
+            for k, p in enumerate(a["parameters"]):
+                q = rx.sub(conv, p)
+                if a["parameters"][:1] == [BOSS] and q == "412" and a["type"]["value"] in ("PosX", "SetX"):
+                    q = TOPE_DER
+                if q != p:
+                    a["parameters"][k] = q
+                    fixed += 1
+    print(f"  {fixed} parámetros de la pelea pasados a Width()/Height() (0 si ya estaban)")
 
     # ---- eventos: una animación por estado ----
     changed = 0
