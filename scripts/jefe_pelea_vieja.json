@@ -1,0 +1,1129 @@
+{
+  "posicion": 51,
+  "eventos": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossT\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossHurt\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetAnimationName"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"Walk\""
+          ]
+        }
+      ],
+      "events": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossActivo",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossState",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "Won",
+            "=",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetX"
+          },
+          "parameters": [
+            "PacienteZero",
+            "+",
+            "Variable(BossDir) * 35 * TimeDelta()"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                "<",
+                "PacienteZero.X() + PacienteZero.Width() * 0.5"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossDir",
+                "=",
+                "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "PacienteZero",
+                "yes"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Player",
+                ">=",
+                "PacienteZero.X() + PacienteZero.Width() * 0.5"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossDir",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlipX"
+              },
+              "parameters": [
+                "PacienteZero",
+                "no"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"BossT\"",
+                "1.8"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossState",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"BossT\""
+              ]
+            },
+            {
+              "type": {
+                "value": "EnableEffect"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"InfectedOutline\"",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"Carga\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayAnimation"
+              },
+              "parameters": [
+                "PacienteZero"
+              ]
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossActivo",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossState",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossT\"",
+            "0.8"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "BossState",
+            "=",
+            "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossT\""
+          ]
+        },
+        {
+          "type": {
+            "value": "EnableEffect"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"InfectedOutline\"",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetAnimationName"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"Walk\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlayAnimation"
+          },
+          "parameters": [
+            "PacienteZero"
+          ]
+        }
+      ],
+      "events": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossActivo",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossState",
+            "=",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetX"
+          },
+          "parameters": [
+            "PacienteZero",
+            "+",
+            "Variable(BossDir) * (170 + (3 - Variable(BossHP)) * 40) * TimeDelta()"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"BossT\"",
+                "1.2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossState",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"BossT\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"Expuesto\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayAnimation"
+              },
+              "parameters": [
+                "PacienteZero"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "PacienteZero",
+                "<",
+                "4"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "PacienteZero",
+                "=",
+                "4"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossState",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"BossT\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"Expuesto\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayAnimation"
+              },
+              "parameters": [
+                "PacienteZero"
+              ]
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "PacienteZero",
+                ">",
+                "480 - 4 - PacienteZero.Width()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "PacienteZero",
+                "=",
+                "480 - 4 - PacienteZero.Width()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossState",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"BossT\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "PacienteZero",
+                "\"Expuesto\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayAnimation"
+              },
+              "parameters": [
+                "PacienteZero"
+              ]
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossActivo",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossState",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossT\"",
+            "1.5"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "BossState",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossT\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetAnimationName"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"Walk\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlayAnimation"
+          },
+          "parameters": [
+            "PacienteZero"
+          ]
+        }
+      ],
+      "events": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "PacienteZero",
+            "<",
+            "4"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetX"
+          },
+          "parameters": [
+            "PacienteZero",
+            "=",
+            "4"
+          ]
+        }
+      ],
+      "events": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "PacienteZero",
+            ">",
+            "480 - 4 - PacienteZero.Width()"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetX"
+          },
+          "parameters": [
+            "PacienteZero",
+            "=",
+            "480 - 4 - PacienteZero.Width()"
+          ]
+        }
+      ],
+      "events": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Player",
+            "PacienteZero",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PosY"
+          },
+          "parameters": [
+            "Player",
+            "<",
+            "PacienteZero.Y()"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::IsFalling"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject"
+          ]
+        },
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossState",
+            "!=",
+            "3"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "BounceVel",
+            "=",
+            "-380"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sfx_stomp.wav",
+            "no",
+            "GlobalVariable(SfxVolume)",
+            "1"
+          ]
+        }
+      ],
+      "events": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Player",
+            "PacienteZero",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PosY"
+          },
+          "parameters": [
+            "Player",
+            "<",
+            "PacienteZero.Y()"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::IsFalling"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject"
+          ]
+        },
+        {
+          "type": {
+            "value": "VarScene"
+          },
+          "parameters": [
+            "BossState",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossHurt\"",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "BossHP",
+            "-",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossHurt\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "ZombiePoofFX",
+            "PacienteZero.X() + PacienteZero.Width() * 0.5",
+            "PacienteZero.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "BossState",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"BossT\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlatformBehavior::PlatformerObjectBehavior::SetCurrentFallSpeed"
+          },
+          "parameters": [
+            "Player",
+            "PlatformerObject",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "BounceVel",
+            "=",
+            "-380"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sfx_stomp.wav",
+            "no",
+            "GlobalVariable(SfxVolume)",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetAnimationName"
+          },
+          "parameters": [
+            "PacienteZero",
+            "\"Walk\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlayAnimation"
+          },
+          "parameters": [
+            "PacienteZero"
+          ]
+        }
+      ],
+      "events": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Player",
+            "PacienteZero",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PosY"
+          },
+          "parameters": [
+            "Player",
+            ">=",
+            "PacienteZero.Y()"
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectTimer"
+          },
+          "parameters": [
+            "Player",
+            "\"Invuln\"",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "Player",
+            ">=",
+            "PacienteZero.X() + PacienteZero.Width() * 0.5"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "Lives",
+            "-",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "Player",
+            "\"Invuln\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetAnimationName"
+          },
+          "parameters": [
+            "Player",
+            "\"Hit\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sfx_hurt.wav",
+            "no",
+            "GlobalVariable(SfxVolume)",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetX"
+          },
+          "parameters": [
+            "Player",
+            "+",
+            "90"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "Player",
+            "+",
+            "-30"
+          ]
+        }
+      ],
+      "events": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Player",
+            "PacienteZero",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PosY"
+          },
+          "parameters": [
+            "Player",
+            ">=",
+            "PacienteZero.Y()"
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectTimer"
+          },
+          "parameters": [
+            "Player",
+            "\"Invuln\"",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "Player",
+            "<",
+            "PacienteZero.X() + PacienteZero.Width() * 0.5"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "Lives",
+            "-",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "Player",
+            "\"Invuln\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetAnimationName"
+          },
+          "parameters": [
+            "Player",
+            "\"Hit\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sfx_hurt.wav",
+            "no",
+            "GlobalVariable(SfxVolume)",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetX"
+          },
+          "parameters": [
+            "Player",
+            "+",
+            "-90"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetY"
+          },
+          "parameters": [
+            "Player",
+            "+",
+            "-30"
+          ]
+        }
+      ],
+      "events": []
+    }
+  ]
+}

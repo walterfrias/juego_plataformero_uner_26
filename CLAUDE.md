@@ -372,9 +372,10 @@ razonamiento de por qué se llegó hasta acá.
   trabada, checkpoint y cartel. 5 checkpoints. Verificado con teclas reales:
   hueco con carrera, poste + cables, entrar y no poder volver, paredes. **No usar `wire_levels23.py --force`**: regenera L3 como
   arena sola.
-  Orden si se regenera L3: `wire_l3_recorrido.py` → `wire_l3_mecanicas.py` → `wire_l3_luces.py` → `wire_virus_patron.py` →
+  Orden si se regenera L3: `wire_l3_recorrido.py` → `wire_l3_mecanicas.py` → `wire_l3_luces.py` → `wire_l3_caos.py` → `wire_virus_patron.py` →
   `wire_minivirus.py` → `wire_lab_luces.py` → `wire_lab_subsuelo.py` →
-  `wire_lab_ambiente.py` → `fix_w_escalera.py` → `wire_jefe.py`.
+  `wire_lab_ambiente.py` → `fix_w_escalera.py` → `wire_jefe.py` → `wire_l3_arena_zombies.py` →
+  `wire_jefe_jeringa.py` (siempre el último: reemplaza la pelea).
 - **L3 entre edificios (18/10):** "no en la costanera sino entre edificios".
   `gen_l3_fachadas.py` (fachadas porteñas: francés, departamentos de los 60, PH,
   bar de esquina con vidrieras cálidas; tapiadas, vidrios rotos, cruces de
@@ -444,17 +445,98 @@ razonamiento de por qué se llegó hasta acá.
   con las 6 `Estante` de antes, que quedan invisibles (la colisión y los
   bordes por cercanía siguen): la pelea no cambió. Verificado: Lio se apoya
   en las 6 a la altura de siempre. Reemplazan a los andamios.
+  **Columnas → pirámides monolito (18/10):** las dos columnas con la Libertad
+  pasaron a ser pirámides escalonadas de basalto negro con runas verdes (mismo
+  tope y 70 y losa y 122; los bustos quedan). La imagen tiene faldones de
+  `PIR_PAD` = 14 px por lado: `fix_l3_piramides.py` corre las instancias (y
+  `wire_l3_recorrido.py` ya lo hace si se regenera).
 - **Jefe definitivo y Obelisco (18/10):** `gen_jefe.py` → `wire_jefe.py`.
   Paciente Zero = **el científico que empezó todo** (el usuario descartó la
-  masa viral, que queda en el historial de git, commit 8fdc8aa): pelo blanco
-  revuelto, anteojos con un vidrio rajado, guardapolvo abierto con la
-  credencial y la **camiseta de Argentina** debajo, jeringa con el líquido
-  verde. Mismo estilo que los zombies, al doble: 64x68 (misma colisión),
-  máscara ajustada al cuerpo. Walk (0 y 2), Carga (1: se agacha y levanta la
+  masa viral, que queda en el historial de git, commit 8fdc8aa): mata de pelo
+  NEGRO, anteojos, guardapolvo abierto con la **camiseta de Argentina** debajo,
+  jeringa con el líquido verde. Es **un zombie más, escalado**: se dibuja a
+  32x34 con las piezas de `gen_zombies_lab.py`/`gen_zombies_wave2.py` y se
+  agranda x1.5 con NEAREST a **48x51** (`ESCALA` en gen_jefe.py; era x2 = 64x68,
+  "más chico" pidió el usuario). `wire_jefe.py` toma el tamaño de la imagen:
+  máscaras, instancia con los pies en y 150, y la lógica de la pelea (centro,
+  boca, poof, nota, tope derecho de la arena) en fracciones de
+  `PacienteZero.Width()/Height()`: ya no depende del tamaño. Walk (0 y 2), Carga (1: se agacha y levanta la
   jeringa) y Expuesto (3: de rodillas, estrellitas = pisalo). La pelea no cambió. Obelisco
   de la arena: `obelisco_cerca.png` (48x176, `gen_l3_calle.py`): luna de la
   izquierda, reflector cálido abajo, cinta de cuarentena. Verificado: la
   secuencia de estados/animaciones y el pisotón con la máscara nueva.
+
+- **Banderas y caos en la calle (18/10, L3):** `gen_l3_caos.py` →
+  `wire_l3_caos.py` (después de `wire_l3_recorrido.py`). Todo decorado, sin
+  colisión. 8 banderas apagadas para la noche ("sin ser exagerado"): colgadas de
+  balcones de los franceses y de una ventana del bar (se mecen), un mástil en la
+  pared de los deptos, una en la terraza del PH y una a cada lado de la arena en
+  el pedestal del prócer. En el asfalto (capa ""), en DOS CARRILES: lo de escala 1 en el
+  de atrás, arriba de la línea amarilla (ruedas en y 199, z 2/3, delante del
+  cordón sin tapar a Lio); los patrulleros al doble en el de adelante: 4 autos quemados con llamas y resplandor que titila, 2 patrulleros con
+  sirena roja/azul y su reflejo (al doble y más abajo, ruedas en y 246: más
+  cerca de la cámara, pedido del usuario; `ESCALA` en el script) y en
+  llamas: el fuego DETRÁS de la carrocería (asoma sobre el techo, la sirena sigue
+  adelante) y humo propio (`HumoAuto`, capa Atmos) que se desvanece a media pantalla, colectivo cruzado, taxi volcado, conos, cubierta
+  y escombros. Ubicación en `CALLE` / `BANDERAS` del script.
+  En la arena, 6 coronavirus gigantes de fondo alrededor del Obelisco
+  (`VirusFondo`, sprite del virus x2/x3, Decor z −1 detrás del Obelisco y las
+  estatuas, tinte 110;140;120 + opacidad 175, flotan y giran; no son del grupo
+  Virus: no dañan).
+  Orden de L3: agregar `wire_l3_caos.py` después de `wire_l3_luces.py`.
+
+- **Zombies que no paran de entrar a la arena (18/10, L3):**
+  `wire_l3_arena_zombies.py` ("me sirven de plataforma"). Durante la pelea
+  (BossActivo 1, BossDown 0, Won 0) entra uno cada 1.8 s alternando el lado
+  (izq. detrás de la barricada, der. desde afuera), máx 7 (era 3 s / 4: "más
+  zombies que entren"); cruzan sin darse
+  vuelta (30-40 px/s) y se borran al salir; al ganar hacen poof. Grupo Zombies:
+  pisarlos = trampolín + cadena de puntos; de costado = −1 vida. Tipos que rotan:
+  TODOS los NPC del juego (los 13 del grupo; el policía que entra no dispara:
+  no tiene el timer "Fuego", que solo arranca en los puestos al cargar). Además cae del cielo de la arena un
+  **coronavirus de los que se desvanecen** (`MiniVirus`, persigue a Lio, −1 vida) cada
+  4 s, máx 3 contando los del jefe (`VIRUS_CADA`/`MAX_VIRUS`); al ganar se borran. Var de objeto `Arena` = 1 (los
+  del recorrido no se tocan); escena ArenaT/ArenaLado/ArenaTipo/ArenaZ, reloj con
+  TimeDelta (se congela en pausa). Verificado: entran, cruzan, salen; pisotón
+  rebota a Lio de y 90 a y 18. Falta playtest (dificultad con el jefe).
+
+- **Pintadas en el muro de la costanera (19/10, L1):** `gen_grafitis_n1.py` →
+  `wire_grafitis_n1.py` (independiente, idempotente, REVERT=1 las saca).
+  Datos y ubicación en `PINTADAS` del generador. Letra de pincel dibujada por
+  trazos (sobremuestreo + reducción), estilo de las referencias que pasó el
+  usuario en la raíz del repo: "LAS MALVINAS SON ARGENTINAS" blanco al comienzo
+  (x 12, letra de la bandera de la semifinal), "PATRICIO REY y sus Redonditos
+  de Ricota" rojo apagado en el centro (x 1166, tapa de Gulp!), el esclavo de
+  Oktubre en esténcil blanco pasando el agua (x 1404, `esclavo.webp`) y
+  "#YO APOYO LA LEY DE FINANCIAMIENTO UNIVERSITARIO" antes de la meta (x 2370).
+  Objetos `Grafiti_*`, capa base z −2 (delante del muro, z −3), con el mismo
+  efecto Noche del muro. Verificado en runtime (capturas).
+
+- **Pelea nueva con Paciente Zero: "que se clave la jeringa" (19/10, L3):**
+  `wire_jefe_jeringa.py` (el último de la cadena de L3). La pelea vieja se
+  descartó entera (usuario: "muy malas"); sus 11 eventos quedan en
+  `scripts/jefe_pelea_vieja.json` y `REVERT=1` los restaura. Estados: 0 camina →
+  1 apunta (Carga + contorno verde + chispazo) → 2 embiste → 3 clavado en una
+  pirámide (Expuesto), única ventana para pisarlo; de costado no lastima mientras
+  está clavado. Si sale a menos de 48 px de la pirámide, frena (no hay ventana
+  gratis). Fases por vida: 3 lento y sin zombies; 2 más rápido, zombies, escupe
+  al desclavarse; 1 se agranda x1.15 y embiste dos veces (la primera hacia el lado
+  contrario a Lio, rebota, la segunda se clava del lado de Lio: de busto a busto
+  NO se llega, planeando cae en x 268 y el busto der. empieza en 284). Cartel
+  "PISALO!" (`PisaloText`) titilando en la fase 3. Virus del cielo en pausa
+  mientras está clavado. Los bustos (Estante y 96, borde, estatua, bandera) se
+  corrieron 22 px hacia el centro (132 / 284): debajo del viejo busto quedaba el
+  jefe clavado sin poder pisarlo. Datos también en `wire_levels23.py` y
+  `wire_l3_caos.py`. Verificado con robot: clavado en x 89 / 343, pisotón desde el
+  busto en las 3 fases, doble embestida y la nota 7 al morir. Lio corre a 95 px/s.
+
+- **Límite de contagios por nivel (19/10):** `fix_contagio_limite.py`
+  (idempotente, REVERT=1). Cada zombie se contagia como mucho 1 vez en L1 y 2 en
+  L2; L3 sin límite (inmunidad de 3 s, como antes). Var de objeto `Contagios` en
+  los zombies del grupo Zombies; el evento del contagio pide `< límite` y suma 1
+  (`LIMITES` en el script). Verificado en runtime en los 3 niveles (3 virus
+  seguidos al mismo zombie: 1 / 2 / 3 contagios). Ojo al probar: el timer
+  "Immune" arranca la primera vez que se consulta (3 s desde que empieza el nivel).
 
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
   CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →
@@ -502,8 +584,18 @@ razonamiento de por qué se llegó hasta acá.
    entrega solo pulido, balance y bugs; lo único "nuevo" admitido es
    contenido con piezas existentes si el playtest muestra que no se llega
    a los 30 min de la consigna. Contenido congelado el 28/10.
-7. **Bug del Tutorial:** el planeo con la mochila de práctica baja
-   MaxFallingSpeed a 80 y no hay evento que la vuelva a 600 (L1/L2/L3 sí lo
-   tienen): después de planear una vez, Lio cae lento todo el Tutorial.
-8. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
+7. ~~Mecánicas del jefe final~~: pelea nueva el 19/10 (ver "Pelea nueva con
+   Paciente Zero"). Falta playtest del usuario. Texto original del pendiente
+   (18/10, cerca del fin del ciclo):
+   hoy la pelea no es entretenida y no se entiende (playtest de punta a punta
+   del usuario). Falta que se lea cuándo es vulnerable y cómo dañarlo, darle
+   ritmo y variedad, y arreglar el expuesto contra los bordes (queda bajo las
+   estatuas y cuesta pisarlo). Detalle en `reseach.md` (18/10, cierre).
+7b. **PENDIENTE: público lejano de la arena de L3** (`wire_l3_publico.py`,
+   19/10): no convence al usuario, quedan tapados por las bases de los
+   monumentos. Los virus de fondo achicados del mismo script sí quedan.
+   Detalle y opciones en `reseach.md` (19/10).
+8. ~~Bug del Tutorial~~ (planeo que dejaba a Lio cayendo lento): resuelto el
+   18/10 con `fix_tutorial_planeo.py`.
+9. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
    31/10/2026.
