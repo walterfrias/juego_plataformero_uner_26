@@ -189,6 +189,19 @@ razonamiento de por qué se llegó hasta acá.
   con 4/4 antídotos; en la victoria de L3, +1000 con las 7 pruebas. `LevelScore` (escena) pasa a `Puntaje` (global)
   recién al ganar; récord único en storage del navegador, visible en el
   menú. Detalle en `reseach.md` (09/10).
+- **Reloj y TOP 5 con iniciales (25/10, última mejora):**
+  - Reloj en `wire_score_hud.py`: "TIEMPO m:ss" debajo de los puntos, se
+    congela con time scale 0 (pausa, notas). Sin límite: tiempo `PAR` por
+    nivel (L1 300 s, L2/L3 360 s) y al ganar +10 por segundo que sobra
+    (línea TIEMPO del desglose); pasado el par se pone rojo. Calibrar el
+    par con los tiempos de los playtests.
+  - `wire_top5.py` (después de `wire_score_hud.py`): tabla TOP 5 arriba a
+    la izquierda del menú (reemplaza "RÉCORD 000000"). La partida termina al
+    volver al menú (victoria final, Game Over → ESC, M en la pausa); cuenta
+    el último puntaje del HUD (global `PuntajeCorte`). Si entra, el panel
+    pide 3 iniciales (↑↓ letra, → / Enter siguiente, ← vuelve; arranca con
+    las últimas usadas). Storage PacienteZero: top_p1..5, top_n1..5, ini.
+    Verificado con puppeteer (orden, persistencia, Game Over → ESC).
 - **Textos en fuente pixel (14/10):** `wire_pixel_texts.py` (después de
   `wire_score_hud.py`): tutorial y carteles de victoria/Game Over en
   BitmapText; ya no queda ningún TextObject.
@@ -539,7 +552,7 @@ razonamiento de por qué se llegó hasta acá.
   "Immune" arranca la primera vez que se consulta (3 s desde que empieza el nivel).
 
 - **Orden de los scripts si se regenera** (todos idempotentes, GDevelop
-  CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` →
+  CERRADO): `wire_levels23.py --force` → `wire_score_hud.py` → `wire_top5.py` →
   `wire_pixel_texts.py` → `wire_mochila_niveles.py` → `wire_notas.py` →
   `wire_bordes_plataforma.py`. También re-correr `wire_notas.py` después
   de `fix_pause_toggle.py` o `wire_pause_panel.py`. `wire_lab_luces.py`,
@@ -598,4 +611,8 @@ razonamiento de por qué se llegó hasta acá.
 8. ~~Bug del Tutorial~~ (planeo que dejaba a Lio cayendo lento): resuelto el
    18/10 con `fix_tutorial_planeo.py`.
 9. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
-   31/10/2026.
+   **03/11/2026** (o hasta el 10/11 si no llega; antes figuraba el 31/10).
+10. **Desarrollo cerrado el 25/10** (después del reloj y el TOP 5). Queda el
+   GDD final: se arma sobre el avance entregado a mitad de desarrollo
+   (`avance_devolucion/avance_gdd.html` → PDF), chequeado contra los
+   documentos de la cátedra. Plan página por página en `reseach.md` (25/10).

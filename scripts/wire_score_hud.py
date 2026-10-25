@@ -20,10 +20,19 @@ Puntaje (decidido el 09/10):
     en cualquier escena (RecordLoaded) para no pisarlo con uno menor si se
     arranca por una escena que no es el menú.
 
+Reloj (decidido el 25/10): "TIEMPO m:ss" debajo de los puntos. Corre
+mientras no se ganó ni se perdió, con TimeDelta() (el time scale 0 de la
+pausa, las notas y la mochila lo congela). No hay límite: cada nivel tiene
+un tiempo PAR y al ganar se suman PTS_POR_SEG por cada segundo que sobró
+(línea "TIEMPO m:ss +n" del desglose). Pasado el par el reloj se pone rojo
+(ya no da bonus). Morir y volver al checkpoint no lo reinicia; reintentar
+el nivel sí.
+
 HUD (capa UI): corazones como estaban | ícono + "n/4" antídotos (L1/L2)
 | "PUNTOS 000000" arriba a la derecha. En L3 el cartel del jefe pasa a la
 fuente bitmap, centrado arriba. En la victoria, desglose debajo del
-cartel (VictoryScore). MainMenu: "RÉCORD 000000" arriba a la derecha.
+cartel (VictoryScore). En el MainMenu el récord se ve en la tabla TOP 5
+(wire_top5.py, correrlo después de este).
 
 Reemplaza el primer corte que había a mano en Level1 (PuntajeText, los
 ModVarGlobal Puntaje y el reset en Once). Idempotente: los eventos nuevos
@@ -38,6 +47,8 @@ Uso:  python3 scripts/wire_score_hud.py    (desde la raíz del repo)
 import datetime
 import json
 import shutil
+
+from gdevelop_cerrado import asegurar_gdevelop_cerrado
 
 GAME = "game/game.json"
 LEVELS = ["Level1", "Level2", "Level3"]
@@ -58,10 +69,23 @@ FINAL_LEVEL = "Level3"
 N_NOTAS, NOTAS_BONUS = 7, 1000
 STORE = ['"PacienteZero"', '"record"']
 CW = 6   # avance por carácter de la fuente (monoespaciada)
+LINE_H = 13   # lineHeight de hud_font.fnt
+
+# tiempo par por nivel (segundos) y puntos por segundo que sobra al ganar.
+# Calibrar con los tiempos reales de los playtests.
+PAR = {"Level1": 300, "Level2": 360, "Level3": 360}
+PTS_POR_SEG = 10
 
 
 def text_w(s):
     return len(s) * CW + 2
+
+
+def mmss(expr):
+    """segundos -> "m:ss" """
+    sec = f"floor(mod({expr}, 60))"
+    return (f'ToString(floor({expr} / 60)) + ":" + '
+            f'StrRepeat("0", 2 - StrLength(ToString({sec}))) + ToString({sec})')
 
 
 def pad6(expr):
@@ -219,7 +243,7 @@ def record_load_event():
 def wire_level(lay, antidotes):
     name = lay["name"]
     for v in ("LevelScore", "LevelBase", "AntiBonus", "NewRecord", "RecLoaded",
-              "StompChain", "StompPts", "NotasBonus"):
+              "StompChain", "StompPts", "NotasBonus", "LevelTime", "TimeBonus"):
         set_var(lay, v)
 
     # --- objetos / instancias del HUD ---
@@ -228,7 +252,9 @@ def wire_level(lay, antidotes):
     put_object(lay, btext("HudScore", score_txt, AMBER))
     put_object(lay, btext("PtsPopup", "+100", AMBER))
     put_object(lay, btext("VictoryScore", "", WHITE, "center"))
+    put_object(lay, btext("HudTime", "TIEMPO 0:00", WHITE))
     insts = [inst("HudScore", W - 8 - text_w(score_txt), 6, 30),
+             inst("HudTime", W - 8 - text_w("TIEMPO 0:00"), 6 + LINE_H, 30),
              inst("VictoryScore", 0, 172, 30)]
     if antidotes:
         icon = json.loads(json.dumps(next(o for o in lay["objects"] if o["name"] == "Antidoto")))
@@ -261,21 +287,21 @@ def wire_level(lay, antidotes):
         strip_mine(e)
 
     # --- puntos en eventos existentes ---
-    if name != "Level3":
-        stomp = find_event(lay, lambda e: has_cond(e, "CollisionNP", "Player", "Zombies")
-                           and has_cond(e, "NumberObjectVariable", "Zombies", "Infected", "=", "0"),
-                           "stomp")
-        k = next(i for i, a in enumerate(stomp["actions"]) if a["type"]["value"] == "Delete")
-        # cadena de stomps sin tocar el piso: 100, 200, 400, 800, 1000, 1000...
-        stomp["actions"][k:k] = \
-            [act("ModVarScene", ["StompPts", "=", "min(1000, 100 * pow(2, Variable(StompChain)))"])] + \
-            popup_actions("Zombies", "ToString(Variable(StompPts))") + \
-            [act("ModVarScene", ["LevelScore", "+", "Variable(StompPts)"]),
-             act("ModVarScene", ["StompChain", "+", "1"])]
-        # el "boing" sube de tono con la cadena (1.0, 1.12, 1.24...)
-        for a in stomp["actions"]:
-            if a["type"]["value"] == "PlaySound" and "sfx_stomp" in a["parameters"][1]:
-                a["parameters"][4] = "0.88 + min(Variable(StompChain), 5) * 0.12"
+    # (en L3 también: el recorrido del 18/10 trajo zombies que se pisan)
+    stomp = find_event(lay, lambda e: has_cond(e, "CollisionNP", "Player", "Zombies")
+                       and has_cond(e, "NumberObjectVariable", "Zombies", "Infected", "=", "0"),
+                       "stomp")
+    k = next(i for i, a in enumerate(stomp["actions"]) if a["type"]["value"] == "Delete")
+    # cadena de stomps sin tocar el piso: 100, 200, 400, 800, 1000, 1000...
+    stomp["actions"][k:k] = \
+        [act("ModVarScene", ["StompPts", "=", "min(1000, 100 * pow(2, Variable(StompChain)))"])] + \
+        popup_actions("Zombies", "ToString(Variable(StompPts))") + \
+        [act("ModVarScene", ["LevelScore", "+", "Variable(StompPts)"]),
+         act("ModVarScene", ["StompChain", "+", "1"])]
+    # el "boing" sube de tono con la cadena (1.0, 1.12, 1.24...)
+    for a in stomp["actions"]:
+        if a["type"]["value"] == "PlaySound" and "sfx_stomp" in a["parameters"][1]:
+            a["parameters"][4] = "0.88 + min(Variable(StompChain), 5) * 0.12"
     if antidotes:
         pick = find_event(lay, lambda e: has_cond(e, "CollisionNP", "Player", "Antidoto"), "antídoto")
         k = next(i for i, a in enumerate(pick["actions"]) if a["type"]["value"] == "Delete")
@@ -297,12 +323,16 @@ def wire_level(lay, antidotes):
             ev([act("BuiltinCommonInstructions::CompareNumbers", [found, ">=", str(N_NOTAS)])],
                [act("ModVarScene", ["NotasBonus", "=", str(NOTAS_BONUS)]),
                 act("ModVarScene", ["LevelScore", "+", str(NOTAS_BONUS)])])]
+    par = PAR[name]
     total = "GlobalVariable(Puntaje)"
     shown = "GlobalVariable(Puntaje) + Variable(LevelScore) * (1 - Variable(Won))"
     victory = ev(
         [act("VarScene", ["Won", "=", "1"]), act("BuiltinCommonInstructions::Once", [])],
         [act("ModVarScene", ["LevelBase", "=", "Variable(LevelScore)"]),
          act("ModVarScene", ["LevelScore", "+", "1000 + Variable(Lives) * 500"]),
+         act("ModVarScene", ["TimeBonus", "=",
+                             f"max(0, floor({par} - Variable(LevelTime))) * {PTS_POR_SEG}"]),
+         act("ModVarScene", ["LevelScore", "+", "Variable(TimeBonus)"]),
          act("ModVarScene", ["AntiBonus", "=", "0"]),
          act("ModVarScene", ["NewRecord", "=", "0"])],
         [
@@ -314,7 +344,8 @@ def wire_level(lay, antidotes):
                     act(BT_TEXT, ["VictoryScore", "=",
                                   '"NIVEL +" + ToString(Variable(LevelBase)) + NewLine() + '
                                   '"META +1000" + NewLine() + '
-                                  '"VIDAS x" + ToString(Variable(Lives)) + " +" + ToString(Variable(Lives) * 500)'])]),
+                                  '"VIDAS x" + ToString(Variable(Lives)) + " +" + ToString(Variable(Lives) * 500) + NewLine() + '
+                                  f'"TIEMPO " + {mmss("Variable(LevelTime)")} + " +" + ToString(Variable(TimeBonus))'])]),
             ev([act("VarScene", ["AntiBonus", ">", "0"])],
                [act(BT_TEXT, ["VictoryScore", "+", 'NewLine() + "ANTÍDOTOS 4/4 +1000"'])]),
             ev([act("VarScene", ["NotasBonus", ">", "0"])],
@@ -329,11 +360,14 @@ def wire_level(lay, antidotes):
             ev([], [act("SetX", ["VictoryScore", "=", "240 - VictoryScore.Width() / 2"]),
                     act("Show", ["VictoryScore", ""])]),
         ])
-    hud = [act(BT_TEXT, ["HudScore", "=", f'"PUNTOS " + {pad6(shown)}'])]
-    subs = []
+    hud = [act(BT_TEXT, ["HudScore", "=", f'"PUNTOS " + {pad6(shown)}']),
+           act(BT_TEXT, ["HudTime", "=", f'"TIEMPO " + {mmss("Variable(LevelTime)")}']),
+           act("SetX", ["HudTime", "=", f"{W - 8} - HudTime.Width()"])]
+    subs = [ev([act("VarScene", ["LevelTime", "<", str(par)])], [act(BT_TINT, ["HudTime", f'"{WHITE}"'])]),
+            ev([act("VarScene", ["LevelTime", ">=", str(par)])], [act(BT_TINT, ["HudTime", f'"{RED}"'])])]
     if antidotes:
         hud.append(act(BT_TEXT, ["HudAnti", "=", 'ToString(Variable(Antidotes)) + "/4"']))
-        subs = [ev([act("VarScene", ["Antidotes", ">=", "4"])], [act(BT_TINT, ["HudAnti", f'"{TOXIC}"'])]),
+        subs += [ev([act("VarScene", ["Antidotes", ">=", "4"])], [act(BT_TINT, ["HudAnti", f'"{TOXIC}"'])]),
                 ev([act("VarScene", ["Antidotes", "<", "4"])], [act(BT_TINT, ["HudAnti", f'"{WHITE}"'])])]
     replace_group(lay, [
         comment("Puntaje: lo del nivel va a LevelScore y pasa al global Puntaje al "
@@ -341,8 +375,11 @@ def wire_level(lay, antidotes):
                 "Récord en storage PacienteZero/record. Generado por wire_score_hud.py."),
         record_load_event(),
         ev([act("BuiltinCommonInstructions::Once", [])], [act("Hide", ["VictoryScore"])]),
+        # reloj: corre hasta ganar o perder; el time scale 0 lo congela
+        ev([act("VarScene", ["Won", "=", "0"]), act("VarScene", ["Over", "=", "0"])],
+           [act("ModVarScene", ["LevelTime", "+", "TimeDelta()"])]),
         victory,
-        ev([], hud, subs or None),
+        ev([], hud, subs),
         ev([act("PlatformBehavior::IsOnFloor", ["Player", "PlatformerObject"])],
            [act("ModVarScene", ["StompChain", "=", "0"])]),
         *popup_events(),
@@ -351,24 +388,22 @@ def wire_level(lay, antidotes):
 
 def wire_menu(lay):
     set_var(lay, "RecLoaded")
-    rec_txt = "RÉCORD 000000"
-    put_object(lay, btext("MenuRecord", rec_txt, AMBER))
-    put_instances(lay, [inst("MenuRecord", W - 8 - text_w(rec_txt), 6, 40, layer="")])
+    # el "RÉCORD 000000" del menú lo reemplazó la tabla TOP 5 (wire_top5.py)
+    drop_object(lay, "MenuRecord")
     # "Jugar" arranca la partida en 0
     jugar = find_event(lay, lambda e: any(a["type"]["value"] == "Scene" and a["parameters"][1] == '"Tutorial"'
                                           for a in e.get("actions", [])), "Jugar")
     strip_mine(jugar)
     jugar["actions"].insert(0, act("ModVarGlobal", ["Puntaje", "=", "0"]))
     replace_group(lay, [
-        comment("Récord guardado (storage PacienteZero/record). Generado por wire_score_hud.py."),
+        comment("Récord guardado (storage PacienteZero/record); la tabla TOP 5 es de "
+                "wire_top5.py. Generado por wire_score_hud.py."),
         record_load_event(),
-        ev([], [act(BT_TEXT, ["MenuRecord", "=", f'"RÉCORD " + {pad6("GlobalVariable(Record)")}'])]),
-        ev([act("VarGlobal", ["Record", "<=", "0"])], [act("Hide", ["MenuRecord"])]),
-        ev([act("VarGlobal", ["Record", ">", "0"])], [act("Show", ["MenuRecord", ""])]),
     ])
 
 
 def main():
+    asegurar_gdevelop_cerrado()
     shutil.copy(GAME, GAME + ".bak-" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
     g = json.load(open(GAME, encoding="utf-8"))
 
@@ -391,7 +426,7 @@ def main():
         wire_level(lay, antidotes=n_anti > 0)
         print(f"{name}: HUD + puntaje ({n_anti} antídotos)")
     wire_menu(lays["MainMenu"])
-    print("MainMenu: récord + reset en Jugar")
+    print("MainMenu: carga del récord + reset en Jugar")
 
     with open(GAME, "w", encoding="utf-8") as f:
         json.dump(g, f, ensure_ascii=False, indent=2)
