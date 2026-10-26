@@ -4414,6 +4414,46 @@
         "metadata": "",
         "name": "hud_font.fnt",
         "userAdded": true
+      },
+      {
+        "file": "assets/City/edificio_evita.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "edificio_evita.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/pila_patrulleros_izq_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pila_patrulleros_izq_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/pila_patrulleros_izq_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pila_patrulleros_izq_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/pila_patrulleros_der_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pila_patrulleros_der_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/pila_patrulleros_der_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pila_patrulleros_der_2.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -73190,8 +73230,8 @@
           "name": "ObeliscoGrande",
           "persistentUuid": "599b8825-ee09-460a-a471-f8e5bcfe8cd9",
           "width": 0,
-          "x": 208,
-          "y": -26,
+          "x": 214,
+          "y": 18,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -78422,6 +78462,48 @@
           "x": 188,
           "y": 6,
           "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "BG_city",
+          "name": "EdificioEvita",
+          "width": 0,
+          "x": 250,
+          "y": -4,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 128,
+          "layer": "Decor",
+          "name": "HumoAuto",
+          "width": 80,
+          "x": 26,
+          "y": -56,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 128,
+          "layer": "Decor",
+          "name": "HumoAuto",
+          "width": 80,
+          "x": 382,
+          "y": -56,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -86889,12 +86971,29 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 1,
+                  "looping": true,
+                  "timeBetweenFrames": 0.4,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "estatua_columna_izq.png",
+                      "image": "pila_patrulleros_izq_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "pila_patrulleros_izq_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -86971,12 +87070,29 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 1,
+                  "looping": true,
+                  "timeBetweenFrames": 0.4,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "estatua_columna_der.png",
+                      "image": "pila_patrulleros_der_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "pila_patrulleros_der_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -93261,6 +93377,47 @@
             "align": "left",
             "verticalTextAlignment": "top"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EdificioEvita",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.15,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "edificio_evita.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -93754,6 +93911,9 @@
           },
           {
             "objectName": "HudTime"
+          },
+          {
+            "objectName": "EdificioEvita"
           }
         ]
       },

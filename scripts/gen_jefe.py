@@ -15,12 +15,13 @@ versión anterior se dibujó directo a 64x68 con mucho más detalle que el resto
 
   - mata de pelo NEGRO revuelto ("más pelo, de color negro"), anteojos, ojos rojos
   - guardapolvo abierto con la camiseta de Argentina (bastones celestes y blancos)
-  - jeringa con el líquido verde del lab en la mano de adelante
+  - una motosierra en la mano de adelante (25/10; antes, una jeringa con el
+    líquido verde del lab)
 Mira a la DERECHA (los eventos lo espejan con FlipX); los pies en la última fila.
 
 Animaciones (mismos nombres y cuadros: wire_jefe.py no cambia de lógica):
-  jefe_walk_1..6      camina con la jeringa al frente
-  jefe_carga_1..3     se agacha y levanta la jeringa sobre la cabeza
+  jefe_walk_1..6      camina con la motosierra al frente (la cadena gira)
+  jefe_carga_1..3     se agacha y levanta la motosierra sobre la cabeza
   jefe_expuesto_1..4  de rodillas, aturdido, estrellitas sobre la cabeza (= pisalo)
 Uso:  python3 scripts/gen_jefe.py   (crea game/assets/Jefe/)
 """
@@ -31,7 +32,7 @@ import sys
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(__file__))
-from gen_zombies_lab import COAT, COAT_H, COAT_S, LIQUID, SHOE, _legs   # noqa: E402
+from gen_zombies_lab import COAT, COAT_H, COAT_S, SHOE, _legs   # noqa: E402
 from gen_zombies_wave2 import EYE, MOUTH, SKIN, SKIN_S, TAU, _new, _outline  # noqa: E402
 
 OUT = "game/assets/Jefe"
@@ -41,7 +42,9 @@ HAIR_H = (66, 64, 78, 255)                      # brillo: si no, el negro se pie
 GLASS = (60, 70, 80, 255)
 CELESTE, BLANCO = (116, 172, 223, 255), (232, 236, 240, 255)
 PANTS = (52, 56, 70, 255)
-SYR = (190, 210, 214, 255)
+# motosierra (25/10, pedido del usuario: reemplaza a la jeringa)
+MOTOR, MOTOR_S, MANGO = (230, 124, 40, 255), (164, 80, 28, 255), (40, 40, 46, 255)
+ESPADA, CADENA = (176, 182, 192, 255), (70, 70, 78, 255)
 STAR = (255, 230, 120, 255)
 
 
@@ -76,15 +79,27 @@ def cabeza(d, hx, hy, ojos="rojo"):
     d.line([(hx, hy + 6), (hx + 3, hy + 6)], fill=MOUTH)
 
 
-def jeringa(d, x, y, arriba=False):
-    if arriba:
-        d.line([(x, y), (x, y - 4)], fill=SYR, width=2)
-        d.point([(x, y - 2), (x, y - 3)], fill=LIQUID)
-        d.point([(x, y - 5)], fill=SYR)
+def motosierra(d, x, y, arriba=False, i=0):
+    """el motor naranja en la mano (x, y) y la espada hacia adelante (o hacia arriba);
+    los dientes de la cadena se corren con el cuadro i (está prendida)."""
+    if arriba:                                                         # levantada, en diagonal hacia adelante
+        d.rectangle([x - 1, y - 1, x + 2, y + 2], fill=MOTOR)              # motor
+        d.line([(x - 1, y + 2), (x + 2, y + 2)], fill=MOTOR_S)
+        d.point([(x - 2, y)], fill=MANGO)                                  # manija
+        pts = [(x + 2 + k, y - 1 - k) for k in range(6)]                   # espada
+        for k, (px_, py_) in enumerate(pts):
+            d.point([(px_, py_), (px_ + 1, py_)], fill=ESPADA)
+            if (k + i) % 2 == 0:
+                d.point([(px_ + 1, py_ + 1)], fill=CADENA)
     else:
-        d.line([(x, y), (x + 4, y)], fill=SYR, width=2)
-        d.point([(x + 1, y), (x + 2, y)], fill=LIQUID)
-        d.point([(x + 5, y)], fill=SYR)
+        d.rectangle([x - 1, y - 2, x + 2, y + 1], fill=MOTOR)              # motor
+        d.line([(x - 1, y + 1), (x + 2, y + 1)], fill=MOTOR_S)
+        d.line([(x - 1, y - 3), (x + 1, y - 3)], fill=MANGO)               # manija de arriba
+        d.line([(x + 3, y - 1), (x + 8, y - 1)], fill=ESPADA, width=2)     # espada al frente
+        for xx in range(x + 3, x + 9):
+            if (xx + i) % 2 == 0:
+                d.point([(xx, y - 2), (xx, y + 1)], fill=CADENA)
+        d.point([(x + 9, y - 1)], fill=ESPADA)
 
 
 def walk(i):
@@ -97,10 +112,10 @@ def walk(i):
     sh_y = hip_y - 11
     d.line([(cx - 3, sh_y + 1), (cx - 4, sh_y + 9)], fill=COAT_S, width=2)     # brazo de atrás
     cuerpo(d, cx, sh_y, hip_y)
-    fx, fy = cx + 9, sh_y + 4 + round(math.sin(ph + 1))                         # brazo con la jeringa
+    fx, fy = cx + 8, sh_y + 4 + round(math.sin(ph + 1))                         # brazo con la motosierra
     d.line([(cx + 3, sh_y + 1), (fx, fy)], fill=COAT, width=2)
     d.point([(fx + 1, fy)], fill=SKIN)
-    jeringa(d, fx + 2, fy)
+    motosierra(d, fx + 2, fy, i=i)
     hx, hy = cx + 1, 3 + round(bob)
     d.rectangle([cx, hy + 6, cx + 2, hy + 8], fill=SKIN_S)
     cabeza(d, hx, hy)
@@ -115,9 +130,9 @@ def carga(i):
     _legs(d, cx, hip_y, 0.6, 3, 0, PANTS, SHOE)
     sh_y = hip_y - 10
     cuerpo(d, cx, sh_y, hip_y)
-    ax, ay = cx + 5, sh_y - 3 - i                                              # brazo arriba
+    ax, ay = cx + 7, sh_y - 1 - i                                              # brazo arriba, al costado de la cabeza
     d.line([(cx + 3, sh_y + 1), (ax, ay)], fill=COAT, width=2)
-    jeringa(d, ax, ay - 1, arriba=True)
+    motosierra(d, ax, ay - 1, arriba=True, i=i)
     d.line([(cx - 3, sh_y + 1), (cx - 6, sh_y + 6)], fill=COAT_S, width=2)
     hx, hy = cx + 1, sh_y - 7
     d.rectangle([cx, hy + 6, cx + 2, hy + 8], fill=SKIN_S)
@@ -139,7 +154,7 @@ def expuesto(i):
     cuerpo(d, cx, sh_y, hip_y, largo=2)
     d.line([(cx + 3, sh_y + 1), (cx + 7, sh_y + 8)], fill=COAT, width=2)      # brazos caídos
     d.line([(cx - 3, sh_y + 1), (cx - 5, sh_y + 8)], fill=COAT_S, width=2)
-    jeringa(d, cx + 10, 33)                                                    # la jeringa en el piso
+    motosierra(d, cx + 9, 32)                                                  # la motosierra en el piso (apagada)
     hx, hy = cx + 1 + (i % 2), sh_y - 7
     d.rectangle([cx, hy + 6, cx + 2, hy + 8], fill=SKIN_S)
     cabeza(d, hx, hy, ojos="cruz")
@@ -151,13 +166,14 @@ def expuesto(i):
 
 
 def main():
-    os.makedirs(OUT, exist_ok=True)
+    out = sys.argv[sys.argv.index("--preview") + 1] if "--preview" in sys.argv else OUT
+    os.makedirs(out, exist_ok=True)
     for kind, fn, n in (("walk", walk, 6), ("carga", carga, 3), ("expuesto", expuesto, 4)):
         for k in range(n):
             im = fn(k)
             im.resize((round(im.width * ESCALA), round(im.height * ESCALA)),
-                      Image.Resampling.NEAREST).save(f"{OUT}/jefe_{kind}_{k + 1}.png")
-    print(f"jefe_walk_1..6, jefe_carga_1..3, jefe_expuesto_1..4 (32x34 x{ESCALA})  ->  {OUT}/")
+                      Image.Resampling.NEAREST).save(f"{out}/jefe_{kind}_{k + 1}.png")
+    print(f"jefe_walk_1..6, jefe_carga_1..3, jefe_expuesto_1..4 (32x34 x{ESCALA})  ->  {out}/")
 
 
 if __name__ == "__main__":

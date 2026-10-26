@@ -51,6 +51,8 @@ import os
 import shutil
 import uuid
 
+from PIL import Image
+
 import l3_recorrido as R
 from gdevelop_cerrado import asegurar_gdevelop_cerrado
 
@@ -361,8 +363,9 @@ def main():
     alto = {"frances": 168, "deptos": 150, "ph": 84, "bar": 120}
     for m, x in R.FACHADAS:
         new.append(inst(FACHADAS[m], x + OX, R.FLOOR - alto[m]))
-    # arena: el Obelisco (48x176, tamaño nativo, apoyado en el piso)
-    new.append(inst("ObeliscoGrande", R.OBELISCO_ARENA + OX - 24, R.FLOOR - 176))
+    # arena: el Obelisco (tamaño de la imagen: 36x132 desde el 25/10, apoyado en el piso)
+    ow, oh = Image.open("game/assets/City/obelisco_cerca.png").size
+    new.append(inst("ObeliscoGrande", R.OBELISCO_ARENA + OX - ow // 2, R.FLOOR - oh))
     # estatuas de la vía pública (pedido del usuario 18/10; antes eran andamios): sus
     # superficies coinciden EXACTO con las 6 plataformas de la pelea (Estante, que
     # quedan invisibles): columna = pedestal (y 122) + capitel (y 70); busto = y 96

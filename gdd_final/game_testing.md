@@ -78,7 +78,7 @@ scripts verifican que esté cerrado y se cortan si lo encuentran abierto.
 | Jugadora de 10 años | Con los virus volando al azar, "tenés que esperar a que se vaya para pasar": **frustrante** (en la simulación, esperas de hasta 4–5 s) | Los virus pasan a **recorridos fijos** (ascensor, péndulo, ocho, círculo): espera máxima ~1 s, se aprende el ritmo. Los minivirus siguen persiguiendo, para que haya contraste. |
 | Desarrollador | Las plataformas no se distinguían del fondo: "no se nota qué se pisa" | **Bordes que se iluminan** al acercarse Lio, y luz de borde en árboles y faroles. |
 | Desarrollador | Las camillas móviles del L2 "flotaban" y "no son de las partes más entretenidas" | Reemplazadas por **pistones hidráulicos** con aviso de luces (piden timing, no solo esperar). |
-| Desarrollador | Pelea con el jefe de punta a punta: "no es entretenida y no se entiende" | **Pelea nueva**: se clava la jeringa, fases por vida, cartel "¡PISALO!". |
+| Desarrollador | Pelea con el jefe de punta a punta: "no es entretenida y no se entiende" | **Pelea nueva**: el jefe embiste y queda trabado contra la barricada, fases por vida, cartel "¡PISALO!". |
 | Desarrollador | L1 con minivirus: muy entretenido con varios a la vez, pero el final se hacía difícil | Vida del minivirus en L1 bajada de 8 a 5 s. |
 | Desarrollador | El disparo del policía desde la cintura "no se veía natural"; las ráfagas dejaban una ventana de salto demasiado chica | Un solo tiro desde la mano, a la altura del pecho, con aviso de 0,5 s. |
 | Desarrollador | Los pozos en la calle del Nivel 3 "no tenían sentido en una calle del centro" | Peligros de calle: toldo, charco electrificado, vapor del subte. |

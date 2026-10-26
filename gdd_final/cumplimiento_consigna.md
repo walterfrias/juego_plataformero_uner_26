@@ -43,7 +43,8 @@ diseño. Lo que cambió desde entonces:
 - **Tutorial** implementado (en el avance figuraba "en desarrollo").
 - **Paciente Zero definitivo:** el científico con la camiseta de Argentina.
   Reemplaza la "versión mutada del zombie" del avance. Pelea propia en 3
-  fases: se clava la jeringa en las pirámides y ahí se lo pisa.
+  fases: embiste con una motosierra que se le traba en las pilas de patrulleros,
+  y ahí se lo pisa. La arena pasa a ser la 9 de Julio, con el mural de Evita.
 - **Las 7 pruebas del brote** con texto definitivo (en el avance: "~2–3 por
   nivel, placeholder"). Se leen al agarrarlas y se releen en la mochila.
 - **Enemigos:** de 8 a 13 tipos de zombie (el personal del laboratorio,

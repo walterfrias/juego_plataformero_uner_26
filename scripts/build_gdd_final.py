@@ -66,7 +66,8 @@ PALETAS = {
     "jefe": ("Paciente Zero", [
         ((34, 32, 40), "Pelo"), ((66, 64, 78), "Brillo del pelo"), ((190, 198, 202), "Guardapolvo"),
         ((116, 172, 223), "Camiseta celeste"), ((232, 236, 240), "Camiseta blanca"),
-        ((90, 200, 100), "Líquido de la jeringa"), ((220, 40, 40), "Contorno de aviso")]),
+        ((230, 124, 40), "Motosierra"), ((176, 182, 192), "Espada de la motosierra"),
+        ((220, 40, 40), "Contorno de aviso")]),
     "antidoto": ("Antídoto", [
         ((26, 22, 34), "Contorno"), ((52, 140, 92), "Líquido (sombra)"), ((96, 200, 128), "Líquido"),
         ((168, 240, 176), "Brillo"), ((110, 78, 46), "Corcho (sombra)"), ((150, 108, 66), "Corcho"),
@@ -112,7 +113,9 @@ PROPS = {
         ("Level3/Charco", "Charco electrificado", "−1 vida"), ("Level3/AutoQuemado", "Auto quemado", "decorado"),
         ("Level3/Patrullero", "Patrullero", "con sirena"), ("Level3/Colectivo", "Colectivo", "cruzado en la plaza"),
         ("Level3/TaxiVolcado", "Taxi volcado", "decorado"), ("Level3/BanderaMastil", "Bandera", "8 en el nivel"),
-        ("Level3/EstatuaColumnaIzq", "Pirámide", "el jefe se clava acá"), ("Level3/EstatuaBustoIzq", "Busto con barbijo", "trampolín"),
+        ("Level3/EstatuaColumnaIzq", "Pila de patrulleros", "la barricada; el jefe se traba acá"),
+        ("Level3/EstatuaBustoIzq", "Busto con barbijo", "trampolín"),
+        ("Level3/EdificioEvita", "Torre del mural de Evita", "detrás del Obelisco"),
         ("Level3/ObeliscoGrande", "Obelisco", "centro de la arena"), ("Level3/Barricada", "Barricada", "cierra la arena")]),
 }
 
@@ -136,7 +139,7 @@ CAPTURAS = {
                   ("l2_subsuelo", "Nivel 2: el corredor del subsuelo (ruta opcional)."),
                   ("l3_corrientes", "Nivel 3: postes y cables sobre el charco electrificado.")],
     "jefe": [("jefe", "Paciente Zero apunta: contorno rojo, está por embestir."),
-             ("jefe_clavado", "Clavado en la pirámide, con estrellitas: la ventana para pisarlo.")],
+             ("jefe_clavado", "Trabado contra la pila de patrulleros, con estrellitas: la ventana para pisarlo.")],
 }
 
 ZOMBIES = [("Vecina", "f"), ("Obrero rengo", "m"), ("Arrastrada", "d"), ("Adolescente", "n"),

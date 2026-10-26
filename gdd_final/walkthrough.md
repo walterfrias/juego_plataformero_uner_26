@@ -119,14 +119,15 @@ los desafíos son **peligros de la calle**. En este nivel no hay antídotos.
 ### La pelea con Paciente Zero
 
 El jefe es **el científico que empezó todo**: guardapolvo abierto con la
-camiseta de Argentina, anteojos y una jeringa con el virus. La arena tiene el
-Obelisco al centro, dos **pirámides** a los costados y dos **bustos de
-próceres con barbijo** que sirven de trampolín.
+camiseta de Argentina, anteojos y una **motosierra**. La arena es la 9 de
+Julio: el Obelisco al centro y, detrás, la torre con el mural de Evita; a los
+costados, dos **pilas de patrulleros** destruidos que humean, y dos **bustos
+de próceres con barbijo** que sirven de trampolín.
 
 1. **Camina** hacia Lio.
 2. **Apunta** (aviso de 1 s: se agacha, contorno rojo, chispazo).
 3. **Embiste** en línea recta.
-4. Si llega a una pirámide, **se clava la jeringa** y queda de rodillas con
+4. Si llega a una pila de patrulleros, **se le traba la motosierra** y queda de rodillas con
    estrellitas: **es la única ventana para pisarlo**. Clavado no lastima de
    costado.
 

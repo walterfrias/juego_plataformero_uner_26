@@ -44,7 +44,7 @@ mecánica nueva es una variación de "cuándo y dónde saltar".
 | ![](obj:Level3/Charco) | **Charco electrificado** (L3) | Pisarlo es como caer a un pozo: −1 vida y al checkpoint. |
 | ![](obj:Level3/Vapor) | **Vapor del subte** (L3) | Ciclo aviso → sopla → nada; eleva a Lio a las marquesinas. |
 | ![](obj:Level3/ZombiePol) | **Policía que dispara** (L3) | Aviso de medio segundo y un tiro al pecho: se esquiva con un salto planeado. |
-| ![](obj:Level3/PacienteZero) | **El jefe** (L3) | Embiste y se clava la jeringa en una pirámide: esa es la única ventana para pisarlo. |
+| ![](obj:Level3/PacienteZero) | **El jefe** (L3) | Embiste con la motosierra y se le traba en una pila de patrulleros: esa es la única ventana para pisarlo. |
 
 <!-- capturas:mecanicas -->
 

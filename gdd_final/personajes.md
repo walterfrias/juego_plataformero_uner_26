@@ -144,11 +144,11 @@ más, dibujado con las mismas piezas que el médico y el investigador, pero
 - mata de pelo negro, anteojos y ojos rojos;
 - **guardapolvo abierto con la camiseta de Argentina**, como Lio, del otro
   lado;
-- una jeringa con el líquido verde del laboratorio.
+- una **motosierra** prendida.
 
 **Animaciones:**
-- Walk (6 cuadros, jeringa al frente);
-- Carga (3: se agacha y levanta la jeringa);
+- Walk (6 cuadros, la motosierra al frente con la cadena girando);
+- Carga (3: se agacha y levanta la motosierra);
 - Expuesto (4: de rodillas, con estrellitas = "pisalo").
 
 <!-- paleta:jefe -->
@@ -160,7 +160,7 @@ más, dibujado con las mismas piezas que el médico y el investigador, pero
 | Camina | Va hacia Lio | 35 px/s | 45 px/s | 55 px/s |
 | Apunta | Aviso: se agacha, contorno rojo, chispazo | 1,0 s | 0,85 s | 0,7 s |
 | Embiste | Carga en línea recta | 170 px/s | 205 px/s | 240 px/s, **dos veces**: la primera hacia el otro lado, rebota, y la segunda se clava del lado de Lio |
-| Clavado | Se clava la jeringa en una pirámide: **única ventana para pisarlo**; de costado no lastima | 3,0 s | 2,6 s | 2,2 s |
+| Trabado | La motosierra se le traba en una pila de patrulleros: **única ventana para pisarlo**; de costado no lastima | 3,0 s | 2,6 s | 2,2 s |
 
 **Cómo cambia cada fase:**
 - **Fase 3:** sin zombies, con el cartel "¡PISALO!" mientras está clavado.

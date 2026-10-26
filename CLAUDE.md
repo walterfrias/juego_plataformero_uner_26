@@ -388,7 +388,7 @@ razonamiento de por qué se llegó hasta acá.
   Orden si se regenera L3: `wire_l3_recorrido.py` → `wire_l3_mecanicas.py` → `wire_l3_luces.py` → `wire_l3_caos.py` → `wire_virus_patron.py` →
   `wire_minivirus.py` → `wire_lab_luces.py` → `wire_lab_subsuelo.py` →
   `wire_lab_ambiente.py` → `fix_w_escalera.py` → `wire_jefe.py` → `wire_l3_arena_zombies.py` →
-  `wire_jefe_jeringa.py` (siempre el último: reemplaza la pelea).
+  `wire_jefe_jeringa.py` (reemplaza la pelea) → `wire_l3_arena_9dejulio.py` (arte de la arena).
 - **L3 entre edificios (18/10):** "no en la costanera sino entre edificios".
   `gen_l3_fachadas.py` (fachadas porteñas: francés, departamentos de los 60, PH,
   bar de esquina con vidrieras cálidas; tapiadas, vidrios rotos, cruces de
@@ -513,6 +513,18 @@ razonamiento de por qué se llegó hasta acá.
   TimeDelta (se congela en pausa). Verificado: entran, cruzan, salen; pisotón
   rebota a Lio de y 90 a y 18. Falta playtest (dificultad con el jefe).
 
+- **Arena = la 9 de Julio y jefe con motosierra (25/10, cosmético, pedido del
+  usuario):** `gen_l3_calle.py` (Obelisco a `OB_ESCALA` 0.75: 36x132, "se veía muy
+  cerca") + `gen_l3_evita.py` (torre crema del ex MOP con el mural de Evita, sacado
+  de `evita_mural.jpg` reducido y umbralizado) + `gen_l3_pilas.py` (las pirámides
+  pasan a ser pilas de patrulleros destruidos, mismas superficies y 70 / 122, sirena
+  de 2 cuadros) → `wire_l3_arena_9dejulio.py` (edificio en BG_city z 15 sin parallax:
+  la cámara está trabada en la arena; humo HumoAuto en Decor detrás de Lio).
+  `gen_jefe.py`: la jeringa pasa a ser una **motosierra** (mismo tamaño de imagen:
+  la pelea no cambia; los scripts y CLAUDE.md siguen diciendo "jeringa" en nombres).
+  El contorno de aviso del jefe es ROJO (220;40;40). Verificado con robot: Lio se
+  para en y 70 y 122 en las dos pilas, el jefe se traba (x 89) y el pisotón le baja
+  la vida. GDD y capturas actualizados.
 - **Pintadas en el muro de la costanera (19/10, L1):** `gen_grafitis_n1.py` →
   `wire_grafitis_n1.py` (independiente, idempotente, REVERT=1 las saca).
   Datos y ubicación en `PINTADAS` del generador. Letra de pincel dibujada por

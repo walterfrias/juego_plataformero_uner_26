@@ -19,7 +19,7 @@ Crea (game/assets/City/):
                             era una columna con la Libertad
   estatua_busto_izq/der.png   64x80  pedestal alto (y 96) con el busto de un
                             prócer con barbijo (las plataformas de la arena)
-  obelisco_cerca.png 48x176 el Obelisco de la arena: pedestal con cinta de
+  obelisco_cerca.png 36x132 el Obelisco de la arena (OB_ESCALA 0.75 de 48x176): pedestal con cinta de
                             cuarentena, fuste, punta y ventanita; luna desde la
                             izquierda y reflector cálido desde abajo
 
@@ -84,7 +84,10 @@ def poste():
 
 
 # --- Obelisco de la arena (18/10): reemplaza al sprite de fondo agrandado al doble ---
-OB_W, OB_H = 48, 176          # del piso (fila 175) hasta casi el borde de arriba de la cámara
+# 25/10: al 75 % ("está muy grande, se ve muy cerca"): 36x132, más lejos, y detrás
+# a la derecha se ve la torre del mural de Evita (gen_l3_evita.py).
+OB_ESCALA = 0.75
+OB_W, OB_H = round(48 * OB_ESCALA), round(176 * OB_ESCALA)
 CONC = [(58, 60, 78, 255), (92, 96, 116, 255), (136, 142, 160, 255),
         (178, 184, 198, 255), (214, 218, 226, 255)]
 WARM = (236, 176, 112)        # reflector de abajo (luz cálida de sodio)
@@ -103,18 +106,19 @@ def obelisco():
     (piramidión) y la ventanita de arriba. Luz de luna desde la izquierda y el
     reflector cálido desde el piso, que se apaga hacia arriba. Cinta de
     cuarentena alrededor del pedestal."""
+    k = OB_ESCALA                                       # las medidas de abajo son las del Obelisco de 48x176
     img = Image.new("RGBA", (OB_W, OB_H), T)
     px = img.load()
     cx = OB_W / 2
-    base_h, tip_h = 16, 12
+    base_h, tip_h = round(16 * k), round(12 * k)
     for y in range(OB_H):
         if y >= OB_H - base_h:                          # pedestal (2 escalones)
-            half = 22 if y >= OB_H - 7 else 19
-        elif y >= tip_h:                                # fuste: de 26 a 18 px de ancho
+            half = (22 if y >= OB_H - round(7 * k) else 19) * k
+        elif y >= tip_h:                                # fuste: se afina hacia arriba
             t = (y - tip_h) / (OB_H - base_h - tip_h)
-            half = 9 + 4 * t
+            half = (9 + 4 * t) * k
         else:                                           # piramidión
-            half = 9 * (y / tip_h)
+            half = 9 * k * (y / tip_h)
         for x in range(OB_W):
             dx = (x + 0.5 - cx) / max(half, 0.5)
             if abs(dx) > 1:
@@ -124,24 +128,26 @@ def obelisco():
                 light += 0.12 if dx < 0 else -0.1       # caras de la punta bien marcadas
             c = _shade(light, x, y)
             # reflector: entibia la parte de abajo (se apaga hacia arriba)
-            warm = max(0.0, 1 - (OB_H - y) / 110) * 0.45
+            warm = max(0.0, 1 - (OB_H - y) / (110 * k)) * 0.45
             if warm > 0 and BAYER[y % 4][x % 4] / 16 < warm * 1.6:
                 c = tuple(int(a * (1 - warm) + b * warm) for a, b in zip(c[:3], WARM)) + (255,)
             px[x, y] = c
     d = ImageDraw.Draw(img)
     # juntas de los paneles del fuste: pocas y cortas (si cruzan todo el ancho y
     # coinciden con el afinamiento, el fuste parece una torre de pisos)
-    for y in range(tip_h + 30, OB_H - base_h - 10, 34):
-        d.line([(cx - 4, y), (cx + 2, y)], fill=CONC[2])
+    for y in range(tip_h + round(30 * k), OB_H - base_h - round(10 * k), round(34 * k)):
+        d.line([(cx - 3, y), (cx + 1, y)], fill=CONC[2])
     # ventanita cerca de la punta
-    d.rectangle([cx - 1, tip_h + 7, cx, tip_h + 10], fill=CONC[0])
-    d.point((cx - 1, tip_h + 7), fill=(255, 220, 150, 255))          # alguien dejó la luz prendida
+    vy = tip_h + round(7 * k)
+    d.rectangle([cx - 1, vy, cx, vy + 2], fill=CONC[0])
+    d.point((cx - 1, vy), fill=(255, 220, 150, 255))          # alguien dejó la luz prendida
     # canto del pedestal y cinta de cuarentena
-    d.line([(cx - 19, OB_H - base_h), (cx + 18, OB_H - base_h)], fill=CONC[4])
-    for x in range(int(cx - 22), int(cx + 22)):
-        for y in (OB_H - 11, OB_H - 10):
+    d.line([(cx - 19 * k, OB_H - base_h), (cx + 18 * k, OB_H - base_h)], fill=CONC[4])
+    ty = OB_H - round(11 * k)
+    for x in range(int(cx - 22 * k), int(cx + 22 * k)):
+        for y in (ty, ty + 1):
             px[x, y] = TAPE_Y if ((x + y) // 3) % 2 == 0 else TAPE_K
-    d.line([(cx + 21, OB_H - 10), (cx + 23, OB_H - 6)], fill=TAPE_Y)      # punta suelta
+    d.line([(cx + 22 * k - 1, ty + 1), (cx + 22 * k + 1, ty + 4)], fill=TAPE_Y)      # punta suelta
     # contorno oscuro de 1 px (como el resto de los objetos del juego)
     src = img.copy()
     sp = src.load()
