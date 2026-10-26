@@ -41,7 +41,7 @@ OpenGameArt, rehash de *Classic Hero* de GrafxKid): recortado, reescalado y
 
 **Animaciones:**
 - Idle;
-- Run (4 cuadros);
+- Run;
 - Jump / Fall (el pisotón usa el cuadro de caída);
 - Hit;
 - Death.
