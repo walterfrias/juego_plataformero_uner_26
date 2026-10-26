@@ -83,14 +83,16 @@ scripts verifican que esté cerrado y se cortan si lo encuentran abierto.
 | Desarrollador | El disparo del policía desde la cintura "no se veía natural"; las ráfagas dejaban una ventana de salto demasiado chica | Un solo tiro desde la mano, a la altura del pecho, con aviso de 0,5 s. |
 | Desarrollador | Los pozos en la calle del Nivel 3 "no tenían sentido en una calle del centro" | Peligros de calle: toldo, charco electrificado, vapor del subte. |
 
-## 4. Playtest final y datos que faltan
+## 4. Duración y planilla de playtest
 
-**[falta dato]** El playtest de punta a punta para medir la duración
-(punto 4 de la consigna). El juego ya lo facilita:
+**Duración medida:** la primera partida completa (Tutorial + 3 niveles)
+lleva **entre 15 y 30 minutos**, según la habilidad del jugador (punto 4 de
+la consigna). El juego ayuda a medirlo:
 - el **reloj** de cada nivel queda en el desglose de la victoria;
 - el **TOP 5** registra el puntaje de cada partida.
 
-**Planilla propuesta** (una por persona):
+**Planilla para los próximos playtests** (una por persona, para tener el
+detalle por nivel):
 
 | Dato | L1 | L2 | L3 |
 |---|---|---|---|

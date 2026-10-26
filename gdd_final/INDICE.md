@@ -82,7 +82,7 @@ Estado de cada apartado:
 |---|---|---|
 | Mundo del juego | Estructura lineal: Tutorial + 3 niveles, de izquierda a derecha, con checkpoints y rutas opcionales (antídotos, ductos, notas) | [nuevo] |
 | Física del juego | Behavior Platformer de GDevelop: velocidad 95 px/s, salto 350, gravedad 900, caída máx. 600 (80 planeando). **Medido: salto de ~28 px parado y 40–45 con carrera**; de ahí el ancho de los huecos. Piso encerado de L2 | [nuevo] |
-| Personajes no jugadores | **Ficha de Lio** (punto 9.b de la consigna, con la ficha de la 1.ª entrega como anexo). Lista de los 13 zombies con su comportamiento y velocidad, dónde aparecen y la multitud de fondo de L3. Virus voladores (patrón fijo) y minivirus. **Paciente Zero:** el científico, la pelea de la jeringa en 3 fases y la nota 7 | [avance, muy ampliado] |
+| Personajes no jugadores | **Ficha de Lio** (punto 9.b de la consigna; actualiza la ficha de la 1.ª entrega). Lista de los 13 zombies con su comportamiento y velocidad, dónde aparecen y la multitud de fondo de L3. Virus voladores (patrón fijo) y minivirus. **Paciente Zero:** el científico, la pelea de la jeringa en 3 fases y la nota 7 | [avance, muy ampliado] |
 | Equipo y efectos | Mochila (planeo + inventario), antídotos, pruebas del brote | [avance] |
 
 ## 7. Animaciones (técnico / artístico)
@@ -128,7 +128,8 @@ Estado de cada apartado:
 - **Créditos** [nuevo]. Forest Boy (CC0, OpenGameArt) y el resto propio.
   Mención del uso de IA en el código y no en el arte (ya estaba en
   "Herramientas").
-- **Anexo:** la ficha de personaje de la primera entrega.
+- ~~Anexo con la ficha de la primera entrega~~: descartado el 25/10 (repetía
+  el capítulo Personajes); las paletas del antídoto y la mochila pasaron ahí.
 
 ---
 

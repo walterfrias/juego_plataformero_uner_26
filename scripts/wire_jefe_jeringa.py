@@ -11,7 +11,7 @@ el busto de al lado (o bajando de la pirámide).
 
 Estados (scene var BossState; las animaciones son las de wire_jefe.py):
   0 CAMINA   hacia Lio (Walk). A los T_CAMINA s → 1.
-  1 APUNTA   aviso: se agacha y levanta la jeringa (Carga) + contorno verde +
+  1 APUNTA   aviso: se agacha y levanta la jeringa (Carga) + contorno rojo +
              chispazo grave. Queda mirando para donde va a embestir.
   2 EMBISTE  en línea recta (Walk). Si llega a la pirámide de ese lado habiendo
              recorrido >= ARRANQUE px → 3. Si no (salió pegado a la pirámide) frena

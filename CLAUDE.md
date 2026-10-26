@@ -529,7 +529,7 @@ razonamiento de por qué se llegó hasta acá.
   `wire_jefe_jeringa.py` (el último de la cadena de L3). La pelea vieja se
   descartó entera (usuario: "muy malas"); sus 11 eventos quedan en
   `scripts/jefe_pelea_vieja.json` y `REVERT=1` los restaura. Estados: 0 camina →
-  1 apunta (Carga + contorno verde + chispazo) → 2 embiste → 3 clavado en una
+  1 apunta (Carga + contorno rojo + chispazo) → 2 embiste → 3 clavado en una
   pirámide (Expuesto), única ventana para pisarlo; de costado no lastima mientras
   está clavado. Si sale a menos de 48 px de la pirámide, frena (no hay ventana
   gratis). Fases por vida: 3 lento y sin zombies; 2 más rápido, zombies, escupe
@@ -610,7 +610,8 @@ razonamiento de por qué se llegó hasta acá.
    Detalle y opciones en `reseach.md` (19/10).
 8. ~~Bug del Tutorial~~ (planeo que dejaba a Lio cayendo lento): resuelto el
    18/10 con `fix_tutorial_planeo.py`.
-9. ~30 min de juego total y video pitch (hasta 5 min). Entrega final:
+9. Duración medida (25/10, usuario): 15–30 min la primera partida completa,
+   según la habilidad. Falta el video pitch (hasta 5 min). Entrega final:
    **03/11/2026** (o hasta el 10/11 si no llega; antes figuraba el 31/10).
 10. **Desarrollo cerrado el 25/10** (después del reloj y el TOP 5). Queda el
    GDD final: se arma sobre el avance entregado a mitad de desarrollo

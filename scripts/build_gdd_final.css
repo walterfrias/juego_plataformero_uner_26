@@ -1,0 +1,135 @@
+/* GDD final — diseño del avance (avance_devolucion/avance_gdd.html), con el
+   contenido que fluye entre páginas. %PIE% lo reemplaza build_gdd_final.py. */
+:root{
+  --cream:#f4ecdc; --cream2:#faf6ec; --ink:#221e28; --ink-soft:#2b2620;
+  --orange:#c1702e; --orange2:#b8672c; --dark:#16131e; --dark2:#221e2b;
+  --dark-border:#3a3446; --muted:#8a8375; --line:#d8cdb8; --th:#efe4cd;
+}
+*{box-sizing:border-box;}
+html{background:var(--cream); -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+body{margin:0; font-family:'Nunito',sans-serif; color:var(--ink-soft); font-size:10.5px;}
+.pix{font-family:'Press Start 2P',monospace;}
+img{image-rendering:pixelated;}
+
+@page{
+  size:A4; margin:15mm 15mm 18mm;
+  @bottom-left{content:"%PIE%"; font-family:'Nunito',sans-serif; font-size:8.5px; color:#8a8375;
+    border-top:1px solid #d8cdb8; vertical-align:top; padding-top:5px;}
+  @bottom-right{content:"Página " counter(page); font-family:'Nunito',sans-serif; font-size:8.5px; color:#8a8375;
+    border-top:1px solid #d8cdb8; vertical-align:top; padding-top:5px;}
+}
+@page portada{ margin:0; @bottom-left{content:none; border:none;} @bottom-right{content:none; border:none;} }
+
+/* ---------- portada ---------- */
+.portada{page:portada; width:210mm; height:297mm; background:var(--dark); color:#e9e4d8;
+  padding:20mm 15mm; position:relative; overflow:hidden;}
+.portada::before,.portada::after{content:""; position:absolute; left:0; right:0; height:9px; background:var(--orange);}
+.portada::before{top:0;} .portada::after{bottom:0;}
+.portada .uni{font-weight:800; letter-spacing:.5px; line-height:1.7; font-size:13px;}
+.portada .uni span{font-size:11px; font-weight:700;}
+.portada .uni span.t{font-size:10px; color:#9c93b0; font-weight:600;}
+.portada .catedra{margin-top:26px; color:#cfc8dd; font-size:11px;}
+.portada .docentes{color:#9c93b0; font-size:9.5px; margin-top:8px;}
+.portada .titulo{font-size:34px; color:var(--orange); margin:46px 0 8px;}
+.portada .pill{background:var(--cream); color:var(--ink);}
+.portada .pill.oscura{background:#2c2636; color:#f4ecdc; border-color:#f4ecdc;}
+.coverimgrow{display:flex; align-items:flex-end; gap:14px; margin:26px 0; background:#1c1826;
+  border:2px solid var(--dark-border); border-radius:14px; padding:16px 16px 10px; justify-content:center;}
+.coverimgrow img{height:48px; width:auto;}
+.coverimgrow .cell:nth-child(7) img{height:72px;}
+.coverimgrow .cell:nth-child(n+8) img{height:30px;}
+.coverimgrow .cell{display:flex; flex-direction:column; align-items:center;}
+.coverimgrow .lbl{font-size:7px; color:#9c93b0; margin-top:4px; min-height:9px;}
+.portada .bajada{color:#cfc8dd; font-size:11px; max-width:150mm; line-height:1.6;}
+.portada .integrante{position:absolute; bottom:18mm; left:15mm;}
+.portada .integrante p{margin:0; font-size:10px;}
+.portada .integrante p.m{color:#9c93b0; margin-top:6px; font-size:9.5px; font-family:'Nunito',sans-serif;}
+.portada .anio{position:absolute; bottom:18mm; right:15mm; color:var(--orange); font-size:20px;}
+
+/* ---------- capítulos ---------- */
+.capitulo{break-before:page;}
+.pill{display:inline-block; background:var(--cream2); border:2px solid var(--ink);
+  border-radius:999px; padding:6px 16px; font-size:8.5px; letter-spacing:.5px;}
+h1.pix{font-size:17px; color:var(--orange); margin:12px 0 8px; line-height:1.4;}
+h2{font-family:'Press Start 2P',monospace; font-size:10.5px; color:var(--orange); margin:18px 0 8px;
+  line-height:1.5; break-after:avoid;}
+h3{font-size:12px; font-weight:800; color:var(--ink); margin:14px 0 6px; break-after:avoid;}
+h4{font-size:11px; font-weight:800; margin:10px 0 4px; break-after:avoid;}
+p{line-height:1.55; margin:6px 0;}
+code{font-size:9.5px; background:var(--th); padding:0 3px; border-radius:3px;}
+blockquote{margin:6px 0 10px; padding:6px 12px; border-left:4px solid var(--orange);
+  background:var(--cream2); color:var(--muted); font-size:9.5px; line-height:1.5;}
+ul,ol{margin:5px 0; padding-left:18px;} li{margin:2px 0; line-height:1.5;}
+
+table{width:100%; border-collapse:collapse; font-size:9.5px; margin:8px 0; background:var(--cream2);}
+th,td{border:1px solid var(--line); padding:5px 7px; text-align:left; vertical-align:top; line-height:1.45;}
+th{background:var(--th); font-size:9px; font-weight:800;}
+tr{break-inside:avoid;} thead{display:table-header-group;}
+td img.ico{max-height:36px; max-width:44px; display:block; margin:auto;}
+td:has(img.ico){width:52px; background:#efe4cd; vertical-align:middle;}
+
+pre.nota{display:inline-block; vertical-align:top; width:calc(50% - 6px); margin:4px 2px;
+  background:#f7eed6; border:1px solid #c9b88f; border-radius:4px; padding:10px 12px;
+  font-family:'Press Start 2P',monospace; font-size:6.4px; line-height:1.9; color:#3a2f22;
+  white-space:pre; break-inside:avoid; box-shadow:2px 2px 0 #d8cdb8;}
+
+pre.diagrama{background:var(--cream2); border:1px solid var(--line); border-radius:6px; padding:10px 12px;
+  font-family:'DejaVu Sans Mono',monospace; font-size:8.5px; line-height:1.5; white-space:pre; break-inside:avoid;}
+.portada img.franja{width:100%; display:block; border-radius:10px; border:2px solid var(--dark-border); margin:0 0 16px;}
+
+.notas{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.notas figure{margin:0; break-inside:avoid;}
+.notas img{width:100%; display:block; box-shadow:3px 3px 0 #d8cdb8;}
+
+/* ---------- paletas, props y capturas ---------- */
+.paleta{border:2px solid var(--ink); border-radius:12px; background:var(--cream2); padding:10px 14px; margin:10px 0;
+  break-inside:avoid;}
+.paleta h4{font-family:'Press Start 2P',monospace; font-size:7.5px; color:var(--orange); margin:0 0 8px;}
+.palette{display:flex; flex-wrap:wrap; gap:10px;}
+.palette .item{width:70px; font-size:7.5px; line-height:1.35; text-align:center; color:var(--ink-soft);}
+.palette .item b{font-family:'DejaVu Sans Mono',monospace; font-size:7.5px;}
+.swatch{width:70px; height:42px; border-radius:7px; border:2px solid var(--ink); margin-bottom:3px;}
+.propgrid{display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 12px;}
+.prop{border:2px solid var(--ink); border-radius:10px; background:var(--cream2); padding:6px; width:117px;
+  text-align:center; break-inside:avoid;}
+.prop .imgwrap{height:70px; display:flex; align-items:flex-end; justify-content:center; background:#1c1826;
+  border-radius:6px; padding:4px;}
+.prop .imgwrap img{max-height:62px; max-width:105px; height:auto; object-fit:contain;}
+.prop .name{font-size:8.5px; margin-top:4px; font-weight:800;}
+.prop .dims{font-size:7.5px; color:var(--muted); line-height:1.3;}
+.capturas{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:8px 0 12px;}
+.capturas.uno{grid-template-columns:1fr; width:75%;}
+.capturas figure{margin:0; break-inside:avoid;}
+.capturas img{width:100%; display:block; border-radius:5px; border:2px solid var(--ink);}
+.capturas figcaption{font-size:8.5px; color:var(--muted); margin-top:3px; line-height:1.35;}
+
+/* ---------- imágenes ---------- */
+.mapas img.mapa{width:100%; display:block; margin:0 0 6px; break-inside:avoid; border-radius:4px;}
+
+.gallery{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;}
+.card{border:2px solid var(--ink); border-radius:10px; padding:8px 10px; background:var(--cream2); break-inside:avoid;}
+.card.ancho{grid-column:span 1;}
+.card h4{font-family:'Press Start 2P',monospace; font-size:7.5px; color:var(--orange); margin:0 0 6px;}
+.card .imgwrap{background:var(--th); border-radius:6px; padding:6px; display:flex; gap:8px;
+  align-items:flex-end; justify-content:center; height:62px;}
+.card .imgwrap img{height:44px; width:auto;}
+.card .imgwrap img.sheet{height:auto; width:100%; max-height:48px; object-fit:contain;}
+.card .meta{font-size:8px; color:var(--muted); margin-top:4px;}
+
+/* ---------- índice ---------- */
+ol.toc{list-style:none; padding:0; margin-top:14px; counter-reset:c;}
+ol.toc li{counter-increment:c; display:flex; gap:12px; align-items:baseline; padding:7px 0;
+  border-bottom:1px dashed var(--line); font-size:12px; font-weight:700;}
+ol.toc li::before{content:counter(c, decimal-leading-zero); font-family:'Press Start 2P',monospace;
+  font-size:9px; color:var(--orange); width:26px;}
+ol.toc .cat{font-size:8.5px; font-weight:600; color:var(--muted); width:92px; flex:none;}
+ol.toc a{color:inherit; text-decoration:none;}
+
+/* ---------- en el navegador: cada capítulo como una hoja A4 centrada ---------- */
+@media screen{
+  html{background:#3a3446;}
+  body{padding:24px 0;}
+  .portada,.capitulo{width:210mm; margin:0 auto 24px; box-shadow:0 4px 18px rgba(0,0,0,.45);}
+  .portada{min-height:297mm; height:auto;}
+  .capitulo{background:var(--cream); padding:15mm 15mm 18mm;}
+}

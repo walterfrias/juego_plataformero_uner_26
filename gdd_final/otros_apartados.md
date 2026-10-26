@@ -30,7 +30,7 @@ enfrentar al científico que lo soltó. Lo que lo distingue:
 | | |
 |---|---|
 | **Público** | 12+ (equivalente a PEGI 12): violencia fantástica sin sangre. Jugador casual, curioso más que competitivo, con afinidad por el pixel-art y las plataformas clásicas, de adolescentes a adultos de 40+. |
-| **Atractivo** | Partida corta (~30 min), tutorial sin riesgo, dos mecánicas que se entienden en segundos (pisotón y correr sobre la horda) y la identidad local, que es poco común en el género. |
+| **Atractivo** | Partida corta (15–30 min la primera vez), tutorial sin riesgo, dos mecánicas que se entienden en segundos (pisotón y correr sobre la horda) y la identidad local, que es poco común en el género. |
 | **Referentes** | *Super Mario Bros.* (el pisotón como único ataque), *Zombies Ate My Neighbors* (el tono: zombies con humor, sin terror), *Donkey Kong Country* (montarse sobre el escenario en movimiento). |
 | **Oportunidad** | Juego web gratuito, sin instalación: se juega desde un link de itch.io, lo que facilita compartirlo y probarlo con gente. |
 
@@ -139,10 +139,17 @@ partículas (el gas del contagio, el humo de la horda, la ráfaga al morir un zo
   Testing).
 - **Datos guardados en el navegador:** el TOP 5, las últimas iniciales y el
   récord.
-- **Uso de IA:** el código (scripts de generación de arte y sonido, de
-  edición del proyecto y de prueba) se escribió con asistencia de IA
-  (Claude Code). El arte y el sonido **no** salen de generadores de IA:
-  los producen esos scripts.
+- **Uso de IA** (permitido por la cátedra):
+  - **Qué hizo:** asistió en escribir el código: los scripts que generan el
+    arte y el sonido, los que editan el proyecto y los de prueba (Claude
+    Code, con el servidor MCP para GDevelop).
+  - **Qué no hizo:** el arte y el sonido **no** salen de generadores de IA:
+    los dibujan y sintetizan esos scripts. La lógica del juego son eventos
+    de GDevelop.
+  - **Las decisiones fueron del autor:** el diseño, los niveles, los
+    personajes, la historia y los textos, qué entra y qué se descarta, y el
+    playtest. Cada cambio partió de un pedido o de una prueba del autor, y
+    quedó registrado en la bitácora del proyecto.
 
 ## 7. Diseño de sonido
 

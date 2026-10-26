@@ -15,8 +15,8 @@ Lee game/game.json (no lo modifica) y arma, por nivel:
 El nivel se corta en tiras parejas de hasta TIRA px, apiladas, para que entre
 en una página ("cortes" fuerza un corte en una x del juego).
 
-Salida: gdd_final/mapas/<Nivel>.png (+ <Nivel>_completo.png, una sola tira a
-escala 1, de referencia).
+Salida: gdd_final/mapas/<Nivel>.png, cada tira en <Nivel>_<n>.png (para el
+PDF) y <Nivel>_completo.png (una sola tira a escala 1, de referencia).
 Uso:  python3 scripts/gen_mapas_gdd.py [Level1 Level2 Level3]
 """
 import json
@@ -296,6 +296,8 @@ def generar(nivel, g, res):
         final.paste(t, (0, yy))
         yy += t.size[1] + 12
     final.save(f"{OUT}/{nivel}.png")
+    for k, t in enumerate(tiras, start=1):   # una por una, para el PDF (no se parten entre páginas)
+        t.save(f"{OUT}/{nivel}_{k}.png")
     mapa.save(f"{OUT}/{nivel}_completo.png")
     print(f"{nivel}: {len(tiras)} tiras, {len(marcas)} marcas, x {x0}..{x1}, y {y0}..{y1}")
 

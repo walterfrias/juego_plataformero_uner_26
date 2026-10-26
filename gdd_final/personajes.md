@@ -2,8 +2,8 @@
 
 > Apartados "Movimiento e interacción", "Salud y poder" y "Personajes no
 > jugadores" de la plantilla del DDJ (Thompson, págs. 106–107). La ficha de
-> Lio cubre el punto 9.b de la consigna; la ficha completa de la primera
-> entrega va como anexo.
+> Lio cubre el punto 9.b de la consigna (actualiza la ficha de la primera
+> entrega).
 >
 > Referencia de velocidades: Lio corre a 95 px/s. Todos los personajes miden
 > 32×34 px salvo el jefe (48×51).
@@ -28,16 +28,7 @@ OpenGameArt, rehash de *Classic Hero* de GrafxKid): recortado, reescalado y
 **recoloreado a la camiseta argentina** (en el original era verde). Es el
 único personaje que no es 100 % propio.
 
-**Paleta:**
-
-| Color | Uso |
-|---|---|
-| #181822 | contorno |
-| #E2B28C | piel |
-| #75AAD8 | camiseta |
-| #4A78A8 | sombra de la camiseta |
-| #E8E8E2 | short |
-| #2C282E | botines |
+<!-- paleta:lio -->
 
 **Animaciones:**
 - Idle;
@@ -83,6 +74,8 @@ Lo que cambia entre ellos es el **aspecto, la manera de caminar y la
 velocidad**, para que cada uno se reconozca de lejos sin sumar reglas
 nuevas. Todos comparten la paleta "familia" (piel verde, ojos rojos) y
 tienen 8 cuadros de caminata (la vecina, 10).
+
+<!-- paleta:zombies -->
 
 | Zombie | Aspecto y andar | Velocidad (px/s) | Dónde aparece |
 |---|---|---|---|
@@ -139,6 +132,8 @@ límite en L3.
 Los dos **brillan más cuanto más cerca está Lio** (ámbar en la calle, verde
 en el laboratorio). No se pueden eliminar: se esquivan.
 
+<!-- paleta:virus -->
+
 ## Paciente Zero — el jefe final
 
 **Quién es.** El científico que trabajaba en el laboratorio del Nivel 2 y
@@ -156,12 +151,14 @@ más, dibujado con las mismas piezas que el médico y el investigador, pero
 - Carga (3: se agacha y levanta la jeringa);
 - Expuesto (4: de rodillas, con estrellitas = "pisalo").
 
+<!-- paleta:jefe -->
+
 **Patrón de combate** (pensado para un juego donde solo se ataca saltando):
 
 | Estado | Qué hace | Fase 3 (3 vidas) | Fase 2 | Fase 1 |
 |---|---|---|---|---|
 | Camina | Va hacia Lio | 35 px/s | 45 px/s | 55 px/s |
-| Apunta | Aviso: se agacha, contorno verde, chispazo | 1,0 s | 0,85 s | 0,7 s |
+| Apunta | Aviso: se agacha, contorno rojo, chispazo | 1,0 s | 0,85 s | 0,7 s |
 | Embiste | Carga en línea recta | 170 px/s | 205 px/s | 240 px/s, **dos veces**: la primera hacia el otro lado, rebota, y la segunda se clava del lado de Lio |
 | Clavado | Se clava la jeringa en una pirámide: **única ventana para pisarlo**; de costado no lastima | 3,0 s | 2,6 s | 2,2 s |
 
@@ -171,6 +168,8 @@ más, dibujado con las mismas piezas que el médico y el investigador, pero
 - **Fase 1:** se agranda (×1,15) y hace la doble embestida.
 - **En las tres:** cae un coronavirus del cielo cada 4 s (como mucho 3 a la
   vez), salvo mientras el jefe está clavado.
+
+<!-- capturas:jefe -->
 
 **Al morir** suelta la séptima prueba, "Última página". La victoria llega al
 leerla.
@@ -183,9 +182,17 @@ pisarlo. La pelea nueva hace que el jefe **se clave solo en un lugar
 visible**. Los bustos se corrieron 22 px para que nunca quede debajo de
 una plataforma.
 
-## Arte de los personajes (para la galería del PDF)
+## Galería
 
-Todas las tiras de caminata están en `game/assets/Zombie_*/zombie_*_walk_sheet.png`
-(256×34, 8 cuadros). El jefe está en `game/assets/Jefe/`, y Lio y la
-mochila, en la ficha de la primera entrega. Todo el arte, salvo la base de
-Lio, se generó por código (Python + Pillow) y no con IA de imagen.
+Todos los personajes, salvo la base de Lio, se dibujaron por código (Python +
+Pillow), sin IA de imagen. Tiras de caminata de 8 cuadros (la vecina, 10):
+
+<!-- galeria:personajes -->
+
+### Antídoto y mochila
+
+Los dos objetos de la primera entrega, con sus paletas:
+
+<!-- paleta:antidoto -->
+
+<!-- paleta:mochila -->

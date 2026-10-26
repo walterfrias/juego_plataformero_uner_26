@@ -61,10 +61,12 @@ cámara).
 | En la arena (L3) | Cartel **"¡PISALO!"** titilando mientras el jefe está clavado (primera fase). |
 | Sobre Lio | La **mochila en la espalda**, que se da vuelta con él. |
 
+<!-- capturas:hud -->
+
 Algunas señales van en el propio mundo, no en el HUD:
 - **Contorno rojo y gas:** zombie contagiado (hay que pisarlo dos veces).
 - **Contorno que parpadea:** está por escupir un virus.
-- **Contorno verde y chispazo:** el jefe está por embestir.
+- **Contorno rojo y chispazo en el jefe:** está por embestir.
 - **Luces verdes / rojas:** pistones (firme / está por bajar).
 - **Bordes de plataforma** que se iluminan cuando Lio se acerca.
 
@@ -77,6 +79,9 @@ MENÚ PRINCIPAL ──Jugar──► TUTORIAL ──► NIVEL 1 ──► NIVEL 
    │                           PAUSA ─ I ─► MOCHILA (pruebas)
    └─ al volver con un puntaje del TOP 5: INGRESÁ TUS INICIALES
 ```
+
+<!-- capturas:menus -->
+
 
 - **Menú principal.** Fondo animado (ciudad en movimiento, zombies que
   caminan, Lio, el Obelisco y la Luna). Panel con **Jugar / Opciones /

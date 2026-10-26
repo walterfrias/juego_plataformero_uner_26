@@ -23,4 +23,4 @@ Exported/
 *.autosave
 
 # Capturas de pantalla de debug/seguimiento
-capturas/
+/capturas/

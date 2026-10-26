@@ -2,12 +2,12 @@
 
 > Apartado "Walkthrough del juego" de la plantilla del DDJ (Thompson, pág.
 > 107): niveles paso a paso, mapas, ubicación de los PNJ y encuentros.
-> Los rótulos (C1, A1, N1, Z, V…) y las x son los de los mapas
-> `mapas/Level1.png`, `Level2.png` y `Level3.png`. La x es la posición en
-> píxeles del juego (la pantalla mide 480×270).
+> Los rótulos (C1, A1, N1, Z, V…) y las x son los de los mapas que
+> acompañan cada nivel. La x es la posición en píxeles del juego (la
+> pantalla mide 480×270).
 >
-> **[falta dato]** Tiempo por nivel: se completa con el reloj del juego en
-> un playtest de punta a punta.
+> **Duración:** la primera partida completa (Tutorial + 3 niveles) lleva
+> entre **15 y 30 minutos**, según la habilidad del jugador.
 
 Referencias de los mapas:
 
@@ -62,6 +62,8 @@ corriendo encima de la horda**. En el camino aparece la mochila.
 | **5. El cruce del río sobre la horda** (1700–1990) | El hueco grande (x 1730–1966): muro roto, alambre de púas y hierros abajo. No hay puente: se cruza **corriendo encima de la estampida de zombies**, que funciona como piso móvil. Caer = −1 vida y volver a C6. La horda pasa en bucle, así que si se pierde una, viene otra. | — |
 | **6. Final** (1990–2600) | Después de C7, el tramo más cargado: 6 zombies seguidos (entre ellos el corredor) y dos virus que giran en círculos opuestos (V, x 2250 y 2460). Pintada "#Yo apoyo la Ley de Financiamiento Universitario" antes de la **META** (x 2569). | **N3** "Mensajeros" (x 2220), en la zona de virus: explica el contagio. |
 
+<!-- mapa:Level1 -->
+
 **Encuentros clave:** el contagio. Si un virus toca a un zombie, el zombie
 queda con contorno rojo y suelta gas: hay que pisarlo **dos veces** y además
 **escupe un minivirus** que persigue a Lio. En este nivel cada zombie se
@@ -87,6 +89,8 @@ explorar. La mochila ya viene puesta y se planea en todo el nivel.
 | **6–7. Pistones hidráulicos** (2178–2960) | Dos pozos anchos (x 2480, 2 pistones; x 2760, 3 pistones). Cada pistón sube al ras del piso y se hunde: **luces verdes = firme, rojas = está por bajar**. Van en ola: cuando el tuyo se pone rojo, el de adelante acaba de subir en verde. Quedarse quieto = caer. | — |
 | **8. Zona de alarma y salida** (2960–3800) | Balizas rojas y tinte de alarma. Policía, y un **ducto de aire obligatorio** (x 3080) para pasar por encima del gabinete. Después: repartidor, un tubo roto, médico e hincha hasta la **META** (x 3720). | **N6** "Anomalía" en el piso justo después del gabinete (x 3168). **Ducto opcional** (x 3400): sube hasta **A4** y **N5** "El antídoto". |
 
+<!-- mapa:Level2 -->
+
 **Encuentros clave:** el tubo que estalla detrás (el virus persigue, se escapa
 corriendo), los pistones (lectura de la luz) y el piso encerado (frenar a
 tiempo). En este nivel cada zombie se contagia como mucho dos veces.
@@ -110,6 +114,8 @@ los desafíos son **peligros de la calle**. En este nivel no hay antídotos.
 | **5. Llegando al Obelisco** (−380 a 0) | Una **marcha de zombies** avanza hacia Lio. Por arriba, los **respiraderos del subte** soplan vapor en ciclos (aviso → sopla → nada) y suben a Lio a las **marquesinas**, que pasan por encima de la marcha. Alambre de púas de la barricada antes de la arena. |
 | **6. Arena: Paciente Zero** (0 a 480) | Al entrar, la barricada se cierra detrás, la cámara se traba y aparece el cartel del jefe (C7). Ver abajo. |
 
+<!-- mapa:Level3 -->
+
 ### La pelea con Paciente Zero
 
 El jefe es **el científico que empezó todo**: guardapolvo abierto con la
@@ -118,7 +124,7 @@ Obelisco al centro, dos **pirámides** a los costados y dos **bustos de
 próceres con barbijo** que sirven de trampolín.
 
 1. **Camina** hacia Lio.
-2. **Apunta** (aviso de 1 s: se agacha, contorno verde, chispazo).
+2. **Apunta** (aviso de 1 s: se agacha, contorno rojo, chispazo).
 3. **Embiste** en línea recta.
 4. Si llega a una pirámide, **se clava la jeringa** y queda de rodillas con
    estrellitas: **es la única ventana para pisarlo**. Clavado no lastima de
@@ -140,9 +146,12 @@ el desglose final (bonus de **+1000 con las 7 pruebas**). Después, el TOP 5.
 
 ## Resumen del recorrido
 
-| Escena | Checkpoints | Antídotos | Pruebas | Zombies | Tiempo |
-|---|---|---|---|---|---|
-| Tutorial | — | 2 (práctica) | — | 1 de práctica | [falta dato] |
-| Nivel 1 | 7 | 4 | N1, N2, N3 | 15 + la horda | [falta dato] |
-| Nivel 2 | 8 | 4 | N4, N5, N6 | 17 | [falta dato] |
-| Nivel 3 | 7 | — | N7 (la suelta el jefe) | 18 + la multitud + los que entran a la arena | [falta dato] |
+| Escena | Checkpoints | Antídotos | Pruebas | Zombies |
+|---|---|---|---|---|
+| Tutorial | — | 2 (práctica) | — | 1 de práctica |
+| Nivel 1 | 7 | 4 | N1, N2, N3 | 15 + la horda |
+| Nivel 2 | 8 | 4 | N4, N5, N6 | 17 |
+| Nivel 3 | 7 | — | N7 (la suelta el jefe) | 18 + la multitud + los que entran a la arena |
+
+**Duración total:** entre 15 y 30 minutos la primera vez, según la
+habilidad del jugador.
