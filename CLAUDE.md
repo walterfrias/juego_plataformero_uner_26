@@ -525,6 +525,48 @@ razonamiento de por qué se llegó hasta acá.
   El contorno de aviso del jefe es ROJO (220;40;40). Verificado con robot: Lio se
   para en y 70 y 122 en las dos pilas, el jefe se traba (x 89) y el pisotón le baja
   la vida. GDD y capturas actualizados.
+- **Motosierra grande y más cuadros del jefe (28/10, sprint post-GDD):**
+  `gen_jefe.py` → `wire_jefe.py` → `wire_jefe_jeringa.py`. Espada de 12 px con
+  cadena (antes 6); el lienzo tiene `PAD` = 8 px vacíos por lado (simétrico, para
+  el FlipX) → imagen 72x51. Walk 8, Carga 6 (la acelera, humo), **Embiste 4**
+  (nueva, estado 2; antes Walk), Expuesto 8 (motosierra trabada, chispas).
+  Máscaras corridas con `PADX` y topes de la pirámide en 0.375 / 0.625 del ancho:
+  la pelea no cambió (cara del cuerpo en 104 / 376, pisotón en las 3 fases,
+  verificado con robot). La motosierra NO lastima: el golpe es la máscara del cuerpo.
+- **Primer tramo del tendido de L1 más alto (28/10):** `gen_tendido.py` (poste_alto,
+  +56 px, con una segunda cruceta a la altura vieja) → `gen_luz_luna.py` →
+  `fix_n1_tendido_alto.py` (idempotente, REVERT=1; re-correr después de
+  `wire_tendido.py`). Pisando a ZombieD/N con J apretada, Lio caía sobre el cable
+  (y 30) y se salteaba el antídoto de x 890. Ahora el cable está en y −26 y los
+  postes de x 862 / 960 son `PosteAlto` (misma escalera). Verificado con robot: el
+  rebote llega a y −10 y no sube; se trepa el poste, se cruza y se baja al 2.º cable.
+  **2.º tramo (x 962..1181), +18 px** (mismo script): pasaba justo a la altura de la copa
+  del ArbolAlto de x 1050 (y 30); ahora cable en y 12. Poste de x 1165 = `PosteMedio`
+  (`poste_medio.png`, 18x114: arriba el 2.º tramo, cruceta de abajo el 3.º, que no
+  cambia); la cruceta de abajo de los PosteAlto bajó a la altura nueva del 2.º tramo.
+  Verificado: se cruza caminando −26 → 12 → 30.
+- **Antídotos en L3 (28/10):** `wire_l3_antidotos.py` (idempotente; después de
+  `wire_score_hud.py` si se regenera L3). L3 ya tenía el premio por 4/4 pero no había
+  frascos. Copia de L2 el objeto, el evento de agarrar (+250) y el contador "n/4" del
+  HUD. Uno por tramo: arriba del toldo (se agarra rebotando), plaza (patrulla del
+  ZombieM), cable sobre el charco y la 2.ª marquesina (vapor). Verificado con robot: los
+  4 se agarran, HUD 1/4..4/4 y con 4/4 +1 vida.
+- **Invasión de zombies en la pelea final (28/10):** `wire_l3_arena_zombies.py` →
+  `wire_jefe_jeringa.py` (en ese orden). Entran desde el comienzo de la pelea (antes,
+  desde la fase 2) y cada vez más: 1.2 / 0.95 / 0.7 s entre uno y otro, tope 10 / 12 / 14
+  según BossHP; rotan los 13 tipos. Verificado con robot: el primero a los 0.5 s, pasan
+  los 13, hasta 13 a la vez en la última fase. Falta playtest ("si es mucho te diré").
+- **Escombros y tachos rotos en la calle de L3 (28/10):** `gen_l3_escombros.py` →
+  `wire_l3_escombros.py` (independiente, idempotente, REVERT=1; NO re-correr
+  `wire_l3_caos.py`, que borra el HumoAuto de la arena). Decorado sin colisión en tres
+  alturas: vereda (Decor), carril de atrás (y 199) y carril de adelante al doble (y 246,
+  como los patrulleros). Tres de adelante PRENDIDOS FUEGO (tacho volcado 820, tacho roto
+  1330, bolsas 1950): NocheFuego x2 + LuzFuegoCalle (titila con el evento de caos) +
+  HumoAuto; se reconocen por nombre + posición al re-correr.
+- **GDevelop borra las claves propias de los eventos al guardar** (`_l3_arena_z`,
+  `_tendido`, etc.): un script que limpia "por marca" deja los viejos y DUPLICA. Pasó
+  el 28/10 con la arena; `wire_l3_arena_zombies.py` ahora reconoce los suyos por
+  contenido. Al re-correr un wire viejo, contar los eventos antes y después.
 - **Pintadas en el muro de la costanera (19/10, L1):** `gen_grafitis_n1.py` →
   `wire_grafitis_n1.py` (independiente, idempotente, REVERT=1 las saca).
   Datos y ubicación en `PINTADAS` del generador. Letra de pincel dibujada por

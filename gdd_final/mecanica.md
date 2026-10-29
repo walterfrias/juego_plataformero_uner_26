@@ -33,7 +33,7 @@ mecánica nueva es una variación de "cuándo y dónde saltar".
 | ![](obj:Level2/ZombieMed) | **Contagio** | Un zombie contagiado (contorno rojo y gas) necesita **dos pisotones** y escupe minivirus que persiguen a Lio. Se cura a los 6 s. |
 | ![](obj:Level1/HordaZombieHin) | **La horda** (L1) | Una estampida de zombies cruza el río en bucle: se corre **encima** como si fuera un piso móvil. |
 | ![](obj:Level1/Mochila) | **Mochila y planeo** | Desde que se encuentra (L1), mantener el salto mientras se cae baja la caída de 600 a 80 px/s. |
-| ![](obj:Level1/Antidoto) | **Antídotos** | 4 por nivel (L1 y L2), en rutas opcionales. Los 4 dan una vida extra. |
+| ![](obj:Level1/Antidoto) | **Antídotos** | 4 por nivel, en rutas opcionales (en L3, uno por tramo de la calle). Los 4 dan una vida extra. |
 | ![](obj:Level1/NotaPick) | **Pruebas del brote** | 7 notas que congelan el juego al agarrarlas y quedan en la mochila. |
 | ![](obj:Level1/Poste) | **Postes y cables** | Se trepa el poste y se cruza por arriba de los cables, sobre el agua (L1) o el charco (L3). |
 | ![](obj:Level1/Colchon) | **Rebote** | El colchón (L1) y el toldo (L3) lanzan a Lio hacia arriba. |

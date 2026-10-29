@@ -53,7 +53,7 @@ cámara).
 | Dónde | Qué muestra |
 |---|---|
 | Arriba a la izquierda | **Corazones**: las vidas (empieza con 3; hasta 4 con la vida extra de los antídotos). |
-| Al lado de los corazones (L1 y L2) | **Frasco + "n/4"**: antídotos del nivel; el número se pone verde con 4/4. |
+| Al lado de los corazones (L1, L2 y L3) | **Frasco + "n/4"**: antídotos del nivel; el número se pone verde con 4/4. |
 | Arriba a la derecha | **PUNTOS 000000** en ámbar: el total de la partida más lo ganado en el nivel. |
 | Debajo de los puntos | **TIEMPO m:ss**: el reloj del nivel; se pone **rojo** al pasar el tiempo par (ya no da bonus). |
 | Arriba al centro (L3) | **PACIENTE ZERO n/3**: la vida del jefe, en rojo, cuando empieza la pelea. |

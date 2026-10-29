@@ -13,12 +13,15 @@ la marca "Made with GDevelop" (si no, tapa una esquina de cada captura).
 
 Uso:  python3 scripts/capturas_gdd.py      (GDevelop cerrado no hace falta:
       solo lee el proyecto; exporta lo que está GUARDADO)
+      python3 scripts/capturas_gdd.py l3_calle l3_corrientes l3_llegada jefe jefe_clavado
+      (solo esas: las demás quedan como están y se saltean sus escenas)
 """
 import json
 import os
 import shutil
 import socket
 import subprocess
+import sys
 import tempfile
 
 GDEXPORT = os.path.expanduser("~/Escritorio/gdevelop-mcp/node_modules/.bin/gdexport")
@@ -27,7 +30,8 @@ OUT = os.path.abspath("gdd_final/capturas")
 
 JS = r"""
 const puppeteer = require(%(pup)s);
-const OUT = %(out)s, URL = %(url)s;
+const OUT = %(out)s, URL = %(url)s, SOLO = %(solo)s;
+const quiere = (...ns) => !SOLO || ns.some(n => SOLO.includes(n));
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 (async () => {
   const b = await puppeteer.launch({headless: 'new', args: ['--autoplay-policy=no-user-gesture-required']});
@@ -48,17 +52,21 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
     const pl = s.getObjects('Player')[0]; pl.setPosition(x, y);
     pl.getBehavior('PlatformerObject').setCurrentFallSpeed(0); }, x, y);
   const tecla = async k => { await p.keyboard.down(k); await sleep(80); await p.keyboard.up(k); await sleep(250); };
-  const foto = async n => { await p.screenshot({path: OUT + '/' + n + '.png'}); console.log('  ' + n); };
+  const foto = async n => { if (!quiere(n)) return;
+    await p.screenshot({path: OUT + '/' + n + '.png'}); console.log('  ' + n); };
 
   // --- menú con una tabla TOP 5 de ejemplo y la pantalla de iniciales
+  if (quiere('menu', 'iniciales')) {
   await glob({TopLoaded: 1, TopP1: 52300, TopN1: 'LIO', TopP2: 47150, TopN2: 'WAL', TopP3: 39800,
               TopN3: 'MEL', TopP4: 28400, TopN4: 'ANA', TopP5: 15200, TopN5: 'PZ0', TopIni: 'WAL', Record: 52300});
   await escena('MainMenu'); await sleep(1500); await foto('menu');
   await glob({PartidaViva: 1, PuntajeCorte: 44120});
   await escena('MainMenu'); await sleep(900); await foto('iniciales');
   await glob({TopP4: 28400, TopN4: 'ANA', TopP5: 15200, TopN5: 'PZ0', TopP3: 39800, TopN3: 'MEL'});
+  }
 
   // --- Nivel 1
+  if (quiere('l1_inicio', 'l1_hud', 'l1_rio', 'l1_horda', 'pausa', 'mochila', 'nota', 'victoria')) {
   await glob({Puntaje: 0, TieneMochila: 0, Nota1: 1, Nota2: 1, Nota3: 1, Nota4: 1});
   await escena('Level1');
   await vars({LevelScore: 1350, Lives: 3, Antidotes: 2});
@@ -83,20 +91,23 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
   await escena('Level1');
   await vars({LevelScore: 4650, Lives: 3, Antidotes: 4, AntidoteBonus: 1, LevelTime: 212});
   await lio(2566, 60); await sleep(2500); await foto('victoria');
+  }
 
   // --- Nivel 2 (con la mochila)
   await glob({TieneMochila: 1});
+  if (quiere('l2_lab', 'l2_subsuelo', 'l2_pistones', 'l2_alarma')) {
   await escena('Level2');
   await vars({Lives: 4, LevelScore: 2200});
   await lio(1500, 76); await sleep(1800); await foto('l2_lab');
   await lio(1110, 158); await sleep(1500); await foto('l2_subsuelo');
   await lio(2440, 76); await sleep(1600); await foto('l2_pistones');
   await lio(3000, 76); await sleep(1500); await foto('l2_alarma');
+  }
 
-  // --- Nivel 3
+  // --- Nivel 3 (28/10: la calle con los tachos en llamas de adelante, frascos y escombros)
   await escena('Level3');
   await vars({Lives: 9});
-  await lio(-1580, 116); await sleep(1800); await foto('l3_calle');
+  await lio(-1420, 116); await sleep(1800); await foto('l3_calle');
   await lio(-880, 116); await sleep(1500); await foto('l3_corrientes');
   await lio(-300, 116); await sleep(1500); await foto('l3_llegada');
   // el jefe: apunta (estado 1, contorno verde) y después se clava (estado 3)
@@ -117,7 +128,7 @@ def puerto_libre():
         return s.getsockname()[1]
 
 
-def main():
+def main(solo):
     tmp = tempfile.mkdtemp(prefix="pz-capturas-")
     try:
         subprocess.run([GDEXPORT, "-p", os.path.abspath("game/game.json"), "-o", tmp], check=True,
@@ -133,7 +144,8 @@ def main():
                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         try:
             js = JS % {"pup": json.dumps(PUPPETEER), "out": json.dumps(OUT),
-                       "url": json.dumps(f"http://127.0.0.1:{port}/index.html")}
+                       "url": json.dumps(f"http://127.0.0.1:{port}/index.html"),
+                       "solo": json.dumps(solo or None)}
             subprocess.run(["node", "-e", js], check=True)
         finally:
             srv.terminate()
@@ -142,4 +154,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])

@@ -5,7 +5,7 @@ wire_l3_arena_zombies.py  —  en la arena del jefe no paran de entrar zombies
 zombies, me sirven de plataforma".
 
 Mientras dura la pelea (BossActivo = 1, BossDown = 0, Won = 0) entra un zombie
-cada ENTRA_CADA s, alternando el lado (por la izquierda sale de atrás de la
+cada ENTRA_CADA s (28/10: cada vez más rápido según la vida del jefe), alternando el lado (por la izquierda sale de atrás de la
 barricada, por la derecha desde afuera de la pantalla), cruza la arena caminando
 sin darse vuelta y se borra al salir por el otro lado. Como mucho MAX_EN_ARENA a
 la vez. Son del grupo Zombies, así que valen las reglas de siempre: pisarlo
@@ -27,15 +27,21 @@ Uso:  python3 scripts/wire_l3_arena_zombies.py   (raíz del repo, GDevelop CERRA
 import datetime
 import json
 import os
+import re
 import shutil
 
 from gdevelop_cerrado import asegurar_gdevelop_cerrado
 
 GAME = "game/game.json"
 MARK = "_l3_arena_z"
-ENTRA_CADA = 1.8                     # s entre zombie y zombie (3.0 → 1.8: "más zombies que entren", 18/10)
-PRIMERO = 1.0                        # el primero entra 1 s después de despertar al jefe
-MAX_EN_ARENA = 7                     # (4 → 7, 18/10)
+# 28/10, "que sea como una invasión": entran desde el comienzo de la pelea (antes, recién
+# desde la fase 2: wire_jefe_jeringa.py ya no los frena) y cada vez más rápido según la vida
+# del jefe: 1.2 / 0.95 / 0.7 s entre uno y otro, hasta 10 / 12 / 14 a la vez (antes 1.8 s y 7)
+FASE = "(3 - Variable(BossHP))"      # 0, 1, 2
+ENTRA_CADA_0 = 1.2
+ENTRA_CADA = f"({ENTRA_CADA_0} - {FASE} * 0.25)"
+PRIMERO = 0.5                        # el primero entra 0.5 s después de despertar al jefe
+MAX_EN_ARENA = f"(10 + {FASE} * 2)"
 PISO = 150
 # (objeto, velocidad px/s): cruzan los 480 px de la arena en ~12-16 s
 # TODOS los NPC del juego (18/10: "que aparezcan todos los npc del juego en este último
@@ -80,6 +86,19 @@ def var(name, op, val):
     return ins("VarScene", [name, op, str(val)])
 
 
+MIOS = re.compile(r'"Arena(T|Z|V|VT|Lado|Tipo)"|"Zombies", "Arena"|wire_l3_arena_zombies\.py')
+BORRA_VIRUS = {"conditions": [var("BossDown", "=", 1)], "actions": [ins("Delete", ["MiniVirus", ""])]}
+
+
+def es_mio(e):
+    """los eventos de este script. GDevelop, al guardar, saca la marca MARK (28/10 ya no
+    estaba): se reconocen también por lo que tienen adentro."""
+    if e.get(MARK) or MIOS.search(json.dumps(e)):
+        return True
+    return e.get("type") == "BuiltinCommonInstructions::Standard" and not e.get("events") and \
+        {k: e.get(k) for k in ("conditions", "actions")} == BORRA_VIRUS
+
+
 def main():
     asegurar_gdevelop_cerrado()
     ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H-%M-%S-%fZ")
@@ -92,9 +111,12 @@ def main():
     assert "MiniVirus" in names, "falta MiniVirus en Level3 (correr wire_minivirus.py)"
 
     # ---- limpieza (idempotente) ----
-    sc["events"] = [e for e in sc["events"] if not e.get(MARK)]
+    viejos = [k for k, e in enumerate(sc["events"]) if es_mio(e)]
+    assert len(viejos) in (0, 13), f"esperaba 0 o 13 eventos de la arena, encontré {len(viejos)}"
+    pos = viejos[0] if viejos else len(sc["events"])      # los nuevos van donde estaban
+    sc["events"] = [e for e in sc["events"] if not es_mio(e)]
     sc["variables"] = [v for v in sc["variables"] if v["name"] not in VARS]
-    sc["variables"] += [{"name": "ArenaT", "type": "number", "value": ENTRA_CADA - PRIMERO},
+    sc["variables"] += [{"name": "ArenaT", "type": "number", "value": ENTRA_CADA_0 - PRIMERO},
                          {"name": "ArenaVT", "type": "number", "value": VIRUS_CADA - VIRUS_PRIMERO}] + [
         {"name": n, "type": "number", "value": 0} for n in VARS if n not in ("ArenaT", "ArenaVT")]
 
@@ -114,11 +136,12 @@ def main():
                 ins("SetAnimationName", [obj, '"Walk"']),
             ], mark=False))
     pelea = [var("BossActivo", "=", 1), var("BossDown", "=", 0), var("Won", "=", 0)]
-    sc["events"] += [
+    sc["events"][pos:pos] = [
         {"type": "BuiltinCommonInstructions::Comment", "color": {
             "b": 109, "g": 230, "r": 255, "textB": 0, "textG": 0, "textR": 0},
-         "comment": f"Zombies que entran a la arena (wire_l3_arena_zombies.py): uno cada {ENTRA_CADA} s "
-                    f"alternando el lado, como mucho {MAX_EN_ARENA}; cruzan y se borran al salir. "
+         "comment": "Zombies que entran a la arena (wire_l3_arena_zombies.py): una invasión, desde el "
+                    "comienzo de la pelea y cada vez más (1.2 / 0.95 / 0.7 s, hasta 10 / 12 / 14 según "
+                    "la vida del jefe), alternando el lado; cruzan y se borran al salir. "
                     "Sirven de trampolín (pisotón).",
          "comment2": "", MARK: True},
         # cuántos hay (solo los que entraron: var de objeto Arena = 1)

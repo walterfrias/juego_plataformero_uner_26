@@ -104,7 +104,10 @@ pre.diagrama{background:var(--cream2); border:1px solid var(--line); border-radi
 .capturas figcaption{font-size:8.5px; color:var(--muted); margin-top:3px; line-height:1.35;}
 
 /* ---------- imágenes ---------- */
-.mapas img.mapa{width:100%; display:block; margin:0 0 6px; break-inside:avoid; border-radius:4px;}
+/* tope de alto: con el tendido alto de L1 y el antídoto del toldo de L3 las tiras crecieron
+   y ya no entraban dos debajo de la tabla de tramos (quedaba media página en blanco) */
+.mapas img.mapa{width:100%; max-height:84mm; object-fit:contain; display:block; margin:0 auto 6px;
+  break-inside:avoid; border-radius:4px;}
 
 .gallery{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;}
 .card{border:2px solid var(--ink); border-radius:10px; padding:8px 10px; background:var(--cream2); break-inside:avoid;}
@@ -115,6 +118,11 @@ pre.diagrama{background:var(--cream2); border:1px solid var(--line); border-radi
 .card .imgwrap img{height:44px; width:auto;}
 .card .imgwrap img.sheet{height:auto; width:100%; max-height:48px; object-fit:contain;}
 .card .meta{font-size:8px; color:var(--muted); margin-top:4px;}
+/* las tiras del jefe (8 cuadros de 72 px): una por fila, a tamaño real */
+.gallery.jefe{grid-template-columns:1fr;}
+.gallery.jefe .imgwrap{height:auto; justify-content:flex-start;}
+.gallery.jefe .imgwrap img.sheet{height:51px; width:auto; max-width:100%; max-height:none;
+  image-rendering:pixelated;}
 
 /* ---------- índice ---------- */
 ol.toc{list-style:none; padding:0; margin-top:14px; counter-reset:c;}

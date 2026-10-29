@@ -13,14 +13,14 @@ Estados (scene var BossState; las animaciones son las de wire_jefe.py):
   0 CAMINA   hacia Lio (Walk). A los T_CAMINA s → 1.
   1 APUNTA   aviso: se agacha y levanta la jeringa (Carga) + contorno rojo +
              chispazo grave. Queda mirando para donde va a embestir.
-  2 EMBISTE  en línea recta (Walk). Si llega a la pirámide de ese lado habiendo
+  2 EMBISTE  en línea recta (Embiste; Walk hasta el 28/10). Si llega a la pirámide de ese lado habiendo
              recorrido >= ARRANQUE px → 3. Si no (salió pegado a la pirámide) frena
              y vuelve a 0. Pegarle de costado a Lio = −1 vida (como siempre).
   3 CLAVADO  (Expuesto, estrellitas) T_CLAVADO s. Única ventana: pisotón = −1 vida
              del jefe, se desclava y retrocede. De costado NO lastima (está trabado).
              En la primera fase, cartel "PISALO!" que titila sobre la cabeza.
-Fases (una por vida): 3 = lento y sin zombies entrando; 2 = más rápido, vuelven
-los zombies y al desclavarse escupe virus (wire_minivirus.py, sin cambios);
+Fases (una por vida): 3 = lento; 2 = más rápido y al desclavarse escupe virus
+(wire_minivirus.py, sin cambios);
 1 = se inyecta: x1.15 de tamaño, más rápido y embiste DOS veces seguidas: la
 primera hacia el lado CONTRARIO a Lio, rebota en esa pirámide, apunta 0.4 s y la
 segunda viene hacia Lio y se clava de su lado (de busto a busto no se llega).
@@ -30,8 +30,9 @@ bustos (plataforma y 96) → no se lo podía pisar, el bug del 18/10. Los bustos
 Estante, borde y bandera) se corren 22 px hacia el centro: arriba del jefe clavado
 queda libre y el busto sirve de trampolín para saltarle encima.
 
-Además: los zombies de la arena (wire_l3_arena_zombies.py) entran recién desde la
-fase 2, y los virus que caen del cielo paran mientras está clavado (ventana limpia).
+Además: los virus que caen del cielo paran mientras está clavado (ventana limpia).
+Los zombies de la arena (wire_l3_arena_zombies.py) entraban recién desde la fase 2;
+desde el 28/10 entran desde el comienzo, como una invasión (pedido del usuario).
 
 Edita game/game.json (backup .bak-<ts>, idempotente). Los eventos de la pelea vieja
 se guardan en scripts/jefe_pelea_vieja.json; REVERT=1 los restaura (los bustos
@@ -55,11 +56,12 @@ CARTEL = "PisaloText"
 
 PISO = 150
 # caras de las pirámides donde se clava: fin de la losa izq. (Estante 40..104) y comienzo
-# de la der. (376..440). El cuerpo del jefe (máscara) va de 12/48 a 33/48 del ancho y se
-# espeja al mirar a la izquierda (15/48..36/48).
+# de la der. (376..440). El cuerpo del jefe (máscara) va de 24/72 a 45/72 del ancho y se
+# espeja al mirar a la izquierda (27/72..48/72). Hasta el 28/10 la imagen tenía 48 de ancho
+# (12/48..33/48); se ensanchó para la motosierra grande, que ahora se mete en la pirámide.
 CARA_IZQ, CARA_DER = 104, 376
-TOPE_IZQ = f"{CARA_IZQ} - {BOSS}.Width() * 0.3125"
-TOPE_DER = f"{CARA_DER} - {BOSS}.Width() * 0.6875"
+TOPE_IZQ = f"{CARA_IZQ} - {BOSS}.Width() * 0.375"
+TOPE_DER = f"{CARA_DER} - {BOSS}.Width() * 0.625"
 ARRANQUE = 48            # px mínimos de embestida para clavarse (si sale pegado, frena)
 # bustos: x nueva de su Estante (y 96). Antes 110 / 306 (debajo quedaba el jefe clavado)
 BUSTO_IZQ, BUSTO_DER = 132, 284
@@ -194,11 +196,11 @@ def eventos():
         std([*activo(), var("BossState", "=", "1"), var("BossCharges", "=", "0"), timer(T_APUNTA)],
             [setv("BossState", "=", "2"), reset(), setv("BossX0", "=", f"{BOSS}.X()"),
              ins("EnableEffect", [BOSS, '"InfectedOutline"', "no"]),
-             sfx("sfx_gatillo.wav", "0.8", "0.7"), *anim("Walk")]),
+             sfx("sfx_gatillo.wav", "0.8", "0.7"), *anim("Embiste")]),
         std([*activo(), var("BossState", "=", "1"), var("BossCharges", "=", "1"), timer(T_APUNTA_2)],
             [setv("BossState", "=", "2"), reset(), setv("BossX0", "=", f"{BOSS}.X()"),
              ins("EnableEffect", [BOSS, '"InfectedOutline"', "no"]),
-             sfx("sfx_gatillo.wav", "0.8", "0.7"), *anim("Walk")]),
+             sfx("sfx_gatillo.wav", "0.8", "0.7"), *anim("Embiste")]),
         # 2 EMBISTE
         std([*activo(), var("BossState", "=", "2")],
             [ins("SetX", [BOSS, "+", f"Variable(BossDir) * {VEL_EMBISTE} * TimeDelta()"])],
@@ -362,8 +364,8 @@ def main(revert=False):
                                  "name": CARTEL, "width": 0, "x": 0, "y": -100, "zOrder": 20,
                                  "numberProperties": [], "stringProperties": [],
                                  "initialVariables": []})
-        # zombies de la arena desde la fase 2; virus del cielo en pausa mientras está clavado
-        assert agregar_cond(evs, '"ArenaT", ">=", "1.8"', var("BossHP", "<=", "2"))
+        # virus del cielo en pausa mientras está clavado (los zombies de la arena ya no
+        # esperan a la fase 2: 28/10, invasión desde el comienzo)
         assert agregar_cond(evs, '"ArenaVT", ">=", "4.0"', var("BossState", "!=", "3"))
         print("bustos movidos:", mover_bustos(lay), "instancias")
 

@@ -10,9 +10,10 @@ Requiere: gen_jefe.py (game/assets/Jefe/).
 
 Edita game/game.json (backup .bak-<ts>, idempotente), en Level3:
   - objeto PacienteZero: animaciones
-        Walk      6 cuadros, en loop      (estado 0 y la embestida, estado 2)
-        Carga     3 cuadros, sin loop     (estado 1: se agacha y levanta la jeringa)
-        Expuesto  4 cuadros, en loop      (estado 3: de rodillas, estrellitas = pisalo)
+        Walk      8 cuadros, en loop      (estado 0)
+        Carga     6 cuadros, sin loop     (estado 1: se agacha y levanta la motosierra)
+        Embiste   4 cuadros, en loop      (estado 2, desde el 28/10; antes Walk)
+        Expuesto  8 cuadros, en loop      (estado 3: de rodillas, estrellitas = pisalo)
     con máscara de colisión ajustada al cuerpo (la caja entera de 64x68 hacía
     que Lio "pisara" el aire; de rodillas, el cuerpo de Expuesto empieza más
     abajo). Se mantiene el efecto InfectedOutline.
@@ -36,10 +37,14 @@ BOSS = "PacienteZero"
 # máscaras para el científico estilo zombie x1.5 = 48x51 (18/10, "más chico"; antes x2 =
 # 64x68): el cuerpo con el guardapolvo y la cabeza, sin el brazo de la jeringa; en Expuesto
 # está de rodillas → el borde de arriba baja a y 11
+# 28/10: motosierra más grande → lienzo con gen_jefe.PAD px de cada lado (x1.5 = PADX), las
+# máscaras se corren lo mismo; más cuadros (8 como los zombies) y Embiste para el estado 2
+PADX = 12
 ANIMS = {
-    "Walk": ("jefe_walk", 6, 0.13, True, (12, 2, 33, 51)),
-    "Carga": ("jefe_carga", 3, 0.27, False, (12, 4, 33, 51)),
-    "Expuesto": ("jefe_expuesto", 4, 0.18, True, (12, 11, 34, 51)),
+    "Walk": ("jefe_walk", 8, 0.1, True, (12 + PADX, 2, 33 + PADX, 51)),
+    "Carga": ("jefe_carga", 6, 0.08, False, (12 + PADX, 4, 33 + PADX, 51)),
+    "Embiste": ("jefe_embiste", 4, 0.06, True, (12 + PADX, 2, 33 + PADX, 51)),
+    "Expuesto": ("jefe_expuesto", 8, 0.12, True, (12 + PADX, 11, 34 + PADX, 51)),
 }
 PISO = 150                       # y del piso de la arena: el jefe apoya los pies ahí
 # la pelea (de wire_levels23.py y wire_minivirus.py) usaba números del sprite de 64x68: el
@@ -49,7 +54,7 @@ PISO = 150                       # y del piso de la arena: el jefe apoya los pie
 OFFSETS = {("X", 32): 0.5, ("X", 16): 0.25, ("X", 25): 0.39, ("X", 48): 0.75,
            ("Y", 16): 0.24, ("Y", 20): 0.29, ("Y", 40): 0.59}
 TOPE_DER = "480 - 4 - PacienteZero.Width()"
-STATE_ANIM = {0: "Walk", 1: "Carga", 2: "Walk", 3: "Expuesto"}
+STATE_ANIM = {0: "Walk", 1: "Carga", 2: "Embiste", 3: "Expuesto"}
 
 
 def ins(value, params):
@@ -96,6 +101,8 @@ def main():
     w, h = Image.open("game/assets/Jefe/jefe_walk_1.png").size
     for i in sc["instances"]:
         if i["name"] == BOSS:
+            if i.get("width") and i["width"] != w:                       # el cuerpo queda donde estaba
+                i["x"] = i["x"] - (w - i["width"]) / 2
             i.update(customSize=True, width=w, height=h, y=PISO - h)   # 1:1 con el sprite, pies en el piso
 
     # ---- la lógica de la pelea, relativa al tamaño ----

@@ -59,7 +59,7 @@ de Lio (CC0, ver Créditos).
 | **Menú** | Skyline de noche en movimiento, la Luna, el Obelisco, zombies que caminan detrás de Lio. Subtítulo: "Buenos Aires — Noche cero". |
 | **Nivel 1 — La costanera** | Noche con luna y nubes, niebla sobre el río, fuego en tachos y faroles de sodio. Ciudad en 4 planos de **parallax** (la Luna casi quieta, el Obelisco acompañando de lejos). Incendios lejanos con humo. La luna "pinta" el borde de arriba de cada objeto; Lio y los zombies toman un tinte frío que se entibia cerca del fuego. Pintadas en el muro. |
 | **Nivel 2 — El laboratorio** | Luces de terror clase B: tubos que fallan, se cortan y chispean, con su zumbido. Zonas a oscuras con islas de luz verde (tanques) y cian (monitores). Por los ventanales se ve la ciudad de noche. Debajo del piso, el **subsuelo**: cañerías y tubos de contención con virus flotando, algunos rotos. Al final, **zona de alarma** con balizas rojas que barren. |
-| **Nivel 3 — Del lab al Obelisco** | El centro **entre edificios**: fachadas porteñas (francés, departamentos de los 60, PH, bar de esquina), tapiadas, con vidrios rotos y cruces de cuarentena. Detrás, dos filas de edificios en parallax con cúpulas, tanques, antenas e incendios en los techos. En la calle: autos quemados, patrulleros con sirena, un colectivo cruzado, un taxi volcado, conos y escombros, y 8 banderas argentinas apagadas para la noche. Una multitud de infectados en silueta en la vereda de enfrente. **Arena, la 9 de Julio:** el Obelisco con reflector y cinta de cuarentena; detrás, la torre crema del ex Ministerio de Obras Públicas con el **mural de Evita**; a los costados, dos **pilas de patrulleros** destruidos (una barricada policial que se vino abajo) que humean, con la sirena que todavía titila; bustos de próceres con barbijo y coronavirus gigantes flotando en el cielo. |
+| **Nivel 3 — Del lab al Obelisco** | El centro **entre edificios**: fachadas porteñas (francés, departamentos de los 60, PH, bar de esquina), tapiadas, con vidrios rotos y cruces de cuarentena. Detrás, dos filas de edificios en parallax con cúpulas, tanques, antenas e incendios en los techos. En la calle: autos quemados, patrulleros con sirena, un colectivo cruzado, un taxi volcado, conos, pilas de escombros, tachos de basura volcados y rotos, bolsas y basura desparramada (algunos, en el carril más cercano a la cámara, en llamas), y 8 banderas argentinas apagadas para la noche. Una multitud de infectados en silueta en la vereda de enfrente. **Arena, la 9 de Julio:** el Obelisco con reflector y cinta de cuarentena; detrás, la torre crema del ex Ministerio de Obras Públicas con el **mural de Evita**; a los costados, dos **pilas de patrulleros** destruidos (una barricada policial que se vino abajo) que humean, con la sirena que todavía titila; bustos de próceres con barbijo y coronavirus gigantes flotando en el cielo. |
 
 ## 3. Sistema de cámara
 
@@ -108,7 +108,7 @@ que se lleva:
 | Lio | Idle (11), Run (12), Jump (1), Fall (1, también el pisotón), Hit (7), Death (7) |
 | Zombies (13 tipos) | Walk (8; la vecina, 10). Al morir: ráfaga de "píxeles" del color del zombie. |
 | Multitud de fondo (L3) | Walk (8–10), en silueta |
-| Paciente Zero | Walk (6), Carga (3), Expuesto (4) |
+| Paciente Zero | Walk (8), Carga (6), Embiste (4), Expuesto (8) |
 | Virus / minivirus | Idle (6): el cuerpo respira y las espigas vibran |
 | Antídoto, mochila, nota en el piso | Idle (6) |
 | Tubos de contención | Idle (4); el roto, además, Vacía (1) |

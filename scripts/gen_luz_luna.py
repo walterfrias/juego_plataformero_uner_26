@@ -29,6 +29,8 @@ SOURCES = {
     "assets/City/sidewalk.png": True,
     "assets/City/cable_tile.png": True,
     "assets/City/poste.png": False,
+    "assets/City/poste_alto.png": False,
+    "assets/City/poste_medio.png": False,
     "assets/City/tacho.png": False,
     "assets/City/drain_pipe.png": False,
     "assets/City/wall_break_l.png": False,

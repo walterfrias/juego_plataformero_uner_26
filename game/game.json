@@ -4454,6 +4454,166 @@
         "name": "pila_patrulleros_der_2.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_walk_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_walk_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_walk_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_walk_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_carga_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_carga_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_carga_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_carga_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_carga_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_carga_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_embiste_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_embiste_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_embiste_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_embiste_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_embiste_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_embiste_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_embiste_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_embiste_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_expuesto_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_expuesto_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_expuesto_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_expuesto_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_expuesto_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_expuesto_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/Jefe/jefe_expuesto_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "jefe_expuesto_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/poste_alto_luna.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "poste_alto_luna.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/poste_medio_luna.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "poste_medio_luna.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/tacho_volcado.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tacho_volcado.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/tacho_roto.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tacho_roto.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/bolsas_basura.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bolsas_basura.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/escombros_pila.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "escombros_pila.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/City/basura_suelta.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "basura_suelta.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ]
   },
@@ -6722,11 +6882,11 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "Poste",
+          "name": "PosteAlto",
           "persistentUuid": "ee2b7fa6-b2fc-469e-b6cf-2c5cea9926f7",
           "width": 0,
           "x": 862,
-          "y": 22,
+          "y": -34,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -6737,11 +6897,11 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "Poste",
+          "name": "PosteAlto",
           "persistentUuid": "3eecf830-333a-4d9c-941a-4d93f93279db",
           "width": 0,
           "x": 960,
-          "y": 22,
+          "y": -34,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -6752,11 +6912,11 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "Poste",
+          "name": "PosteMedio",
           "persistentUuid": "323b6631-1583-4daa-9ac3-34ae930645b4",
           "width": 0,
           "x": 1165,
-          "y": 22,
+          "y": 4,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -6802,7 +6962,7 @@
           "persistentUuid": "19baf1db-c171-4fb0-b344-6aafd96fd586",
           "width": 112,
           "x": 864,
-          "y": 30,
+          "y": -26,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -6818,7 +6978,7 @@
           "persistentUuid": "295baede-aa0c-47b9-a3f7-fa0345bd7919",
           "width": 219,
           "x": 962,
-          "y": 30,
+          "y": 12,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -7391,7 +7551,7 @@
           "persistentUuid": "efc9cea5-10cd-450c-b9d3-39568c5fe753",
           "width": 112,
           "x": 864,
-          "y": 27,
+          "y": -29,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -7406,7 +7566,7 @@
           "persistentUuid": "9779781d-5140-49a6-a94c-bc50eda51cfc",
           "width": 219,
           "x": 962,
-          "y": 27,
+          "y": 9,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -19384,6 +19544,138 @@
             "align": "left",
             "verticalTextAlignment": "top"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "PosteAlto",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Ladder"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "poste_alto_luna.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 3
+                          },
+                          {
+                            "x": 15,
+                            "y": 3
+                          },
+                          {
+                            "x": 15,
+                            "y": 148
+                          },
+                          {
+                            "x": 3,
+                            "y": 148
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "PosteMedio",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "platformType": "Ladder"
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "poste_medio_luna.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 3
+                          },
+                          {
+                            "x": 15,
+                            "y": 3
+                          },
+                          {
+                            "x": 15,
+                            "y": 110
+                          },
+                          {
+                            "x": 3,
+                            "y": 110
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -19739,6 +20031,12 @@
           },
           {
             "objectName": "HudTime"
+          },
+          {
+            "objectName": "PosteAlto"
+          },
+          {
+            "objectName": "PosteMedio"
           }
         ]
       },
@@ -69893,9 +70191,31 @@
           "value": 0
         },
         {
+          "folded": true,
+          "name": "BossCharges",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "BossX0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LevelTime",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TimeBonus",
+          "type": "number",
+          "value": 0
+        },
+        {
           "name": "ArenaT",
           "type": "number",
-          "value": 0.8
+          "value": 0.7
         },
         {
           "name": "ArenaVT",
@@ -69919,28 +70239,6 @@
         },
         {
           "name": "ArenaV",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "BossCharges",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "BossX0",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "LevelTime",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "TimeBonus",
           "type": "number",
           "value": 0
         }
@@ -70043,8 +70341,8 @@
           "layer": "",
           "name": "PacienteZero",
           "persistentUuid": "038fc662-bf30-4784-a509-8d66e62f8e89",
-          "width": 48,
-          "x": 360,
+          "width": 72,
+          "x": 348.0,
           "y": 99,
           "zOrder": 2,
           "numberProperties": [],
@@ -77767,21 +78065,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PisaloText",
-          "persistentUuid": "a0b7134c-3aa1-4fe7-8375-5f91cd52fa3f",
-          "width": 0,
-          "x": 0,
-          "y": -100,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "height": 14,
           "layer": "BG_near",
@@ -78504,6 +78787,743 @@
           "x": 382,
           "y": -56,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "HudAntiIcon",
+          "width": 0,
+          "x": 68,
+          "y": 4,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [],
+          "persistentUuid": "156e5477-f03c-4ea4-88ab-401e63ed24f2"
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "name": "HudAnti",
+          "width": 0,
+          "x": 84,
+          "y": 6,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [],
+          "persistentUuid": "6086991c-1b15-4113-8eab-7cb8c5c98d71"
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Antidoto",
+          "persistentUuid": "d99c789c-fab8-4ec2-af2c-4bdb45b381a6",
+          "width": 0,
+          "x": -1488,
+          "y": 34,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Antidoto",
+          "persistentUuid": "3de0ba5a-cb0e-4792-8bac-891befc84da6",
+          "width": 0,
+          "x": -1115,
+          "y": 130,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Antidoto",
+          "persistentUuid": "d497d980-3dbf-4d01-a7ee-5976341985b7",
+          "width": 0,
+          "x": -760,
+          "y": 50,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Antidoto",
+          "persistentUuid": "2708a382-47a9-4c89-be79-d22dcc13e2eb",
+          "width": 0,
+          "x": -159,
+          "y": 56,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "PisaloText",
+          "width": 0,
+          "x": 0,
+          "y": -100,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "BasuraSuelta",
+          "persistentUuid": "14ffb460-9637-41a5-bf75-7e0621999e8e",
+          "width": 0,
+          "x": -1755,
+          "y": 146,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "TachoVolcado",
+          "persistentUuid": "b9053d71-ff69-4edb-b6fc-5c214e423461",
+          "width": 0,
+          "x": -1696,
+          "y": 140,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "BasuraSuelta",
+          "persistentUuid": "45a1187b-454b-4213-8ecb-95658c6385e7",
+          "width": 0,
+          "x": -1672,
+          "y": 146,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "BolsasBasura",
+          "persistentUuid": "711a4861-0355-4701-98e4-80d7c1a0cedc",
+          "width": 0,
+          "x": -1580,
+          "y": 138,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "EscombrosPila",
+          "persistentUuid": "3c21393e-5fc8-4b95-b702-abd3b9f87e37",
+          "width": 0,
+          "x": -1440,
+          "y": 138,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "BasuraSuelta",
+          "persistentUuid": "69e19199-0b37-44ca-ac0a-a9129af79115",
+          "width": 0,
+          "x": -1365,
+          "y": 146,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "TachoRoto",
+          "persistentUuid": "a6b7aa31-1be6-4bf5-89e0-b6e7ba22a3e7",
+          "width": 0,
+          "x": -1210,
+          "y": 132,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "BasuraSuelta",
+          "persistentUuid": "a2af28bf-8b86-47f1-848e-88d9e2ea7ab4",
+          "width": 0,
+          "x": -1190,
+          "y": 146,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "BolsasBasura",
+          "persistentUuid": "b2a28026-5a89-458b-8c13-a7f243f06ea2",
+          "width": 0,
+          "x": -1015,
+          "y": 138,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "TachoVolcado",
+          "persistentUuid": "6f0c87ae-2973-410f-8f54-6777ff0a4182",
+          "width": 0,
+          "x": -885,
+          "y": 140,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "EscombrosPila",
+          "persistentUuid": "6256bc96-0850-4aea-b40f-ee364768c1cf",
+          "width": 0,
+          "x": -575,
+          "y": 138,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "BolsasBasura",
+          "persistentUuid": "9b59a22c-c631-4e78-a112-f2a459796595",
+          "width": 0,
+          "x": -510,
+          "y": 138,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "TachoRoto",
+          "persistentUuid": "9e08053a-8e4f-4651-be6d-2ec56e5c93ba",
+          "width": 0,
+          "x": -420,
+          "y": 132,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "BasuraSuelta",
+          "persistentUuid": "5fcd3cac-3fe1-44c5-b993-9f1605f785ab",
+          "width": 0,
+          "x": -300,
+          "y": 146,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "TachoVolcado",
+          "persistentUuid": "f9a82d80-e9da-4ba6-aa3a-08c3963eaf67",
+          "width": 0,
+          "x": -116,
+          "y": 140,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Decor",
+          "name": "EscombrosPila",
+          "persistentUuid": "4ec7003c-5d90-4672-9061-8b8c2369bb0c",
+          "width": 0,
+          "x": -72,
+          "y": 138,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "EscombrosPila",
+          "persistentUuid": "98f5aa77-754a-444a-9161-e5f4e612820f",
+          "width": 0,
+          "x": -1614,
+          "y": 187,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BasuraSuelta",
+          "persistentUuid": "681502a5-b46c-4b22-88ca-709a096159f7",
+          "width": 0,
+          "x": -1400,
+          "y": 195,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "TachoVolcado",
+          "persistentUuid": "1e185e2e-b426-4ff8-9a07-441241d97ad4",
+          "width": 0,
+          "x": -910,
+          "y": 189,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BasuraSuelta",
+          "persistentUuid": "d52ae2ce-eb58-4f24-9c6f-e8ad4060f0e2",
+          "width": 0,
+          "x": -800,
+          "y": 195,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "EscombrosPila",
+          "persistentUuid": "284d2de7-e0db-4d6a-befc-8954f7b42ea6",
+          "width": 0,
+          "x": -630,
+          "y": 187,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "TachoVolcado",
+          "persistentUuid": "e76d9d19-0fbe-456a-abb0-427f6549b062",
+          "width": 0,
+          "x": -400,
+          "y": 189,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BasuraSuelta",
+          "persistentUuid": "019b1a49-92dd-4b85-b66c-ea0e6a310c25",
+          "width": 0,
+          "x": -110,
+          "y": 195,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "EscombrosPila",
+          "persistentUuid": "b068caa0-9314-4f88-b1b3-20f179f8fb55",
+          "width": 0,
+          "x": -50,
+          "y": 187,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 24,
+          "layer": "",
+          "name": "EscombrosPila",
+          "persistentUuid": "d873a161-edd3-4233-9768-4d094dcd12a8",
+          "width": 56,
+          "x": -1630,
+          "y": 222,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "TachoVolcado",
+          "persistentUuid": "78642666-ca76-490e-9b61-d0632b074e16",
+          "width": 44,
+          "x": -1280,
+          "y": 226,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 24,
+          "layer": "",
+          "name": "BolsasBasura",
+          "persistentUuid": "084ad0e6-52dd-417e-996b-89baf0b2ad49",
+          "width": 48,
+          "x": -1100,
+          "y": 222,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 8,
+          "layer": "",
+          "name": "BasuraSuelta",
+          "persistentUuid": "e81001c2-9dd9-46e3-aab0-d1ca467de46a",
+          "width": 40,
+          "x": -860,
+          "y": 238,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 36,
+          "layer": "",
+          "name": "TachoRoto",
+          "persistentUuid": "d7d1288f-43f5-4d22-8ba5-b364897fc1a2",
+          "width": 32,
+          "x": -770,
+          "y": 210,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 24,
+          "layer": "",
+          "name": "EscombrosPila",
+          "persistentUuid": "0b1c6ac3-31f2-4e66-b253-6b588de7602b",
+          "width": 56,
+          "x": -540,
+          "y": 222,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "name": "TachoVolcado",
+          "persistentUuid": "14ed27cc-8549-426f-a92a-f6470849e212",
+          "width": 44,
+          "x": -320,
+          "y": 226,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 24,
+          "layer": "",
+          "name": "BolsasBasura",
+          "persistentUuid": "858f466d-a0e3-46fd-8f33-40f08ff4b71c",
+          "width": 48,
+          "x": -150,
+          "y": 222,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "name": "NocheFuego",
+          "persistentUuid": "2ba6e677-c4e1-4676-9240-636395e22d10",
+          "width": 24,
+          "x": -1262,
+          "y": 204,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "LuzFuegoCalle",
+          "persistentUuid": "b5ce9e8d-0464-4030-ae95-1ffc15895d60",
+          "width": 0,
+          "x": -1315,
+          "y": 202,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 0.9
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "HumoAuto",
+          "persistentUuid": "261fc4c7-fd12-4633-a3d4-3358eba6d33f",
+          "width": 0,
+          "x": -1270,
+          "y": 154,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "name": "NocheFuego",
+          "persistentUuid": "991e3b44-2ca5-45d1-8ec1-49bfdc197a98",
+          "width": 24,
+          "x": -766,
+          "y": 184,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "LuzFuegoCalle",
+          "persistentUuid": "52d9acc2-95b4-4290-b678-e2112c04e53e",
+          "width": 0,
+          "x": -819,
+          "y": 182,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "HumoAuto",
+          "persistentUuid": "9d173d8f-1431-4b0c-9b12-8c3bf4973ff7",
+          "width": 0,
+          "x": -774,
+          "y": 134,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "name": "NocheFuego",
+          "persistentUuid": "4ece68c2-226f-463d-bc63-8a1db8374a50",
+          "width": 24,
+          "x": -138,
+          "y": 198,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "LuzFuegoCalle",
+          "persistentUuid": "f1e1aa46-d5aa-4d48-8bee-08cecf7aaf6d",
+          "width": 0,
+          "x": -191,
+          "y": 196,
+          "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Seed",
+              "type": "number",
+              "value": 5.1000000000000005
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Atmos",
+          "name": "HumoAuto",
+          "persistentUuid": "bd795bdb-0693-42b6-bbd2-e68f7c8afa47",
+          "width": 0,
+          "x": -146,
+          "y": 148,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -80358,7 +81378,7 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.13,
+                  "timeBetweenFrames": 0.1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -80378,19 +81398,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80414,19 +81434,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80450,19 +81470,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80486,19 +81506,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80522,19 +81542,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80558,19 +81578,91 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 2
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_walk_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_walk_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80586,7 +81678,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.27,
+                  "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -80606,19 +81698,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 4
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 4
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80642,19 +81734,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 4
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 4
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80678,19 +81770,283 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 4
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 4
                           },
                           {
-                            "x": 33,
+                            "x": 45,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_carga_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 4
+                          },
+                          {
+                            "x": 45,
+                            "y": 4
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_carga_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 4
+                          },
+                          {
+                            "x": 45,
+                            "y": 4
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_carga_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 4
+                          },
+                          {
+                            "x": 45,
+                            "y": 4
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Embiste",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.06,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_embiste_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_embiste_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_embiste_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_embiste_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 2
+                          },
+                          {
+                            "x": 45,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80706,7 +82062,7 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.18,
+                  "timeBetweenFrames": 0.12,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -80726,19 +82082,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 11
                           },
                           {
-                            "x": 34,
+                            "x": 46,
                             "y": 11
                           },
                           {
-                            "x": 34,
+                            "x": 46,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80762,19 +82118,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 11
                           },
                           {
-                            "x": 34,
+                            "x": 46,
                             "y": 11
                           },
                           {
-                            "x": 34,
+                            "x": 46,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80798,19 +82154,19 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 11
                           },
                           {
-                            "x": 34,
+                            "x": 46,
                             "y": 11
                           },
                           {
-                            "x": 34,
+                            "x": 46,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -80834,19 +82190,163 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
+                            "x": 24,
                             "y": 11
                           },
                           {
-                            "x": 34,
+                            "x": 46,
                             "y": 11
                           },
                           {
-                            "x": 34,
+                            "x": 46,
                             "y": 51
                           },
                           {
-                            "x": 12,
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_expuesto_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 11
+                          },
+                          {
+                            "x": 46,
+                            "y": 11
+                          },
+                          {
+                            "x": 46,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_expuesto_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 11
+                          },
+                          {
+                            "x": 46,
+                            "y": 11
+                          },
+                          {
+                            "x": 46,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_expuesto_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 11
+                          },
+                          {
+                            "x": 46,
+                            "y": 11
+                          },
+                          {
+                            "x": 46,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
+                            "y": 51
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "jefe_expuesto_8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 11
+                          },
+                          {
+                            "x": 46,
+                            "y": 11
+                          },
+                          {
+                            "x": 46,
+                            "y": 51
+                          },
+                          {
+                            "x": 24,
                             "y": 51
                           }
                         ]
@@ -91149,25 +92649,6 @@
           ]
         },
         {
-          "assetStoreId": "",
-          "name": "PisaloText",
-          "type": "BitmapText::BitmapTextObject",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "text": "PISALO!",
-            "opacity": 255,
-            "scale": 1,
-            "fontSize": 20,
-            "tint": "250;220;90",
-            "bitmapFontResourceName": "hud_font.fnt",
-            "textureAtlasResourceName": "hud_font.png",
-            "align": "left",
-            "verticalTextAlignment": "top"
-          }
-        },
-        {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Publico_ZombieMed",
@@ -93418,6 +94899,501 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Antidoto",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "HudAntiIcon",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.12,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "antidoto_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "HudAnti",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "0/4",
+            "opacity": 255,
+            "scale": 1,
+            "fontSize": 20,
+            "tint": "236;238;230",
+            "bitmapFontResourceName": "hud_font.fnt",
+            "textureAtlasResourceName": "hud_font.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "PisaloText",
+          "type": "BitmapText::BitmapTextObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "PISALO!",
+            "opacity": 255,
+            "scale": 1,
+            "fontSize": 20,
+            "tint": "250;220;90",
+            "bitmapFontResourceName": "hud_font.fnt",
+            "textureAtlasResourceName": "hud_font.png",
+            "align": "left",
+            "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "TachoVolcado",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tacho_volcado.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "TachoRoto",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "tacho_roto.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "BolsasBasura",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bolsas_basura.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "EscombrosPila",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "escombros_pila.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "BasuraSuelta",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 1,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "basura_suelta.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -93868,9 +95844,6 @@
             "objectName": "VirusFondo"
           },
           {
-            "objectName": "PisaloText"
-          },
-          {
             "objectName": "Publico_ZombieMed"
           },
           {
@@ -93914,6 +95887,33 @@
           },
           {
             "objectName": "EdificioEvita"
+          },
+          {
+            "objectName": "Antidoto"
+          },
+          {
+            "objectName": "HudAntiIcon"
+          },
+          {
+            "objectName": "HudAnti"
+          },
+          {
+            "objectName": "PisaloText"
+          },
+          {
+            "objectName": "TachoVolcado"
+          },
+          {
+            "objectName": "TachoRoto"
+          },
+          {
+            "objectName": "BolsasBasura"
+          },
+          {
+            "objectName": "EscombrosPila"
+          },
+          {
+            "objectName": "BasuraSuelta"
           }
         ]
       },
@@ -95761,6 +97761,117 @@
           "conditions": [
             {
               "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Antidoto",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "PtsPopup",
+                "Antidoto.X()",
+                "Antidoto.Y() - 12",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BitmapText::BitmapTextObject::SetText"
+              },
+              "parameters": [
+                "PtsPopup",
+                "=",
+                "\"250\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "PtsPopup",
+                "=",
+                "Antidoto.X() + Antidoto.Width() / 2 - PtsPopup.Width() / 2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "PtsPopup",
+                "=",
+                "1000"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "PtsPopup",
+                "\"Pts\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "LevelScore",
+                "+",
+                "250"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Antidoto",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Antidotes",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "sfx_pickup.wav",
+                "no",
+                "GlobalVariable(SfxVolume)",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "VarScene"
               },
               "parameters": [
@@ -96259,14 +98370,17 @@
           "comment": "Jefe: 0=avanza hacia el jugador, 1=se prepara (contorno rojo), 2=embiste, 3=expuesto (única ventana de stomp). 3 stomps = victoria."
         },
         {
-          "colorB": 0,
-          "colorG": 0,
-          "colorR": 0,
-          "creationTime": 0,
-          "folded": true,
+          "type": "BuiltinCommonInstructions::Group",
           "name": "Jefe: que se clave la jeringa (wire_jefe_jeringa.py)",
           "source": "",
-          "type": "BuiltinCommonInstructions::Group",
+          "creationTime": 0,
+          "folded": true,
+          "color": {
+            "b": 60,
+            "g": 60,
+            "r": 200
+          },
+          "conditions": [],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -96278,7 +98392,8 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Pelea con Paciente Zero: 0 camina, 1 apunta (aviso), 2 embiste, 3 clavado en una pirámide (única ventana para pisarlo). Una fase por vida. Generado por wire_jefe_jeringa.py."
+              "comment": "Pelea con Paciente Zero: 0 camina, 1 apunta (aviso), 2 embiste, 3 clavado en una pirámide (única ventana para pisarlo). Una fase por vida. Generado por wire_jefe_jeringa.py.",
+              "comment2": ""
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -96344,7 +98459,8 @@
                     "PisaloText"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -96360,7 +98476,8 @@
                     "150 - PacienteZero.Height()"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -96372,7 +98489,7 @@
                   "parameters": [
                     "PacienteZero",
                     "<",
-                    "104 - PacienteZero.Width() * 0.3125"
+                    "104 - PacienteZero.Width() * 0.375"
                   ]
                 }
               ],
@@ -96384,10 +98501,11 @@
                   "parameters": [
                     "PacienteZero",
                     "=",
-                    "104 - PacienteZero.Width() * 0.3125"
+                    "104 - PacienteZero.Width() * 0.375"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -96399,7 +98517,7 @@
                   "parameters": [
                     "PacienteZero",
                     ">",
-                    "376 - PacienteZero.Width() * 0.6875"
+                    "376 - PacienteZero.Width() * 0.625"
                   ]
                 }
               ],
@@ -96411,10 +98529,11 @@
                   "parameters": [
                     "PacienteZero",
                     "=",
-                    "376 - PacienteZero.Width() * 0.6875"
+                    "376 - PacienteZero.Width() * 0.625"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -96507,7 +98626,8 @@
                         "yes"
                       ]
                     }
-                  ]
+                  ],
+                  "events": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -96543,7 +98663,8 @@
                         "no"
                       ]
                     }
-                  ]
+                  ],
+                  "events": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -96681,7 +98802,8 @@
                                 "yes"
                               ]
                             }
-                          ]
+                          ],
+                          "events": []
                         },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
@@ -96707,7 +98829,8 @@
                                 "no"
                               ]
                             }
-                          ]
+                          ],
+                          "events": []
                         }
                       ]
                     }
@@ -96837,7 +98960,7 @@
                   },
                   "parameters": [
                     "PacienteZero",
-                    "\"Walk\""
+                    "\"Embiste\""
                   ]
                 },
                 {
@@ -96848,7 +98971,8 @@
                     "PacienteZero"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -96972,7 +99096,7 @@
                   },
                   "parameters": [
                     "PacienteZero",
-                    "\"Walk\""
+                    "\"Embiste\""
                   ]
                 },
                 {
@@ -96983,7 +99107,8 @@
                     "PacienteZero"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -97062,7 +99187,7 @@
                       "parameters": [
                         "PacienteZero",
                         "<=",
-                        "104 - PacienteZero.Width() * 0.3125"
+                        "104 - PacienteZero.Width() * 0.375"
                       ]
                     }
                   ],
@@ -97100,7 +99225,7 @@
                           "parameters": [
                             "PacienteZero",
                             "=",
-                            "104 - PacienteZero.Width() * 0.3125"
+                            "104 - PacienteZero.Width() * 0.375"
                           ]
                         },
                         {
@@ -97149,7 +99274,8 @@
                             "PacienteZero"
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -97203,7 +99329,7 @@
                           "parameters": [
                             "PacienteZero",
                             "=",
-                            "104 - PacienteZero.Width() * 0.3125"
+                            "104 - PacienteZero.Width() * 0.375"
                           ]
                         },
                         {
@@ -97305,7 +99431,8 @@
                             "PacienteZero"
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -97349,7 +99476,7 @@
                           "parameters": [
                             "PacienteZero",
                             "=",
-                            "104 - PacienteZero.Width() * 0.3125"
+                            "104 - PacienteZero.Width() * 0.375"
                           ]
                         },
                         {
@@ -97422,7 +99549,8 @@
                             "PacienteZero"
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -97476,7 +99604,7 @@
                           "parameters": [
                             "PacienteZero",
                             "=",
-                            "104 - PacienteZero.Width() * 0.3125"
+                            "104 - PacienteZero.Width() * 0.375"
                           ]
                         },
                         {
@@ -97539,7 +99667,8 @@
                             "PacienteZero"
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     }
                   ]
                 },
@@ -97563,7 +99692,7 @@
                       "parameters": [
                         "PacienteZero",
                         ">=",
-                        "376 - PacienteZero.Width() * 0.6875"
+                        "376 - PacienteZero.Width() * 0.625"
                       ]
                     }
                   ],
@@ -97601,7 +99730,7 @@
                           "parameters": [
                             "PacienteZero",
                             "=",
-                            "376 - PacienteZero.Width() * 0.6875"
+                            "376 - PacienteZero.Width() * 0.625"
                           ]
                         },
                         {
@@ -97650,7 +99779,8 @@
                             "PacienteZero"
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -97704,7 +99834,7 @@
                           "parameters": [
                             "PacienteZero",
                             "=",
-                            "376 - PacienteZero.Width() * 0.6875"
+                            "376 - PacienteZero.Width() * 0.625"
                           ]
                         },
                         {
@@ -97806,7 +99936,8 @@
                             "PacienteZero"
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -97850,7 +99981,7 @@
                           "parameters": [
                             "PacienteZero",
                             "=",
-                            "376 - PacienteZero.Width() * 0.6875"
+                            "376 - PacienteZero.Width() * 0.625"
                           ]
                         },
                         {
@@ -97923,7 +100054,8 @@
                             "PacienteZero"
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -97977,7 +100109,7 @@
                           "parameters": [
                             "PacienteZero",
                             "=",
-                            "376 - PacienteZero.Width() * 0.6875"
+                            "376 - PacienteZero.Width() * 0.625"
                           ]
                         },
                         {
@@ -98040,7 +100172,8 @@
                             "PacienteZero"
                           ]
                         }
-                      ]
+                      ],
+                      "events": []
                     }
                   ]
                 },
@@ -98115,7 +100248,8 @@
                         "PacienteZero"
                       ]
                     }
-                  ]
+                  ],
+                  "events": []
                 }
               ]
             },
@@ -98220,7 +100354,8 @@
                     "Variable(BossDir) * 14"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -98301,7 +100436,8 @@
                     "1"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -98527,7 +100663,8 @@
                         "0.3"
                       ]
                     }
-                  ]
+                  ],
+                  "events": []
                 }
               ]
             },
@@ -98658,7 +100795,8 @@
                     "-30"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -98787,7 +100925,8 @@
                     "-30"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -98801,7 +100940,8 @@
                     "PisaloText"
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -98877,10 +101017,10 @@
                     "PacienteZero.Y() - PisaloText.Height() - 6"
                   ]
                 }
-              ]
+              ],
+              "events": []
             }
-          ],
-          "parameters": []
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -107730,7 +109870,9 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Zombies que entran a la arena (wire_l3_arena_zombies.py): uno cada 1.8 s alternando el lado, como mucho 7; cruzan y se borran al salir. Sirven de trampolín (pisotón)."
+          "comment": "Zombies que entran a la arena (wire_l3_arena_zombies.py): una invasión, desde el comienzo de la pelea y cada vez más (1.2 / 0.95 / 0.7 s, hasta 10 / 12 / 14 según la vida del jefe), alternando el lado; cruzan y se borran al salir. Sirven de trampolín (pisotón).",
+          "comment2": "",
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -107746,11 +109888,14 @@
                 "0"
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Zombies",
+          "objectsToPick": "Zombies",
           "conditions": [
             {
               "type": {
@@ -107775,7 +109920,9 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -107822,7 +109969,9 @@
                 "TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -107864,7 +110013,7 @@
               "parameters": [
                 "ArenaT",
                 ">=",
-                "1.8"
+                "(1.2 - (3 - Variable(BossHP)) * 0.25)"
               ]
             },
             {
@@ -107874,17 +110023,7 @@
               "parameters": [
                 "ArenaZ",
                 "<",
-                "7"
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "BossHP",
-                "<=",
-                "2"
+                "(10 + (3 - Variable(BossHP)) * 2)"
               ]
             }
           ],
@@ -108022,7 +110161,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108145,7 +110285,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108268,7 +110409,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108391,7 +110533,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108514,7 +110657,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108637,7 +110781,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108760,7 +110905,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -108883,7 +111029,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109006,7 +111153,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109129,7 +111277,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109252,7 +111401,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109375,7 +111525,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109498,7 +111649,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109621,7 +111773,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109744,7 +111897,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109867,7 +112021,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -109990,7 +112145,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -110113,7 +112269,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -110236,7 +112393,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -110359,7 +112517,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -110482,7 +112641,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -110605,7 +112765,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -110728,7 +112889,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -110851,7 +113013,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -110974,7 +113137,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -111097,7 +113261,8 @@
                     "\"Walk\""
                   ]
                 }
-              ]
+              ],
+              "events": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -111123,9 +113288,11 @@
                     "mod(Variable(ArenaTipo) + 1, 13)"
                   ]
                 }
-              ]
+              ],
+              "events": []
             }
-          ]
+          ],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -111141,11 +113308,14 @@
                 "0"
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "MiniVirus",
+          "objectsToPick": "MiniVirus",
           "conditions": [],
           "actions": [
             {
@@ -111158,7 +113328,9 @@
                 "1"
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -111205,7 +113377,9 @@
                 "TimeDelta()"
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -111344,7 +113518,9 @@
                 "\"Retarget\""
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -111381,7 +113557,9 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -111418,7 +113596,9 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -111444,7 +113624,9 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -111493,7 +113675,9 @@
                 ""
               ]
             }
-          ]
+          ],
+          "events": [],
+          "_l3_arena_z": true
         },
         {
           "colorB": 0,
@@ -112964,6 +115148,16 @@
                     "=",
                     "472 - HudTime.Width()"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BitmapText::BitmapTextObject::SetText"
+                  },
+                  "parameters": [
+                    "HudAnti",
+                    "=",
+                    "ToString(Variable(Antidotes)) + \"/4\""
+                  ]
                 }
               ],
               "events": [
@@ -113015,6 +115209,58 @@
                       "parameters": [
                         "HudTime",
                         "\"240;120;120\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Antidotes",
+                        ">=",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "BitmapText::SetTint"
+                      },
+                      "parameters": [
+                        "HudAnti",
+                        "\"132;214;92\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Antidotes",
+                        "<",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "BitmapText::SetTint"
+                      },
+                      "parameters": [
+                        "HudAnti",
+                        "\"236;238;230\""
                       ]
                     }
                   ]

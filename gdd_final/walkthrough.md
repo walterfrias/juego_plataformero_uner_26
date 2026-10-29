@@ -15,7 +15,7 @@ Referencias de los mapas:
 |---|---|
 | INICIO / META | Dónde aparece Lio / fin del nivel |
 | C1, C2… | Checkpoint: si Lio cae o pierde una vida, vuelve ahí |
-| A1–A4 | Antídoto (4 por nivel en L1 y L2; los 4 = vida extra) |
+| A1–A4 | Antídoto (4 por nivel; los 4 = vida extra) |
 | N1–N7 | Prueba del brote (nota del diario de Paciente Zero) |
 | Z / HORDA | Zombie que patrulla / la horda del Nivel 1 |
 | V | Virus volador (recorrido fijo, contagia zombies) |
@@ -57,7 +57,7 @@ corriendo encima de la horda**. En el camino aparece la mochila.
 |---|---|---|
 | **1. Arranque** (0–420) | Calle tranquila con pintada de "Las Malvinas son argentinas". Un virus sube y baja en el lugar (V, x 150): enseña a esperar el momento. Plataformeo de la ciudad: banco → toldo → balcón y escalera de incendio. El colchón rebota. | **A1** en el piso (x 115). **A2** arriba del balcón (x 265): se llega trepando por toldo y balcón. |
 | **2. Primer hueco y los primeros zombies** (420–860) | El agua del río corta la vereda (AGUA, x 335) y se cruza por un puente. Después de **C1** patrullan los primeros zombies (vecina, obrero, arrastrada, adolescente), separados para aprender el pisotón de a uno. Un virus péndulo baja sobre el camino (V, x 620), y zombies de "marcha" cruzan solos. | — |
-| **3. Postes y cables, la mochila** (860–1180) | Hueco con agua: se trepa un **poste**, se cruza por los **cables** y se baja por el otro (C2). Un virus sube y baja en medio del puente (V, x 926). Justo después está la **MOCHILA** (x 950): desde acá Lio planea, y la conserva el resto del juego. | **A3** abajo, entre los postes (x 890). **N2** "Remito" junto a la mochila (x 1010), la primera nota que se encuentra. |
+| **3. Postes y cables, la mochila** (860–1180) | Hueco con agua: se trepa un **poste**, se cruza por los **cables** y se baja por el otro (C2). Los dos primeros tramos del tendido van altos: el primero, fuera del alcance del rebote sobre los zombies de antes (si no, Lio caía arriba y se salteaba **A3**), y el segundo, por encima de la copa del árbol. Un virus sube y baja en medio del puente (V, x 926). Justo después está la **MOCHILA** (x 950): desde acá Lio planea, y la conserva el resto del juego. | **A3** abajo, entre los postes (x 890). **N2** "Remito" junto a la mochila (x 1010), la primera nota que se encuentra. |
 | **4. Antes del río** (1180–1700) | Más postes y puentes sobre huecos (C3, C4). Al pasar x 1300 **se arma la horda**. | **N1** "El plan" (x 1232). **A4** (x 1450). Puente alto (x 1325). |
 | **5. El cruce del río sobre la horda** (1700–1990) | El hueco grande (x 1730–1966): muro roto, alambre de púas y hierros abajo. No hay puente: se cruza **corriendo encima de la estampida de zombies**, que funciona como piso móvil. Caer = −1 vida y volver a C6. La horda pasa en bucle, así que si se pierde una, viene otra. | — |
 | **6. Final** (1990–2600) | Después de C7, el tramo más cargado: 6 zombies seguidos (entre ellos el corredor) y dos virus que giran en círculos opuestos (V, x 2250 y 2460). Pintada "#Yo apoyo la Ley de Financiamiento Universitario" antes de la **META** (x 2569). | **N3** "Mensajeros" (x 2220), en la zona de virus: explica el contagio. |
@@ -103,15 +103,17 @@ tiempo). En este nivel cada zombie se contagia como mucho dos veces.
 centro tomado, **entre edificios**, hasta el Obelisco. **Vuelven todos los
 zombies del juego** (18 jugables, uno de cada tipo salvo el del jefe), más
 una multitud en silueta en la vereda de enfrente que no lastima. Sin pozos:
-los desafíos son **peligros de la calle**. En este nivel no hay antídotos.
+los desafíos son **peligros de la calle**. La calle está llena de escombros,
+tachos volcados y bolsas de basura; algunos, en el carril más cercano a la
+cámara, arden. Hay **4 antídotos**, uno por tramo, cada uno con su mecánica.
 
 | Tramo (x) | Qué pasa |
 |---|---|
 | **1. Salida del laboratorio** (−2140 a −1780) | Médico, inválido y enfermera (C1). La pared rota da a la calle. |
-| **2. La calle del hospital** (−1780 a −1340) | Fachadas porteñas tapiadas, autos quemados y un patrullero en llamas. Vecinos de L1 (obrero, vecina) y un virus ascensor. El **policía zombie dispara**: aviso de medio segundo (destello en la mano y clic) y un tiro a la altura del pecho; se esquiva con un salto planeado. Antes, un **toldo que rebota** (x −1504) lanza a Lio por encima del policía. |
-| **3. La plaza** (−1340 a −900) | Tramo abierto de respiro (C3): árboles y banco que se pisan, un colectivo cruzado en la calle. La anciana (lentísima), el obrero, la arrastrada, la enfermera que "se escapó del hospital" y un virus péndulo. |
-| **4. Obra en Corrientes** (−900 a −380) | Un **charco electrificado** (cable de alta tensión caído) cubre la vereda (x −810 a −600): pisarlo = −1 vida y volver a C4. Se cruza **trepando un poste y por los cables**, con un virus que gira encima. Después, el repartidor y **el corredor** (el zombie más rápido). |
-| **5. Llegando al Obelisco** (−380 a 0) | Una **marcha de zombies** avanza hacia Lio. Por arriba, los **respiraderos del subte** soplan vapor en ciclos (aviso → sopla → nada) y suben a Lio a las **marquesinas**, que pasan por encima de la marcha. Alambre de púas de la barricada antes de la arena. |
+| **2. La calle del hospital** (−1780 a −1340) | Fachadas porteñas tapiadas, autos quemados y un patrullero en llamas. Vecinos de L1 (obrero, vecina) y un virus ascensor. El **policía zombie dispara**: aviso de medio segundo (destello en la mano y clic) y un tiro a la altura del pecho; se esquiva con un salto planeado. Antes, un **toldo que rebota** (x −1504) lanza a Lio por encima del policía. **A1** arriba del toldo: se agarra rebotando (saltando desde el piso no se llega). |
+| **3. La plaza** (−1340 a −900) | Tramo abierto de respiro (C3): árboles y banco que se pisan, un colectivo cruzado en la calle. La anciana (lentísima), el obrero, la arrastrada, la enfermera que "se escapó del hospital" y un virus péndulo. **A2** en el piso (x −1115), en la patrulla del obrero: riesgo y premio. |
+| **4. Obra en Corrientes** (−900 a −380) | Un **charco electrificado** (cable de alta tensión caído) cubre la vereda (x −810 a −600): pisarlo = −1 vida y volver a C4. Se cruza **trepando un poste y por los cables**, con un virus que gira encima; **A3** está sobre el cable (x −760). Después, el repartidor y **el corredor** (el zombie más rápido). |
+| **5. Llegando al Obelisco** (−380 a 0) | Una **marcha de zombies** avanza hacia Lio. Por arriba, los **respiraderos del subte** soplan vapor en ciclos (aviso → sopla → nada) y suben a Lio a las **marquesinas**, que pasan por encima de la marcha; **A4** en la segunda marquesina. Alambre de púas de la barricada antes de la arena. |
 | **6. Arena: Paciente Zero** (0 a 480) | Al entrar, la barricada se cierra detrás, la cámara se traba y aparece el cartel del jefe (C7). Ver abajo. |
 
 <!-- mapa:Level3 -->
@@ -133,9 +135,14 @@ de próceres con barbijo** que sirven de trampolín.
 
 | Fase (vidas del jefe) | Qué cambia |
 |---|---|
-| 3 | Lento y sin zombies. Cartel "¡PISALO!" mientras está clavado. |
-| 2 | Más rápido; **entran zombies** a la arena (uno cada 1,8 s, alternando los lados; sirven de trampolín) y escupe virus al desclavarse. |
-| 1 | Se agranda y **embiste dos veces**: la primera hacia el lado contrario a Lio, rebota, y la segunda se clava del lado de Lio. |
+| 3 | Lento. Cartel "¡PISALO!" mientras está clavado. Ya entran zombies: uno cada 1,2 s, hasta 10 a la vez. |
+| 2 | Más rápido y escupe virus al desclavarse. Entran más zombies: uno cada 0,95 s, hasta 12. |
+| 1 | Se agranda y **embiste dos veces**: la primera hacia el lado contrario a Lio, rebota, y la segunda se clava del lado de Lio. La invasión es máxima: uno cada 0,7 s, hasta 14. |
+
+Desde que empieza la pelea **la arena se llena de zombies**, como una
+invasión: entran de los 13 tipos, alternando los lados, cruzan sin darse
+vuelta y salen. Sirven de trampolín para subir a los bustos o saltar la
+embestida, pero de costado lastiman.
 
 En las tres fases cae del cielo un coronavirus que persigue a Lio cada 4 s
 (como mucho 3 a la vez), salvo mientras el jefe está clavado.
@@ -152,7 +159,7 @@ el desglose final (bonus de **+1000 con las 7 pruebas**). Después, el TOP 5.
 | Tutorial | — | 2 (práctica) | — | 1 de práctica |
 | Nivel 1 | 7 | 4 | N1, N2, N3 | 15 + la horda |
 | Nivel 2 | 8 | 4 | N4, N5, N6 | 17 |
-| Nivel 3 | 7 | — | N7 (la suelta el jefe) | 18 + la multitud + los que entran a la arena |
+| Nivel 3 | 7 | 4 | N7 (la suelta el jefe) | 18 + la multitud + la invasión de la arena |
 
 **Duración total:** entre 15 y 30 minutos la primera vez, según la
 habilidad del jugador.

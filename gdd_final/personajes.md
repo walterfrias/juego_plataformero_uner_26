@@ -6,7 +6,7 @@
 > entrega).
 >
 > Referencia de velocidades: Lio corre a 95 px/s. Todos los personajes miden
-> 32×34 px salvo el jefe (48×51).
+> 32×34 px salvo el jefe (48×51 el cuerpo; 72×51 la imagen, con la motosierra).
 
 ## Lio — el personaje jugable
 
@@ -101,9 +101,11 @@ tienen 8 cuadros de caminata (la vecina, 10).
   medio segundo (destello en la mano y un clic) y dispara un tiro a la altura
   del pecho que viaja a 150 px/s, cada ~1,7 s. Se esquiva con un salto
   planeado.
-- **Zombies que entran a la arena (L3):** durante la pelea con el jefe
-  entran de a uno, de cualquiera de los 13 tipos, cruzan sin darse vuelta y
-  salen. Sirven de trampolín.
+- **Zombies que entran a la arena (L3):** desde que empieza la pelea con el
+  jefe entran de a uno, de cualquiera de los 13 tipos, cruzan sin darse
+  vuelta y salen: una invasión que crece con cada vida que pierde el jefe
+  (uno cada 1,2 / 0,95 / 0,7 s, hasta 10 / 12 / 14 a la vez). Sirven de
+  trampolín.
 - **Multitud de fondo (L3):** 14 zombies en silueta oscura con ojos rojos,
   en la vereda de enfrente. Son ambientación: no lastiman ni se pisan.
 
@@ -140,16 +142,25 @@ en el laboratorio). No se pueden eliminar: se esquivan.
 escribió el diario. Soltó el virus a propósito en el festejo del Obelisco:
 quería "un ejército que no protesta, no vota, no pide aumento". Es un zombie
 más, dibujado con las mismas piezas que el médico y el investigador, pero
-**una vez y media más grande** (48×51):
+**una vez y media más grande** (el cuerpo, 48×51):
 - mata de pelo negro, anteojos y ojos rojos;
 - **guardapolvo abierto con la camiseta de Argentina**, como Lio, del otro
   lado;
-- una **motosierra** prendida.
+- una **motosierra** prendida, grande: la espada (con la cadena arriba y
+  abajo) es casi tan larga como su cuerpo. Para que entre, la imagen mide
+  72×51; la colisión sigue siendo solo el cuerpo, así que la motosierra no
+  lastima.
 
-**Animaciones:**
-- Walk (6 cuadros, la motosierra al frente con la cadena girando);
-- Carga (3: se agacha y levanta la motosierra);
-- Expuesto (4: de rodillas, con estrellitas = "pisalo").
+**Animaciones** (26 cuadros, como los zombies, que tienen 8 de caminata):
+- Walk (8 cuadros, la motosierra al frente con la cadena girando);
+- Carga (6: se agacha, levanta la motosierra y la acelera, sale humo): es el
+  aviso antes de embestir;
+- Embiste (4: corre inclinado, con el guardapolvo al viento y chispas en la
+  punta);
+- Expuesto (8: de rodillas, la motosierra trabada que vibra, estrellitas =
+  "pisalo").
+
+<!-- galeria:jefe -->
 
 <!-- paleta:jefe -->
 
@@ -163,9 +174,11 @@ más, dibujado con las mismas piezas que el médico y el investigador, pero
 | Trabado | La motosierra se le traba en una pila de patrulleros: **única ventana para pisarlo**; de costado no lastima | 3,0 s | 2,6 s | 2,2 s |
 
 **Cómo cambia cada fase:**
-- **Fase 3:** sin zombies, con el cartel "¡PISALO!" mientras está clavado.
-- **Fase 2:** empiezan a entrar zombies y escupe virus al desclavarse.
-- **Fase 1:** se agranda (×1,15) y hace la doble embestida.
+- **Fase 3:** cartel "¡PISALO!" mientras está clavado. Ya entran zombies
+  (uno cada 1,2 s, hasta 10).
+- **Fase 2:** escupe virus al desclavarse; más zombies (cada 0,95 s, hasta 12).
+- **Fase 1:** se agranda (×1,15) y hace la doble embestida; la invasión es
+  máxima (cada 0,7 s, hasta 14).
 - **En las tres:** cae un coronavirus del cielo cada 4 s (como mucho 3 a la
   vez), salvo mientras el jefe está clavado.
 

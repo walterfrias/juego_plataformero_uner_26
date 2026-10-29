@@ -58,7 +58,8 @@ BLOQUE = {"solida": (90, 210, 255), "jumpthru": (255, 220, 90), "escalera": (110
 
 # etiqueta para las mecánicas y los peligros (una por grupo de instancias cercanas)
 MECANICAS = {
-    "Colchon": "COLCHÓN", "Poste": "POSTE", "Cable": "CABLES", "Piston": "PISTONES",
+    "Colchon": "COLCHÓN", "Poste": "POSTE", "PosteAlto": "POSTE", "PosteMedio": "POSTE",
+    "Cable": "CABLES", "Piston": "PISTONES",
     "AirFlow": "DUCTO", "WetFloor": "PISO ENCERADO", "Gabinete": "GABINETE",
     "ToldoRebote": "TOLDO", "Vapor": "VAPOR", "Marquesina": "MARQUESINA",
     "PuenteA": "PUENTE", "Toldo": "TOLDO", "EscaleraIncendio": "ESCALERA",

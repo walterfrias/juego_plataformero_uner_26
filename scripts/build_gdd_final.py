@@ -14,6 +14,7 @@ imágenes) que convierte md_a_html(). Extras:
   <!-- mapa:Level1 -->        las tiras del mapa del nivel (gen_mapas_gdd.py)
   <!-- galeria:personajes --> tiras de caminata de los zombies, Lio y el jefe
   <!-- galeria:notas -->      el arte de las 7 notas
+  <!-- galeria:jefe -->       todos los cuadros de cada animación del jefe (gen_jefe.py)
   <!-- paleta:lio -->         muestras de color (PALETAS)
   <!-- props:Level1 -->       galería de objetos del escenario (PROPS)
   <!-- capturas:menus -->     capturas del juego (CAPTURAS, de scripts/capturas_gdd.py)
@@ -132,14 +133,15 @@ CAPTURAS = {
                 ("l1_rio", "Nivel 1: puentes sobre el río, el Obelisco a lo lejos."),
                 ("l2_lab", "Nivel 2: el laboratorio, con los tubos de contención abajo."),
                 ("l2_alarma", "Nivel 2: la zona de alarma del final."),
-                ("l3_calle", "Nivel 3: la calle del hospital, entre edificios."),
-                ("l3_llegada", "Nivel 3: llegando al Obelisco, vapor del subte y marquesinas.")],
+                ("l3_calle", "Nivel 3: la calle del hospital, entre edificios; adelante, un tacho volcado en llamas."),
+                ("l3_llegada", "Nivel 3: llegando al Obelisco, vapor del subte, marquesinas y bolsas de basura ardiendo.")],
     "mecanicas": [("l1_horda", "Nivel 1: Lio cruza el río corriendo sobre la horda."),
                   ("l2_pistones", "Nivel 2: los pistones sobre el pozo."),
                   ("l2_subsuelo", "Nivel 2: el corredor del subsuelo (ruta opcional)."),
-                  ("l3_corrientes", "Nivel 3: postes y cables sobre el charco electrificado.")],
-    "jefe": [("jefe", "Paciente Zero apunta: contorno rojo, está por embestir."),
-             ("jefe_clavado", "Trabado contra la pila de patrulleros, con estrellitas: la ventana para pisarlo.")],
+                  ("l3_corrientes", "Nivel 3: postes y cables sobre el charco electrificado, con un antídoto en el cable.")],
+    "jefe": [("jefe", "Paciente Zero apunta: levanta la motosierra, contorno rojo, está por embestir."),
+             ("jefe_clavado", "Con la motosierra trabada en la pila de patrulleros, de rodillas y con estrellitas: "
+                              "la ventana para pisarlo, entre los zombies que no paran de entrar.")],
 }
 
 ZOMBIES = [("Vecina", "f"), ("Obrero rengo", "m"), ("Arrastrada", "d"), ("Adolescente", "n"),
@@ -298,9 +300,9 @@ def galeria_personajes():
     lio = "".join(f'<img src="{asset(f"Player/Player_{a}_1.png")}">' for a in ("Idle", "Run", "Fall", "Hit", "Death"))
     cards.append(f'<div class="card ancho"><h4>Lio</h4><div class="imgwrap">{lio}</div>'
                  f'<div class="meta">Idle · Run · Jump/Fall · Hit · Death</div></div>')
-    jefe = "".join(f'<img src="{asset(f"Jefe/jefe_{a}.png")}">' for a in ("walk_1", "walk_3", "carga_3", "expuesto_1"))
+    jefe = "".join(f'<img src="{asset(f"Jefe/jefe_{a}.png")}">' for a in ("walk_1", "carga_6", "embiste_2", "expuesto_1"))
     cards.append(f'<div class="card ancho"><h4>Paciente Zero</h4><div class="imgwrap">{jefe}</div>'
-                 f'<div class="meta">Walk · Carga · Expuesto (48×51)</div></div>')
+                 f'<div class="meta">Walk · Carga · Embiste · Expuesto (72×51 con la motosierra)</div></div>')
     for nombre, k in ZOMBIES:
         cards.append(f'<div class="card"><h4>{nombre}</h4><div class="imgwrap">'
                      f'<img class="sheet" src="{asset(f"Zombie_{k.upper() if len(k) == 1 else k.capitalize()}/zombie_{k}_walk_sheet.png")}">'
@@ -308,6 +310,21 @@ def galeria_personajes():
     virus = "".join(f'<img src="{img_objeto(r)}">' for r in ("Level1/Virus1", "Level1/Antidoto", "Level1/Mochila", "Level1/NotaPick"))
     cards.append(f'<div class="card ancho"><h4>Virus, antídoto, mochila y prueba</h4><div class="imgwrap">{virus}</div></div>')
     return '<div class="gallery">' + "".join(cards) + "</div>"
+
+
+JEFE_ANIMS = [("walk", "Walk", 8, "camina con la motosierra al frente, la cadena girando"),
+              ("carga", "Carga", 6, "se agacha, levanta la motosierra y la acelera (humo)"),
+              ("embiste", "Embiste", 4, "corre inclinado, el guardapolvo al viento, chispas"),
+              ("expuesto", "Expuesto", 8, "de rodillas, la motosierra trabada, estrellitas")]
+
+
+def galeria_jefe():
+    """todos los cuadros de cada animación del jefe (tiras de gen_jefe.py)."""
+    cards = "".join(
+        f'<div class="card ancho"><h4>{nombre} · {n} cuadros</h4><div class="imgwrap">'
+        f'<img class="sheet" src="{asset(f"Jefe/jefe_{k}_sheet.png")}"></div>'
+        f'<div class="meta">{desc}</div></div>' for k, nombre, n, desc in JEFE_ANIMS)
+    return '<div class="gallery jefe">' + cards + "</div>"
 
 
 def galeria_notas():
@@ -359,6 +376,8 @@ def extras(tipo, arg):
         return galeria_personajes()
     if tipo == "galeria" and arg == "notas":
         return galeria_notas()
+    if tipo == "galeria" and arg == "jefe":
+        return galeria_jefe()
     raise SystemExit(f"marcador desconocido: {tipo}:{arg}")
 
 
